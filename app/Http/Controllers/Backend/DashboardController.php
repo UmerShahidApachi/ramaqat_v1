@@ -15,7 +15,7 @@ class DashboardController extends Controller
         return view('backend.admin.dashboard.dashboard');
     }
     public function all_users(){
-        return view('backend.admin.dashboard.dashboard');
+        return view('backend.admin.users.home');
 
     }
 }

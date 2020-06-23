@@ -30,7 +30,7 @@ The above copyright notice and this permission notice shall be included in all c
     <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
 
-<div class="wrapper">
+{{--<div class="wrapper">--}}
 @include('backend.admin.layouts.admin_header')
 @include('backend.admin.layouts.admin_sidebar')
 <!-- Content Wrapper. Contains page content -->
@@ -39,7 +39,7 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
     <!-- /.content-wrapper -->
 
-{{--    @include('site_layout.footer')--}}
+    @include('backend.admin.layouts.admin_footer')
 
 </div>
 </html>

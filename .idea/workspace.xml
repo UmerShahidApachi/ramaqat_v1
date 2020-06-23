@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87c89e9d-b62d-4d09-8666-53ffecf75c08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/master/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/master/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/users/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/users/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +139,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/admin" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/backend/admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/backend/admin/dashboard" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -157,7 +165,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592933780145</updated>
-      <workItem from="1592933781632" duration="6410000" />
+      <workItem from="1592933781632" duration="7971000" />
     </task>
     <servers />
   </component>
@@ -168,10 +176,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="385" y="80" width="670" height="676" key="search.everywhere.popup" timestamp="1592940590707">
+    <state x="450" y="239" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592942807700">
       <screen x="0" y="23" width="1440" height="827" />
     </state>
-    <state x="385" y="80" width="670" height="676" key="search.everywhere.popup/0.23.1440.827@0.23.1440.827" timestamp="1592940590707" />
-    <state x="385" y="80" width="670" height="677" key="search.everywhere.popup/0.23.1440.828@0.23.1440.828" timestamp="1592939737478" />
+    <state x="450" y="239" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.827@0.23.1440.827" timestamp="1592942807700" />
+    <state x="385" y="80" width="670" height="677" key="search.everywhere.popup" timestamp="1592941990667">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="385" y="80" width="670" height="676" key="search.everywhere.popup/0.23.1440.827@0.23.1440.827" timestamp="1592941168069" />
+    <state x="385" y="80" width="670" height="677" key="search.everywhere.popup/0.23.1440.828@0.23.1440.828" timestamp="1592941990667" />
   </component>
 </project>
