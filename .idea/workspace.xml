@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87c89e9d-b62d-4d09-8666-53ffecf75c08" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/CourseVideo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_23_201335_create_course_videos_table.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/DashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/master/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/master/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/users/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/users/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +170,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592933780145</updated>
-      <workItem from="1592933781632" duration="7971000" />
+      <workItem from="1592933781632" duration="8646000" />
     </task>
     <servers />
   </component>
