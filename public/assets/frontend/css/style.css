@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 .font16{
     font-size: 16px;
 }
@@ -145,7 +148,7 @@ ul.Offers li{
     padding: 20px 15px;
 }
 .img-bg{
-    /* height: 100vh; */
+    height: 100vh;
     background-image: url("../img/bg-img.png");
     background-size: cover;
     overflow: hidden;
@@ -562,16 +565,4 @@ nav{
 ul.img_footer li {
 margin: 0px 10px;
 margin: 0px 16px;
-}
-#to-top {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    cursor: pointer;
-    padding: 10px 15px;
-    background: #983497;
-    font-weight: bold;
-    color: #ffffff;
-    size: 20px;
-    display: none;
 }
