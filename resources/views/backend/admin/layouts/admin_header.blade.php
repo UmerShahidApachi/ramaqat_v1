@@ -64,11 +64,9 @@
             </div>
         </div>
     </nav>
-    <!-- End Navbar -->
-{{--    <div class="content">--}}
-{{--        @yield('content')--}}
-{{--    </div>--}}
+
 </div>
+
 <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
         <a href="#" data-toggle="dropdown">

@@ -29,17 +29,19 @@ The above copyright notice and this permission notice shall be included in all c
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
+<div class="wrapper ">
 
 {{--<div class="wrapper">--}}
 @include('backend.admin.layouts.admin_header')
 @include('backend.admin.layouts.admin_sidebar')
 <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        @yield('content')
-    </div>
+<div class="content">
+            @yield('content')
+        </div>
     <!-- /.content-wrapper -->
 
     @include('backend.admin.layouts.admin_footer')
 
 </div>
+
 </html>
