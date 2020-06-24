@@ -27,3 +27,7 @@ Route::get('user-register','Frontend\RegisterController@userRegister')->name('re
 Route::get('online-course','Frontend\CourseController@onlineCourse')->name('online-course');
 Route::get('offline-course','Frontend\CourseController@offlineCourse')->name('offline-course');
 Route::get('homePage','Frontend\HomeController@homePage')->name('homePage');
+
+Route::get('progressView','progresscontroller@fileUpload')->name('progressView');
+
+Route::post('progressStore','progresscontroller@fileStore')->name('progressStore');
