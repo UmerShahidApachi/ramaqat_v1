@@ -38,21 +38,7 @@
                             <input type="password" class="form-control custom-height" placeholder="Re-Type password">
                         </div>
                         <!-- Grid column -->
-                        <div class="col-12 mx-auto mb-3">
-                            <!-- Default input -->
-                            <input type="password" class="form-control custom-height" placeholder="Re-Type password">
-                        </div>
-                        <!-- Grid column -->
-                        <div class="col-12 mx-auto mb-3">
-                            <!-- Default input -->
-                            <input type="password" class="form-control custom-height" placeholder="Re-Type password">
-                        </div>
-                        <!-- Grid column -->
-                        <div class="col-12 mx-auto mb-3">
-                            <!-- Default input -->
-                            <input type="password" class="form-control custom-height" placeholder="Re-Type password">
-                        </div>
-                        <!-- Grid column -->
+
                     </div>
                     <!-- Grd row -->
                 </form>
