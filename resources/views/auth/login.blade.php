@@ -7,8 +7,9 @@
         <div class="inputform plum-bg text-center white-text">
             <h2>Sign in</h2>
             <!-- Default form row -->
-            <form>
-                <!-- Grd row -->
+            <form method="POST" action="{{ route('login') }}">
+            @csrf
+            <!-- Grd row -->
                 <div class="form-row">
                     <!-- Grid column -->
                     <div class="col-12 mx-auto mb-3">
@@ -25,8 +26,9 @@
                     <!-- Grid column -->
                 </div>
                 <!-- Grd row -->
+                <button type="submit" class="login-btn mb-3">Sign in</button>
+
             </form>
-            <button class="login-btn mb-3">Sign in</button>
             <div>
                 <ul class="social-login">
                     <li><img src="{{asset('assets/frontend/img/fb.png')}}" alt="facebook"></li>

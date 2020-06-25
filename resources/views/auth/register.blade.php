@@ -11,7 +11,7 @@
                 <h2>Sign Up</h2>
                 <!-- Default form row -->
                 <form method="POST" action="{{ route('register') }}">
-                    @csrf
+                @csrf
                     <!-- Grd row -->
                     <div class="form-row">
                         <!-- Grid column -->
@@ -58,8 +58,9 @@
 
                     </div>
                     <!-- Grd row -->
+                    <button type="submit" class="login-btn mb-3">Sign Up</button>
+
                 </form>
-                <button type="submit" class="login-btn mb-3">Sign Up</button>
                 <!-- Default form row -->
 
                 <br>
