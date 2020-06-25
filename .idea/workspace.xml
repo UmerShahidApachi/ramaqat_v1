@@ -2,48 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87c89e9d-b62d-4d09-8666-53ffecf75c08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/progresscontroller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Slider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/progress_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_24_114601_progress_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_24_184103_create_sliders_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1592999788.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1592999889.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1592999989.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593000122.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593000232.ppt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593000527.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593001558.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593002827.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593002929.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593004580.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593008936.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593008942.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593014104.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593014108.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593014187.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593014188.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593014336.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593014337.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593014424.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593014426.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593014427.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593015031.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/1593015038.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/admin/slider/add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/admin/slider/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/admin/slider/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/course/progressBar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/layouts/admin_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/master/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/master/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +163,7 @@
       <option name="presentableId" value="Default" />
       <updated>1592933780145</updated>
       <workItem from="1592933781632" duration="9243000" />
-      <workItem from="1592980913799" duration="3569000" />
+      <workItem from="1592980913799" duration="5004000" />
     </task>
     <servers />
   </component>
@@ -223,11 +182,12 @@
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="397" y="261" key="com.intellij.ide.util.TipDialog/0.23.1440.828@0.23.1440.828" timestamp="1592990770855" />
-    <state x="385" y="80" width="670" height="682" key="search.everywhere.popup" timestamp="1593024406290">
-      <screen x="0" y="23" width="1440" height="833" />
+    <state x="385" y="80" width="670" height="682" key="search.everywhere.popup" timestamp="1593027090304">
+      <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state x="385" y="80" width="670" height="676" key="search.everywhere.popup/0.23.1440.827@0.23.1440.827" timestamp="1592941168069" />
     <state x="385" y="80" width="670" height="677" key="search.everywhere.popup/0.23.1440.828@0.23.1440.828" timestamp="1592999047792" />
+    <state x="385" y="80" width="670" height="682" key="search.everywhere.popup/0.23.1440.832@0.23.1440.832" timestamp="1593027090304" />
     <state x="385" y="80" width="670" height="682" key="search.everywhere.popup/0.23.1440.833@0.23.1440.833" timestamp="1593024406290" />
   </component>
 </project>
