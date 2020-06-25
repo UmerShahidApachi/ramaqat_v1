@@ -28,4 +28,8 @@ class DashboardController extends Controller
         return view('backend.admin.slider.add');
 
     }
+    public function categories(){
+        return view('backend.admin.category.category');
+
+    }
 }
