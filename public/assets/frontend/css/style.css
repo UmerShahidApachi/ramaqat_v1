@@ -13,21 +13,40 @@ body{
 }
 .font45{
     font-size: 45px;
-    color:#983497;
+    color:#570055;
     font-weight: bold;
 }
 .font35{
     font-size: 35px;
-    color:#983497 ;
+    color:#570055;
 }
 .plum-text{
-    color: #983497;
+    color: #570055;
 }
 .white-text{
     color:white;
 }
 .plum-bg{
-  background-color:#983497;
+  background-color:#570055;
+}
+.plum-btn{
+background-color: #570055;
+color:#fff;
+border:1px solid #570055;
+}
+.plum-btn:hover{
+    background-color: #fff;
+    border: 1px solid #570055;
+    color:#570055;
+}
+.white-btn{
+background-color: #fff;
+border: 1px solid #570055;
+}
+.white-btn:hover{
+    background-color: #570055;
+    border: 1px solid #570055;
+    color:#fff;
 }
 .SearchInput{
     width: 100%;
@@ -96,7 +115,7 @@ nav{
 
 }
 .custum-indicators li{
-    background-color:#983497;
+    background-color:#570055;
 }
 .custum-indicators li .active{
     width: 40px;
@@ -162,6 +181,9 @@ ul.social-login li{
 }
 .top-header{
     line-height: 6;
+}
+.accordion-head h6,.black-text{
+   color:#484848;
 }
 /* Slider Style */
 @media (min-width: 768px) {
@@ -234,6 +256,20 @@ ul.social-login li{
     -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.5);
   }
+  .accordion-head i{
+    font-size: 2.5em;
+    float: right;
+    color:#484848;
+}
+
+.accordion-head > .collapsed > i:before{
+    content: "\f105";
+}
+.accordian-height{
+    max-height:337px;
+    height: 337px;
+    overflow-y:scroll;
+}
 /* End */
 @media screen and (min-width:320px) and (max-width:768px){
     ul.ulDBlockMenu li{
@@ -447,7 +483,7 @@ nav{
     padding: 0;
 }
 .sidebar_icons {
-    background-color: #983497;
+    background-color: #570055;
     padding: 50px;
 }
 
@@ -456,7 +492,7 @@ nav{
 }
 .singup_id_name {
     font-size: 20px !important;
-    color: #983497 !important;
+    color: #570055 !important;
 }
 .sidebar_icons > a > img{
     padding-right: 10px;
@@ -491,7 +527,7 @@ nav{
 }
 .course_content {
     font-size: 28px;
-    color: #983497;
+    color: #570055;
     margin: 10px;
     margin-bottom: -5px;
 }
@@ -509,7 +545,7 @@ nav{
     margin-top: 14px;
 }
 .checkbox_div {
-    color: #983497;
+    color: #570055;
 }
 .lession_video_length {
     padding-left: 35px;
@@ -519,7 +555,7 @@ nav{
     padding-left: 15px;
 }
 .checkbox_lession_1 {
-    background-color: #98349708;
+    background-color: #57005508;
     padding-left: 10px;
     padding-top: 5px;
 }

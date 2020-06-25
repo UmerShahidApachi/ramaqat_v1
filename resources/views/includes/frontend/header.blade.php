@@ -18,10 +18,10 @@
       </div>
       <ul class="ulDBlock d-none d-sm-block">
         <li>
-          <a href="signin.html"><img src="{{asset('assets/frontend/img/Signin.png')}}"></a>
+        <button class="btn white-btn">Login</button>
         </li>
         <li>
-          <span class="font16 plum-text">اللغة العربية</span>
+        <button class="btn plum-btn">Sinup</button>
         </li>
       </ul>
 

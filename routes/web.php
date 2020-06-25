@@ -34,3 +34,7 @@ Route::get('homePage','Frontend\HomeController@homePage')->name('homePage');
 Route::get('progressView','progresscontroller@fileUpload')->name('progressView');
 
 Route::post('progressStore','progresscontroller@fileStore')->name('progressStore');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -31,7 +31,6 @@ The above copyright notice and this permission notice shall be included in all c
 </head>
 <div class="wrapper ">
 
-{{--<div class="wrapper">--}}
 @include('backend.admin.layouts.admin_header')
 @include('backend.admin.layouts.admin_sidebar')
 <!-- Content Wrapper. Contains page content -->
