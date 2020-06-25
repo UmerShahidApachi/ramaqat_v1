@@ -24,6 +24,9 @@ Route::prefix('admin')->group(function (){
     Route::get('all-users','Backend\DashboardController@all_users')->name('all-users');
     Route::get('slider','Backend\DashboardController@slider')->name('slider');
     Route::post('add-slider-data','Backend\DashboardController@sliderdata')->name('slider-data');
+    Route::get('edit_slider','Backend\DashboardController@edit_slider')->name('slider-edit');
+    Route::post('edit-slider-data','Backend\DashboardController@update_slider')->name('slider-edit-data');
+    Route::get('delete-slider','Backend\DashboardController@delete_slider');
 
 });
 Route::get('category','Backend\DashboardController@categories')->name('category');
