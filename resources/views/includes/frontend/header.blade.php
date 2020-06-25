@@ -18,10 +18,10 @@
       </div>
       <ul class="ulDBlock d-none d-sm-block">
         <li>
-        <button class="btn white-btn">Login</button>
+            <a href="{{route('login')}}"><button class="btn white-btn">Login</button></a>
         </li>
         <li>
-        <button class="btn plum-btn">Sinup</button>
+            <a href="{{route('register')}}"><button class="btn plum-btn">Signup</button></a>
         </li>
       </ul>
 
