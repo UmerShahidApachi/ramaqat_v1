@@ -24,7 +24,9 @@ Route::prefix('admin')->group(function (){
     Route::get('all-users','Backend\DashboardController@all_users')->name('all-users');
     Route::get('slider','Backend\DashboardController@slider')->name('slider');
     Route::get('add-slider-data','Backend\DashboardController@sliderdata')->name('slider-data');
+
 });
+Route::get('category','Backend\DashboardController@categories')->name('category');
 Route::get('userlogin','Frontend\LoginController@userLogin')->name('login');
 Route::get('user-register','Frontend\RegisterController@userRegister')->name('register');
 Route::get('online-course','Frontend\CourseController@onlineCourse')->name('online-course');
