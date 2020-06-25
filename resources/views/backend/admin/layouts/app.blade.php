@@ -30,6 +30,7 @@ The above copyright notice and this permission notice shall be included in all c
   <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
 
+
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
@@ -39,7 +40,7 @@ The above copyright notice and this permission notice shall be included in all c
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+          Ramaqat
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
@@ -56,9 +57,15 @@ The above copyright notice and this permission notice shall be included in all c
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="{{url('category')}}">
+            <a class="nav-link" href="{{route('category')}}">
               <i class="material-icons">content_paste</i>
               <p>Category</p>
+            </a>
+          </li>
+            <li class="nav-item ">
+            <a class="nav-link" href="{{route('slider')}}">
+              <i class="material-icons">content_paste</i>
+              <p>Slider</p>
             </a>
           </li>
           <li class="nav-item ">
@@ -427,6 +434,8 @@ The above copyright notice and this permission notice shall be included in all c
   <script src="../assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+{{--  <script src="{{url('js/sweetalert2.all.js')}}"></script>--}}
+
   <script>
     $(document).ready(function() {
       $().ready(function() {

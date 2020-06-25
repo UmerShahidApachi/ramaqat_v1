@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class CategoryController extends Controller
 {
@@ -22,9 +24,47 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+//        dd($request->all());
+//        $imgname = "";
+
+        if ($request->hasfile('logo')) {
+            $postData = $request->only('logo');
+
+            $file = $postData['logo'];
+
+            $fileArray = array('image' => $file);
+
+            // Tell the validator that this file should be an image
+            $rules = array(
+                'image' => 'mimes:jpeg,jpg,png,gif|required|max:10000' // max 10000kb
+            );
+
+            // Now pass the input and rules into the validator
+            $validator = Validator::make($fileArray, $rules);
+
+
+            // Check to see if validation fails or passes
+            if ($validator->fails()) {
+                return redirect()->back()->with('alert', 'Upload Image only')->withInput();
+            }
+            $file = $request->file('logo');
+            $filename = str_replace(' ', '', $file->getClientOriginalName());
+            $ext = $file->getClientOriginalExtension();
+            $imgname = uniqid() . $filename;
+            $destinationpath = public_path('category');
+            $file->move($destinationpath, $imgname);
+        }
+//        dd($imgname);
+
+        $category = Category::create(['name'=>$request->name,'logo'=>$imgname]);
+
+        if ($category){
+            return redirect()->back();
+        }
+
+
     }
 
     /**

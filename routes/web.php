@@ -23,10 +23,11 @@ Route::prefix('admin')->group(function (){
     Route::get('dashboard','Backend\DashboardController@dashboard')->name('dashboard');
     Route::get('all-users','Backend\DashboardController@all_users')->name('all-users');
     Route::get('slider','Backend\DashboardController@slider')->name('slider');
-    Route::get('add-slider-data','Backend\DashboardController@sliderdata')->name('slider-data');
+    Route::post('add-slider-data','Backend\DashboardController@sliderdata')->name('slider-data');
 
 });
 Route::get('category','Backend\DashboardController@categories')->name('category');
+Route::POST('save_category','Frontend\CategoryController@create')->name('save_category');
 Route::get('userlogin','Frontend\LoginController@userLogin')->name('login');
 Route::get('user-register','Frontend\RegisterController@userRegister')->name('register');
 Route::get('online-course','Frontend\CourseController@onlineCourse')->name('online-course');
