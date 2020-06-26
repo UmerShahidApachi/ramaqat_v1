@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87c89e9d-b62d-4d09-8666-53ffecf75c08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/category/5ef621659fc72Screenshot2020-06-18at11.02.56AM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/slider/5ef62186e16c7Screenshot2020-06-18at1.12.32PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/admin/accounts/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/admin/trainers/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/category/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/category/category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/slider/slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/slider/slider.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/users/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/users/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/frontend/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Course.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Course.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/courses/add.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/courses/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/courses/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/courses/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -210,12 +203,12 @@
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="397" y="261" key="com.intellij.ide.util.TipDialog/0.23.1440.828@0.23.1440.828" timestamp="1592990770855" />
-    <state x="385" y="80" width="670" height="681" key="search.everywhere.popup" timestamp="1593191633934">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state x="385" y="80" width="670" height="680" key="search.everywhere.popup" timestamp="1593193538965">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="385" y="80" width="670" height="676" key="search.everywhere.popup/0.23.1440.827@0.23.1440.827" timestamp="1592941168069" />
     <state x="385" y="80" width="670" height="677" key="search.everywhere.popup/0.23.1440.828@0.23.1440.828" timestamp="1592999047792" />
-    <state x="385" y="80" width="670" height="680" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1593187830373" />
+    <state x="385" y="80" width="670" height="680" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1593193538965" />
     <state x="385" y="80" width="670" height="681" key="search.everywhere.popup/0.23.1440.830@0.23.1440.830" timestamp="1593191633934" />
     <state x="385" y="80" width="670" height="681" key="search.everywhere.popup/0.23.1440.831@0.23.1440.831" timestamp="1593113033498" />
     <state x="385" y="80" width="670" height="682" key="search.everywhere.popup/0.23.1440.832@0.23.1440.832" timestamp="1593112697794" />

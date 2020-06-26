@@ -28,6 +28,7 @@ Route::prefix('admin')->group(function (){
     Route::get('all-users','Backend\DashboardController@all_users')->name('all-users');
     Route::get('all-trainers','Backend\DashboardController@all_trainers')->name('all_trainers');
     Route::get('all-accounts','Backend\DashboardController@accounts')->name('accounts');
+    Route::get('all-courses','Backend\DashboardController@courses')->name('courses');
     Route::get('slider','Backend\DashboardController@slider')->name('slider');
     Route::get('category','Backend\DashboardController@categories')->name('category');
     Route::get('delete/category','Frontend\CategoryController@delete_category')->name('delete_category');

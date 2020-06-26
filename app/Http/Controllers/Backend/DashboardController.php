@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Course;
 use App\Slider;
 use App\User;
 use Illuminate\Http\Request;
@@ -28,6 +29,11 @@ class DashboardController extends Controller
     public function accounts(){
         $data = "";
         return view('backend.admin.accounts.home', compact('data'));
+
+    }
+    public function courses(){
+        $data = Course::all();
+        return view('backend.admin.courses.home', compact('data'));
 
     }
     public function all_trainers(){
