@@ -110,9 +110,9 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $slider = Slider::find($request->id);
+        $slider = Category::find($request->id);
         if($request->hasfile('logo')){
 
             $postData = $request->only('logo');
@@ -150,7 +150,7 @@ class CategoryController extends Controller
         }
 //        dd($imgname);
 
-        $category = Category::create(['name'=>$request->name,'logo'=>$imgname]);
+        $category = Category::where('id',$request->id)->update(['name'=>$request->name,'logo'=>$imgname]);
 
         if ($category){
             return redirect()->back();
