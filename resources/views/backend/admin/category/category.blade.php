@@ -36,7 +36,10 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
+
                 <tbody>
+                @if($data)
+                    @foreach($data as $row)
                     <tr>
 {{--						<td>--}}
 {{--							<span class="custom-checkbox">--}}
@@ -44,8 +47,7 @@
 {{--								<label for="checkbox1"></label>--}}
 {{--							</span>--}}
 {{--						</td>--}}
-                        @if($data)
-                        @foreach($data as $row)
+
                         <td>{{$row->name}}</td>
                             <td>
                                 @if($row->image!="")
@@ -61,9 +63,10 @@
                             <a href="" data-id="{{$row->id}}" id="edit_cat"  class="edit category_edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
-                            @endforeach
-                        @endif
+
                     </tr>
+                    @endforeach
+                    @endif
                 </tbody>
               </table>
               </div>
@@ -106,7 +109,7 @@
 <div id="edit_category" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form  id="category_form" method="POST" action="{{url('admin/edit-slider-data')}}" enctype="multipart/form-data">
+            <form  id="category_form" method="POST" action="{{url('admin/update/category')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-header">
                     <h4 class="modal-title">Edit Slider</h4>
