@@ -78,45 +78,59 @@
               <div class="ct-chart" id="dailySalesChart"></div>
             </div>
             <div class="card-body">
-              <h4 class="card-title">Daily Sales</h4>
-              <p class="card-category">
-                <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
-            </div>
-            <div class="card-footer">
-              <div class="stats">
-                <i class="material-icons">access_time</i> updated 4 minutes ago
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-chart">
-            <div class="card-header card-header-warning">
-              <div class="ct-chart" id="websiteViewsChart"></div>
-            </div>
-            <div class="card-body">
-              <h4 class="card-title">Email Subscriptions</h4>
-              <p class="card-category">Last Campaign Performance</p>
-            </div>
-            <div class="card-footer">
-              <div class="stats">
-                <i class="material-icons">access_time</i> campaign sent 2 days ago
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-chart">
-            <div class="card-header card-header-danger">
-              <div class="ct-chart" id="completedTasksChart"></div>
-            </div>
-            <div class="card-body">
-              <h4 class="card-title">Completed Tasks</h4>
-              <p class="card-category">Last Campaign Performance</p>
-            </div>
-            <div class="card-footer">
-              <div class="stats">
-                <i class="material-icons">access_time</i> campaign sent 2 days ago
+              <div class="row">
+                  <div class="table-responsive">
+
+                  <table class="table table-striped table-hover" id="table_id">
+                <thead>
+                    <tr>
+{{--						<th>--}}
+{{--							<span class="custom-checkbox">--}}
+{{--								<input type="checkbox" id="selectAll">--}}
+{{--								<label for="selectAll"></label>--}}
+{{--							</span>--}}
+{{--						</th>--}}
+                        <th>Name</th>
+                        <th>Icon</th>
+{{--						<th>Address</th>--}}
+{{--                        <th>Phone</th>--}}
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                @if($data)
+                    @foreach($data as $row)
+                    <tr>
+{{--						<td>--}}
+{{--							<span class="custom-checkbox">--}}
+{{--								<input type="checkbox" id="checkbox1" name="options[]" value="1">--}}
+{{--								<label for="checkbox1"></label>--}}
+{{--							</span>--}}
+{{--						</td>--}}
+
+                        <td>{{$row->name}}</td>
+                            <td>
+                                @if($row->image!="")
+                                    <img src="{{asset('category/'.$row->logo)}}" style="width: 75px;" >
+                                @else
+                                    <img src="{{url('image/dummy.jpg')}} " style="width: 75px;">
+                                @endif
+                            </td>
+
+                            {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
+{{--                        <td>(171) 555-2222</td>--}}
+                        <td>
+                            <a href="" data-id="{{$row->id}}" id="edit_cat"  class="edit category_edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                        </td>
+
+                    </tr>
+                    @endforeach
+                    @endif
+                </tbody>
+              </table>
+                  </div>
               </div>
             </div>
           </div>

@@ -20,7 +20,8 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <table class="table table-striped table-hover" id="table_id">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover" id="table_id">
                             <thead>
                             <tr>
 
@@ -55,6 +56,7 @@
 
                             </tbody>
                         </table>
+                        </div>
                     </div>
                 </div>
             </div>
