@@ -57,8 +57,8 @@
                             {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
 {{--                        <td>(171) 555-2222</td>--}}
                         <td>
-                            <a href="" data-id="{{$row->id}}" id="edit_cat"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            <a href="" data-id="{{$row->id}}" id="edit_cat"  class="edit_category" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
                 </tbody>
@@ -99,6 +99,27 @@
         </div>
     </div>
 </div>
+<div id="edit_categoryr" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form  id="category_form" method="POST" action="{{url('admin/edit-slider-data')}}" enctype="multipart/form-data">
+                @csrf
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Slider</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body" id="replace">
+                </div>
+
+                <div class="modal-footer">
+                    <input type="button"  class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-info" value="Update">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 {{--@section('script')--}}
 
 @endsection
@@ -112,7 +133,7 @@
             "order": [[ 2, "desc" ]]
         } );
     } );
-    $( "body" ).on( "click", ".removePartner", function () {
+    $(document).on('click', '.removePartner', function (evt) {
         var task_id = $( this ).attr( "data-id" );
         var form_data = {
             id: task_id
@@ -129,11 +150,11 @@
         }).then( ( result ) => {
             if ( result.value == true ) {
                 $.ajax( {
-                    type: 'POST',
+                    type: 'get',
                     headers: {
                         'X-CSRF-TOKEN': $( 'meta[name="csrf-token"]' ).attr( 'content' )
                     },
-                    url: '<?php echo url("delete/sauce"); ?>',
+                    url: '<?php echo url("admin/delete/category"); ?>',
                     data: form_data,
                     success: function ( msg ) {
                         swal( "Record Delete Successfully", '', 'success' )
@@ -148,4 +169,41 @@
     } );
 
 
+</script>
+<script>
+    $(document).on('click', '.slider_edit', function (evt) {
+        var task_id = $( this ).attr( "data-id" );
+        var form_data = {
+            id: task_id
+        }
+        $.ajax({
+            type: 'get',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: '{{url('admin/edit_slider')}}',
+            data: form_data,
+            success: function (response) {
+                if(response.status == "success") {
+                    var html ="";
+                    html += '<input type="hidden" name="id" value="'+response.data.id+ '" >';
+                    html += '<div class="form-group">' ;
+                    html +=  '<label>Title</label>' ;
+                    html += '<input type="text" class="form-control" value="'+response.data.title+ '" name="heading" required>' ;
+                    html +=  '</div>' ;
+                    html += '<div class="form-group">' ;
+                    html += '<label>Heading</label>' ;
+                    html += '<input type="text" class="form-control" value="'+response.data.heading+ '" name="sub_heading" required>';
+                    html += '</div>';
+                    html += '<div class="btn btn-primary btn-sm float-left">';
+                    html +=  '<span>Choose file</span>';
+                    html +=  '<input type="file" name="image" accept="image/*" required>' ;
+                    html +=  '</div>';
+                    $('#replace').html(html);
+                    $('#edit_slider').modal('toggle');
+
+                }
+            }
+        });
+    });
 </script>
