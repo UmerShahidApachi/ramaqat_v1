@@ -42,6 +42,7 @@ border:1px solid #570055;
 .white-btn{
 background-color: #fff;
 border: 1px solid #570055;
+color:#570055;
 }
 .white-btn:hover{
     background-color: #570055;
@@ -64,15 +65,16 @@ ul{
 }
 ul.ulDBlockMenu li{
     display: inline-block;
-    margin:0px 10px;
+    margin:0px 0px;
     text-align: center;
 }
+
 ul.ulDBlock{
     list-style: none;
 }
 ul.ulDBlock li{
     display: inline-block;
-    margin:0px 10px;
+    margin:0px 8px;
     text-align: center;
 
 }
@@ -185,7 +187,86 @@ ul.social-login li{
 .accordion-head h6,.black-text{
    color:#484848;
 }
+.over-view{
+    /* display: flex;
+    line-height: 2; */
+}
+.over-view span{
+    color:#fff;
+}
+.over-view-box{
+padding: 15px 0px;
+}
+.text-start{
+    text-align: start;
+}
+.heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color:#570055;
+}
+.trainee-img{
+ width: 247px;
+ height:247px;
 
+}
+.social{
+
+}
+.student-box{
+  width:100%;
+  height:auto;
+  border-radius: 10px;
+  padding: 15px 10px !important;
+}
+.student-box:hover{
+
+}
+.student-img{
+    width:72px;
+    height:72px;
+}
+.stu-name{
+    color:#570055;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 70px;
+    margin-left: 15px;
+}
+.stu-description{
+    width: 100%;
+display: block;
+display: -webkit-box;
+max-width: 100%;
+margin: 0 auto;
+-webkit-line-clamp: 5;
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
+
+}
+.book-sec{
+    background-image: url('../img/bookbg.png');
+    color: #fff;
+    padding: 20px 10px;
+}
+ul.tranee-social li{
+    display: inline-block;
+    margin: 10px 5px;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+color:#fff;
+background-color: #570055;
+border:1px solid #570055;
+}
+.nav-tabs{
+    background-color: #E4E4E4;
+    color:#570055;
+}
+.nav-tabs .nav-item a{
+    color:#570055;
+}
 /* Slider Style */
 /* Custom Select */
 .custom-select {
@@ -193,6 +274,7 @@ ul.social-login li{
     height: auto;
     background: none;
     border: none;
+    width:110px;
   }
 
   .custom-select select {
@@ -222,20 +304,40 @@ ul.social-login li{
   }
 
   /* style the items (options), including the selected item: */
+   .select-selected{
+       color:#570055 !important;
+   }
   .select-items div,.select-selected {
-    color: #570055;
     padding: 8px 16px;
+    color:#fff;
     cursor: pointer;
   }
 
   /* Style items (options): */
   .select-items {
     position: absolute;
-    background-color: DodgerBlue;
+    background-color:#570055;
+    color:#fff;
     top: 100%;
     left: 0;
     right: 0;
     z-index: 99;
+    border-radius: .4em;
+    border:1px solid #fff;
+
+  }
+  .select-items:after{
+    content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 7px solid transparent;
+	border-bottom-color: #570055;
+	border-top: 0;
+	margin-left: -7px;
+	margin-top: -7px;
   }
 
   /* Hide the items when the select box is closed: */
@@ -334,7 +436,7 @@ ul.social-login li{
 /* End */
 @media screen and (min-width:320px) and (max-width:768px){
     ul.ulDBlockMenu li{
-        width:40%;
+        width:25%;
     }
     ul.ulDBlock-top li{
         width: 48%;
@@ -344,8 +446,8 @@ ul.social-login li{
         padding: 15px 20px !important;
     }
     .SubInput{
-      width:225px;
-      margin-top: 10px;
+      width:185px;
+      margin-top: 30px;
   }
   ul.Offers li {
     margin: .5rem 0rem 1rem 0rem;
