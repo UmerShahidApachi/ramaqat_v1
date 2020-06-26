@@ -58,7 +58,7 @@
 {{--                        <td>(171) 555-2222</td>--}}
                         <td>
                             <a href="" data-id="{{$row->id}}" id="edit_cat"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
                 </tbody>
@@ -112,7 +112,7 @@
             "order": [[ 2, "desc" ]]
         } );
     } );
-    $( "body" ).on( "click", ".removePartner", function () {
+    $(document).on('click', '.removePartner', function (evt) {
         var task_id = $( this ).attr( "data-id" );
         var form_data = {
             id: task_id
@@ -129,11 +129,11 @@
         }).then( ( result ) => {
             if ( result.value == true ) {
                 $.ajax( {
-                    type: 'POST',
+                    type: 'get',
                     headers: {
                         'X-CSRF-TOKEN': $( 'meta[name="csrf-token"]' ).attr( 'content' )
                     },
-                    url: '<?php echo url("delete/sauce"); ?>',
+                    url: '<?php echo url("admin/delete/category"); ?>',
                     data: form_data,
                     success: function ( msg ) {
                         swal( "Record Delete Successfully", '', 'success' )

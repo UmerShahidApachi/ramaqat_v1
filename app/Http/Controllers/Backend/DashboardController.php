@@ -118,7 +118,13 @@ class DashboardController extends Controller
 
 
     }
+    public function delete_category(Request $request){
+        Slider::where('id',$request->id)->delete();
+
+
+    }
     public function categories(){
+//        dd('sda');
         $data = Category::all();
         return view('backend.admin.category.category', compact('data'));
 
