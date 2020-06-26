@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87c89e9d-b62d-4d09-8666-53ffecf75c08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/category/5ef6138039dd6Screenshot2020-06-18at1.12.32PM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/DashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/category/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/category/category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,10 +183,11 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="450" y="239" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.827@0.23.1440.827" timestamp="1592942807700" />
-    <state x="458" y="191" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593115659300">
-      <screen x="0" y="23" width="1440" height="831" />
+    <state x="458" y="191" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1593185998987">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
-    <state x="458" y="191" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.830@0.23.1440.830" timestamp="1593111611792" />
+    <state x="458" y="191" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.829@0.23.1440.829" timestamp="1593185901028" />
+    <state x="458" y="191" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.830@0.23.1440.830" timestamp="1593185998987" />
     <state x="458" y="191" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.831@0.23.1440.831" timestamp="1593115659300" />
     <state x="458" y="191" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.832@0.23.1440.832" timestamp="1593108103867" />
     <state x="368" y="83" key="#phpunit.xml" timestamp="1593111328157">
@@ -202,12 +198,12 @@
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="397" y="261" key="com.intellij.ide.util.TipDialog/0.23.1440.828@0.23.1440.828" timestamp="1592990770855" />
-    <state x="385" y="80" width="670" height="680" key="search.everywhere.popup" timestamp="1593185295555">
+    <state x="385" y="80" width="670" height="680" key="search.everywhere.popup" timestamp="1593185869898">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="385" y="80" width="670" height="676" key="search.everywhere.popup/0.23.1440.827@0.23.1440.827" timestamp="1592941168069" />
     <state x="385" y="80" width="670" height="677" key="search.everywhere.popup/0.23.1440.828@0.23.1440.828" timestamp="1592999047792" />
-    <state x="385" y="80" width="670" height="680" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1593185295555" />
+    <state x="385" y="80" width="670" height="680" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1593185869898" />
     <state x="385" y="80" width="670" height="681" key="search.everywhere.popup/0.23.1440.830@0.23.1440.830" timestamp="1593111142260" />
     <state x="385" y="80" width="670" height="681" key="search.everywhere.popup/0.23.1440.831@0.23.1440.831" timestamp="1593113033498" />
     <state x="385" y="80" width="670" height="682" key="search.everywhere.popup/0.23.1440.832@0.23.1440.832" timestamp="1593112697794" />

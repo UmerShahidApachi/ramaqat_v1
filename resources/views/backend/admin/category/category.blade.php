@@ -192,19 +192,15 @@
                     var html ="";
                     html += '<input type="hidden" name="id" value="'+response.data.id+ '" >';
                     html += '<div class="form-group">' ;
-                    html +=  '<label>Title</label>' ;
-                    html += '<input type="text" class="form-control" value="'+response.data.title+ '" name="heading" required>' ;
+                    html +=  '<label>Name</label>' ;
+                    html += '<input type="text" class="form-control" value="'+response.data.name+ '" name="name" required>' ;
                     html +=  '</div>' ;
-                    html += '<div class="form-group">' ;
-                    html += '<label>Heading</label>' ;
-                    html += '<input type="text" class="form-control" value="'+response.data.heading+ '" name="sub_heading" required>';
-                    html += '</div>';
                     html += '<div class="btn btn-primary btn-sm float-left">';
                     html +=  '<span>Choose file</span>';
-                    html +=  '<input type="file" name="image" accept="image/*" required>' ;
+                    html +=  '<input type="file" name="logo" accept="image/*" required>' ;
                     html +=  '</div>';
                     $('#replace').html(html);
-                    $('#edit_slider').modal('toggle');
+                    $('#edit_category').modal('toggle');
 
                 }
             }
