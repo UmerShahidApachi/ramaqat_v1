@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87c89e9d-b62d-4d09-8666-53ffecf75c08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/category/5ef617548baa9Screenshot2020-06-18at4.11.51PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/category/5ef6179466714Screenshot2020-06-18at11.02.56AM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/category/5ef617aa9e056Screenshot2020-06-18at11.58.20PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/category/5ef6184bb36d7Screenshot2020-06-18at1.12.32PM.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/category/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/category/category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/admin/slider/slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/admin/slider/slider.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
