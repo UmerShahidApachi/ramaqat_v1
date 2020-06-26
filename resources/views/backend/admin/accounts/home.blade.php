@@ -9,7 +9,7 @@
                     <div class="table-title">
                         <div class="row">
                             <div class="col-sm-6">
-                                <h2>Manage <b>All Users</b></h2>
+                                <h2>Manage <b>Accounts</b></h2>
                             </div>
 {{--                            <div class="col-sm-6">--}}
 {{--                                <a href="#addCategory" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Category</span></a>--}}
@@ -31,14 +31,12 @@
                                     {{--								<label for="selectAll"></label>--}}
                                     {{--							</span>--}}
                                     {{--						</th>--}}
-                                    <th>Name</th>
-                                    <th>Image</th>
-                                    <th>Email</th>
-                                    <th>Address</th>
-                                    <th>Phone</th>
-                                    <th>Cnic</th>
-                                    <th>Country</th>
-                                    <th>Date of Birth</th>
+                                    <th>Purchesd By</th>
+                                    <th>Price</th>
+                                    <th>Trainer</th>
+                                    <th>Category</th>
+                                    <th>Course</th>
+                                    <th>Date</th>
                                 </tr>
                                 </thead>
 
@@ -64,9 +62,6 @@
                                             <td>{{$row->email}}</td>
                                             <td>{{$row->address}}</td>
                                             <td>{{$row->phone}}</td>
-                                            <td>{{$row->cnic}}</td>
-                                            <td>{{$row->country}}</td>
-                                            <td>{{$row->date_of_birth}}</td>
 
                                             {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
                                             {{--                        <td>(171) 555-2222</td>--}}

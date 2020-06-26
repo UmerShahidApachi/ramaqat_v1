@@ -52,8 +52,8 @@
 
                         <td>{{$row->name}}</td>
                             <td>
-                                @if($row->image!="")
-                                    <img src="{{asset('category/'.$row->logo)}}" style="width: 75px;" >
+                                @if($row->logo!="")
+                                    <img src="{{asset('category/' .$row->logo)}}" style="width: 75px;" >
                                 @else
                                     <img src="{{url('image/dummy.jpg')}} " style="width: 75px;">
                                 @endif
@@ -62,7 +62,7 @@
                             {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
 {{--                        <td>(171) 555-2222</td>--}}
                         <td>
-                            <a href="" data-id="{{$row->id}}" id="edit_cat"  class="edit category_edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="" data-id="{{$row->id}}" id="edit_cat"  class="edit category_edit"><i class="material-icons" data-toggle="" title="Edit">&#xE254;</i></a>
                             <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
 
@@ -118,7 +118,7 @@
                     <h4 class="modal-title">Edit Slider</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
-                <div class="modal-body" id="replace">
+                <div class="modal-body" id="replace1">
                 </div>
 
                 <div class="modal-footer">
@@ -205,7 +205,7 @@
                     html +=  '<span>Choose file</span>';
                     html +=  '<input type="file" name="logo" accept="image/*" required>' ;
                     html +=  '</div>';
-                    $('#replace').html(html);
+                    $('#replace1').html(html);
                     $('#edit_category').modal('toggle');
 
                 }

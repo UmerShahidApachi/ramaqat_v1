@@ -7,46 +7,12 @@
                 <i class="fadeIn fa fa-youtube-play"></i>
                 <div class="font16 white-text">All</div>
             </li>
+            @foreach($categories as $cat)
             <li>
-                <i class='fadeIn fa fa-calculator'></i>
-                <div class="font16 white-text">Accountancy</div>
+                <img class='fadeIn' src="{{asset('category/'. $cat->image)}}"></img>
+                <div class="font16 white-text">{{$cat->name}}</div>
             </li>
-            <li>
-                <i class='fadeIn fa fa-area-chart'></i>
-                <div class="font16 white-text">Art</div>
-            </li>
-            <li>
-                <i class='fadeIn fa fa-cc-amex'></i>
-                <div class="font16 white-text">Cooking</div>
-            </li>
-            <li>
-                <a href="{{ route('online-course') }}"><i class="fadeIn fa fa-graduation-cap"></i></a>
-                <div class="font16 white-text">Educational</div>
-            </li>
-            <li>
-                <i class='fadeIn fa fa-balance-scale'></i>
-                <div class="font16 white-text">Finance</div>
-            </li>
-            <li>
-                <i class='fadeIn fa fa-photo'></i>
-                <div class="font16 white-text">Graphic design</div>
-            </li>
-            <li>
-                <i class='fadeIn fa fa-medkit'></i>
-                <div class="font16 white-text">Health</div>
-            </li>
-            <li>
-                <i class='fadeIn fa fa-sitemap'></i>
-                <div class="font16 white-text">Interior design</div>
-            </li>
-            <li>
-                <i class="fadeIn fa fa-desktop"></i>
-                <div class="font16 white-text">IT and Tech</div>
-            </li>
-            <li>
-                <i class="fadeIn fa fa-language"></i>
-                <div class="font16 white-text">language</div>
-            </li>
+            @endforeach
 
         </ul>
     </div>
@@ -63,39 +29,41 @@
     <!--/.Indicators-->
     <!--Slides-->
     <div class="carousel-inner" role="listbox">
+        @foreach($slider as $s)
         <div class="carousel-item active">
             <div class="view">
-                <img class="d-block w-100" src="{{asset('assets/frontend/img/slider-11.png')}}" alt="First slide">
+                <img class="d-block w-100" src="{{asset('slider/'.$s->image)}}" alt="First slide">
                 <div class="mask rgba-black-light"></div>
             </div>
             <div class="carousel-caption">
-                <h3 class="h3-responsive font45">Light mask</h3>
-                <p class="font35">First text</p>
+                <h3 class="h3-responsive font45">{{$s->title}}</h3>
+                <p class="font35">{{$s->heading}}</p>
             </div>
         </div>
-        <div class="carousel-item">
-            <!--Mask color-->
-            <div class="view">
-                <img class="d-block w-100" src="{{asset('assets/frontend/img/slider-11.png')}}" alt="Second slide">
-                <div class="mask rgba-black-strong"></div>
-            </div>
-            <div class="carousel-caption">
-                <h3 class="h3-responsive font45">Strong mask</h3>
-                <p class="font35">Secondary text</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <!--Mask color-->
-            <div class="view">
-                <img class="d-block w-100" src="{{asset('assets/frontend/img/slider-11.png')}}" alt="Third slide">
-                <div class="mask rgba-black-slight"></div>
-            </div>
-            <div class="carousel-caption">
-                <h3 class="h3-responsive font45">Slight mask</h3>
-                <p class="font35">Third text</p>
-            </div>
-        </div>
-    </div>
+        @endforeach
+{{--        <div class="carousel-item">--}}
+{{--            <!--Mask color-->--}}
+{{--            <div class="view">--}}
+{{--                <img class="d-block w-100" src="{{asset('assets/frontend/img/slider-11.png')}}" alt="Second slide">--}}
+{{--                <div class="mask rgba-black-strong"></div>--}}
+{{--            </div>--}}
+{{--            <div class="carousel-caption">--}}
+{{--                <h3 class="h3-responsive font45">Strong mask</h3>--}}
+{{--                <p class="font35">Secondary text</p>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="carousel-item">--}}
+{{--            <!--Mask color-->--}}
+{{--            <div class="view">--}}
+{{--                <img class="d-block w-100" src="{{asset('assets/frontend/img/slider-11.png')}}" alt="Third slide">--}}
+{{--                <div class="mask rgba-black-slight"></div>--}}
+{{--            </div>--}}
+{{--            <div class="carousel-caption">--}}
+{{--                <h3 class="h3-responsive font45">Slight mask</h3>--}}
+{{--                <p class="font35">Third text</p>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <!--/.Slides-->
     <!--Controls-->
     <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Slider;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -21,8 +23,15 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
     public function index()
     {
         return view('home');
+    }
+    public function home()
+    {
+        $categories = Category::all();
+        $slider = Slider::all();
+        return view('home.frontend.index',compact('slider','categories'));
     }
 }

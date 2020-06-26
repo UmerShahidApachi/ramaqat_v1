@@ -36,11 +36,11 @@ class CategoryController extends Controller
 
             $file = $postData['logo'];
 
-            $fileArray = array('image' => $file);
+            $fileArray = array('logo' => $file);
 
             // Tell the validator that this file should be an image
             $rules = array(
-                'image' => 'mimes:jpeg,jpg,png,gif|required|max:10000' // max 10000kb
+                'logo' => 'mimes:jpeg,jpg,png,gif|required|max:10000' // max 10000kb
             );
 
             // Now pass the input and rules into the validator
@@ -99,6 +99,7 @@ class CategoryController extends Controller
      */
     public function edit(Request $request)
     {
+//        dd($request->all());
         $slider = Category::find($request->id);
         return response()->json(['status' => 'success', 'data'=>$slider ]);
     }

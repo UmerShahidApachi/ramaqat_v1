@@ -9,7 +9,7 @@
                     <div class="table-title">
                         <div class="row">
                             <div class="col-sm-6">
-                                <h2>Manage <b>All Users</b></h2>
+                                <h2>Manage <b>All Trainers</b></h2>
                             </div>
 {{--                            <div class="col-sm-6">--}}
 {{--                                <a href="#addCategory" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Category</span></a>--}}
