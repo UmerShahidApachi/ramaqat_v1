@@ -2,49 +2,47 @@
 <header>
  <!-- Start your project here-->
  <nav>
-    <div class="container d-flex justify-content-between top-header">
+    <div class="d-flex justify-content-between top-header">
+      <div class="col-12 col-sm-3">
       <ul class="ulDBlockMenu">
         <li>
-          <img src="{{asset('assets/frontend/img/toggle.png')}}" class="openbtn" onclick="openNav()">
+          <img src="{{asset('assets/frontend/img/toggle-menu.png')}}" class="openbtn" onclick="openNav()">
         </li>
         <li>
           <img class="animated fadeIn logo_img" src="{{asset('assets/frontend/img/logo.png')}}">
         </li>
 
       </ul>
+      </div>
+      <div class="col-12 col-sm-4">
       <div class="HeaderSearch d-none d-sm-block">
         <input class="SearchInput z-depth-1" type="search" placeholder="Search">
         <img class="plumIcon" src="{{asset('assets/frontend/img/search (2).png')}}">
       </div>
-      <ul class="ulDBlock d-none d-sm-block">
-         <li>
-             <!-- Surround the select box within a "custom-select" DIV element.
-        Remember to set the width: -->
-        <div class="custom-select">
-        <select>
-            <option value="0">Select car:</option>
-            <option value="1">Audi</option>
-            <option value="2">BMW</option>
-            <option value="3">Citroen</option>
-            <option value="4">Ford</option>
-            <option value="5">Honda</option>
-            <option value="6">Jaguar</option>
-            <option value="7">Land Rover</option>
-            <option value="8">Mercedes</option>
-            <option value="9">Mini</option>
-            <option value="10">Nissan</option>
-            <option value="11">Toyota</option>
-            <option value="12">Volvo</option>
-        </select>
-        </div>
-         </li>
-        <li>
-            <a href="{{route('login')}}"><button class="btn white-btn">Login</button></a>
-        </li>
-        <li>
-            <a href="{{route('register')}}"><button class="btn plum-btn">Signup</button></a>
-        </li>
-      </ul>
+      </div>
+      <div class="col-12 col-sm-5">
+        <ul class="ulDBlock d-none d-sm-block">
+            <li>
+                <div class="custom-select">
+                <select>
+                    <option class="plum-text" value="0">Language</option>
+                    <option value="1">English</option>
+                    <option value="1">Arabic</option>
+                </select>
+                </div>
+            </li>
+            <li><img src="{{asset('assets/frontend/img/line.png')}}" alt="cart"></li>
+            <li>
+            <a href="#"><img src="{{asset('assets/frontend/img/supermarket.png')}}" alt="cart"></a>
+            </li>
+            <li>
+                <a href="{{route('login')}}"><button class="btn white-btn">Login</button></a>
+            </li>
+            <li>
+                <a href="{{route('register')}}"><button class="btn plum-btn">Signup</button></a>
+            </li>
+        </ul>
+      </div>
 
     </div>
   </nav>
