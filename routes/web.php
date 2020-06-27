@@ -45,7 +45,10 @@ Route::prefix('admin')->group(function (){
 
 //trainer
 Route::prefix('trainer')->group(function () {
-    Route::get('dashboard','Trainer\DashboardController@dashboard')->name('dashboard');
+    Route::get('dashboard','Trainer\DashboardController@dashboard')->name('Trainer/dashboard');
+    Route::get('my-courses','Trainer\DashboardController@courses')->name('my_courses');
+    Route::get('add-course','Frontend\CourseController@create')->name('course_data');
+
 
 });
 Route::POST('save_category','Frontend\CategoryController@create')->name('save_category');
@@ -60,5 +63,7 @@ Route::get('progressView','progresscontroller@fileUpload')->name('progressView')
 Route::post('progressStore','progresscontroller@fileStore')->name('progressStore');
 
 Auth::routes();
+Route::get('/logout', 'Auth\LoginController@logout');
+
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -18,6 +18,7 @@ class CreateCoursesTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('duration');
+            $table->text('thumbnail');
             $table->string('views_counter');
             $table->integer('price');
             $table->bigInteger('user_id')->unsigned()->nullable();

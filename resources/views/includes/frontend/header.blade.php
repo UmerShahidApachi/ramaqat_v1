@@ -35,12 +35,22 @@
             <li>
             <a href="#"><img src="{{asset('assets/frontend/img/supermarket.png')}}" alt="cart"></a>
             </li>
+            @guest
             <li>
                 <a href="{{route('login')}}"><button class="btn white-btn">Login</button></a>
             </li>
             <li>
                 <a href="{{route('register')}}"><button class="btn plum-btn">Signup</button></a>
             </li>
+                @endguest
+            @auth
+                <li>
+                    <a href=""><button class="btn white-btn">{{\Illuminate\Support\Facades\Auth::user()->name}}</button></a>
+                </li>
+                <li>
+                    <a href="{{route('logout')}}"><button class="btn plum-btn">Logout</button></a>
+                </li>
+                @endauth
         </ul>
       </div>
 
