@@ -32,6 +32,13 @@ Route::prefix('admin')->group(function (){
     Route::get('delete-slider','Backend\DashboardController@delete_slider');
 
 });
+
+
+//trainer
+Route::prefix('trainer')->group(function () {
+    Route::get('dashboard','Trainer\DashboardController@dashboard')->name('dashboard');
+
+});
 Route::POST('save_category','Frontend\CategoryController@create')->name('save_category');
 Route::get('userlogin','Frontend\LoginController@userLogin')->name('login');
 Route::get('user-register','Frontend\RegisterController@userRegister')->name('register');
