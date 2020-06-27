@@ -44,66 +44,84 @@ The above copyright notice and this permission notice shall be included in all c
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
+          <li class="nav-item {{ Request::segment(2) == 'dashboard'? 'active':'' }}  ">
+            <a class="nav-link" href="{{route('dashboard')}}">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
+          <li class="nav-item {{ Request::segment(2) == 'all-users'? 'active':'' }} ">
+            <a class="nav-link" href="{{route('all-users')}}">
               <i class="material-icons">person</i>
-              <p>User Profile</p>
+              <p>All User</p>
             </a>
           </li>
-          <li class="nav-item ">
+            <li class="nav-item {{ Request::segment(2) == 'all_trainers'? 'active':'' }} ">
+            <a class="nav-link" href="{{route('all_trainers')}}">
+              <i class="material-icons">person</i>
+              <p>All Trainers</p>
+            </a>
+          </li>
+            <li class="nav-item {{ Request::segment(2) == 'courses'? 'active':'' }} ">
+            <a class="nav-link" href="{{route('courses')}}">
+              <i class="material-icons">content_paste</i>
+              <p>Courses</p>
+            </a>
+          </li>
+            <li class="nav-item {{ Request::segment(2) == 'accounts'? 'active':'' }} ">
+            <a class="nav-link" href="{{route('accounts')}}">
+              <i class="material-icons">content_paste</i>
+              <p>Accounts</p>
+            </a>
+          </li>
+          <li class="nav-item {{ Request::segment(2) == 'category'? 'active':'' }}">
             <a class="nav-link" href="{{route('category')}}">
               <i class="material-icons">content_paste</i>
               <p>Category</p>
             </a>
           </li>
-            <li class="nav-item ">
+            <li class="nav-item {{ Request::segment(2) == 'slider'? 'active':'' }} ">
             <a class="nav-link" href="{{route('slider')}}">
               <i class="material-icons">content_paste</i>
               <p>Slider</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./typography.html">
-              <i class="material-icons">library_books</i>
-              <p>Typography</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
-              <i class="material-icons">bubble_chart</i>
-              <p>Icons</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
-              <i class="material-icons">location_ons</i>
-              <p>Maps</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./notifications.html">
-              <i class="material-icons">notifications</i>
-              <p>Notifications</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./rtl.html">
-              <i class="material-icons">language</i>
-              <p>RTL Support</p>
-            </a>
-          </li>
-          <li class="nav-item active-pro ">
-            <a class="nav-link" href="./upgrade.html">
-              <i class="material-icons">unarchive</i>
-              <p>Upgrade to PRO</p>
-            </a>
-          </li>
+{{--          <li class="nav-item ">--}}
+{{--            <a class="nav-link" href="./typography.html">--}}
+{{--              <i class="material-icons">library_books</i>--}}
+{{--              <p>Typography</p>--}}
+{{--            </a>--}}
+{{--          </li>--}}
+{{--          <li class="nav-item ">--}}
+{{--            <a class="nav-link" href="./icons.html">--}}
+{{--              <i class="material-icons">bubble_chart</i>--}}
+{{--              <p>Icons</p>--}}
+{{--            </a>--}}
+{{--          </li>--}}
+{{--          <li class="nav-item ">--}}
+{{--            <a class="nav-link" href="./map.html">--}}
+{{--              <i class="material-icons">location_ons</i>--}}
+{{--              <p>Maps</p>--}}
+{{--            </a>--}}
+{{--          </li>--}}
+{{--          <li class="nav-item ">--}}
+{{--            <a class="nav-link" href="./notifications.html">--}}
+{{--              <i class="material-icons">notifications</i>--}}
+{{--              <p>Notifications</p>--}}
+{{--            </a>--}}
+{{--          </li>--}}
+{{--          <li class="nav-item ">--}}
+{{--            <a class="nav-link" href="./rtl.html">--}}
+{{--              <i class="material-icons">language</i>--}}
+{{--              <p>RTL Support</p>--}}
+{{--            </a>--}}
+{{--          </li>--}}
+{{--          <li class="nav-item active-pro ">--}}
+{{--            <a class="nav-link" href="./upgrade.html">--}}
+{{--              <i class="material-icons">unarchive</i>--}}
+{{--              <p>Upgrade to PRO</p>--}}
+{{--            </a>--}}
+{{--          </li>--}}
         </ul>
       </div>
     </div>
@@ -199,11 +217,11 @@ The above copyright notice and this permission notice shall be included in all c
         <div class="container-fluid">
           <nav class="float-left">
             <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
+{{--              <li>--}}
+{{--                <a href="https://www.creative-tim.com">--}}
+{{--                  Creative Tim--}}
+{{--                </a>--}}
+{{--              </li>--}}
               <li>
                 <a href="https://creative-tim.com/presentation">
                   About Us
@@ -225,8 +243,8 @@ The above copyright notice and this permission notice shall be included in all c
             &copy;
             <script>
               document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+            </script>, All Rights @ reserved</i> by Ramaqat
+{{--            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.--}}
           </div>
         </div>
       </footer>

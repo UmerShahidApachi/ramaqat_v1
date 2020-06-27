@@ -27,7 +27,7 @@
 
                                 <th>Heading</th>
                                 <th>Sub-Heading</th>
-                                <th>Icon</th>
+                                <th>Image</th>
 
                                 <th>Actions</th>
                             </tr>
