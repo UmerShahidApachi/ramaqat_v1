@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Category;
+use App\Slider;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home.frontend.index');
+    $categories = Category::all();
+    $slider = Slider::all();
+    return view('home.frontend.index',compact('slider','categories'));
 });
 /**
  * admin routes
@@ -22,9 +26,14 @@ Route::get('/', function () {
 Route::prefix('admin')->group(function (){
     Route::get('dashboard','Backend\DashboardController@dashboard')->name('dashboard');
     Route::get('all-users','Backend\DashboardController@all_users')->name('all-users');
+    Route::get('all-trainers','Backend\DashboardController@all_trainers')->name('all_trainers');
+    Route::get('all-accounts','Backend\DashboardController@accounts')->name('accounts');
+    Route::get('all-courses','Backend\DashboardController@courses')->name('courses');
     Route::get('slider','Backend\DashboardController@slider')->name('slider');
     Route::get('category','Backend\DashboardController@categories')->name('category');
-    Route::get('delete/category','Backend\DashboardController@delete_category')->name('delete_category');
+    Route::get('delete/category','Frontend\CategoryController@delete_category')->name('delete_category');
+    Route::post('edit/category','Frontend\CategoryController@edit')->name('edit_category');
+    Route::post('update/category','Frontend\CategoryController@update')->name('update_category');
 
     Route::post('add-slider-data','Backend\DashboardController@sliderdata')->name('slider-data');
     Route::get('edit_slider','Backend\DashboardController@edit_slider')->name('slider-edit');

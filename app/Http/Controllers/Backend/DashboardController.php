@@ -6,7 +6,9 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Course;
 use App\Slider;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
@@ -20,7 +22,23 @@ class DashboardController extends Controller
         return view('backend.admin.dashboard.home');
     }
     public function all_users(){
-        return view('backend.admin.users.home');
+        $data = User::all();
+        return view('backend.admin.users.home', compact('data'));
+
+    }
+    public function accounts(){
+        $data = "";
+        return view('backend.admin.accounts.home', compact('data'));
+
+    }
+    public function courses(){
+        $data = Course::all();
+        return view('backend.admin.courses.home', compact('data'));
+
+    }
+    public function all_trainers(){
+        $data = User::all();
+        return view('backend.admin.trainers.home', compact('data'));
 
     }
     public function slider(){
@@ -118,11 +136,7 @@ class DashboardController extends Controller
 
 
     }
-    public function delete_category(Request $request){
-        Slider::where('id',$request->id)->delete();
 
-
-    }
     public function categories(){
 //        dd('sda');
         $data = Category::all();
