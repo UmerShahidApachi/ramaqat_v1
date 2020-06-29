@@ -45,6 +45,7 @@
                                 @if($data)
                                     @foreach($data as $row)
                                         <tr>
+{{--                                            {{dd($row->category)}}--}}
                                             <td>{{$row->category->name}}</td>
                                             <td>{{$row->name}}</td>
                                             <td>
@@ -58,7 +59,8 @@
                                             <td>{{$row->description}}</td>
                                             <td>{{$row->duration}}</td>
                                             <td>{{$row->created_at}}</td>
-                                            <td><a href="{{url('view-lessons/'.$row->id)}}"><button>View Lessons</button></a></td>
+                                            <td><a href="{{url('trainer/view-lessons/'.$row->id)}}"><i class="fa fa-eye"></i></a>
+                                            <a href="{{url('trainer/edit-course/'.$row->id)}}"><i class="fa fa-edit"></i></a></td>
 
                                             {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
                                             {{--                        <td>(171) 555-2222</td>--}}

@@ -9,11 +9,11 @@
                     <div class="table-title">
                         <div class="row">
                             <div class="col-sm-6">
-                                <h2>My <b>Courses</b></h2>
+                                <h2>Course <b>Lessons</b></h2>
                             </div>
                             <div class="col-sm-6">
                                 <a href="{{url('trainer/add-lesson-form')}}" class="btn btn-success" data-toggle=""><i
-                                        class="material-icons">&#xE147;</i> <span>Add New Course</span></a>
+                                        class="material-icons">&#xE147;</i> <span>Add New Lesson</span></a>
                             </div>
                         </div>
                     </div>
@@ -45,6 +45,7 @@
                                 @if($data)
                                     @foreach($data as $row)
                                         <tr>
+                                            {{--                                            {{dd($row->category)}}--}}
                                             <td>{{$row->category->name}}</td>
                                             <td>{{$row->name}}</td>
                                             <td>
@@ -58,7 +59,8 @@
                                             <td>{{$row->description}}</td>
                                             <td>{{$row->duration}}</td>
                                             <td>{{$row->created_at}}</td>
-                                            <td><a href="{{url('view-lessons/'.$row->id)}}"><button>View Lessons</button></a></td>
+                                            <td><a href="{{url('trainer/view-lessons/'.$row->id)}}"><i class="fa fa-eye"></i></a>
+                                                <a href="{{url('view-lessons/'.$row->id)}}"><i class="fa fa-edit"></i></a></td>
 
                                             {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
                                             {{--                        <td>(171) 555-2222</td>--}}
@@ -86,10 +88,7 @@
 <link rel="stylesheet" href="http://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
-<script>
-    CKEDITOR.replace('description');
-</script>
+
 <script>
 
     $(document).ready(function () {

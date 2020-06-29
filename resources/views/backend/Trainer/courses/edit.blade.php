@@ -1,10 +1,11 @@
 @extends('backend.Trainer.layouts.app')
 @section('customSection')
     <div class="container mt-5">
-    <form  id="course_form" method="POST" action="{{route('course_data')}}" enctype="multipart/form-data">
+    <form  id="course_form" method="POST" action="{{route('update-course')}}" enctype="multipart/form-data">
         @csrf
+        <input type="hidden" name="id" value="{{$course->id}}">
         <div class="modal-header">
-            <h4 class="modal-title">Add Course</h4>
+            <h4 class="modal-title">Edit Course</h4>
         </div>
 
             <div class="row">
@@ -13,8 +14,7 @@
                 <label>Category</label>
                 <select class="form-control" name="category_id" required>
                     @foreach($categories as $c)
-                        <option value="{{$c->id}}">{{$c->name}}</option>
-
+                        <option value="{{$c->id}}" @if($course->category_id == $c->id) selected @endif>{{$c->name}}</option>
                     @endforeach
                 </select>
             </div>
@@ -25,13 +25,13 @@
             <div class="col-6">
             <div class="form-group">
                 <label>Course Name</label>
-                <input type="text" class="form-control" name="name" required>
+                <input type="text" class="form-control" name="name" value="{{$course->name}}" required>
             </div>
             </div>
             <div class="col-6">
             <div class="form-group">
                 <label>Duration</label>
-                <input type="text" class="form-control" name="duration" required>
+                <input type="text" class="form-control" name="duration" value="{{$course->duration}}" required>
             </div>
             </div>
             </div>
@@ -40,13 +40,13 @@
             <div class="col-6">
             <div class="form-group">
                 <label>Price</label>
-                <input type="number" class="form-control" name="price" required>
+                <input type="number" class="form-control" name="price" value="{{$course->price}}" required>
             </div>
             </div>
             <div class="col-6">
             <div class="btn btn-primary btn-sm float-left">
                 <span>Choose file</span>
-                <input type="file" name="image" accept="image/*" required>
+                <input type="file" name="image" accept="image/*"  required>
             </div>
             </div>
             </div>
@@ -54,7 +54,7 @@
             <div class="col-12">
             <div class="form-group">
                 <label>Description</label>
-                <textarea id="description"  class="form-control description" name="description" required></textarea>
+                <textarea id="description"  class="form-control" name="description" required>{{$course->description}}</textarea>
             </div>
             </div>
             </div>
@@ -68,7 +68,3 @@
     </form>
     </div>
 @endsection
-<script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
-<script>
-    CKEDITOR.replace('description');
-</script>

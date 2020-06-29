@@ -7,6 +7,8 @@ use App\Models\Category;
 use App\Models\Course;
 use App\Slider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 
 class CourseController extends Controller
@@ -66,7 +68,7 @@ class CourseController extends Controller
         }
 //        dd($imgname);
 
-        $category = Course::create(['category_id'=>$request->category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price,'thumbnail'=>$imgname]);
+        $category = Course::create(['category_id'=>$request->category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
 
         if ($category){
             return redirect()->back();
@@ -93,7 +95,8 @@ class CourseController extends Controller
     public function show()
     {
         $categories = Category::all();
-        return view('backend.trainer.courses.add', compact('categories'));    }
+        return view('backend.trainer.courses.add', compact('categories'));
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -103,7 +106,9 @@ class CourseController extends Controller
      */
     public function edit($id)
     {
-        //
+        $course = Course::find($id);
+        $categories = Category::all();
+        return view('backend.trainer.courses.edit', compact('categories','course'));
     }
 
     /**
@@ -113,9 +118,52 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+//        dd($request->all());
+        $slider = Course::find($request->id);
+        if($request->hasfile('image')){
+
+            $postData = $request->only('image');
+
+            $file = $postData['image'];
+
+            $fileArray = array('image' => $file);
+
+            // Tell the validator that this file should be an image
+            $rules = array(
+                'image' => 'mimes:jpeg,jpg,png,gif|required|max:10000' // max 10000kb
+            );
+
+            // Now pass the input and rules into the validator
+            $validator = Validator::make($fileArray, $rules);
+
+
+            // Check to see if validation fails or passes
+            if ($validator->fails())
+            {
+                return redirect()->back()->with('alert','Upload Image only')->withInput();
+            }
+
+            $destinationpath=public_path("course/".$slider->image);
+            File::delete($destinationpath);
+            $file=$request->file('image');
+            $filename = str_replace(' ', '', $file->getClientOriginalName());
+            $ext=$file->getClientOriginalExtension();
+            $imgname=uniqid().$filename;
+            $destinationpath=public_path('course');
+            $file->move($destinationpath,$imgname);
+        }else{
+            $imgname=$slider->image;
+
+        }
+
+        $category = Course::where('id',$request->id)->update(['category_id'=>$request->category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
+
+        if ($category){
+            return redirect(url('trainer/my-courses'));
+        }
+
     }
 
     /**

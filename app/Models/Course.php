@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
@@ -9,10 +10,10 @@ class Course extends Model
     protected $guarded = [''];
     public function users()
     {
-        return $this->hasMany('App\User','user_id','id');
+        return $this->hasMany(User::class,'id','user_id');
     }
     public function category()
     {
-        return $this->hasMany('App\Category','category_id','id');
+        return $this->belongsTo(Category::class,'category_id');
     }
 }
