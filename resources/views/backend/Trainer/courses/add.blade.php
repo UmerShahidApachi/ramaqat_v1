@@ -12,12 +12,10 @@
             <div class="form-group select-dropdown">
                 <label>Category</label>
                 <select class="form-control" name="category_id" required>
-                    {{--@foreach($categories as $c)--}}
-                        <option>Test1</option>
-                        <option>Test2</option>
-                        <option>Test3</option>
-                        <option>Test4</option>
-                    {{--@endforeach--}}
+                    @foreach($categories as $c)
+                        <option value="{{$c->id}}">{{$c->name}}</option>
+
+                    @endforeach
                 </select>
             </div>
             </div>

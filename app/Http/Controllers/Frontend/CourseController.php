@@ -36,6 +36,7 @@ class CourseController extends Controller
      */
     public function create(Request $request)
     {
+//        dd($request->all());
         if ($request->hasfile('image')) {
             $postData = $request->only('image');
 

@@ -19,7 +19,7 @@ class CreateCoursesTable extends Migration
             $table->string('description');
             $table->string('duration');
             $table->text('thumbnail');
-            $table->string('views_counter');
+            $table->string('views_counter')->default(0);
             $table->integer('price');
             $table->bigInteger('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

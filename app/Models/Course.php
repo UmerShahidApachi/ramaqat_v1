@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
+    protected $guarded = [''];
     public function users()
     {
         return $this->hasMany('App\User','user_id','id');

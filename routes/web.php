@@ -48,7 +48,7 @@ Route::prefix('trainer')->group(function () {
     Route::get('dashboard','Trainer\DashboardController@dashboard')->name('Trainer/dashboard');
     Route::get('my-courses','Trainer\DashboardController@courses')->name('my_courses');
     Route::get('add-form','Frontend\CourseController@show')->name('form');
-    Route::get('add-course','Frontend\CourseController@create')->name('course_data');
+    Route::post('add-course','Frontend\CourseController@create')->name('course_data');
     Route::get('view-lessons/{id}','LessonController@index')->name('lessons');
     Route::get('add-lesson-form','LessonController@show')->name('form');
 
