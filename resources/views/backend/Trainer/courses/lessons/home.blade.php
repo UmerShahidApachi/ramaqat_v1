@@ -12,7 +12,7 @@
                                 <h2>Course <b>Lessons</b></h2>
                             </div>
                             <div class="col-sm-6">
-                                <a href="{{url('trainer/add-lesson-form')}}" class="btn btn-success" data-toggle=""><i
+                                <a href="{{url('trainer/add-lesson-form/'.$id)}}" class="btn btn-success" data-toggle=""><i
                                         class="material-icons">&#xE147;</i> <span>Add New Lesson</span></a>
                             </div>
                         </div>
