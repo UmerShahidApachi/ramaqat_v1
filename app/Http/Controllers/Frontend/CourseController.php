@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Course;
 use App\Slider;
 use Illuminate\Http\Request;
@@ -88,10 +89,10 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
-    }
+        $categories = Category::all();
+        return view('backend.trainer.courses.add', compact('categories'));    }
 
     /**
      * Show the form for editing the specified resource.
