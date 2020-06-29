@@ -273,3 +273,6 @@ table.table .avatar {
 .modal form label {
     font-weight: normal;
 }
+.form-group {
+    padding-bottom: 30px;
+}
