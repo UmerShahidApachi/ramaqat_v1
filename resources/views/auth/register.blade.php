@@ -55,6 +55,9 @@
                             <!-- Default input -->
                                 <input id="password-confirm" placeholder="Re-Type Password" type="password" class="custom-height form-control" name="password_confirmation" required autocomplete="new-password">
                         </div>
+                        <div class="col-12 mx-auto mb-3">
+                            <input type="checkbox" name="trainer" value="1" > As Trainer
+                        </div>
 
                     </div>
                     <!-- Grd row -->
