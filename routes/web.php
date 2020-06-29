@@ -47,6 +47,7 @@ Route::prefix('admin')->group(function (){
 Route::prefix('trainer')->group(function () {
     Route::get('dashboard','Trainer\DashboardController@dashboard')->name('Trainer/dashboard');
     Route::get('my-courses','Trainer\DashboardController@courses')->name('my_courses');
+    Route::get('add-form','Frontend\CourseController@show')->name('form');
     Route::get('add-course','Frontend\CourseController@create')->name('course_data');
 
 
