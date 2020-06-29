@@ -31,13 +31,12 @@
                                     {{--								<label for="selectAll"></label>--}}
                                     {{--							</span>--}}
                                     {{--						</th>--}}
-                                    <th>Category</th>
-                                    <th>Name</th>
-                                    <th>Thumbnail</th>
+                                    <th>Course</th>
+                                    <th>Lesson No.</th>
+                                    <th>Lesson Name</th>
                                     <th>Description</th>
-                                    <th>Duration</th>
                                     <th>Created at</th>
-                                    <th>Action</th>
+{{--                                    <th>Action</th>--}}
                                 </tr>
                                 </thead>
 
@@ -46,21 +45,13 @@
                                     @foreach($data as $row)
                                         <tr>
                                             {{--                                            {{dd($row->category)}}--}}
-                                            <td>{{$row->category->name}}</td>
-                                            <td>{{$row->name}}</td>
-                                            <td>
-                                                @if($row->thumbnail!="")
-                                                    <img src="{{asset('course/' .$row->thumbnail)}}"
-                                                         style="width: 75px;">
-                                                @else
-                                                    <img src="{{url('image/dummy.jpg')}} " style="width: 75px;">
-                                                @endif
-                                            </td>
+                                            <td>{{$row->course->name}}</td>
+                                            <td>{{$row->lesson_no}}</td>
+                                            <td>{{$row->title}}</td>
                                             <td>{{$row->description}}</td>
-                                            <td>{{$row->duration}}</td>
                                             <td>{{$row->created_at}}</td>
-                                            <td><a href="{{url('trainer/view-lessons/'.$row->id)}}"><i class="fa fa-eye"></i></a>
-                                                <a href="{{url('view-lessons/'.$row->id)}}"><i class="fa fa-edit"></i></a></td>
+{{--                                            <td><a href="{{url('trainer/view-lessons/'.$row->id)}}"><i class="fa fa-eye"></i></a>--}}
+{{--                                                <a href="{{url('view-lessons/'.$row->id)}}"><i class="fa fa-edit"></i></a></td>--}}
 
                                             {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
                                             {{--                        <td>(171) 555-2222</td>--}}

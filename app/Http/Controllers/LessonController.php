@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Lesson;
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class LessonController extends Controller
@@ -39,6 +40,8 @@ class LessonController extends Controller
      */
     public function store(Request $request)
     {
+//        dd($request->all());
+
         $course = Course::find($request->course_id);
         if ($request->hasfile('document')) {
             $postData = $request->only('document');
@@ -71,7 +74,8 @@ class LessonController extends Controller
         }
 
 
-
+//dd($request->file('video'));
+        $video = "";
         if ($request->hasfile('video')) {
             $postData = $request->only('video');
 
@@ -80,8 +84,8 @@ class LessonController extends Controller
             $fileArray = array('video' => $file);
 
             // Tell the validator that this file should be an image
-            $rules = array(
-//                'document' => 'mimes:jpeg,jpg,png,gif|required|max:10000' // max 10000kb
+            $rules = array(//                '
+                'video'          =>'mimes:mpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts|max:100040|required'
             );
 
             // Now pass the input and rules into the validator
@@ -96,11 +100,23 @@ class LessonController extends Controller
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $ext = $file->getClientOriginalExtension();
             $video = uniqid() . $filename;
-            $destinationpath = public_path('course/'.$course->name.'/');
+            $destinationpath = public_path('course/' . $course->name . '/');
             $file->move($destinationpath, $video);
-
-
         }
+            if ($request->hasfile('document')) {
+
+                $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name,'lesson_no' => $request->l_num, 'description' => $request->description, 'video_path' => $video, 'extra_document' => $imgname]);
+            }else{
+
+            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num,'description' => $request->description, 'video_path' => $video]);
+
+            }
+            if ($category){
+                return redirect()->back();
+            }
+
+
+
 
     }
 

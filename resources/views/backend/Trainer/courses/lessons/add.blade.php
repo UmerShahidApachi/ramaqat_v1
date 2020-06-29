@@ -1,10 +1,6 @@
 @extends('backend.Trainer.layouts.app')
 @section('customSection')
-    <style>
-        .progress { position:relative; width:100%; }
-        .bar { background-color: #008000; width:0%; height:20px; }
-        .percent { position:absolute; display:inline-block; left:50%; color: #7F98B2;}
-    </style>
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
     <div class="container mt-5">
@@ -33,7 +29,7 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label>Lesson Number*</label>
-                        <input type="number" min="0" class="form-control" name="name" required>
+                        <input type="number" min="0" class="form-control" name="l_num" required>
                     </div>
                 </div>
                 <div class="col-6">
@@ -49,8 +45,13 @@
                         <span>Choose Video*</span>
                         <input type="file" name="video" accept="video/*" required>
                         <div class="progress">
-                            <div class="bar"></div >
-                            <div class="percent">0%</div >
+                        <div class="progress-bar" role="progressbar" aria-valuenow=""
+                             aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                            0%
+                        </div>
+                    </div>
+                        <div id="success">
+
                         </div>
                     </div>
                 </div>
@@ -83,29 +84,35 @@
 <script>
     CKEDITOR.replace('description');
 </script>
-<script type="text/javascript">
-    $(function() {
-        $(document).ready(function()
-        {
-            var bar = $('.bar');
-            var percent = $('.percent');
+<script>
+    $(document).ready(function(){
 
-            $('form').ajaxForm({
-                beforeSend: function() {
-                    var percentVal = '0%';
-                    bar.width(percentVal)
-                    percent.html(percentVal);
-                },
-                uploadProgress: function(event, position, total, percentComplete) {
-                    var percentVal = percentComplete + '%';
-                    bar.width(percentVal)
-                    percent.html(percentVal);
-                },
-                complete: function(xhr) {
-                    // alert('File Uploaded Successfully');
-                    // window.location.href = "/fileupload";
+        $('form').ajaxForm({
+            beforeSend:function(){
+                $('#success').empty();
+            },
+            uploadProgress:function(event, position, total, percentComplete)
+            {
+                $('.progress-bar').text(percentComplete + '%');
+                $('.progress-bar').css('width', percentComplete + '%');
+            },
+            success:function(data)
+            {
+                if(data.errors)
+                {
+                    $('.progress-bar').text('0%');
+                    $('.progress-bar').css('width', '0%');
+                    $('#success').html('<span class="text-danger"><b>'+data.errors+'</b></span>');
                 }
-            });
+                if(data.success)
+                {
+                    $('.progress-bar').text('Uploaded');
+                    $('.progress-bar').css('width', '100%');
+                    $('#success').html('<span class="text-success"><b>'+data.success+'</b></span><br /><br />');
+                    $('#success').append(data.image);
+                }
+            }
         });
+
     });
 </script>

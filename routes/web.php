@@ -53,7 +53,7 @@ Route::prefix('trainer')->group(function () {
     Route::post('update-course','Frontend\CourseController@update')->name('update-course');
     Route::get('view-lessons/{id}','LessonController@index')->name('lessons');
     Route::get('add-lesson-form/{id}','LessonController@show')->name('form');
-    Route::post('add-lesson','LessonController@create')->name('add_lesson');
+    Route::post('add-lesson','LessonController@store')->name('add_lesson');
 
 
 });
