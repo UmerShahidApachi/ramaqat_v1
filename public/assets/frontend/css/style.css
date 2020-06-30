@@ -191,10 +191,10 @@ margin:0px 5px 0px 5px;
     color: #fff;
 }
 .custom-height{
-    padding: 20px 15px;
+    padding: 10px 15px;
 }
 .img-bg{
-    height: 100vh;
+    /* height: 100vh; */
     background-image: url("../img/bg-img.png");
     background-size: cover;
     overflow: hidden;

@@ -66,8 +66,11 @@
                 </form>
                 <!-- Default form row -->
 
-                <br>
-                <div>Still not member?&nbsp;<span><a href="">Sign up</a></span></div>
+                <div>Aleady Register?&nbsp;<span><a href="">Login</a></span></div>
+                <hr style="background-color:#fff;">
+                <div class="col-12">
+                    <bitton style="border-radius:5px;" class="btn white-btn waves-effect waves-light w-100">Trainer</buton>
+                </div>
             </div>
             <div class="font36 plum-text mt-3 mb-3">تخطى</div>
         </div>
