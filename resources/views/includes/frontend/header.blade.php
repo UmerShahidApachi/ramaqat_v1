@@ -31,7 +31,7 @@
                 </select>
                 </div>
             </li>
-            <li><img src="{{asset('assets/frontend/img/line.png')}}" alt="cart"></li>
+{{--            <li><img src="{{asset('assets/frontend/img/line.png')}}" alt="cart"></li>--}}
             <li>
             <a href="#"><img src="{{asset('assets/frontend/img/cart.png')}}" alt="cart"></a>
             </li>

@@ -36,7 +36,7 @@
                                     <th>Lesson Name</th>
                                     <th>Description</th>
                                     <th>Created at</th>
-{{--                                    <th>Action</th>--}}
+                                    <th>Action</th>
                                 </tr>
                                 </thead>
 
@@ -50,8 +50,9 @@
                                             <td>{{$row->title}}</td>
                                             <td>{{$row->description}}</td>
                                             <td>{{$row->created_at}}</td>
-{{--                                            <td><a href="{{url('trainer/view-lessons/'.$row->id)}}"><i class="fa fa-eye"></i></a>--}}
-{{--                                                <a href="{{url('view-lessons/'.$row->id)}}"><i class="fa fa-edit"></i></a></td>--}}
+                                            <td>
+{{--                                                <a href="{{url('trainer/view-lessons/'.$row->id)}}"><i class="fa fa-eye"></i></a>--}}
+                                                <a href="{{url('view-lessons/'.$row->id)}}"><i class="fa fa-edit"></i></a></td>
 
                                             {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
                                             {{--                        <td>(171) 555-2222</td>--}}
