@@ -20,6 +20,9 @@ body{
     font-size: 35px;
     color:#570055;
 }
+h2{
+    font-weight: 600;
+}
 .plum-text{
     color: #570055;
 }
@@ -136,8 +139,9 @@ nav{
     border: 1px solid transparent;
 }
 footer{
-    background-color: #484848;
-    border: 1px solid #707070;
+    background-color: #fff;
+    color:#707070;
+    font-size: 18px;
     padding: 30px 5px;
 }
 ul.SocialLinks {
@@ -152,8 +156,29 @@ ul.Offers{
 
 }
 ul.Offers li{
-    margin:.5rem 0rem 2rem 0rem;
+    margin:.5rem 0rem .5rem 0rem;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    font-size: 17px;
 }
+.copyright{
+    display: inline-flex;
+    justify-content: space-around;
+    font-size: 17px;
+    cursor: pointer;
+}
+ul.Social li{
+display: inline-block;
+margin:0px 5px 0px 5px;
+}
+.text-end{
+    text-align: end;
+}
+
+/* ul.Offers li:hover{
+    border-bottom: 1px solid #570055;
+    transition: .5s;
+} */
 .inputform{
     padding: 15px 20px;
     border-radius: 20px;
@@ -185,7 +210,10 @@ ul.social-login li{
     line-height: 6;
 }
 .accordion-head h6,.black-text{
-   color:#484848;
+   color:#fff;
+}
+.accordion-head h6{
+   margin-bottom: 0px;
 }
 .over-view{
     /* display: flex;
@@ -268,6 +296,28 @@ border:1px solid #570055;
     color:#570055;
 }
 /* Slider Style */
+.multi-img{
+    width: 338px;
+    height: 200px;
+    position: relative;
+}
+.thumbnail-img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+.trainer-name{
+font-size: 12px;
+color:#fff;
+}
+.img-hover{
+ position:absolute;
+ top:0;
+}
+.hover-bg{
+    background-color: #484848;
+}
 /* Custom Select */
 .custom-select {
     position: relative;
@@ -349,6 +399,75 @@ border:1px solid #570055;
     background-color: rgba(0, 0, 0, 0.1);
   }
 /* ENd */
+
+/* Course-detail */
+.course-name{
+    color:#fff;
+    padding: 50px 10px;
+}
+ul.rating{
+
+}
+ul.rating li{
+    display: inline-block;
+    margin:0px 5px 0px 0px;
+}
+ul.rating li:nth-child(6){
+    margin: 0px 10px 0px 10px;
+}
+ul.rating li img{
+    /* width:50%; */
+}
+.feature-box{
+    color:#570055;
+    padding: 50px 10px;
+    position: relative;
+}
+ul.feature-list li{
+    display: inline-block;
+    margin: 0px 15px 0px 5px;
+}
+.feature{
+    border: 1px solid #570055;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+.course-img{
+    width:273px;
+    height:164px;
+    border-radius: 10px;
+}
+.course-cart{
+position: absolute;
+border: 1px solid #fff;
+border-radius: 10px;
+background-color: #fff;
+top: -16rem;
+    right: 53rem;
+    padding: 10px;
+}
+.course-play{
+    position: absolute;
+    right: 7rem;
+    top: 3rem;
+}
+ul.course-price li{
+    display: inline-block;
+}
+.w-90{
+    width:90%;
+}
+.height-2{
+    height:2px;
+    background-color: #570055;
+}
+.course-description{
+    color: #570055;
+    padding: 30px 10px;
+}
+.Description-text{
+
+}
 @media (min-width: 768px) {
 
     .multi-item-carousel .carousel-inner .carousel-item {
@@ -420,9 +539,9 @@ border:1px solid #570055;
     transform: scale(1.5);
   }
   .accordion-head i{
-    font-size: 2.5em;
+    font-size: 1.5em;
     float: right;
-    color:#484848;
+    color:#fff;
 }
 
 .accordion-head > .collapsed > i:before{
@@ -432,6 +551,11 @@ border:1px solid #570055;
     max-height:337px;
     height: 337px;
     overflow-y:scroll;
+}
+.card-header{
+    padding: 8  px 15px;
+    background-color: #570055;
+    color:#fff;
 }
 /* End */
 @media screen and (min-width:320px) and (max-width:768px){

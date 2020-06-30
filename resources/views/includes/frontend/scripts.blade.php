@@ -1,6 +1,6 @@
 <!-- jQuery -->
 <script type="text/javascript" src="{{asset('assets/frontend/js/jquery.min.js')}}"></script>
-{{--<script src=”https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js”></script>--}}
+
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="{{asset('assets/frontend/js/popper.min.js')}}"></script>
 <!-- Bootstrap core JavaScript -->
@@ -11,7 +11,7 @@
 <script type="text/javascript" src="{{asset('assets/frontend/js/script.js')}}" ></script>
 <!-- Your custom scripts (optional) -->
  <script type="text/javascript" src="{{asset('assets/frontend/js/custom.js')}}"></script>
-<!-- <script>
+<script>
 $('.multi-item-carousel').on('slide.bs.carousel', function (e) {
     let $e = $(e.relatedTarget),
       itemsPerSlide = 3,
@@ -40,4 +40,4 @@ document.getElementById("mySidebar").style.width = "0";
 document.getElementById("main").style.marginLeft= "0";
 }
 
-</script> -->
+</script>

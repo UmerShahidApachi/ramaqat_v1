@@ -106,44 +106,61 @@
 </div>
 
 <div class="heading mt-3">Latest Videos</div>
-<div class="container mt-3 mb-3">
+
+<div class="container mt-5 mb-5">
     <div class="carousel slide multi-item-carousel" id="theCarousel">
-        <div class="carousel-inner row w-100 mx-auto">
-            <div class="carousel-item active col-md-4">
-                <a href="#"><img class="zoom" src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block"></a>
+      <div class="carousel-inner row w-100 mx-auto">
+        <div class="carousel-item active col-md-4 p-0">
+           <div class="multi-img">
+           <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="thumbnail-img">
+           <!-- <div class="img-hover">
+               <div class="row hover-bg">
+                <div class="col-4">
+                 <div class="course-traine-img">
+                 <img src="{{asset('assets/frontend/img/user-1.png')}}" class="">
+                  </div>
+                </div>
+                <div class="col-5">
+                   <div class="trainer-name">Miss Nabeela</div>
+                </div>
+                <div class="col-3"></div>
             </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
-            </div>
+           </div> -->
+           </div>
+
         </div>
-        <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#theCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        <div class="carousel-item col-md-4">
+          <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#theCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-</div>
+  </div>
 <!-- Product Slider End -->
 <div>
     <div class="col-12 col-sm-10 offset-md-1 mt-5">
@@ -276,7 +293,7 @@
   </div>
   <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
   <div class="mt-3 mb-3">
-    <div class="carousel slide multi-item-carousel" id="theCarousel">
+    <!-- <div class="carousel slide multi-item-carousel" id="theCarousel">
         <div class="carousel-inner row w-100 mx-auto">
             <div class="carousel-item active col-md-4">
                 <a href="#"><img class="zoom" src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block"></a>
@@ -311,7 +328,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>
+    </div> -->
 </div>
   </div>
 </div>
