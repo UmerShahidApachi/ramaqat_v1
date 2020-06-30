@@ -54,10 +54,16 @@ Route::prefix('trainer')->group(function () {
     Route::get('add-form','Frontend\CourseController@show')->name('form');
     Route::post('add-course','Frontend\CourseController@create')->name('course_data');
     Route::get('edit-course/{id}','Frontend\CourseController@edit')->name('edit-course');
+    Route::get('delete/{id}','Frontend\CourseController@delete')->name('delete');
     Route::post('update-course','Frontend\CourseController@update')->name('update-course');
     Route::get('view-lessons/{id}','LessonController@index')->name('lessons');
+    Route::get('edit-lessons/{id}','LessonController@edit')->name('edit_lesson');
     Route::get('add-lesson-form/{id}','LessonController@show')->name('form');
+    Route::get('edit-lesson-form/{id}','LessonController@edit')->name('edit_form');
     Route::post('add-lesson','LessonController@store')->name('add_lesson');
+    Route::post('update-lesson','LessonController@store')->name('update_lesson');
+    Route::get('delete-lesson/{id}','LessonController@delete')->name('delete');
+
 
 
 });

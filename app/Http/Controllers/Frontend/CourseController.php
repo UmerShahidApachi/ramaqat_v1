@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Lesson;
 use App\Models\Category;
 use App\Models\Course;
 use App\Slider;
@@ -175,5 +176,12 @@ class CourseController extends Controller
     public function destroy($id)
     {
         //
+
+    }
+    public function delete($id)
+    {
+        Lesson::where('course_id',$id)->delete();
+        Course::where('id',$id)->delete();
+        return redirect()->back();
     }
 }

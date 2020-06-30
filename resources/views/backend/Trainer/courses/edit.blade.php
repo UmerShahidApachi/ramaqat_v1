@@ -63,7 +63,7 @@
 
         <div class="modal-footer">
             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-            <input type="submit" class="btn btn-success cat" id="cat">
+            <input type="submit" class="btn btn-success cat" id="cat" value="Update">
         </div>
     </form>
     </div>

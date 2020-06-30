@@ -52,7 +52,8 @@
                                             <td>{{$row->created_at}}</td>
                                             <td>
 {{--                                                <a href="{{url('trainer/view-lessons/'.$row->id)}}"><i class="fa fa-eye"></i></a>--}}
-                                                <a href="{{url('view-lessons/'.$row->id)}}"><i class="fa fa-edit"></i></a></td>
+                                                <a href="{{url('trainer/edit-lessons/'.$row->id)}}"><i class="fa fa-edit"></i></a>
+                                                <a href="{{url('trainer/delete-lesson/'.$row->id)}}"><i class="fa fa-trash"></i></a></td>
 
                                             {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
                                             {{--                        <td>(171) 555-2222</td>--}}

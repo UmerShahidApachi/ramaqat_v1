@@ -9,7 +9,7 @@
             </li>
             @foreach($categories as $cat)
             <li>
-                <i > <img class='fadeIn'  src="{{asset('category/'.$cat->logo)}}"></i>
+{{--                <i > <img class='fadeIn'  src="{{asset('category/'.$cat->logo)}}"></i>--}}
                 <div class="font16 white-text">{{$cat->name}}</div>
             </li>
             @endforeach
@@ -22,9 +22,12 @@
 <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
     <!--Indicators-->
     <ol class="carousel-indicators custum-indicators">
-        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-2" data-slide-to="1"></li>
-        <li data-target="#carousel-example-2" data-slide-to="2"></li>
+        @foreach($slider as $s)
+
+        <li data-target="#carousel-example-2" data-slide-to="{{$s->id}}" class="active"></li>
+        <li data-target="#carousel-example-2" data-slide-to="{{$s->id}}"></li>
+        <li data-target="#carousel-example-2" data-slide-to="{{$s->id}}"></li>
+         @endforeach
     </ol>
     <!--/.Indicators-->
     <!--Slides-->
