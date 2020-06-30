@@ -6,7 +6,7 @@
       <div class="col-12 col-sm-3">
       <ul class="ulDBlockMenu">
         <li>
-          <img src="{{asset('assets/frontend/img/toggle-menu.png')}}" class="openbtn" onclick="openNav()">
+          <img src="{{asset('assets/frontend/img/toggle.png')}}" class="openbtn" onclick="openNav()">
         </li>
         <li>
           <img class="animated fadeIn logo_img" src="{{asset('assets/frontend/img/logo.png')}}">
@@ -33,7 +33,7 @@
             </li>
             <li><img src="{{asset('assets/frontend/img/line.png')}}" alt="cart"></li>
             <li>
-            <a href="#"><img src="{{asset('assets/frontend/img/supermarket.png')}}" alt="cart"></a>
+            <a href="#"><img src="{{asset('assets/frontend/img/cart.png')}}" alt="cart"></a>
             </li>
             @guest
             <li>
@@ -55,7 +55,7 @@
       </div>
 
     </div>
-  </nav>
+</nav>
 
 <!--   sidebar -->
 

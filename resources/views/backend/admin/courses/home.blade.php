@@ -1,5 +1,10 @@
 @extends('backend.admin.layouts.app')
 @section('customSection')
+<style>
+#showform{
+    display:none;
+}
+</style>
     {{--    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>--}}
     {{--    <script type="text/javascript" src="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>--}}
     <div class="content">
@@ -15,13 +20,21 @@
                             {{--                                <a href="#addCategory" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Category</span></a>--}}
                             {{--                                --}}{{--						<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>--}}
                             {{--                            </div>--}}
+                            <div class="col-sm-6">
+                                  <a href="#addCategory" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Category</span></a>
+                            	<div id="hideform" class="btn"> Delete</div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="table-responsive">
-
+                            <div id="showform">
+                                <form>
+                                    Hello
+                                </form>
+                            </div>
                             <table class="table table-striped table-hover" id="table_id">
                                 <thead>
                                 <tr>
@@ -86,4 +99,9 @@
     } );
 
 
+</script>
+<script>
+   $( "#hideform" ).click(function() {
+  $( "#showform" ).toggle( "slow" );
+  });
 </script>
