@@ -497,6 +497,7 @@ class ComposerStaticInit417ee0e2ff336eec7b7ae8cf378944b7
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Backend\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/DashboardController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\CourseSaleController' => __DIR__ . '/../..' . '/app/Http/Controllers/CourseSaleController.php',
         'App\\Http\\Controllers\\Frontend\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Frontend/CategoryController.php',
         'App\\Http\\Controllers\\Frontend\\CourseController' => __DIR__ . '/../..' . '/app/Http/Controllers/Frontend/CourseController.php',
         'App\\Http\\Controllers\\Frontend\\DiscountController' => __DIR__ . '/../..' . '/app/Http/Controllers/Frontend/DiscountController.php',
