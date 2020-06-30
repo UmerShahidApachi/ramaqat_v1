@@ -44,29 +44,6 @@
             </div>
         </div>
         @endforeach
-{{--        <div class="carousel-item">--}}
-{{--            <!--Mask color-->--}}
-{{--            <div class="view">--}}
-{{--                <img class="d-block w-100" src="{{asset('assets/frontend/img/slider-11.png')}}" alt="Second slide">--}}
-{{--                <div class="mask rgba-black-strong"></div>--}}
-{{--            </div>--}}
-{{--            <div class="carousel-caption">--}}
-{{--                <h3 class="h3-responsive font45">Strong mask</h3>--}}
-{{--                <p class="font35">Secondary text</p>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <div class="carousel-item">--}}
-{{--            <!--Mask color-->--}}
-{{--            <div class="view">--}}
-{{--                <img class="d-block w-100" src="{{asset('assets/frontend/img/slider-11.png')}}" alt="Third slide">--}}
-{{--                <div class="mask rgba-black-slight"></div>--}}
-{{--            </div>--}}
-{{--            <div class="carousel-caption">--}}
-{{--                <h3 class="h3-responsive font45">Slight mask</h3>--}}
-{{--                <p class="font35">Third text</p>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
     <!--/.Slides-->
     <!--Controls-->
     <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
@@ -116,19 +93,28 @@
         <div class="carousel-item active col-md-4 p-0">
            <div class="multi-img">
            <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="thumbnail-img">
-           <!-- <div class="img-hover">
+            <div class="img-hover">
                <div class="row hover-bg">
-                <div class="col-4">
+                <div class="col-3 p-0 text-center">
                  <div class="course-traine-img">
                  <img src="{{asset('assets/frontend/img/user-1.png')}}" class="">
                   </div>
                 </div>
-                <div class="col-5">
+                <div class="col-5 p-0">
                    <div class="trainer-name">Miss Nabeela</div>
+                   <div class="course-d mt-2">The Art Painting and Digital Art Course -12 Courses in 1</div>
                 </div>
-                <div class="col-3"></div>
+                <div class="col-4 pt-3">
+                <ul class="card-item">
+              <li><img src="{{asset('assets/frontend/img/star-small-fill.png')}}"></li>
+              <li><img src="{{asset('assets/frontend/img/star-small-fill.png')}}"></li>
+              <li><img src="{{asset('assets/frontend/img/star-small.png')}}"></li>
+              <li>4.8</li>
+              <li>(12)</li>
+            </ul>
+                </div>
             </div>
-           </div> -->
+           </div>
            </div>
 
         </div>
@@ -145,13 +131,13 @@
           <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid">
         </div>
         <div class="carousel-item col-md-4">
-          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+          <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
         </div>
         <div class="carousel-item col-md-4">
-          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+          <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
         </div>
         <div class="carousel-item col-md-4">
-          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+          <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
         </div>
       </div>
       <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">

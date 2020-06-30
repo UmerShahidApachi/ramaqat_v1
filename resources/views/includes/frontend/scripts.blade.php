@@ -1,4 +1,5 @@
 <!-- jQuery -->
+
 <script type="text/javascript" src="{{asset('assets/frontend/js/jquery.min.js')}}"></script>
 
 <!-- Bootstrap tooltips -->
@@ -7,11 +8,11 @@
 <script type="text/javascript" src="{{asset('assets/frontend/js/bootstrap.min.js')}}"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="{{asset('assets/frontend/js/mdb.min.js')}}"></script>
-{{--  myscripte class--}}
+ <!-- myscripte class -->
 <script type="text/javascript" src="{{asset('assets/frontend/js/script.js')}}" ></script>
 <!-- Your custom scripts (optional) -->
  <script type="text/javascript" src="{{asset('assets/frontend/js/custom.js')}}"></script>
-<script>
+ <script>
 $('.multi-item-carousel').on('slide.bs.carousel', function (e) {
     let $e = $(e.relatedTarget),
       itemsPerSlide = 3,

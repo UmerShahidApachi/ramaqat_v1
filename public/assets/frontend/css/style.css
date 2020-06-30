@@ -296,6 +296,76 @@ border:1px solid #570055;
     color:#570055;
 }
 /* Slider Style */
+@media (min-width: 768px) {
+
+    .multi-item-carousel .carousel-inner .carousel-item {
+      margin-right: inherit;
+    }
+    .multi-item-carousel .carousel-inner .carousel-item.active + .carousel-item,
+    .multi-item-carousel .carousel-inner .carousel-item.active + .carousel-item + .carousel-item {
+      display: block;
+    }
+    .multi-item-carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .multi-item-carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .multi-item-carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+      -webkit-transition: none;
+      transition: none;
+    }
+    .multi-item-carousel .carousel-inner .carousel-item.active + .carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -33.33333333%;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+    }
+    .multi-item-carousel .carousel-inner .carousel-item-next,
+    .multi-item-carousel .carousel-inner .carousel-item-prev {
+      position: relative;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .multi-item-carousel .carousel-inner .carousel-item-prev.carousel-item-right {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+    }
+    .multi-item-carousel .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .multi-item-carousel .carousel-item-next.carousel-item-left + .carousel-item,
+    .multi-item-carousel .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .multi-item-carousel .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      -webkit-transform: translate3d(-100%, 0, 0);
+              transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+    .multi-item-carousel .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .multi-item-carousel .carousel-item-prev.carousel-item-right + .carousel-item,
+    .multi-item-carousel .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .multi-item-carousel .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      -webkit-transform: translate3d(100%, 0, 0);
+              transform: translate3d(100%, 0, 0);
+      display: block;
+      visibility: visible;
+    }
+  }
+  .zoom {
+
+    transition: transform .2s;
+    width:100%;
+    height:auto;
+    margin: 0 auto;
+  }
+
+  .zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+  }
 .multi-img{
     width: 338px;
     height: 200px;
@@ -306,6 +376,7 @@ border:1px solid #570055;
     height: 100%;
     object-fit: cover;
     vertical-align: middle;
+    border-radius: 10px;
 }
 .trainer-name{
 font-size: 12px;
@@ -313,10 +384,22 @@ color:#fff;
 }
 .img-hover{
  position:absolute;
- top:0;
+ width:324px;
+ bottom:0;
+}
+ul.card-item li{
+  display: inline-block;
+  color:#fff;
+  font-size: 8px;
+}
+.course-d{
+font-size: 11px;
+color:#fff;
 }
 .hover-bg{
     background-color: #484848;
+    padding: 10px 10px;
+    border-radius: 10px;
 }
 /* Custom Select */
 .custom-select {
@@ -468,7 +551,7 @@ ul.course-price li{
 .Description-text{
 
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 
     .multi-item-carousel .carousel-inner .carousel-item {
       margin-right: inherit;
@@ -524,8 +607,8 @@ ul.course-price li{
       display: block;
       visibility: visible;
     }
-  }
-  .zoom {
+  } */
+  /* .zoom {
 
     transition: transform .2s;
     width:100%;
@@ -534,10 +617,10 @@ ul.course-price li{
   }
 
   .zoom:hover {
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
     transform: scale(1.5);
-  }
+  } */
   .accordion-head i{
     font-size: 1.5em;
     float: right;
