@@ -18,6 +18,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
     'App\\Http\\Controllers\\Backend\\DashboardController' => $baseDir . '/app/Http/Controllers/Backend/DashboardController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\CourseSaleController' => $baseDir . '/app/Http/Controllers/CourseSaleController.php',
     'App\\Http\\Controllers\\Frontend\\CategoryController' => $baseDir . '/app/Http/Controllers/Frontend/CategoryController.php',
     'App\\Http\\Controllers\\Frontend\\CourseController' => $baseDir . '/app/Http/Controllers/Frontend/CourseController.php',
     'App\\Http\\Controllers\\Frontend\\DiscountController' => $baseDir . '/app/Http/Controllers/Frontend/DiscountController.php',

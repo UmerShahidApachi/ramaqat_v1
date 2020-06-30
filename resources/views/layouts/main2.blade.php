@@ -30,5 +30,5 @@
 
 @include('includes.frontend.scripts')
 </body>
-@include('includes.frontend.footer')
+{{--@include('includes.frontend.footer')--}}
 </html>
