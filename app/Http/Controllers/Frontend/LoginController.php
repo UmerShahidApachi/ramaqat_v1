@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -19,6 +22,30 @@ class LoginController extends Controller
     public function userLogin()
     {
         return view('Login.login');
+    }
+    public function login_user(Request $request)
+    {
+//        dd($request->all());
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+//            if (Auth::loginUsingId($user->id)) {
+            session()->flash('main_admin_success','Login Successfully');
+                if (Auth::user()->role_id == 3) {
+                    return redirect(RouteServiceProvider::HOME);
+                }elseif (Auth::user()->role_id == 2){
+                    return redirect(route('Trainer/dashboard'));
+                }elseif (Auth::user()->role_id == 1){
+                    return redirect(route('dashboard'));
+                }
+            } else {
+            session()->flash('main_admin_errors','Invalid User, Email or Password');
+                return response()->json(['status' => 'error']);
+            }
+//        } else {
+//            return redirect()->back()->with(['status' => 'error','message'=>'Invalid Email']);
+//
+//        }
     }
 
     /**

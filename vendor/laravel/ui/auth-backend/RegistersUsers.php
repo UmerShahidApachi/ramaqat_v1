@@ -2,6 +2,7 @@
 
 namespace Illuminate\Foundation\Auth;
 
+use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -63,6 +64,6 @@ trait RegistersUsers
      */
     protected function registered(Request $request, $user)
     {
-        //
+        
     }
 }

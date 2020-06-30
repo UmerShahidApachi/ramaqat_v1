@@ -74,6 +74,12 @@ The above copyright notice and this permission notice shall be included in all c
                         <p>Sales</p>
                     </a>
                 </li>
+                <li class="nav-item {{ Request::segment(2) == 'logout'? 'active':'' }} ">
+                    <a class="nav-link" href="{{route('logout')}}">
+                        <i class="material-icons">person</i>
+                        <p>Logout</p>
+                    </a>
+                </li>
 {{--                <li class="nav-item {{ Request::segment(2) == 'category'? 'active':'' }}">--}}
 {{--                    <a class="nav-link" href="{{route('category')}}">--}}
 {{--                        <i class="material-icons">content_paste</i>--}}
