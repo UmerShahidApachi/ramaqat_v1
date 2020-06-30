@@ -486,6 +486,7 @@ class ComposerStaticInit417ee0e2ff336eec7b7ae8cf378944b7
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\CourseSale' => __DIR__ . '/../..' . '/app/CourseSale.php',
         'App\\CourseVideo' => __DIR__ . '/../..' . '/app/CourseVideo.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
@@ -503,6 +504,7 @@ class ComposerStaticInit417ee0e2ff336eec7b7ae8cf378944b7
         'App\\Http\\Controllers\\Frontend\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Frontend/LoginController.php',
         'App\\Http\\Controllers\\Frontend\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Frontend/RegisterController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\LessonController' => __DIR__ . '/../..' . '/app/Http/Controllers/LessonController.php',
         'App\\Http\\Controllers\\Trainer\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Trainer/DashboardController.php',
         'App\\Http\\Controllers\\progresscontroller' => __DIR__ . '/../..' . '/app/Http/Controllers/progresscontroller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',

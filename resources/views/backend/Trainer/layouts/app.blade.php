@@ -68,12 +68,12 @@ The above copyright notice and this permission notice shall be included in all c
                         <p>My Courses</p>
                     </a>
                 </li>
-{{--                <li class="nav-item {{ Request::segment(2) == 'accounts'? 'active':'' }} ">--}}
-{{--                    <a class="nav-link" href="{{route('accounts')}}">--}}
-{{--                        <i class="material-icons">content_paste</i>--}}
-{{--                        <p>Accounts</p>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                <li class="nav-item {{ Request::segment(2) == 'sell_courses'? 'active':'' }} ">
+                    <a class="nav-link" href="{{route('sell_courses')}}">
+                        <i class="material-icons">content_paste</i>
+                        <p>Sales</p>
+                    </a>
+                </li>
 {{--                <li class="nav-item {{ Request::segment(2) == 'category'? 'active':'' }}">--}}
 {{--                    <a class="nav-link" href="{{route('category')}}">--}}
 {{--                        <i class="material-icons">content_paste</i>--}}

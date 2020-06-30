@@ -9,7 +9,7 @@
             </li>
             @foreach($categories as $cat)
             <li>
-                <img class='fadeIn' src="{{asset('category/'. $cat->image)}}"></img>
+                <i > <img class='fadeIn'  src="{{asset('category/'.$cat->logo)}}"></i>
                 <div class="font16 white-text">{{$cat->name}}</div>
             </li>
             @endforeach

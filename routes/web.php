@@ -40,6 +40,9 @@ Route::prefix('admin')->group(function (){
     Route::post('edit-slider-data','Backend\DashboardController@update_slider')->name('slider-edit-data');
     Route::get('delete-slider','Backend\DashboardController@delete_slider');
 
+    Route::get('sales','Backend\DashboardController@sell_courses')->name('sales');
+
+
 });
 
 
@@ -47,6 +50,7 @@ Route::prefix('admin')->group(function (){
 Route::prefix('trainer')->group(function () {
     Route::get('dashboard','Trainer\DashboardController@dashboard')->name('Trainer/dashboard');
     Route::get('my-courses','Trainer\DashboardController@courses')->name('my_courses');
+    Route::get('sell-courses','Trainer\DashboardController@sell_courses')->name('sell_courses');
     Route::get('add-form','Frontend\CourseController@show')->name('form');
     Route::post('add-course','Frontend\CourseController@create')->name('course_data');
     Route::get('edit-course/{id}','Frontend\CourseController@edit')->name('edit-course');
@@ -58,7 +62,7 @@ Route::prefix('trainer')->group(function () {
 
 });
 Route::POST('save_category','Frontend\CategoryController@create')->name('save_category');
-Route::get('userlogin','Frontend\LoginController@userLogin')->name('login');
+Route::get('userlogin','Frontend\LoginController@userLogin')->name('login-form');
 Route::get('user-register','Frontend\RegisterController@userRegister')->name('register');
 Route::get('online-course','Frontend\CourseController@onlineCourse')->name('online-course');
 Route::get('offline-course','Frontend\CourseController@offlineCourse')->name('offline-course');

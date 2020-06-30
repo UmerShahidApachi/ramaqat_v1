@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\CourseSale' => $baseDir . '/app/CourseSale.php',
     'App\\CourseVideo' => $baseDir . '/app/CourseVideo.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
@@ -24,6 +25,7 @@ return array(
     'App\\Http\\Controllers\\Frontend\\LoginController' => $baseDir . '/app/Http/Controllers/Frontend/LoginController.php',
     'App\\Http\\Controllers\\Frontend\\RegisterController' => $baseDir . '/app/Http/Controllers/Frontend/RegisterController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'App\\Http\\Controllers\\LessonController' => $baseDir . '/app/Http/Controllers/LessonController.php',
     'App\\Http\\Controllers\\Trainer\\DashboardController' => $baseDir . '/app/Http/Controllers/Trainer/DashboardController.php',
     'App\\Http\\Controllers\\progresscontroller' => $baseDir . '/app/Http/Controllers/progresscontroller.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',

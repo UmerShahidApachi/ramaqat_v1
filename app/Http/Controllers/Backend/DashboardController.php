@@ -4,12 +4,14 @@
 namespace App\Http\Controllers\Backend;
 
 
+use App\CourseSale;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Course;
 use App\Slider;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 
@@ -44,6 +46,12 @@ class DashboardController extends Controller
     public function slider(){
        $data =  Slider::all();
         return view('backend.admin.slider.slider', compact('data'));
+
+    }
+
+    public function sell_courses(){
+        $data = CourseSale::all();
+        return view('backend.admin.courses.sales', compact('data'));
 
     }
     public function sliderdata(Request $request){
