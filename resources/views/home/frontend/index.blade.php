@@ -317,7 +317,7 @@
                 </div>
                 @foreach($categories as $cat)
 
-                <div class="tab-pane fade show   {{$cat->name}}" id="{{$cat->name}}" role="tabpanel" aria-labelledby="{{$cat->name}}-tab">
+                <div class="tab-pane fade    {{$cat->name}}" id="{{$cat->name}}" role="tabpanel" aria-labelledby="{{$cat->name}}-tab">
                     <div class="mt-3 mb-3">
                         <div class="carousel slide multi-item-carousel" id="theCarousel">
                             <div class="carousel-inner row w-100 mx-auto">

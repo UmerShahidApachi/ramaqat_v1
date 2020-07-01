@@ -40,7 +40,7 @@ class LoginController extends Controller
                 }
             } else {
             session()->flash('main_admin_errors','Invalid User, Email or Password');
-                return response()->json(['status' => 'error']);
+                return redirect()->back();
             }
 //        } else {
 //            return redirect()->back()->with(['status' => 'error','message'=>'Invalid Email']);
