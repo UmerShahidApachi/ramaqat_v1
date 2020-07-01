@@ -52,7 +52,7 @@
                         <div class="carousel-item">
                             <!--Mask color-->
                             <div class="view">
-                                <img class="d-block w-100" src="{{public_path('slider').'/'.$slide['image']}}"
+                                <img class="d-block w-100" src="{{url('slider').'/'.$slide['image']}}"
                                      alt="Second slide">
                                 <div class="mask rgba-black-strong"></div>
                             </div>
