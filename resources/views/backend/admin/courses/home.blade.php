@@ -59,7 +59,7 @@
                                         <tr>
                                             <td>{{$row->category->name}}</td>
                                             <td>{{$row->name}}</td>
-                                            <td>{{$row->user->name}}</td>
+                                            <td>{{$row->users['name']}}</td>
                                             <td>{{$row->description}}</td>
                                             <td>{{$row->duration}}</td>
                                             <td>{{$row->created_at}}</td>

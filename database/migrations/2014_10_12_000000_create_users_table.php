@@ -35,13 +35,13 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->integer('cnic')->nullable();
+            $table->string('cnic')->nullable();
             $table->string('address')->nullable();
-            $table->integer('experience')->nullable();
+            $table->string('experience')->nullable();
             $table->string('image')->nullable();
             $table->string('country')->nullable();
-            $table->integer('phone')->nullable();
-            $table->integer('date_of_birth')->nullable();
+            $table->string('phone')->nullable();
+            $table->date('date_of_birth')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -60,25 +60,47 @@
 <!--   sidebar -->
 
     <div id="mySidebar" class="sidebar">
+        @auth
             <div class="row login_id">
+                @if(Auth::user()->image == "")
                 <img src="{{asset('assets/frontend/img/singup_person.png')}}">
+                @else
+                    <img src="{{asset('users/'. Auth::user()->image)}}">
+                @endif
 
-              <!-- <div class="mb-1 white-text">Sign up to receive our weekly newsletter</div> -->
-              <div class="flex-center mb-1 mt-1 offline_courses">
-                <u><a class="Socialb plum-text singup_id_name" href="#">Sayed Muhammad Ahtesham</a></u>
-              </div>
-              <p>mahtesham42@gmail.com</p>
+                <!-- <div class="mb-1 white-text">Sign up to receive our weekly newsletter</div> -->
+                <div class="flex-center mb-1 mt-1 offline_courses">
+                    <u><a class="Socialb plum-text singup_id_name" href="">{{Auth::user()->name}}</a></u>
+                </div>
+                <p>{{Auth::user()->email}}</p>
+        @endauth
+                @guest
+                    <div class="row login_id">
+                        <img src="{{asset('assets/frontend/img/singup_person.png')}}">
+
+                        <!-- <div class="mb-1 white-text">Sign up to receive our weekly newsletter</div> -->
+                        <div class="flex-center mb-1 mt-1 offline_courses">
+                            <u><a class="Socialb plum-text singup_id_name" href="{{route('login')}}">Login/Signup</a></u>
+                        </div>
+{{--                        <p>guest</p>--}}
+                    @endguest
 
 
             </div>
             <div class="row sidebar_icons">
               <a href="javascript:void(0)" class="closebtn close_sidbar" onclick="closeNav()">×</a>
+                @auth
+                    @if(Auth::user()->role_id == 2)
+              <a href="{{route('Trainer/dashboard')}}"><img src="{{asset('assets/frontend/img/dark_mode.png')}}">Dashboard</a>
+                    @endif
               <a href="#"><img src="{{asset('assets/frontend/img/dark_mode.png')}}">Dark Mode</a>
               <a href="#"><img src="{{asset('assets/frontend/img/online_courses.png')}}">Online Courses</a>
               <a href="#"><img src="{{asset('assets/frontend/img/offline_courses.png')}}">Offline Courses</a>
               <a href="#"><img src="{{asset('assets/frontend/img/your_courses.png')}}">Your Courses</a>
               <a href="#"><img src="{{asset('assets/frontend/img/favourites%20.png')}}">Favourites </a>
               <a href="#"><img src="{{asset('assets/frontend/img/currency_rate.png')}}">Currency Rate</a>
+              <a href="{{route('logout')}}"><img src="{{asset('assets/frontend/img/currency_rate.png')}}">Logout</a>
+                @endauth
               <a href="#"><img src="{{asset('assets/frontend/img/contact_us.png')}}">Contact Us</a>
             </div>
     </div>

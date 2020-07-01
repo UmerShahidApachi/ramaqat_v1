@@ -50,12 +50,12 @@ The above copyright notice and this permission notice shall be included in all c
                         <p>Dashboard</p>
                     </a>
                 </li>
-{{--                <li class="nav-item {{ Request::segment(2) == 'all-users'? 'active':'' }} ">--}}
-{{--                    <a class="nav-link" href="{{route('all-users')}}">--}}
-{{--                        <i class="material-icons">person</i>--}}
-{{--                        <p>All User</p>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                <li class="nav-item {{ Request::segment(2) == 'profile'? 'active':'' }} ">
+                    <a class="nav-link" href="{{route('profile')}}">
+                        <i class="material-icons">person</i>
+                        <p>Profile</p>
+                    </a>
+                </li>
 {{--                <li class="nav-item {{ Request::segment(2) == 'all_trainers'? 'active':'' }} ">--}}
 {{--                    <a class="nav-link" href="{{route('all_trainers')}}">--}}
 {{--                        <i class="material-icons">person</i>--}}

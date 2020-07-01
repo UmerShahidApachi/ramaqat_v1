@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Category;
+use App\Models\Course;
 use App\Slider;
 use Illuminate\Support\Facades\Route;
 
@@ -16,9 +17,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $latest = Course::all()->take(3);
     $categories = Category::all();
+    $categories1 = Category::where('id','>=',1)->first();
     $slider = Slider::all();
-    return view('home.frontend.index',compact('slider','categories'));
+    $slider1 = Slider::where('id','>=',1)->first();
+    $latest1 = Course::where('id','>=',1)->first();
+    return view('home.frontend.index',compact('slider','categories','categories1','slider1','latest','latest1'));
 });
 /**
  * admin routes
@@ -63,6 +68,8 @@ Route::prefix('trainer')->group(function () {
     Route::post('add-lesson','LessonController@store')->name('add_lesson');
     Route::post('update-lesson','LessonController@store')->name('update_lesson');
     Route::get('delete-lesson/{id}','LessonController@delete')->name('delete');
+    Route::get('profile','Trainer\DashboardController@profile')->name('profile');
+    Route::post('update-profile','Trainer\DashboardController@update_profile')->name('update_profile');
 
 
 

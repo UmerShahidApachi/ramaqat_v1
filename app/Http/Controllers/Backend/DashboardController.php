@@ -20,6 +20,10 @@ class DashboardController extends Controller
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function dashboard(){
         return view('backend.admin.dashboard.home');
     }

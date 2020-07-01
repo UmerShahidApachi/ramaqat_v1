@@ -10,7 +10,7 @@ class Course extends Model
     protected $guarded = [''];
     public function users()
     {
-        return $this->hasMany(User::class,'id','user_id');
+        return $this->belongsTo(User::class,'user_id');
     }
     public function category()
     {
