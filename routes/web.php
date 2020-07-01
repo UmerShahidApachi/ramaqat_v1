@@ -29,7 +29,7 @@ Route::get('/', function () {
  * admin routes
  */
 Route::prefix('admin')->group(function () {
-    Route::group(['middleware' => ['Admin']], function () {
+    Route::group(['middleware' => ['Admin']], function () { 
 
         Route::get('dashboard', 'Backend\DashboardController@dashboard')->name('dashboard');
         Route::get('all-users', 'Backend\DashboardController@all_users')->name('all-users');
