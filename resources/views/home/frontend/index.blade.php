@@ -10,7 +10,7 @@
                 @if(isset($categories))
                     @foreach($categories as $cat)
                         <li>
-                            <i> <img class='fadeIn' src="{{public_path('category'.'/'.$cat->logo)}}" style="
+                            <i> <img class='fadeIn' src="{{url('category'.'/'.$cat->logo)}}" style="
                 width: 57px;
                 height: 57px;
             "></i>
@@ -37,7 +37,7 @@
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <div class="view">
-                        <img class="d-block w-100" src="{{public_path('slider').'/'.$slider1['image']}}" alt="First slide">
+                        <img class="d-block w-100" src="{{url('slider').'/'.$slider1['image']}}" alt="First slide">
                         <div class="mask rgba-black-light"></div>
                     </div>
                     <div class="carousel-caption">
