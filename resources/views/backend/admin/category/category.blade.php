@@ -62,7 +62,8 @@
                                             {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
                                             {{--                        <td>(171) 555-2222</td>--}}
                                             <td>
-                                                <a href="" data-id="{{$row->id}}" id="edit_cat"  class="edit category_edit"><i class="material-icons" data-toggle="" title="Edit">&#xE254;</i></a>
+                                                <a href="" data-id="{{$row->id}}" class="edit category_edit" data-toggle="modal"><i
+                                                        class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                                 <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                             </td>
 
