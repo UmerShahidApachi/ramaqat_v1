@@ -89,4 +89,8 @@ class DashboardController extends Controller
         return view('backend.trainer.courses.sales', compact('data'));
 
     }
+
+    public function trainer_profile(){
+        return view('trainer.index');
+    }
 }
