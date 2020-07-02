@@ -15,3 +15,7 @@
 <link rel="stylesheet" href="{{asset('assets/frontend/css/mdb.min.css')}}">
 <!-- Your custom styles (optional) -->
 <link rel="stylesheet" href="{{asset('assets/frontend/css/style.css')}}">
+
+<style>
+	
+</style>

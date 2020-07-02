@@ -114,10 +114,10 @@ class LessonController extends Controller
 //        dd($input);
         if ($request->hasfile('document')) {
 
-            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'video_path' => $input, 'extra_document' => $imgname]);
+            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'video_path' => $video, 'extra_document' => $imgname]);
         } else {
 
-            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'video_path' => $input]);
+            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'video_path' => $video]);
 
         }
         if ($category) {

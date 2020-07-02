@@ -46,14 +46,15 @@
     }
 </style>
 @section('online-course')
+{{--    {{dd($data->lessons)}}--}}
     <!-- couser-detail main section -->
     <div class="main">
         <div class="plum-bg mt-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 offset-md-4 course-name">
-                        <h3><b>The Complete SQL Bootcamp 2020 :Go From</b></h3>
-                        <p>Becom expert at SQL !</p>
+                        <h3><b>{{$data->name}}</b></h3>
+                        <p>{{$data->description}}</p>
                         <ul class="rating">
                             <li><img src="{{asset('assets/frontend/img/star-fill.png')}}"></li>
                             <li><img src="{{asset('assets/frontend/img/star-fill.png')}}"></li>
