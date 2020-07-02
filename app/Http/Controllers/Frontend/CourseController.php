@@ -27,9 +27,35 @@ class CourseController extends Controller
     {
         //
     }
-    public function onlineCourse()
+    public function onlineCourse(Request $request)
     {
-        return view('course.onlineCourse');
+//        dd($request->id);
+
+        if ($request->id){
+            $category = Category::find($request->id);
+            if (!$category) {
+                abort(404);
+            }
+        $data = Course::where('category_id',$request->id)->get();
+        }else{
+            $category = "";
+            $data = Course::all();
+        }
+        return view('course.onlineCourse',compact('data','category'));
+    }
+    public function course_detail(Request $request)
+    {
+//        dd($request->id);
+
+        if ($request->id) {
+            $data = Course::find($request->id);
+            if (!$data) {
+                abort(404);
+            }
+//            dd($data->lessons);
+
+            return view('course.coursedetail', compact('data'));
+        }
     }
     public function offlineCourse()
     {

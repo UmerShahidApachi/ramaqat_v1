@@ -1,71 +1,72 @@
 @extends('layouts.main')
 @section('online-course')
 <div class="flex-center mb-1 mt-1 offline_courses">
-    <u><a class="Socialb plum-text" href="#">Online Courses</a></u>
+    @if($category == "")
+    <u><a class="Socialb plum-text" href="#">All Courses</a></u>
+        @else
+        <u><a class="Socialb plum-text" href="#">{{$category->name}} Courses</a></u>
+    @endif
 </div>
 
 <div class="container mt-5 mb-5">
     <div class="carousel slide multi-item-carousel" id="theCarousel">
         <div class="carousel-inner row w-100 mx-auto">
+            @foreach($data as $row)
             <div class="carousel-item active col-md-4">
-                <a href="#"><img src="{{asset('assets/frontend/img/tipstricks.png')}}" class="img-fluid mx-auto d-block zoom"></a>
+                <a href="{{route('detail-course',['id'=>$row->id])}}"><img src="{{asset('course/'. $row->thumbnail)}}" class="img-fluid mx-auto d-block zoom"></a>
             </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/ios.png')}}" class="img-fluid mx-auto d-block zoom">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/note20.png')}}" class="img-fluid mx-auto d-block zoom">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container mt-5 mb-5">
-    <div class="carousel slide multi-item-carousel" id="theCarousel">
-        <div class="carousel-inner row w-100 mx-auto">
-            <div class="carousel-item active col-md-4">
-                <a href="#"><img src="{{asset('assets/frontend/img/tipstricks.png')}}" class="img-fluid mx-auto d-block zoom"></a>
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/ios.png')}}" class="img-fluid mx-auto d-block zoom">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/note20.png')}}" class="img-fluid mx-auto d-block zoom">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container mt-5 mb-5">
-    <div class="carousel slide multi-item-carousel" id="theCarousel">
-        <div class="carousel-inner row w-100 mx-auto">
-            <div class="carousel-item active col-md-4">
-                <a href="#"><img src="{{asset('assets/frontend/img/tipstricks.png')}}" class="img-fluid mx-auto d-block zoom"></a>
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/ios.png')}}" class="img-fluid mx-auto d-block zoom">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/note20.png')}}" class="img-fluid mx-auto d-block zoom">
-            </div>
-        </div>
+            @endforeach
 
-    </div>
-</div>
-<div class="container mt-5 mb-5">
-    <div class="carousel slide multi-item-carousel" id="theCarousel">
-        <div class="carousel-inner row w-100 mx-auto">
-            <div class="carousel-item active col-md-4">
-                <a href="#"><img src="{{asset('assets/frontend/img/tipstricks.png')}}" class="img-fluid mx-auto d-block zoom"></a>
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/ios.png')}}" class="img-fluid mx-auto d-block zoom">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/note20.png')}}" class="img-fluid mx-auto d-block zoom">
-            </div>
         </div>
-
     </div>
 </div>
+{{--<div class="container mt-5 mb-5">--}}
+{{--    <div class="carousel slide multi-item-carousel" id="theCarousel">--}}
+{{--        <div class="carousel-inner row w-100 mx-auto">--}}
+{{--            <div class="carousel-item active col-md-4">--}}
+{{--                <a href="#"><img src="{{asset('assets/frontend/img/tipstricks.png')}}" class="img-fluid mx-auto d-block zoom"></a>--}}
+{{--            </div>--}}
+{{--            <div class="carousel-item col-md-4">--}}
+{{--                <img src="{{asset('assets/frontend/img/ios.png')}}" class="img-fluid mx-auto d-block zoom">--}}
+{{--            </div>--}}
+{{--            <div class="carousel-item col-md-4">--}}
+{{--                <img src="{{asset('assets/frontend/img/note20.png')}}" class="img-fluid mx-auto d-block zoom">--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
+{{--<div class="container mt-5 mb-5">--}}
+{{--    <div class="carousel slide multi-item-carousel" id="theCarousel">--}}
+{{--        <div class="carousel-inner row w-100 mx-auto">--}}
+{{--            <div class="carousel-item active col-md-4">--}}
+{{--                <a href="#"><img src="{{asset('assets/frontend/img/tipstricks.png')}}" class="img-fluid mx-auto d-block zoom"></a>--}}
+{{--            </div>--}}
+{{--            <div class="carousel-item col-md-4">--}}
+{{--                <img src="{{asset('assets/frontend/img/ios.png')}}" class="img-fluid mx-auto d-block zoom">--}}
+{{--            </div>--}}
+{{--            <div class="carousel-item col-md-4">--}}
+{{--                <img src="{{asset('assets/frontend/img/note20.png')}}" class="img-fluid mx-auto d-block zoom">--}}
+{{--            </div>--}}
+{{--        </div>--}}
+
+{{--    </div>--}}
+{{--</div>--}}
+{{--<div class="container mt-5 mb-5">--}}
+{{--    <div class="carousel slide multi-item-carousel" id="theCarousel">--}}
+{{--        <div class="carousel-inner row w-100 mx-auto">--}}
+{{--            <div class="carousel-item active col-md-4">--}}
+{{--                <a href="#"><img src="{{asset('assets/frontend/img/tipstricks.png')}}" class="img-fluid mx-auto d-block zoom"></a>--}}
+{{--            </div>--}}
+{{--            <div class="carousel-item col-md-4">--}}
+{{--                <img src="{{asset('assets/frontend/img/ios.png')}}" class="img-fluid mx-auto d-block zoom">--}}
+{{--            </div>--}}
+{{--            <div class="carousel-item col-md-4">--}}
+{{--                <img src="{{asset('assets/frontend/img/note20.png')}}" class="img-fluid mx-auto d-block zoom">--}}
+{{--            </div>--}}
+{{--        </div>--}}
+
+{{--    </div>--}}
+{{--</div>--}}
 
 <div class="next_previous flex-center mb-1 mt-1 offline_courses">
     <a href="#" class="Socialb plum-text previous">&laquo; Previous</a>
