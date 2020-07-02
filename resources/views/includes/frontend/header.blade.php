@@ -24,10 +24,10 @@
         <ul class="ulDBlock d-none d-sm-block">
             <li>
                 <div class="custom-select">
-                <select>
+                <select id="select_language">
                     <option class="plum-text" value="0">Language</option>
-                    <option value="1">English</option>
-                    <option value="1">Arabic</option>
+                    <option value="1"><a href="#">English</a> </option>
+                    <option value="2">Arabic</option>
                 </select>
                 </div>
             </li>
