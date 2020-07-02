@@ -78,40 +78,40 @@ class LessonController extends Controller
 
 
 //dd($request->hasfile('video'));
-//        $video = "";
-//        if ($request->hasfile('video')) {
-//            $postData = $request->only('video');
-//
-//            $file = $postData['video'];
-//
-//            $fileArray = array('video' => $file);
-//
-//            // Tell the validator that this file should be an image
-//            $rules = array(//                '
-//                'video' => 'mimes:mpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts|max:100040|required'
-//            );
-//
-//            // Now pass the input and rules into the validator
-//            $validator = Validator::make($fileArray, $rules);
-//
-//
-//            // Check to see if validation fails or passes
-//            if ($validator->fails()) {
-//                return redirect()->back()->with('alert', 'Upload video only')->withInput();
-//            }
-//            $file = $request->file('video');
-//            $filename = str_replace(' ', '', $file->getClientOriginalName());
-//            $ext = $file->getClientOriginalExtension();
-//            $video = uniqid() . $filename;
-//            $destinationpath = public_path('course/' . $course->name . '/');
-//            $file->move($destinationpath, $video);
-//        }
+        $video = "";
+        if ($request->hasfile('video')) {
+            $postData = $request->only('video');
 
-        $video=$request->video;
-        $input = time().$video->getClientOriginalExtension();
-        $destinationPath = public_path('course/' . $course->name . '/');
-        $video->move($destinationPath, $input);
-        dd($input);
+            $file = $postData['video'];
+
+            $fileArray = array('video' => $file);
+
+            // Tell the validator that this file should be an image
+            $rules = array(//                '
+                'video' => 'mimes:mpeg,ogg,mp4,webm,3gp,mov,flv,avi,wmv,ts|max:100040|required'
+            );
+
+            // Now pass the input and rules into the validator
+            $validator = Validator::make($fileArray, $rules);
+
+
+            // Check to see if validation fails or passes
+            if ($validator->fails()) {
+                return redirect()->back()->with('alert', 'Upload video only')->withInput();
+            }
+            $file = $request->file('video');
+            $filename = str_replace(' ', '', $file->getClientOriginalName());
+            $ext = $file->getClientOriginalExtension();
+            $video = uniqid() . $filename;
+            $destinationpath = public_path('course/' . $course->name . '/');
+            $file->move($destinationpath, $video);
+        }
+
+//        $video=$request->video;
+//        $input = time().$video->getClientOriginalExtension();
+//        $destinationPath = public_path('course/' . $course->name . '/');
+//        $video->move($destinationPath, $input);
+//        dd($input);
         if ($request->hasfile('document')) {
 
             $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'video_path' => $input, 'extra_document' => $imgname]);

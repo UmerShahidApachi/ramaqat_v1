@@ -43,7 +43,7 @@ Route::prefix('admin')->group(function () {
         Route::get('category', 'Backend\DashboardController@categories')->name('category');
         Route::POST('save_category', 'Frontend\CategoryController@create')->name('save_category');
         Route::get('delete/category', 'Frontend\CategoryController@delete_category')->name('delete_category');
-        Route::post('edit/category', 'Frontend\CategoryController@edit')->name('edit_category');
+        Route::get('edit/category', 'Frontend\CategoryController@edit')->name('edit_category');
         Route::post('update/category', 'Frontend\CategoryController@update')->name('update_category');
 
         Route::post('add-slider-data', 'Backend\DashboardController@sliderdata')->name('slider-data');
