@@ -64,7 +64,7 @@
                             <li>4.8</li>
                             <li>(1234,567)</li>
                         </ul>
-                        <h6 class="mt-3">Trainer : Jose Portilla</h6>
+                        <h6 class="mt-3">Trainer : {{$data->users['name']}}</h6>
                         <h6>Language : English/Arabic</h6>
                     </div>
                 </div>
@@ -78,24 +78,24 @@
                         <h5><b>What you'll learn</b></h5>
                         <ul class="feature-list">
                             <li><img src="{{asset('assets/frontend/img/tick.png')}}"></li>
-                            <li>Use SQL to query a database</li>
+                            <li>{{$data->description}}</li>
                         </ul>
-                        <ul class="feature-list">
-                            <li><img src="img/tick.png"></li>
-                            <li>Use SQL to query a database</li>
-                        </ul>
-                        <ul class="feature-list">
-                            <li><img src="img/tick.png"></li>
-                            <li>Use SQL to query a database</li>
-                        </ul>
-                        <ul class="feature-list">
-                            <li><img src="img/tick.png"></li>
-                            <li>Use SQL to query a database</li>
-                        </ul>
-                        <ul class="feature-list">
-                            <li><img src="img/tick.png"></li>
-                            <li>Use SQL to query a database</li>
-                        </ul>
+{{--                        <ul class="feature-list">--}}
+{{--                            <li><img src="img/tick.png"></li>--}}
+{{--                            <li>Use SQL to query a database</li>--}}
+{{--                        </ul>--}}
+{{--                        <ul class="feature-list">--}}
+{{--                            <li><img src="img/tick.png"></li>--}}
+{{--                            <li>Use SQL to query a database</li>--}}
+{{--                        </ul>--}}
+{{--                        <ul class="feature-list">--}}
+{{--                            <li><img src="img/tick.png"></li>--}}
+{{--                            <li>Use SQL to query a database</li>--}}
+{{--                        </ul>--}}
+{{--                        <ul class="feature-list">--}}
+{{--                            <li><img src="img/tick.png"></li>--}}
+{{--                            <li>Use SQL to query a database</li>--}}
+{{--                        </ul>--}}
                     </div>
                     <div class="course-cart z-depth-1-half">
                         <div class="course-img">
@@ -104,7 +104,7 @@
                         </div>
                         <div class="text-center mt-3">
                             <ul class="course-price">
-                                <li><h3><b>$18.99</b></h3></li>
+                                <li><h3><b>${{$data->price}}</b></h3></li>
                                 <li><strike>$30.99</strike></li>
                             </ul>
                         </div>
@@ -121,9 +121,9 @@
                         <div class="height-2 mt-2"></div>
                         <div class="mt-3">
                             <h4><b>This course includes</b></h4>
-                            <div>  9 hours on-demand video</div>
-                            <div>  15 articles</div>
-                            <div>  5 downloadable resources</div>
+                            <div>  {{$data->duration}}</div>
+                            <div>  {{$data->lessons->count()}} articles</div>
+{{--                            <div>  5 downloadable resources</div>--}}
                             <div>  Full lifetime access</div>
                         </div>
                     </div>
@@ -136,11 +136,11 @@
             <div class="row">
                 <div class="col-12 course-description">
                     <h2><b>Description</b></h2>
-                    <p>Learn how to use SQL quickly and effectively with this course!</p>
-                    <div class="Description-text">
-                        You'll learn how to read and write complex queries to a database using one of the most in demand skills - PostgreSQL. These skills are also applicable to any other major SQL database, such as MySQL, Microsoft SQL Server, Amazon Redshift, Oracle, and much more.
-                        Learning SQL is one of the fastest ways to improve your career prospects as it is one of the most in demand tech skills! In this course you'll learn quickly and receive challenges and tests along the way to improve your understanding!
-                    </div>
+                    <p>{{$data->description}}</p>
+{{--                    <div class="Description-text">--}}
+{{--                        You'll learn how to read and write complex queries to a database using one of the most in demand skills - PostgreSQL. These skills are also applicable to any other major SQL database, such as MySQL, Microsoft SQL Server, Amazon Redshift, Oracle, and much more.--}}
+{{--                        Learning SQL is one of the fastest ways to improve your career prospects as it is one of the most in demand tech skills! In this course you'll learn quickly and receive challenges and tests along the way to improve your understanding!--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>
@@ -158,10 +158,10 @@
                             <h6><b>Extend all</b></h6>
                         </div>
                         <div class="col-2">
-                            <h6><b>81 Lectures</b></h6>
+                            <h6><b>{{$data->lessons->count()}} Lectures</b></h6>
                         </div>
                         <div class="col-2">
-                            <h6><b>08:52:11</b></h6>
+                            <h6><b>{{$data->duration}}</b></h6>
                         </div>
                     </div>
                 </div>
@@ -218,6 +218,7 @@
                             </div>
 
                             <!-- Accordion Item 2 -->
+                            @foreach($data->lessons as $lesson)
                             <div class="card">
                                 <div class="card-header" role="tab" id="accordionHeadingTwo">
                                     <div class="mb-0 row">
@@ -225,7 +226,7 @@
                                             <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyTwo" aria-expanded="false" aria-controls="accordionBodyTwo"
                                                class="collapsed ">
                                                 <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                                <h6>Section 1: Course Name And Detail</h6>
+                                                <h6>{{$lesson->title}}</h6>
                                             </a>
                                         </div>
                                     </div>
@@ -233,123 +234,124 @@
 
                                 <div id="accordionBodyTwo" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingTwo" aria-expanded="false" data-parent="accordion">
                                     <div class="card-block col-12">
-                                        <p>Accordion Item 2 - Body</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum
-                                            odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo
-                                            vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi
-                                            tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum
-                                            interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>
+                                        <p>{{$lesson->description}}</p>
+{{--                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum--}}
+{{--                                            odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo--}}
+{{--                                            vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi--}}
+{{--                                            tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum--}}
+{{--                                            interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>--}}
                                     </div>
                                 </div>
                             </div>
+                        @endforeach
 
                             <!-- Accordion Item 3 -->
-                            <div class="card">
-                                <div class="card-header" role="tab" id="accordionHeadingThree">
-                                    <div class="mb-0 row">
-                                        <div class="col-12 no-padding accordion-head">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyThree" aria-expanded="false" aria-controls="accordionBodyThree"
-                                               class="collapsed ">
-                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                                <h6>Section 1: Course Name And Detail</h6>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+{{--                            <div class="card">--}}
+{{--                                <div class="card-header" role="tab" id="accordionHeadingThree">--}}
+{{--                                    <div class="mb-0 row">--}}
+{{--                                        <div class="col-12 no-padding accordion-head">--}}
+{{--                                            <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyThree" aria-expanded="false" aria-controls="accordionBodyThree"--}}
+{{--                                               class="collapsed ">--}}
+{{--                                                <i class="fa fa-angle-down" aria-hidden="true"></i>--}}
+{{--                                                <h6>Section 1: Course Name And Detail</h6>--}}
+{{--                                            </a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
-                                <div id="accordionBodyThree" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingThree" aria-expanded="false" data-parent="accordion">
-                                    <div class="card-block col-12">
-                                        <p>Accordion Item 3 - Body</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum
-                                            odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo
-                                            vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi
-                                            tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum
-                                            interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>
-                                    </div>
-                                </div>
-                            </div>
+{{--                                <div id="accordionBodyThree" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingThree" aria-expanded="false" data-parent="accordion">--}}
+{{--                                    <div class="card-block col-12">--}}
+{{--                                        <p>Accordion Item 3 - Body</p>--}}
+{{--                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum--}}
+{{--                                            odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo--}}
+{{--                                            vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi--}}
+{{--                                            tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum--}}
+{{--                                            interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
-                            <!-- Accordion Item 3 -->
-                            <div class="card">
-                                <div class="card-header" role="tab" id="accordionHeadingThree">
-                                    <div class="mb-0 row">
-                                        <div class="col-12 no-padding accordion-head">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyThree" aria-expanded="false" aria-controls="accordionBodyThree"
-                                               class="collapsed ">
-                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                                <h6>Section 1: Course Name And Detail</h6>
+{{--                            <!-- Accordion Item 3 -->--}}
+{{--                            <div class="card">--}}
+{{--                                <div class="card-header" role="tab" id="accordionHeadingThree">--}}
+{{--                                    <div class="mb-0 row">--}}
+{{--                                        <div class="col-12 no-padding accordion-head">--}}
+{{--                                            <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyThree" aria-expanded="false" aria-controls="accordionBodyThree"--}}
+{{--                                               class="collapsed ">--}}
+{{--                                                <i class="fa fa-angle-down" aria-hidden="true"></i>--}}
+{{--                                                <h6>Section 1: Course Name And Detail</h6>--}}
 
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+{{--                                            </a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
-                                <div id="accordionBodyThree" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingThree" aria-expanded="false" data-parent="accordion">
-                                    <div class="card-block col-12">
-                                        <p>Accordion Item 3 - Body</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum
-                                            odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo
-                                            vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi
-                                            tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum
-                                            interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>
-                                    </div>
-                                </div>
-                            </div>
+{{--                                <div id="accordionBodyThree" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingThree" aria-expanded="false" data-parent="accordion">--}}
+{{--                                    <div class="card-block col-12">--}}
+{{--                                        <p>Accordion Item 3 - Body</p>--}}
+{{--                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum--}}
+{{--                                            odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo--}}
+{{--                                            vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi--}}
+{{--                                            tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum--}}
+{{--                                            interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
-                            <!-- Accordion Item 3 -->
-                            <div class="card">
-                                <div class="card-header" role="tab" id="accordionHeadingThree">
-                                    <div class="mb-0 row">
-                                        <div class="col-12 no-padding accordion-head">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyThree" aria-expanded="false" aria-controls="accordionBodyThree"
-                                               class="collapsed ">
-                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                                <h6>Section 1: Course Name And Detail</h6>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+{{--                            <!-- Accordion Item 3 -->--}}
+{{--                            <div class="card">--}}
+{{--                                <div class="card-header" role="tab" id="accordionHeadingThree">--}}
+{{--                                    <div class="mb-0 row">--}}
+{{--                                        <div class="col-12 no-padding accordion-head">--}}
+{{--                                            <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyThree" aria-expanded="false" aria-controls="accordionBodyThree"--}}
+{{--                                               class="collapsed ">--}}
+{{--                                                <i class="fa fa-angle-down" aria-hidden="true"></i>--}}
+{{--                                                <h6>Section 1: Course Name And Detail</h6>--}}
+{{--                                            </a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
-                                <div id="accordionBodyThree" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingThree" aria-expanded="false" data-parent="accordion">
-                                    <div class="card-block col-12">
-                                        <p>Accordion Item 3 - Body</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum
-                                            odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo
-                                            vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi
-                                            tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum
-                                            interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>
-                                    </div>
-                                </div>
-                            </div>
+{{--                                <div id="accordionBodyThree" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingThree" aria-expanded="false" data-parent="accordion">--}}
+{{--                                    <div class="card-block col-12">--}}
+{{--                                        <p>Accordion Item 3 - Body</p>--}}
+{{--                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum--}}
+{{--                                            odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo--}}
+{{--                                            vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi--}}
+{{--                                            tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum--}}
+{{--                                            interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
-                            <!-- Accordion Item 3 -->
-                            <div class="card">
-                                <div class="card-header" role="tab" id="accordionHeadingThree">
-                                    <div class="mb-0 row">
-                                        <div class="col-12 no-padding accordion-head">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyThree" aria-expanded="false" aria-controls="accordionBodyThree"
-                                               class="collapsed ">
-                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                                <h6>Section 1: Course Name And Detail</h6>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+{{--                            <!-- Accordion Item 3 -->--}}
+{{--                            <div class="card">--}}
+{{--                                <div class="card-header" role="tab" id="accordionHeadingThree">--}}
+{{--                                    <div class="mb-0 row">--}}
+{{--                                        <div class="col-12 no-padding accordion-head">--}}
+{{--                                            <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyThree" aria-expanded="false" aria-controls="accordionBodyThree"--}}
+{{--                                               class="collapsed ">--}}
+{{--                                                <i class="fa fa-angle-down" aria-hidden="true"></i>--}}
+{{--                                                <h6>Section 1: Course Name And Detail</h6>--}}
+{{--                                            </a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
-                                <div id="accordionBodyThree" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingThree" aria-expanded="false" data-parent="accordion">
-                                    <div class="card-block col-12">
-                                        <p>Accordion Item 3 - Body</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum
-                                            odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo
-                                            vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi
-                                            tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum
-                                            interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>
-                                    </div>
-                                </div>
-                            </div>
+{{--                                <div id="accordionBodyThree" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingThree" aria-expanded="false" data-parent="accordion">--}}
+{{--                                    <div class="card-block col-12">--}}
+{{--                                        <p>Accordion Item 3 - Body</p>--}}
+{{--                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum--}}
+{{--                                            odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo--}}
+{{--                                            vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi--}}
+{{--                                            tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum--}}
+{{--                                            interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
-                        </div>
-                    </div>
+{{--                        </div>--}}
+{{--                    </div>--}}
                     <!-- End -->
                 </div>
                 <div class="col-12 col-sm-4"></div>
@@ -367,7 +369,12 @@
                             <div class="row">
                                 <div class="col-5">
                                     <div class="trainer-image">
-                                        <img class="t-img rounded-circle" src="{{asset('assets/frontend/img/download.png')}}" alt="trainer-img">
+                                        @if($data->users['image'] == "")
+                                            <img class="t-img rounded-circle" src="{{asset('assets/frontend/img/download.png')}}" alt="trainer-img">
+                                        @else
+                                            <img class="t-img rounded-circle" src="{{asset('users/'. $data->users['image'])}}" alt="trainer-img">
+
+                                        @endif
                                     </div>
                                     <ul class="trainer-rating pl-3">
                                         <li>
@@ -440,6 +447,7 @@
                 <div class="col-sm-4"></div>
             </div>
         </div>
+            </div>
 
         <div class="height-2"></div>
 
