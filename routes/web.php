@@ -17,12 +17,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $latest = Course::all()->take(3);
+    $latest = Course::where('status',1)->get()->take(3);
     $categories = Category::all();
     $categories1 = Category::where('id', '>=', 1)->first();
     $slider = Slider::all();
     $slider1 = Slider::where('id', '>=', 1)->first();
-    $latest1 = Course::where('id', '>=', 1)->first();
+    $latest1 = Course::where('id', '>=', 1)->where('status',1)->first();
     return view('home.frontend.index', compact('slider', 'categories', 'categories1', 'slider1', 'latest', 'latest1'));
 });
 /**
@@ -36,6 +36,7 @@ Route::prefix('admin')->group(function () {
         Route::get('all-trainers', 'Backend\DashboardController@all_trainers')->name('all_trainers');
         Route::get('all-accounts', 'Backend\DashboardController@accounts')->name('accounts');
         Route::get('all-courses', 'Backend\DashboardController@courses')->name('courses');
+        Route::get('change_course_status', 'Backend\DashboardController@change_course_status')->name('change_course_status');
         Route::get('slider', 'Backend\DashboardController@slider')->name('slider');
         Route::get('sales', 'Backend\DashboardController@sell_courses')->name('sales');
 
