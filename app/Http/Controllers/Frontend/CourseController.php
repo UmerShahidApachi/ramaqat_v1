@@ -35,7 +35,10 @@ class CourseController extends Controller
     {
 
     }
-
+    public function completeCourse()
+    {
+        return view('course.completeCourse');
+    }
     /**
      * Show the form for creating a new resource.
      *

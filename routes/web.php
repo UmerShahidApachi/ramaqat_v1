@@ -78,20 +78,20 @@ Route::prefix('trainer')->group(function () {
         Route::get('profile',          'Trainer\DashboardController@profile')->name('profile');
         Route::post('update-profile',  'Trainer\DashboardController@update_profile')->name('update_profile');
         /*trainer page 11*/
-        Route::get('trainer-profile', 'Trainer\DashboardController@trainer_profile')->name('trainer_profile');
-
+        Route::get('trainer-profile', 'Trainer\DashboardController@trainer_profile')->name('trainer_profile'); 
     });
 });
+
 Route::get('userlogin',      'Frontend\LoginController@userLogin')->name('login-form');
 Route::post('login_user',    'Frontend\LoginController@login_user')->name('login_user');
 Route::get('user-register',  'Frontend\RegisterController@userRegister')->name('register');
 Route::get('online-course',  'Frontend\CourseController@onlineCourse')->name('online-course');
 Route::get('offline-course', 'Frontend\CourseController@offlineCourse')->name('offline-course');
-Route::get('homePage', 'Frontend\HomeController@homePage')->name('homePage');
+Route::get('complete-course', 'Frontend\CourseController@completeCourse')->name('complete-course');
+Route::get('homePage',        'Frontend\HomeController@homePage')->name('homePage');
 
-Route::get('progressView', 'progresscontroller@fileUpload')->name('progressView');
-
-Route::post('progressStore', 'progresscontroller@fileStore')->name('progressStore');
+Route::get('progressView',    'progresscontroller@fileUpload')->name('progressView');
+Route::post('progressStore',  'progresscontroller@fileStore')->name('progressStore');
 
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
