@@ -98,10 +98,13 @@
               <a href="{{route('Trainer/dashboard')}}"><img src="{{asset('assets/frontend/img/dark_mode.png')}}">Dashboard</a>
                     @endif
               <a href="#"><img src="{{asset('assets/frontend/img/dark_mode.png')}}">Dark Mode</a>
-              <a href="#"><img src="{{asset('assets/frontend/img/online_courses.png')}}">Online Courses</a>
+                        @if(Auth::user()->role_id == 3)
+
+                        <a href="{{route('my_courses')}}"><img src="{{asset('assets/frontend/img/online_courses.png')}}">My Courses</a>
               <a href="#"><img src="{{asset('assets/frontend/img/offline_courses.png')}}">Offline Courses</a>
               <a href="#"><img src="{{asset('assets/frontend/img/your_courses.png')}}">Your Courses</a>
               <a href="#"><img src="{{asset('assets/frontend/img/favourites%20.png')}}">Favourites </a>
+                        @endif
               <a href="#"><img src="{{asset('assets/frontend/img/currency_rate.png')}}">Currency Rate</a>
               <a href="{{route('logout')}}"><img src="{{asset('assets/frontend/img/currency_rate.png')}}">Logout</a>
                 @endauth

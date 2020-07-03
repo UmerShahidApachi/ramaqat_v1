@@ -108,7 +108,7 @@ Route::prefix('trainer')->group(function () {
 
 Route::prefix('user')->group(function () {
     Route::group(['middleware' => ['user']], function () {
-        Route::get('my-course', 'Frontend\CourseController@my_course')->name('my-course');
+        Route::get('my-course', 'Frontend\CourseController@my_course')->name('my-courses');
 
     });
 });
