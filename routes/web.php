@@ -4,6 +4,8 @@ use App\Models\Category;
 use App\Models\Course;
 use App\Slider;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::post('language/{locale}', function (Request $request,$locale) {
+    // App::setLocale($locale);
+    $request->session()->put('lang', $locale);
+});
 
 Route::get('/', function () {
     $latest = Course::where('status',1)->get()->take(3);
@@ -32,13 +39,31 @@ Route::prefix('admin')->group(function () {
     Route::group(['middleware' => ['Admin']], function () {
 
         Route::get('dashboard', 'Backend\DashboardController@dashboard')->name('dashboard');
+        Route::get('sales', 'Backend\DashboardController@sell_courses')->name('sales');
         Route::get('all-users', 'Backend\DashboardController@all_users')->name('all-users');
         Route::get('all-trainers', 'Backend\DashboardController@all_trainers')->name('all_trainers');
+        Route::get('delete-user', 'Backend\UserController@delete_users')->name('delete_users');
+        Route::get('add/user', 'Backend\UserController@new_user_form')->name('new_user_form');
+        Route::post('new-profile', 'Backend\UserController@new_profile')->name('admin_new_profile');
+        Route::get('edit-profile', 'Backend\UserController@edit')->name('edit_profile');
+        Route::post('update-profile', 'Backend\UserController@update_profile')->name('admin_update_profile');
+
+
+
+
         Route::get('all-accounts', 'Backend\DashboardController@accounts')->name('accounts');
+
         Route::get('all-courses', 'Backend\DashboardController@courses')->name('courses');
+        Route::get('delete', 'Frontend\CourseController@delete')->name('delete');
+
         Route::get('change_course_status', 'Backend\DashboardController@change_course_status')->name('change_course_status');
+
         Route::get('slider', 'Backend\DashboardController@slider')->name('slider');
-        Route::get('sales', 'Backend\DashboardController@sell_courses')->name('sales');
+        Route::post('add-slider-data', 'Backend\DashboardController@sliderdata')->name('slider-data');
+        Route::get('edit_slider', 'Backend\DashboardController@edit_slider')->name('slider-edit');
+        Route::post('edit-slider-data', 'Backend\DashboardController@update_slider')->name('slider-edit-data');
+        Route::get('delete-slider', 'Backend\DashboardController@delete_slider');
+
 
         Route::get('category', 'Backend\DashboardController@categories')->name('category');
         Route::POST('save_category', 'Frontend\CategoryController@create')->name('save_category');
@@ -46,10 +71,7 @@ Route::prefix('admin')->group(function () {
         Route::get('edit/category', 'Frontend\CategoryController@edit')->name('edit_category');
         Route::post('update/category', 'Frontend\CategoryController@update')->name('update_category');
 
-        Route::post('add-slider-data', 'Backend\DashboardController@sliderdata')->name('slider-data');
-        Route::get('edit_slider', 'Backend\DashboardController@edit_slider')->name('slider-edit');
-        Route::post('edit-slider-data', 'Backend\DashboardController@update_slider')->name('slider-edit-data');
-        Route::get('delete-slider', 'Backend\DashboardController@delete_slider');
+
 
 
 
@@ -67,7 +89,7 @@ Route::prefix('trainer')->group(function () {
         Route::get('add-form', 'Frontend\CourseController@show')->name('form');
         Route::post('add-course', 'Frontend\CourseController@create')->name('course_data');
         Route::get('edit-course/{id}', 'Frontend\CourseController@edit')->name('edit-course');
-        Route::get('delete/{id}', 'Frontend\CourseController@delete')->name('delete');
+        Route::get('delete', 'Frontend\CourseController@delete')->name('delete');
         Route::post('update-course', 'Frontend\CourseController@update')->name('update-course');
         Route::get('view-lessons/{id}', 'LessonController@index')->name('lessons');
         Route::get('edit-lessons/{id}', 'LessonController@edit')->name('edit_lesson');
@@ -83,9 +105,16 @@ Route::prefix('trainer')->group(function () {
     });
 });
 
-Route::get('userlogin',      'Frontend\LoginController@userLogin')->name('login-form');
-Route::post('login_user',    'Frontend\LoginController@login_user')->name('login_user');
-Route::get('user-register',  'Frontend\RegisterController@userRegister')->name('register');
+
+Route::prefix('user')->group(function () {
+    Route::group(['middleware' => ['user']], function () {
+        Route::get('my-course', 'Frontend\CourseController@my_course')->name('my-course');
+
+    });
+});
+Route::get('userlogin', 'Frontend\LoginController@userLogin')->name('login-form');
+Route::post('login_user', 'Frontend\LoginController@login_user')->name('login_user');
+Route::get('user-register', 'Frontend\RegisterController@userRegister')->name('register');
 Route::get('all-course', 'Frontend\CourseController@onlineCourse')->name('all-course');
 Route::get('course-detail', 'Frontend\CourseController@course_detail')->name('detail-course');
 Route::get('offline-course', 'Frontend\CourseController@offlineCourse')->name('offline-course');

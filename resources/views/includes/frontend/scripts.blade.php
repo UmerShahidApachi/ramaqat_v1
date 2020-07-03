@@ -1,5 +1,6 @@
 <!-- jQuery -->
-
+<script src="../assets/js/core/jquery.min.js"></script>
+<script src="../assets/js/core/popper.min.js"></script>
 <script type="text/javascript" src="{{asset('assets/frontend/js/jquery.min.js')}}"></script>
 
 <!-- Bootstrap tooltips -->
@@ -41,4 +42,28 @@ document.getElementById("mySidebar").style.width = "0";
 document.getElementById("main").style.marginLeft= "0";
 }
 
+</script>
+
+<script>
+ $('.select-selected').bind('DOMSubtreeModified', function(){
+  var lang = $('.select-selected').text();
+  // alert(lang);
+  if (lang !="") {
+      if(lang=="Arabic"){
+        set_lang= 'ar';
+      }else{
+        set_lang= 'en';
+      }
+    $.ajax( {
+          type: 'POST',
+          headers: {
+            'X-CSRF-TOKEN': $( 'meta[name="csrf-token"]' ).attr( 'content' )
+          },
+          url: '{{url("language")}}/'+set_lang,
+          success: function ( msg ) {
+           location.reload();
+          }
+        } );
+  }
+});
 </script>

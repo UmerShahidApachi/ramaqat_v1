@@ -14,35 +14,83 @@ class CategorySeeder extends Seeder
         $users = [
 
             [
+                'name' => 'Art',
+                "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
+
+            ],[
+                'name' => 'It&computing',
+                "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
+
+            ],[
+                'name' => 'health & fitness',
+                "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
+
+            ],[
+                'name' => 'Interior design',
+                "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
+
+            ],[
+                'name' => 'Language',
+                "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
+
+            ],[
+                'name' => 'Sport',
+                "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
+
+            ],[
+                'name' => 'Photography',
+                "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
+
+            ],[
+                'name' => 'Education',
+                "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
+
+            ],[
+                'name' => 'Engineering',
+                "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
+
+            ],[
                 'name' => 'Cooking',
                 "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
 
             ],[
-                'name' => 'Baking',
+                'name' => 'Sales',
                 "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
 
             ],[
-                'name' => 'Swimming',
+                'name' => 'Graphic design',
                 "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
 
             ],[
-                'name' => 'Driving',
+                'name' => 'Marketing',
                 "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
 
             ],[
-                'name' => 'Educational',
+                'name' => 'Finance',
                 "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
 
             ],[
-                'name' => 'Mobile',
+                'name' => 'Customer service',
                 "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
 
             ],[
-                'name' => 'IT',
+                'name' => 'Media',
                 "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
 
             ],[
-                'name' => 'Commerce',
+                'name' => 'Law',
+                "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
+
+            ],[
+                'name' => 'Management',
+                "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
+
+            ],[
+                'name' => 'Accountancy',
+                "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
+
+            ],[
+                'name' => 'Skills',
                 "logo" => "5ef9c4df329fbScreenshot2020-06-29at3.05.08PM.png",
 
             ],

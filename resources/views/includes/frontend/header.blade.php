@@ -9,7 +9,7 @@
           <img src="{{asset('assets/frontend/img/toggle.png')}}" class="openbtn" onclick="openNav()">
         </li>
         <li>
-          <img class="animated fadeIn logo_img" src="{{asset('assets/frontend/img/logo.png')}}">
+         <a href="{{url('/')}}"> <img class="animated fadeIn logo_img" src="{{asset('assets/frontend/img/logo.png')}}"></a>
         </li>
 
       </ul>
@@ -24,10 +24,10 @@
         <ul class="ulDBlock d-none d-sm-block">
             <li>
                 <div class="custom-select">
-                <select>
+                <select id="select_language">
                     <option class="plum-text" value="0">Language</option>
-                    <option value="1">English</option>
-                    <option value="1">Arabic</option>
+                    <option value="1"><a href="#">English</a> </option>
+                    <option value="2">Arabic</option>
                 </select>
                 </div>
             </li>
@@ -73,6 +73,8 @@
                     <u><a class="Socialb plum-text singup_id_name" href="">{{Auth::user()->name}}</a></u>
                 </div>
                 <p>{{Auth::user()->email}}</p>
+            </div>
+
         @endauth
                 @guest
                     <div class="row login_id">
@@ -83,10 +85,12 @@
                             <u><a class="Socialb plum-text singup_id_name" href="{{route('login')}}">Login/Signup</a></u>
                         </div>
 {{--                        <p>guest</p>--}}
+                    </div>
+
                     @endguest
 
 
-            </div>
+
             <div class="row sidebar_icons">
               <a href="javascript:void(0)" class="closebtn close_sidbar" onclick="closeNav()">×</a>
                 @auth
@@ -104,5 +108,6 @@
               <a href="#"><img src="{{asset('assets/frontend/img/contact_us.png')}}">Contact Us</a>
             </div>
     </div>
+
 </header>
 <!--Header End Here  -->
