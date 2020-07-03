@@ -122,9 +122,9 @@
 
     <div class="container mt-5 mb-5">
         <div class="carousel slide multi-item-carousel" id="theCarousel">
-            <div class="carousel-inner row w-100 mx-auto">
-                <div class="carousel-item active col-md-4 p-0">
-                    <div class="multi-img">
+            <div class="carousel-inner row w-100 ">
+                <div class="carousel-item active multi-img p-0">
+                    <div class="">
                         @if(isset($latest1))
                             <img src="{{asset('course/'. $latest1->thumbnail)}}" class="thumbnail-img">
                             <div class="img-hover">
@@ -162,8 +162,8 @@
                 @if(isset($latest))
 
                     @foreach($latest as $c)
-                        <div class="carousel-item  col-md-4 p-0">
-                            <div class="multi-img">
+                        <div class="carousel-item  multi-img p-0">
+                            <div class="">
                                 <img src="{{asset('course/'. $c->thumbnail)}}" class="thumbnail-img">
                                 <div class="img-hover">
                                     <div class="row hover-bg">
