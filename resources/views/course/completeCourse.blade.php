@@ -14,7 +14,7 @@
       <div class="col-sm-4 d-flex">
         <ul class="ulDBlock-top compelet_course_nav2 pull-right d-flex">
           <li>
-            <div class="font16 white-text"><img src="img/share_icon.png"></div>
+            <div class="font16 white-text"><a href="#" style="color: white;opacity: 0.9"> <i class="fa fa-share-alt mr-1" style="font-size: 14px" aria-hidden="true"></i></a> Share</div>
           </li>
           <li>
             <div class="font16 white-text"><img src="img/favourit.png"></div>
@@ -123,7 +123,23 @@
   </div>
 
   <!--Description-->
-
+  <div class="plum-bg">
+    <div class="col-12 col-sm-10 offset-md-1" style="padding: 40px 15px;line-height: 1;">
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <!-- <div class="mb-1 white-text">Sign up to receive our weekly newsletter</div> -->
+          <div class="white-text pull-right">Sign up to receive our weekly newsletter</div><br><br>
+          <div class="white-text pull-right">Stay uploaded on all new online and offline training courses</div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <div class="Subscription">
+            <input class="SubInput z-depth-1" type="text" placeholder="Enter your email"><span class="SubBtn"><a
+                href="#">Subscribe</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 

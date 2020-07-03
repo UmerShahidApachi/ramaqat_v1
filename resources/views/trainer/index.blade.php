@@ -8,9 +8,9 @@
     section div:nth-child(0) {
         max-width:1920px;
     }
-   
+
     section #content_main_body {
-        margin-top:201px;
+        /* margin-top:201px; */
         margin-bottom: 41px;
         padding-bottom: 2%;
         background-color: white;
@@ -22,13 +22,15 @@
         color: #570055;
     }
     .auto_height{
-        min-height: 100px;overflow: hidden;
+        min-height: 100px;
+        /* overflow: hidden; */
     }
     #left_body{
-      background-color: lightpink;
+
+        /*background-color: lightpink;*/
     }
     #trainer11_logo{
-        margin-top:-150px
+        /* margin-top:-150px */
     }
     #trainer11_logo_title p:nth-child(1){
         font-size: 43px;
@@ -38,7 +40,7 @@
         font-size: 19px;
     }
     .border_right{
-        border-right: 1px solid #570055; 
+        border-right: 1px solid #570055;
     }
     .table_f_size{
         font-size: 18px;
@@ -70,18 +72,26 @@
     .col-md-1{
         margin-top: 10%;
     }
-
-
+.test{
+    border: 1px solid red;
+}
+.mr-t{
+    margin-top:-10%;
+}
 </style>
 
 
     <section class="container-fluid p-0">
-        <div class="col-md-12 p-0 pb main_bg_color main_color" style="min-width: 100px;overflow: hidden;">
-        
+        <div class="row">
+         <div class="col-12 plum-bg" style="height:200px;">
+        </div>
+        <div class="col-md-12 p-0 pb main_color" style="min-width: 100px;">
+
             <div class="col-md-12 main_color auto_height" id="content_main_body">
-                <div class="col-md-4 float-left" id="left_body"> 
+                <div class="col-md-4 float-left mr-t" id="left_body">
                     <div class="col text-center">
-                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" class="rounded-circle" alt="Cinque Terre"  width="278" height="278" id="trainer11_logo"> 
+
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" class="rounded-circle" alt="Cinque Terre"  width="278" height="278" id="trainer11_logo">
                     </div>
 
                     <div class="col text-center mt-3" id="trainer11_logo_title">
@@ -101,7 +111,7 @@
                             <p>4.5 / 6</p>
                             <p>My Rating</p>
                         </div>
-                    </div>                     
+                    </div>
                     <div class="col text-center mt-5">
                         <p>Im passionat trainer to make my  student a professional to work in  maket as a  expert.Im passionat trainer to make my  studenta professional to .</p>
                     </div>
@@ -113,7 +123,7 @@
                         <span><i class="fa fa-twitter-square" style="font-size:36px"></i></span>
                     </div>
                 </div>
-               
+
 
                 <div class="col-md-8 float-left" id="img_slider">
 <!-- block 1 --> 
@@ -306,6 +316,7 @@
                     <!--/.Carousel Wrapper-->
                   </div>
                     <!-- col close -->
+<!-- block 2 -->
 <!-- block 2 -->
                     
                     <div class="col" style="min-height: 100px ;overflow: hidden;">
@@ -685,10 +696,12 @@
                         <!--/.Carousel Wrapper-->
                     </div>
                     <!-- col close --> 
+
+                    <!-- slide close -->
                 </div>
 
             </div>
         </div>
     </section>
 @endsection
-    <!-- Latter Subscription End -->
+    <!-- Latter Subscription End --> 
