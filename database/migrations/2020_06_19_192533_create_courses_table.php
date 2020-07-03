@@ -25,6 +25,7 @@ class CreateCoursesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->bigInteger('category_id')->unsigned()->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }

@@ -5,6 +5,13 @@
     display:none;
 }
 </style>
+<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
+
     {{--    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>--}}
     {{--    <script type="text/javascript" src="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>--}}
     <div class="content">
@@ -20,10 +27,10 @@
                             {{--                                <a href="#addCategory" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Category</span></a>--}}
                             {{--                                --}}{{--						<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>--}}
                             {{--                            </div>--}}
-                            <div class="col-sm-6">
-                                  <a href="#addCategory" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Category</span></a>
-                            	<div id="hideform" class="btn"> Delete</div>
-                            </div>
+{{--                            <div class="col-sm-6">--}}
+{{--                                  <a href="#addCategory" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Category</span></a>--}}
+{{--                            	<div id="hideform" class="btn"> Delete</div>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
                 </div>
@@ -49,6 +56,7 @@
                                     <th>Trainer</th>
                                     <th>Description</th>
                                     <th>Duration</th>
+                                    <th>Enable / Disable</th>
                                     <th>Created at</th>
                                 </tr>
                                 </thead>
@@ -62,6 +70,7 @@
                                             <td>{{$row->users['name']}}</td>
                                             <td>{{$row->description}}</td>
                                             <td>{{$row->duration}}</td>
+                                            <td class="text-center" title="change status"><input type="checkbox" class="course_status" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-onstyle="success" rel="{{$row->id}}" data-offstyle="danger" @if($row->status=='1') checked @endif></td>
                                             <td>{{$row->created_at}}</td>
 
                                             {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
@@ -90,11 +99,12 @@
 <link rel="stylesheet" href="http://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+
 <script>
 
     $(document).ready(function() {
         $('#table_id').DataTable( {
-            "order": [[ 2, "desc" ]]
+            "order": [[ 5, "desc" ]]
         } );
     } );
 
@@ -104,4 +114,48 @@
    $( "#hideform" ).click(function() {
   $( "#showform" ).toggle( "slow" );
   });
+</script>
+<script type="text/javascript">
+    // $(document).ready( function () {
+    //     $(".course_status").change(function(){ // yahaan pr class select ho gi checkbox me jo di hui he.
+            $(document).on('change', '.course_status', function (evt) {
+                // alert('he');
+
+
+                var id=$(this).attr('rel'); // yahaan pr id pick ho gi product ki. rel se
+            if($(this).prop("checked")==true){
+
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    type: 'get',
+                    url: "{{route('change_course_status')}}",
+                    data: {status:'1',id:id},
+                    success:function(resp){
+                        $(".msgSuccess").show();
+                        setTimeout(function() { $(".msgSuccess").fadeOut('slow'); }, 2000);
+                    },error:function(){
+                        alert('Error');
+                    }
+                });
+            }else
+            {
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('customSection')
+                    },
+                    type: 'get',
+                    url: "{{route('change_course_status')}}",
+                    data: {status:'0',id:id},
+                    success:function(resp){
+                        $(".msgError").show();
+                        setTimeout(function() { $(".msgError").fadeOut('slow'); }, 2000);
+                    },error:function(){
+                        alert('Error');
+                    }
+                });
+            }
+        });
+    // });
 </script>

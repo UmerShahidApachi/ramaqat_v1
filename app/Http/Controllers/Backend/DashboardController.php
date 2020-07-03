@@ -24,6 +24,16 @@ class DashboardController extends Controller
     {
         $this->middleware('auth');
     }
+    public function change_course_status(Request $request)
+    {
+//        dd($request->all());
+
+        $id=$request->id;
+        $club=Course::find($id);
+        $club->status=$request->status;
+        $club->save();
+    }
+
     public function dashboard(){
         return view('backend.admin.dashboard.home');
     }

@@ -1,20 +1,22 @@
 @extends('layouts.main')
+
 @section('indexpage')
+
     <div class="plum-bg pt-3 pb-3">
         <div class="container">
             <ul class="ulDBlock-top">
                 <li>
-                    <i class="fadeIn fa fa-youtube-play"></i>
-                    <div class="font16 white-text">All</div>
+                    <a href="{{route('all-course')}}" class="course_list"><i class="fadeIn fa fa-youtube-play"></i>
+                        <div class="font16 white-text">All</div></a>
                 </li>
                 @if(isset($categories))
                     @foreach($categories as $cat)
                         <li>
-                            <i> <img class='fadeIn' src="{{url('category'.'/'.$cat->logo)}}" style="
+                           <a href="{{route('all-course',['id'=>$cat->id])}}" class="course_list"> <i> <img class='fadeIn' src="{{url('category'.'/'.$cat->logo)}}" style="
                 width: 57px;
                 height: 57px;
             "></i>
-                            <div class="font16 white-text">{{$cat->name}}</div>
+                            <div class="font16 white-text">{{$cat->name}}</div></a>
 
                     @endforeach
                 @endif
@@ -622,5 +624,7 @@
         </div>
     </div>
     <div id="to-top" title="back to top">↑</div>
+
+
 @endsection
 <!-- Latter Subscription End -->
