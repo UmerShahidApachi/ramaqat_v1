@@ -75,6 +75,12 @@ The above copyright notice and this permission notice shall be included in all c
                         <p>Sales</p>
                     </a>
                 </li>
+                <li class="nav-item {{ Request::segment(2) == 'currency'? 'active':'' }} ">
+                    <a class="nav-link" href="{{route('currency')}}">
+                        <i class="material-icons">content_paste</i>
+                        <p>Currency</p>
+                    </a>
+                </li>
                 <li class="nav-item {{ Request::segment(2) == 'accounts'? 'active':'' }} ">
                     <a class="nav-link" href="{{route('accounts')}}">
                         <i class="material-icons">content_paste</i>

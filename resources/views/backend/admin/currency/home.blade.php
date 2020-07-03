@@ -9,11 +9,11 @@
                     <div class="table-title">
                         <div class="row">
                             <div class="col-sm-6">
-                                <h2>Manage <b>Categories</b></h2>
+                                <h2>Currency</b></h2>
                             </div>
                             <div class="col-sm-6">
-                                <a href="#addCategory" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Category</span></a>
-                                {{--						<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>--}}
+                                <a href="#addCategory" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Currency</span></a>
+                              
                             </div>
                         </div>
                     </div>
@@ -25,16 +25,10 @@
                             <table class="table table-striped table-hover" id="table_id">
                                 <thead>
                                 <tr>
-                                    {{--						<th>--}}
-                                    {{--							<span class="custom-checkbox">--}}
-                                    {{--								<input type="checkbox" id="selectAll">--}}
-                                    {{--								<label for="selectAll"></label>--}}
-                                    {{--							</span>--}}
-                                    {{--						</th>--}}
-                                    <th>Name</th>
-                                    <th>Icon</th>
-                                    {{--						<th>Address</th>--}}
-                                    {{--                        <th>Phone</th>--}}
+                                    
+                                    <th>Currency Name</th>
+                                    <th>Symbol</th>
+                                    <th>Created At</th>                                    
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
@@ -42,25 +36,17 @@
                                 <tbody>
                                 @if($data)
                                     @foreach($data as $row)
-                                        <tr>
-                                            {{--						<td>--}}
-                                            {{--							<span class="custom-checkbox">--}}
-                                            {{--								<input type="checkbox" id="checkbox1" name="options[]" value="1">--}}
-                                            {{--								<label for="checkbox1"></label>--}}
-                                            {{--							</span>--}}
-                                            {{--						</td>--}}
-
-                                            <td>{{$row->name}}</td>
+                                        <tr>                                      
+                                            <td>{{$row->currency}}</td>
+                                            <td>{{$row->symbol}}</td>                                      
                                             <td>
-                                                @if($row->logo!="")
-                                                    <img src="{{asset('category/' .$row->logo)}}" style="width: 75px;" >
+                                                @if($row->flag!="")
+                                                    <img src="{{asset('currency/' .$row->flag)}}" style="width: 75px;" >
                                                 @else
                                                     <img src="{{url('image/dummy.jpg')}} " style="width: 75px;">
                                                 @endif
                                             </td>
 
-                                            {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
-                                            {{--                        <td>(171) 555-2222</td>--}}
                                             <td>
                                                 <a href="" data-id="{{$row->id}}" class="edit category_edit" data-toggle="modal"><i
                                                         class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -81,19 +67,25 @@
     <div id="addCategory" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form  id="category_form" method="POST" action="{{route('save_category')}}" enctype="multipart/form-data">
+                <form  id="category_form" method="POST" action="{{route('save_currency')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-header">
-                        <h4 class="modal-title">Add Category</h4>
+                        <h4 class="modal-title">Add Currency</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body">
 
                         <div class="file-field">
                             <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" name="name" required>
+                                <label>Currency Name</label>
+                                <input type="text" class="form-control" placeholder="currency name" name="name" required value="{{old('name')}}">
                             </div>
+                            <div class="form-group">
+                                <label>Symbol</label>
+                                <input type="text" class="form-control" placeholder="$, SR" name="symbol" required value="{{old('symbol')}}">
+                            </div>
+
+                            <label>Flag</label>
                             <div class="btn btn-primary btn-sm float-left">
                                 <span>Choose file</span>
                                 <input type="file" name="logo" accept="image/*" required>
@@ -113,10 +105,10 @@
     <div id="edit_category" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form  id="category_form" method="POST" action="{{url('admin/update/category')}}" enctype="multipart/form-data">
+                <form  id="category_form" method="POST" action="{{route('update_currency')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-header">
-                        <h4 class="modal-title">Edit Category</h4>
+                        <h4 class="modal-title">Edit Currency</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body" id="replace1">
@@ -151,7 +143,6 @@
         };
         swal({
             title: "Do you want to delete this Record",
-            text: "@lang('packages.delete_package_msg')",
             type: 'info',
             showCancelButton: true,
             confirmButtonColor: '#F79426',
@@ -165,7 +156,7 @@
                     headers: {
                         'X-CSRF-TOKEN': $( 'meta[name="csrf-token"]' ).attr( 'content' )
                     },
-                    url: '<?php echo url("admin/delete/category"); ?>',
+                    url: '<?php echo url("admin/delete/currency"); ?>',
                     data: form_data,
                     success: function ( msg ) {
                         swal( "Record Delete Successfully", '', 'success' )
@@ -192,7 +183,7 @@
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            url: '{{url('admin/edit/category')}}',
+            url: '{{url('admin/edit/currency')}}',
             data: form_data,
             success: function (response) {
                 if(response.status == "success") {
@@ -200,11 +191,15 @@
                     html += '<input type="hidden" name="id" value="'+response.data.id+ '" >';
                     html += '<div class="form-group">' ;
                     html +=  '<label>Name</label>' ;
-                    html += '<input type="text" class="form-control" value="'+response.data.name+ '" name="name" required>' ;
+                    html += '<input type="text" class="form-control" value="'+response.data.currency+ '" name="name" required>' ;
+                    html +=  '</div>' ;
+                    html += '<div class="form-group">' ;
+                    html +=  '<label>Name</label>' ;
+                    html += '<input type="text" class="form-control" value="'+response.data.symbol+ '" name="symbol" required>' ;
                     html +=  '</div>' ;
                     html += '<div class="btn btn-primary btn-sm float-left">';
                     html +=  '<span>Choose file</span>';
-                    html +=  '<input type="file" name="logo" accept="image/*" required>' ;
+                    html +=  '<input type="file" name="logo" accept="image/*">' ;
                     html +=  '</div>';
                     $('#replace1').html(html);
                     $('#edit_category').modal('toggle');

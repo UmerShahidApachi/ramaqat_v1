@@ -47,6 +47,12 @@ Route::prefix('admin')->group(function () {
         Route::get('slider', 'Backend\DashboardController@slider')->name('slider');
         Route::get('sales', 'Backend\DashboardController@sell_courses')->name('sales');
 
+        Route::get('currency', 'Backend\CurrencyController@index')->name('currency');
+        Route::post('currency/store', 'Backend\CurrencyController@store')->name('save_currency');
+        Route::get('edit/currency', 'Backend\CurrencyController@edit');
+        Route::post('currency/updates', 'Backend\CurrencyController@update')->name('update_currency');
+        Route::get('delete/currency', 'Backend\CurrencyController@destroy');
+
         Route::get('category', 'Backend\DashboardController@categories')->name('category');
         Route::POST('save_category', 'Frontend\CategoryController@create')->name('save_category');
         Route::get('delete/category', 'Frontend\CategoryController@delete_category')->name('delete_category');
