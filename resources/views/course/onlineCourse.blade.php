@@ -7,7 +7,7 @@
     .main_bg_color{
         background-color:#570055;
     }
-    .carousel_item_header_icon{      
+    .carousel_item_header_icon{
       overflow: hidden;
       position: absolute;
       top: 4px;
@@ -23,7 +23,7 @@
             color: white;
         }
 
-    .carousel_item_footer{      
+    .carousel_item_footer{
       overflow: hidden;
       position: relative;
       bottom: 0px;
@@ -41,30 +41,40 @@
         .carousel_item_footer div p{
             margin: 0px;
         }
-   
+
 </style>
 
 <div class="flex-center mb-1 mt-1 offline_courses">
-    <u><a class="Socialb plum-text" href="#">Online Courses</a></u>
+    @if($category == "")
+    <u><a class="Socialb plum-text" href="#">All Courses</a></u>
+        @else
+        <u><a class="Socialb plum-text" href="#">{{$category->name}} Courses</a></u>
+    @endif
 </div>
 
 <div class="container mt-5 mb-5">
     <div class="carousel slide multi-item-carousel" id="theCarousel">
         <div class="carousel-inner row w-100 mx-auto">
+            @foreach($data as $row)
             <div class="carousel-item active col-md-4">
-                <a href="#">
-                    <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block">
+{{--                <a href="{{route('detail-course',['id'=>$row->id])}}"><img src="{{asset('course/'. $row->thumbnail)}}" class="img-fluid mx-auto d-block zoom"></a>--}}
+                <a href="{{route('detail-course',['id'=>$row->id])}}">
+                    <img src="{{asset('course/'. $row->thumbnail)}}" class="img-fluid mx-auto d-block">
                      <div class="carousel_item_header_icon">
                        <p class="mb-1"><i class="fa fa-clock-o"></i></p>
                        <p class="mb-0"><i class="fa fa-bars"></i></p>
                      </div>
                     <div class="col carousel_item_footer main_bg_color" style="color: white">
                         <div class="col-md-3 float-left p-0">
-                            <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
+                            @if($row->users['image'] == "")
+                                <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
+                            @else
+                                <img src="{{asset('users/'. $row->users['image'])}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
+                            @endif
                         </div>
                         <div class="col-md-9 float-left pl-0">
-                            <p>Miss Nabeela</p>
-                            <p>The Art Painting and Digital Art Course<br> -12 Courses in 1</p>
+                            <p>{{$row->users['name']}}</p>
+                            <p>{{$row->name}}<br> {{$row->description}}</p>
                             <p class="float-right p-0" style="font-size: 10px">
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
@@ -78,324 +88,12 @@
                     </div>
                 </a>
             </div>
-            <div class="carousel-item active col-md-4">
-                <a href="#">
-                    <img src="{{asset('assets/frontend/img/onlinecourse/tips.png')}}" class="img-fluid mx-auto d-block">
-                    <div class="carousel_item_header_icon">
-                       <p class="mb-1"><i class="fa fa-clock-o"></i></p>
-                       <p class="mb-0"><i class="fa fa-bars"></i></p>
-                     </div>
-                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-                        <div class="col-md-3 float-left p-0">
-                            <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
-                        </div>
-                        <div class="col-md-9 float-left pl-0">
-                            <p>Miss Nabeela</p>
-                            <p>The Art Painting and Digital Art Course<br> -12 Courses in 1</p>
-                            <p class="float-right p-0" style="font-size: 10px">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span> 5</span>
-                                <span>(12345)</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="carousel-item active col-md-4">
-                <a href="#">
-                    <img src="{{asset('assets/frontend/img/onlinecourse/note.png')}}" class="img-fluid mx-auto d-block">
-                    <div class="carousel_item_header_icon">
-                       <p class="mb-1"><i class="fa fa-clock-o"></i></p>
-                       <p class="mb-0"><i class="fa fa-bars"></i></p>
-                     </div>
-                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-                        <div class="col-md-3 float-left p-0">
-                            <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
-                        </div>
-                        <div class="col-md-9 float-left pl-0">
-                            <p>Miss Nabeela</p>
-                            <p>The Art Painting and Digital Art Course<br> -12 Courses in 1</p>
-                            <p class="float-right p-0" style="font-size: 10px">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span> 5</span>
-                                <span>(12345)</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            @endforeach
+
         </div>
     </div>
 </div>
-<div class="container mt-5 mb-5">
-    <div class="carousel slide multi-item-carousel" id="theCarousel">
-        <div class="carousel-inner row w-100 mx-auto">
-            <div class="carousel-item active col-md-4">
-                <a href="#">
-                    <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block">
-                    <div class="carousel_item_header_icon">
-                       <p class="mb-1"><i class="fa fa-clock-o"></i></p>
-                       <p class="mb-0"><i class="fa fa-bars"></i></p>
-                     </div>
-                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-                        <div class="col-md-3 float-left p-0">
-                            <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
-                        </div>
-                        <div class="col-md-9 float-left pl-0">
-                            <p>Miss Nabeela</p>
-                            <p>The Art Painting and Digital Art Course<br> -12 Courses in 1</p>
-                            <p class="float-right p-0" style="font-size: 10px">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span> 5</span>
-                                <span>(12345)</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="carousel-item active col-md-4">
-                <a href="#">
-                    <img src="{{asset('assets/frontend/img/onlinecourse/tips.png')}}" class="img-fluid mx-auto d-block">
-                    <div class="carousel_item_header_icon">
-                       <p class="mb-1"><i class="fa fa-clock-o"></i></p>
-                       <p class="mb-0"><i class="fa fa-bars"></i></p>
-                     </div>
-                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-                        <div class="col-md-3 float-left p-0">
-                            <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
-                        </div>
-                        <div class="col-md-9 float-left pl-0">
-                            <p>Miss Nabeela</p>
-                            <p>The Art Painting and Digital Art Course<br> -12 Courses in 1</p>
-                            <p class="float-right p-0" style="font-size: 10px">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span> 5</span>
-                                <span>(12345)</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="carousel-item active col-md-4">
-                <a href="#">
-                    <img src="{{asset('assets/frontend/img/onlinecourse/note.png')}}" class="img-fluid mx-auto d-block">
-                    <div class="carousel_item_header_icon">
-                       <p class="mb-1"><i class="fa fa-clock-o"></i></p>
-                       <p class="mb-0"><i class="fa fa-bars"></i></p>
-                     </div>
-                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-                        <div class="col-md-3 float-left p-0">
-                            <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
-                        </div>
-                        <div class="col-md-9 float-left pl-0">
-                            <p>Miss Nabeela</p>
-                            <p>The Art Painting and Digital Art Course<br> -12 Courses in 1</p>
-                            <p class="float-right p-0" style="font-size: 10px">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span> 5</span>
-                                <span>(12345)</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container mt-5 mb-5">
-    <div class="carousel slide multi-item-carousel" id="theCarousel">
-        <div class="carousel-inner row w-100 mx-auto">
-            <div class="carousel-item active col-md-4">
-                <a href="#">
-                    <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block">
-                    <div class="carousel_item_header_icon">
-                       <p class="mb-1"><i class="fa fa-clock-o"></i></p>
-                       <p class="mb-0"><i class="fa fa-bars"></i></p>
-                     </div>
-                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-                        <div class="col-md-3 float-left p-0">
-                            <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
-                        </div>
-                        <div class="col-md-9 float-left pl-0">
-                            <p>Miss Nabeela</p>
-                            <p>The Art Painting and Digital Art Course<br> -12 Courses in 1</p>
-                            <p class="float-right p-0" style="font-size: 10px">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span> 5</span>
-                                <span>(12345)</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="carousel-item active col-md-4">
-                <a href="#">
-                    <img src="{{asset('assets/frontend/img/onlinecourse/tips.png')}}" class="img-fluid mx-auto d-block">
-                    <div class="carousel_item_header_icon">
-                       <p class="mb-1"><i class="fa fa-clock-o"></i></p>
-                       <p class="mb-0"><i class="fa fa-bars"></i></p>
-                     </div>
-                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-                        <div class="col-md-3 float-left p-0">
-                            <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
-                        </div>
-                        <div class="col-md-9 float-left pl-0">
-                            <p>Miss Nabeela</p>
-                            <p>The Art Painting and Digital Art Course<br> -12 Courses in 1</p>
-                            <p class="float-right p-0" style="font-size: 10px">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span> 5</span>
-                                <span>(12345)</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="carousel-item active col-md-4">
-                <a href="#">
-                    <img src="{{asset('assets/frontend/img/onlinecourse/note.png')}}" class="img-fluid mx-auto d-block">
-                    <div class="carousel_item_header_icon">
-                       <p class="mb-1"><i class="fa fa-clock-o"></i></p>
-                       <p class="mb-0"><i class="fa fa-bars"></i></p>
-                     </div>
-                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-                        <div class="col-md-3 float-left p-0">
-                            <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
-                        </div>
-                        <div class="col-md-9 float-left pl-0">
-                            <p>Miss Nabeela</p>
-                            <p>The Art Painting and Digital Art Course<br> -12 Courses in 1</p>
-                            <p class="float-right p-0" style="font-size: 10px">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span> 5</span>
-                                <span>(12345)</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container mt-5 mb-5">
-    <div class="carousel slide multi-item-carousel" id="theCarousel">
-        <div class="carousel-inner row w-100 mx-auto">
-            <div class="carousel-item active col-md-4">
-                <a href="#">
-                    <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block">
-                    <div class="carousel_item_header_icon">
-                       <p class="mb-1"><i class="fa fa-clock-o"></i></p>
-                       <p class="mb-0"><i class="fa fa-bars"></i></p>
-                     </div>
-                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-                        <div class="col-md-3 float-left p-0">
-                            <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
-                        </div>
-                        <div class="col-md-9 float-left pl-0">
-                            <p>Miss Nabeela</p>
-                            <p>The Art Painting and Digital Art Course<br> -12 Courses in 1</p>
-                            <p class="float-right p-0" style="font-size: 10px">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span> 5</span>
-                                <span>(12345)</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="carousel-item active col-md-4">
-                <a href="#">
-                    <img src="{{asset('assets/frontend/img/onlinecourse/tips.png')}}" class="img-fluid mx-auto d-block">
-                    <div class="carousel_item_header_icon">
-                       <p class="mb-1"><i class="fa fa-clock-o"></i></p>
-                       <p class="mb-0"><i class="fa fa-bars"></i></p>
-                     </div>
-                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-                        <div class="col-md-3 float-left p-0">
-                            <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
-                        </div>
-                        <div class="col-md-9 float-left pl-0">
-                            <p>Miss Nabeela</p>
-                            <p>The Art Painting and Digital Art Course<br> -12 Courses in 1</p>
-                            <p class="float-right p-0" style="font-size: 10px">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span> 5</span>
-                                <span>(12345)</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="carousel-item active col-md-4">
-                <a href="#">
-                    <img src="{{asset('assets/frontend/img/onlinecourse/note.png')}}" class="img-fluid mx-auto d-block">
-                    <div class="carousel_item_header_icon">
-                       <p class="mb-1"><i class="fa fa-clock-o"></i></p>
-                       <p class="mb-0"><i class="fa fa-bars"></i></p>
-                     </div>
-                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-                        <div class="col-md-3 float-left p-0">
-                            <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
-                        </div>
-                        <div class="col-md-9 float-left pl-0">
-                            <p>Miss Nabeela</p>
-                            <p>The Art Painting and Digital Art Course<br> -12 Courses in 1</p>
-                            <p class="float-right p-0" style="font-size: 10px">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span> 5</span>
-                                <span>(12345)</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <div class="next_previous flex-center mb-1 mt-1 offline_courses">
     <a href="#" class="Socialb plum-text previous">&laquo; Previous</a>

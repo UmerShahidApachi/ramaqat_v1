@@ -24,6 +24,7 @@
    @yield('online-course')
 
 </div>
+
 <!-- End layout-->
 
 <!-- Script Files-->
