@@ -9,7 +9,7 @@
           <img src="{{asset('assets/frontend/img/toggle.png')}}" class="openbtn" onclick="openNav()">
         </li>
         <li>
-          <img class="animated fadeIn logo_img" src="{{asset('assets/frontend/img/logo.png')}}">
+         <a href="{{url('/')}}"> <img class="animated fadeIn logo_img" src="{{asset('assets/frontend/img/logo.png')}}"></a>
         </li>
 
       </ul>

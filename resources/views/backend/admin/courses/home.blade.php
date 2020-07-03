@@ -58,6 +58,7 @@
                                     <th>Duration</th>
                                     <th>Enable / Disable</th>
                                     <th>Created at</th>
+                                    <th>Actions</th>
                                 </tr>
                                 </thead>
 
@@ -75,10 +76,10 @@
 
                                             {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
                                             {{--                        <td>(171) 555-2222</td>--}}
-                                            {{--                                            <td>--}}
+                                                                                        <td>
                                             {{--                                                <a href="" data-id="{{$row->id}}" id="edit_cat"  class="edit category_edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>--}}
-                                            {{--                                                <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>--}}
-                                            {{--                                            </td>--}}
+                                                                                            <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                                                        </td>
 
                                         </tr>
                                     @endforeach
@@ -106,6 +107,40 @@
         $('#table_id').DataTable( {
             "order": [[ 5, "desc" ]]
         } );
+    } );
+    $(document).on('click', '.removePartner', function (evt) {
+        var task_id = $( this ).attr( "data-id" );
+        var form_data = {
+            id: task_id
+        };
+        swal({
+            title: "Do you want to delete this Record",
+            text: "@lang('packages.delete_package_msg')",
+            type: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#F79426',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes',
+            showLoaderOnConfirm: true
+        }).then( ( result ) => {
+            if ( result.value == true ) {
+                $.ajax( {
+                    type: 'get',
+                    headers: {
+                        'X-CSRF-TOKEN': $( 'meta[name="csrf-token"]' ).attr( 'content' )
+                    },
+                    url: '<?php echo url("admin/delete"); ?>',
+                    data: form_data,
+                    success: function ( msg ) {
+                        swal( "Record Delete Successfully", '', 'success' )
+                        setTimeout( function () {
+                            location.reload();
+                        }, 2000 );
+                    }
+                } );
+            }
+        } );
+
     } );
 
 

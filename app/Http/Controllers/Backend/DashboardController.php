@@ -13,6 +13,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class DashboardController extends Controller
@@ -38,10 +39,11 @@ class DashboardController extends Controller
         return view('backend.admin.dashboard.home');
     }
     public function all_users(){
-        $data = User::all();
+        $data = User::where('role_id',3)->get();
         return view('backend.admin.users.home', compact('data'));
 
     }
+
     public function accounts(){
         $data = "";
         return view('backend.admin.accounts.home', compact('data'));
@@ -53,7 +55,7 @@ class DashboardController extends Controller
 
     }
     public function all_trainers(){
-        $data = User::all();
+        $data = User::where('role_id',2)->get();
         return view('backend.admin.trainers.home', compact('data'));
 
     }
@@ -158,6 +160,7 @@ class DashboardController extends Controller
 
 
     }
+
 
     public function categories(){
 //        dd('sda');
