@@ -62,7 +62,7 @@
                                             <td>
                                                 <a href="{{url('trainer/view-lessons/'.$row->id)}}"><i class="fa fa-eye"></i></a>
                                             <a href="{{url('trainer/edit-course/'.$row->id)}}"><i class="fa fa-edit"></i></a>
-                                                <a href="{{url('trainer/delete/'.$row->id)}}"><i class="fa fa-trash"></i></a>
+                                                <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                             </td>
 
                                             {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
@@ -153,6 +153,41 @@
             "order": [[2, "desc"]]
         });
     });
+    $(document).on('click', '.removePartner', function (evt) {
+        var task_id = $( this ).attr( "data-id" );
+        var form_data = {
+            id: task_id
+        };
+        swal({
+            title: "Do you want to delete this Record",
+            text: "@lang('packages.delete_package_msg')",
+            type: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#F79426',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes',
+            showLoaderOnConfirm: true
+        }).then( ( result ) => {
+            if ( result.value == true ) {
+                $.ajax( {
+                    type: 'get',
+                    headers: {
+                        'X-CSRF-TOKEN': $( 'meta[name="csrf-token"]' ).attr( 'content' )
+                    },
+                    url: '<?php echo url("trainer/delete"); ?>',
+                    data: form_data,
+                    success: function ( msg ) {
+                        swal( "Record Delete Successfully", '', 'success' )
+                        setTimeout( function () {
+                            location.reload();
+                        }, 2000 );
+                    }
+                } );
+            }
+        } );
+
+    } );
+
 
 
 </script>

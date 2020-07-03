@@ -21,7 +21,7 @@ class CourseController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+//        $this->middleware('auth');
     }
     public function index()
     {
@@ -144,6 +144,12 @@ class CourseController extends Controller
         $categories = Category::all();
         return view('backend.trainer.courses.edit', compact('categories','course'));
     }
+    public function my_course()
+    {
+        $data = Course::where('user_id',Auth::id());
+//        $categories = Category::all();
+        return view('course.myCourse',compact('data'));
+    }
 
     /**
      * Update the specified resource in storage.
@@ -211,8 +217,9 @@ class CourseController extends Controller
         //
 
     }
-    public function delete($id)
+    public function delete(Request $request)
     {
+        $id = $request->id;
         Lesson::where('course_id',$id)->delete();
         Course::where('id',$id)->delete();
         return redirect()->back();
