@@ -14,8 +14,8 @@
 <!-- Material Design Bootstrap -->
 <link rel="stylesheet" href="{{asset('assets/frontend/css/mdb.min.css')}}">
 <!-- Your custom styles (optional) -->
-<link rel="stylesheet" href="{{asset('assets/frontend/css/style.css')}}">
-
+<link rel="stylesheet" href="{{asset('assets/frontend/css/color.css')}}" title="color">
+<link rel="alternate stylesheet" href="{{asset('assets/frontend/css/color1.css')}}" title="color1">
 <style>
 	
 </style>

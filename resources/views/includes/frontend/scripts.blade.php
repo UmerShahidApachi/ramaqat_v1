@@ -12,7 +12,18 @@
 <script type="text/javascript" src="{{asset('assets/frontend/js/script.js')}}" ></script>
 <!-- Your custom scripts (optional) -->
  <script type="text/javascript" src="{{asset('assets/frontend/js/custom.js')}}"></script>
+ <script type="text/javascript" src="{{asset('assets/frontend/js/js-plugins.min.js')}}"></script>
  <script>
+  $(".sidepanel > span").on('click', function () {
+    $(".sidepanel").toggleClass("show");
+    $(this).toggleClass('spin');
+    return false;
+  });
+  $('.color-picker a').on("click", function () {
+    $('.color-picker a').removeClass("applied");
+    $(this).addClass("applied");
+    return false;
+  });
 $('.multi-item-carousel').on('slide.bs.carousel', function (e) {
     let $e = $(e.relatedTarget),
       itemsPerSlide = 3,
