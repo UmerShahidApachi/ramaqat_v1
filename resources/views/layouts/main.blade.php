@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" @if(Session::has('lang')) @if(Session::get('lang')=="ar") dir="rtl" @endif @endif>
+
 <head>
     <!-- Basic -->
     <meta charset="utf-8">

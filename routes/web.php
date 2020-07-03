@@ -4,6 +4,8 @@ use App\Models\Category;
 use App\Models\Course;
 use App\Slider;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::post('language/{locale}', function (Request $request,$locale) {
+    // App::setLocale($locale);
+    $request->session()->put('lang', $locale);
+});
 
 Route::get('/', function () {
     $latest = Course::where('status',1)->get()->take(3);

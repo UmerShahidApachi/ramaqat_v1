@@ -42,3 +42,27 @@ document.getElementById("main").style.marginLeft= "0";
 }
 
 </script>
+
+<script>
+ $('.select-selected').bind('DOMSubtreeModified', function(){
+  var lang = $('.select-selected').text();
+  // alert(lang);
+  if (lang !="") {
+      if(lang=="Arabic"){
+        set_lang= 'ar';
+      }else{
+        set_lang= 'en';
+      }
+    $.ajax( {
+          type: 'POST',
+          headers: {
+            'X-CSRF-TOKEN': $( 'meta[name="csrf-token"]' ).attr( 'content' )
+          },
+          url: '{{url("language")}}/'+set_lang,
+          success: function ( msg ) {
+           location.reload();
+          }
+        } );
+  }
+});
+</script>
