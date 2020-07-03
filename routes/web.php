@@ -104,6 +104,14 @@ Route::prefix('trainer')->group(function () {
 
     });
 });
+
+
+Route::prefix('user')->group(function () {
+    Route::group(['middleware' => ['user']], function () {
+        Route::get('my-course', 'Frontend\CourseController@my_course')->name('my-course');
+
+    });
+});
 Route::get('userlogin', 'Frontend\LoginController@userLogin')->name('login-form');
 Route::post('login_user', 'Frontend\LoginController@login_user')->name('login_user');
 Route::get('user-register', 'Frontend\RegisterController@userRegister')->name('register');

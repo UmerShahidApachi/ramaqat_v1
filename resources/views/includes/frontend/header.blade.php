@@ -73,6 +73,8 @@
                     <u><a class="Socialb plum-text singup_id_name" href="">{{Auth::user()->name}}</a></u>
                 </div>
                 <p>{{Auth::user()->email}}</p>
+            </div>
+
         @endauth
                 @guest
                     <div class="row login_id">
@@ -83,10 +85,12 @@
                             <u><a class="Socialb plum-text singup_id_name" href="{{route('login')}}">Login/Signup</a></u>
                         </div>
 {{--                        <p>guest</p>--}}
+                    </div>
+
                     @endguest
 
 
-            </div>
+
             <div class="row sidebar_icons">
               <a href="javascript:void(0)" class="closebtn close_sidbar" onclick="closeNav()">×</a>
                 @auth
@@ -104,5 +108,6 @@
               <a href="#"><img src="{{asset('assets/frontend/img/contact_us.png')}}">Contact Us</a>
             </div>
     </div>
+
 </header>
 <!--Header End Here  -->

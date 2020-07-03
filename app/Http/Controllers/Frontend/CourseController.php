@@ -141,6 +141,12 @@ class CourseController extends Controller
         $categories = Category::all();
         return view('backend.trainer.courses.edit', compact('categories','course'));
     }
+    public function my_course()
+    {
+        $data = Course::where('user_id',Auth::id());
+//        $categories = Category::all();
+        return view('course.myCourse',compact('data'));
+    }
 
     /**
      * Update the specified resource in storage.

@@ -24,6 +24,7 @@
     @yield('register')
    @yield('offline-course')
    @yield('online-course')
+   @yield('my-course')
 
 </div>
 

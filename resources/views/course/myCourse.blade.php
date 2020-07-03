@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('online-course')
+@section('my-course')
 <style>
     .carousel-item{
         position: relative;
@@ -45,11 +45,7 @@
 </style>
 
 <div class="flex-center mb-1 mt-1 offline_courses">
-    @if($category == "")
-    <u><a class="Socialb plum-text" href="#">All Courses</a></u>
-        @else
-        <u><a class="Socialb plum-text" href="#">{{$category->name}} Courses</a></u>
-    @endif
+    <u><a class="Socialb plum-text" href="#">My Courses</a></u>
 </div>
 
 <div class="container mt-5 mb-5">
