@@ -197,17 +197,20 @@
             <ul class="ulDBlock-top">
                 <li>
                     <a href="{{route('all-course')}}" class="course_list"><i class="fadeIn fa fa-youtube-play"></i>
-                        <div class="font16 white-text">All</div></a>
+                        <div class="font16 white-text">All</div>
+                    </a>
                 </li>
                 @if(isset($categories))
                     @foreach($categories as $cat)
                         <li>
-                           <a href="{{route('all-course',['id'=>$cat->id])}}" class="course_list"> <i> <img class='fadeIn' src="{{url('category'.'/'.$cat->logo)}}" style="
+                            <a href="{{route('all-course',['id'=>$cat->id])}}" class="course_list"> <i> <img
+                                        class='fadeIn' src="{{url('category'.'/'.$cat->logo)}}" style="
                 width: 57px;
                 height: 57px;
             "></i>
-                            <div class="font16 white-text">{{$cat->name}}</div></a>
-
+                                <div class="font16 white-text">{{$cat->name}}</div>
+                            </a>
+                        </li>
                     @endforeach
                 @endif
 
@@ -225,9 +228,9 @@
         </ol>
         <!--/.Indicators-->
         <!--Slides-->
-        @if(isset($slider1))
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
+                @if(isset($slider1))
+                    <div class="carousel-item active">
                     <div class="view">
                         <img class="d-block w-100" src="{{url('slider').'/'.$slider1['image']}}" alt="First slide">
                         <div class="mask rgba-black-light"></div>
@@ -255,18 +258,19 @@
                         </div>
                     @endforeach
                 @endif
-                {{-- <div class="carousel-item">
-                  <!--Mask color-->
-                  <div class="view">
-                    <img class="d-block w-100" src="img/slider-11.png" alt="Third slide">
-                    <div class="mask rgba-black-slight"></div>
-                  </div>
-                  <div class="carousel-caption">
-                    <h3 class="h3-responsive font45">Slight mask</h3>
-                    <p class="font35">Third text</p>
-                  </div>
-                </div> --}}
             </div>
+
+        {{-- <div class="carousel-item">
+          <!--Mask color-->
+          <div class="view">
+            <img class="d-block w-100" src="img/slider-11.png" alt="Third slide">
+            <div class="mask rgba-black-slight"></div>
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive font45">Slight mask</h3>
+            <p class="font35">Third text</p>
+          </div>
+        </div> --}}
             <!--/.Slides-->
             <!--Controls-->
             <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
@@ -436,6 +440,7 @@
             </div>
         </div>
     </div>
+
     <!-- Description -->
     <div class="heading mt-3">Courses Cetagories</div>
     <div class="container mt-3 mb-3">
@@ -458,16 +463,7 @@
                     </li>
                 @endforeach
             @endif
-            {{--                <li class="nav-item">--}}
-            {{--                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"--}}
-            {{--                       aria-controls="profile"--}}
-            {{--                       aria-selected="false">Art</a>--}}
-            {{--                </li>--}}
-            {{--                <li class="nav-item">--}}
-            {{--                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"--}}
-            {{--                       aria-controls="contact"--}}
-            {{--                       aria-selected="false">Cooking</a>--}}
-            {{--                </li>--}}
+
         </ul>
         @if(isset($categories1))
 
@@ -605,55 +601,7 @@
                         </div>
                     @endforeach
                 @endif
-                {{--                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">--}}
-                {{--                    <div class="mt-3 mb-3">--}}
-                {{--                        <div class="carousel slide multi-item-carousel" id="theCarousel">--}}
-                {{--                            <div class="carousel-inner row w-100 mx-auto">--}}
-                {{--                                <div class="carousel-item active col-md-4">--}}
-                {{--                                    <a href="#"><img class="zoom"--}}
-                {{--                                                     src="{{asset('assets/frontend/img/multislider-1.png')}}"--}}
-                {{--                                                     class="img-fluid mx-auto d-block"></a>--}}
-                {{--                                </div>--}}
-                {{--                                <div class="carousel-item col-md-4">--}}
-                {{--                                    <img src="{{asset('assets/frontend/img/multislider-1.png')}}"--}}
-                {{--                                         class="img-fluid mx-auto d-block">--}}
-                {{--                                </div>--}}
-                {{--                                <div class="carousel-item col-md-4">--}}
-                {{--                                    <img src="{{asset('assets/frontend/img/multislider-1.png')}}"--}}
-                {{--                                         class="img-fluid mx-auto d-block">--}}
-                {{--                                </div>--}}
-                {{--                                <div class="carousel-item col-md-4">--}}
-                {{--                                    <img src="{{asset('assets/frontend/img/multislider-1.png')}}"--}}
-                {{--                                         class="img-fluid mx-auto d-block">--}}
-                {{--                                </div>--}}
-                {{--                                <div class="carousel-item col-md-4">--}}
-                {{--                                    <img src="{{asset('assets/frontend/img/multislider-1.png')}}"--}}
-                {{--                                         class="img-fluid mx-auto d-block">--}}
-                {{--                                </div>--}}
-                {{--                                <div class="carousel-item col-md-4">--}}
-                {{--                                    <img src="{{asset('assets/frontend/img/multislider-1.png')}}"--}}
-                {{--                                         class="img-fluid mx-auto d-block">--}}
-                {{--                                </div>--}}
-                {{--                                <div class="carousel-item col-md-4">--}}
-                {{--                                    <img src="{{asset('assets/frontend/img/multislider-1.png')}}"--}}
-                {{--                                         class="img-fluid mx-auto d-block">--}}
-                {{--                                </div>--}}
-                {{--                                <div class="carousel-item col-md-4">--}}
-                {{--                                    <img src="{{asset('assets/frontend/img/multislider-1.png')}}"--}}
-                {{--                                         class="img-fluid mx-auto d-block">--}}
-                {{--                                </div>--}}
-                {{--                            </div>--}}
-                {{--                            <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">--}}
-                {{--                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>--}}
-                {{--                                <span class="sr-only">Previous</span>--}}
-                {{--                            </a>--}}
-                {{--                            <a class="carousel-control-next" href="#theCarousel" role="button" data-slide="next">--}}
-                {{--                                <span class="carousel-control-next-icon" aria-hidden="true"></span>--}}
-                {{--                                <span class="sr-only">Next</span>--}}
-                {{--                            </a>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-                {{--                </div>--}}
+
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                     <div class="mt-3 mb-3">
                     <!-- <div class="carousel slide multi-item-carousel" id="theCarousel">
