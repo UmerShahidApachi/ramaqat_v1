@@ -1,8 +1,198 @@
 @extends('layouts.main')
 
 @section('indexpage')
+<!-- Cetegory slider -->
+<div class="plum-bg pt-3 pb-3">
+<div class="container">
+    <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+        <!--Indicators-->
+        <!-- <ol class="carousel-indicators custum-indicators">
+    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-2" data-slide-to="1"></li>
+    <li data-target="#carousel-example-2" data-slide-to="2"></li>
+  </ol> -->
+        <!--/.Indicators-->
+        <!--Slides-->
+        <div class="row">
+            <div class="col-12">
 
-    <div class="plum-bg pt-3 pb-3">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class=" col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">match</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">match</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">match</div>
+                                </div>
+                            </div>
+                            <div class=" col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+                            <div class="col-1 text-center">
+                                <div>
+                                    <i class="fadeIn fa fa-youtube-play"></i>
+                                    <div class="font16 white-text">All</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--/.Slides-->
+        <!--Controls-->
+ <a class="carousel-control-prev cat-prev" href="#carousel-example-2" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon cat-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next cat-next" href="#carousel-example-2" role="button" data-slide="next">
+  <span class="carousel-control-next-icon cat-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a>
+        <!--/.Controls-->
+    </div>
+</div>
+</div>
+<!-- End -->
+
+</div>
+   {{-- <div class="plum-bg pt-3 pb-3">
         <div class="container">
             <ul class="ulDBlock-top">
                 <li>
@@ -23,7 +213,7 @@
 
             </ul>
         </div>
-    </div>
+    </div>--}}
     <!-- Services Section End Here -->
     <!--Carousel Wrapper-->
     <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
