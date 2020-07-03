@@ -19,7 +19,13 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect(RouteServiceProvider::HOME);
+            if (Auth::user()->role_id == 3) {
+                return redirect(RouteServiceProvider::HOME);
+            }elseif (Auth::user()->role_id == 2){
+                return redirect(route('Trainer/dashboard'));
+            }elseif (Auth::user()->role_id == 1){
+                return redirect(route('dashboard'));
+            }
         }
 
         return $next($request);

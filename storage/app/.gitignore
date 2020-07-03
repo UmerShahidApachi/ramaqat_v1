@@ -1,6 +1,6 @@
 *
-!public/
-!.gitignore
+public/
+.gitignore
 .env
 /vendor
 /.idea

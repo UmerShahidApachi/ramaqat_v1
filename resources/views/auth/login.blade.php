@@ -1,27 +1,27 @@
-@extends('layouts.main')
+@extends('layouts.main2')
 @section('userlogin')
-<div class="img-bg">
+<div class="img-bg" style="height:100vh">
     <div class="flex-center flex-column col-11 col-sm-4 mx-auto">
         <img class="mb-2 SiteLogo" src="{{asset('assets/frontend/img/logo.png')}}" alt="Logo">
         <h1 class="text-hide animated fadeIn mb-2 font45 plum-text mb-2">أهلا وسهلا بك إلى رمقات</h1>
         <div class="inputform plum-bg text-center white-text">
             <h2>Sign in</h2>
             <!-- Default form row -->
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ route('login_user') }}">
             @csrf
             <!-- Grd row -->
                 <div class="form-row">
                     <!-- Grid column -->
                     <div class="col-12 mx-auto mb-3">
                         <!-- Default input -->
-                        <input type="email" class="form-control custom-height" placeholder="Email">
+                        <input type="email" name="email" class="form-control custom-height" placeholder="Email">
                     </div>
                     <!-- Grid column -->
 
                     <!-- Grid column -->
                     <div class="col-12 mx-auto mb-3">
                         <!-- Default input -->
-                        <input type="password" class="form-control custom-height" placeholder="password">
+                        <input type="password" name="password" class="form-control custom-height" placeholder="password">
                     </div>
                     <!-- Grid column -->
                 </div>

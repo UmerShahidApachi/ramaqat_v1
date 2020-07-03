@@ -18,12 +18,14 @@ class CreateCoursesTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('duration');
-            $table->string('views_counter');
+            $table->text('thumbnail');
+            $table->string('views_counter')->default(0);
             $table->integer('price');
             $table->bigInteger('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->bigInteger('category_id')->unsigned()->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }

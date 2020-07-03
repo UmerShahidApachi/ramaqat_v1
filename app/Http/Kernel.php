@@ -43,6 +43,18 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+        'Admin' => [
+            \App\Http\Middleware\Admin::class,
+
+        ],
+        'Trainer' => [
+            \App\Http\Middleware\Trainer::class,
+
+        ],
+        'User' => [
+            \App\Http\Middleware\User::class,
+
+        ],
     ];
 
     /**

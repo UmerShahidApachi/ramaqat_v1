@@ -1,5 +1,5 @@
-@extends('layouts.main')
-@section('userlogin')
+{{--@extends('layouts.main')--}}
+{{--@section('userlogin')--}}
 <div class="img-bg">
     <div class="flex-center flex-column col-11 col-sm-4 mx-auto">
         <img class="mb-2 SiteLogo" src="{{asset('assets/frontend/img/logo.png')}}" alt="Logo">

@@ -92,6 +92,7 @@ trait AuthenticatesUsers
      */
     protected function credentials(Request $request)
     {
+//        dd($request->all());
         return $request->only($this->username(), 'password');
     }
 

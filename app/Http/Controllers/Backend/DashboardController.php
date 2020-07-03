@@ -4,13 +4,16 @@
 namespace App\Http\Controllers\Backend;
 
 
+use App\CourseSale;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Course;
 use App\Slider;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class DashboardController extends Controller
@@ -18,14 +21,29 @@ class DashboardController extends Controller
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    public function change_course_status(Request $request)
+    {
+//        dd($request->all());
+
+        $id=$request->id;
+        $club=Course::find($id);
+        $club->status=$request->status;
+        $club->save();
+    }
+
     public function dashboard(){
         return view('backend.admin.dashboard.home');
     }
     public function all_users(){
-        $data = User::all();
+        $data = User::where('role_id',3)->get();
         return view('backend.admin.users.home', compact('data'));
 
     }
+
     public function accounts(){
         $data = "";
         return view('backend.admin.accounts.home', compact('data'));
@@ -37,13 +55,19 @@ class DashboardController extends Controller
 
     }
     public function all_trainers(){
-        $data = User::all();
+        $data = User::where('role_id',2)->get();
         return view('backend.admin.trainers.home', compact('data'));
 
     }
     public function slider(){
        $data =  Slider::all();
         return view('backend.admin.slider.slider', compact('data'));
+
+    }
+
+    public function sell_courses(){
+        $data = CourseSale::all();
+        return view('backend.admin.courses.sales', compact('data'));
 
     }
     public function sliderdata(Request $request){
@@ -136,6 +160,7 @@ class DashboardController extends Controller
 
 
     }
+
 
     public function categories(){
 //        dd('sda');
