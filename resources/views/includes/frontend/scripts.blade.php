@@ -12,21 +12,32 @@
 <script type="text/javascript" src="{{asset('assets/frontend/js/script.js')}}" ></script>
 <!-- Your custom scripts (optional) -->
  <script type="text/javascript" src="{{asset('assets/frontend/js/custom.js')}}"></script>
+ <script type="text/javascript" src="{{asset('assets/frontend/js/js-plugins.min.js')}}"></script>
  <script>
-// $('.multi-item-carousel').on('slide.bs.carousel', function (e) {
-//     let $e = $(e.relatedTarget),
-//       itemsPerSlide = 3,
-//       totalItems = $('.carousel-item', this).length,
-//       $itemsContainer = $('.carousel-inner', this),
-//       it = itemsPerSlide - (totalItems - $e.index());
-//     if (it > 0) {
-//       for (var i = 0; i < it; i++) {
-//         $('.carousel-item', this).eq(e.direction == "left" ? i : 0).
-//           // append slides to the end/beginning
-//           appendTo($itemsContainer);
-//       }
-//     }
-//   });
+  $(".sidepanel > span").on('click', function () {
+    $(".sidepanel").toggleClass("show");
+    $(this).toggleClass('spin');
+    return false;
+  });
+  $('.color-picker a').on("click", function () {
+    $('.color-picker a').removeClass("applied");
+    $(this).addClass("applied");
+    return false;
+  });
+$('.multi-item-carousel').on('slide.bs.carousel', function (e) {
+    let $e = $(e.relatedTarget),
+      itemsPerSlide = 3,
+      totalItems = $('.carousel-item', this).length,
+      $itemsContainer = $('.carousel-inner', this),
+      it = itemsPerSlide - (totalItems - $e.index());
+    if (it > 0) {
+      for (var i = 0; i < it; i++) {
+        $('.carousel-item', this).eq(e.direction == "left" ? i : 0).
+          // append slides to the end/beginning
+          appendTo($itemsContainer);
+      }
+    }
+  });
 
 </script>
 <script>

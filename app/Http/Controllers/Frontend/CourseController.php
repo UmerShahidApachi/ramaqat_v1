@@ -36,13 +36,12 @@ class CourseController extends Controller
             $category = Category::find($request->id);
             if (!$category) {
                 abort(404);
-            }
-         
-        $data = Course::whereRaw("find_in_set($request->id,category_id)")->get();
-      
+            }         
+        $data = Course::whereRaw("find_in_set($request->id,category_id)")->paginate(9);   
+
         }else{
             $category = "";
-            $data = Course::all();
+            $data = Course::paginate(9);
         }
         return view('course.onlineCourse',compact('data','category'));
     }
