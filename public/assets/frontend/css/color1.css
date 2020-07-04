@@ -13,43 +13,46 @@ body{
 }
 .font45{
     font-size: 45px;
-    color:#A9A9A9;
+    color:#484848;
     font-weight: bold;
 }
 .font35{
     font-size: 35px;
-    color:#A9A9A9;
+    color:#484848;
 }
 h2{
     font-weight: 600;
 }
+.font-25{
+    font-size: 25px;
+}
 .plum-text{
-    color: #A9A9A9;
+    color: #484848;
 }
 .white-text{
     color:white;
 }
 .plum-bg{
-  background-color:#A9A9A9;
+  background-color:#484848;
 }
 .plum-btn{
-background-color: #A9A9A9;
+background-color: #484848;
 color:#fff;
-border:1px solid #A9A9A9;
+border:1px solid #484848;
 }
 .plum-btn:hover{
     background-color: #fff;
-    border: 1px solid #A9A9A9;
-    color:#A9A9A9;
+    border: 1px solid #484848;
+    color:#484848;
 }
 .white-btn{
 background-color: #fff;
-border: 1px solid #A9A9A9;
-color:#A9A9A9;
+border: 1px solid #484848;
+color:#484848;
 }
 .white-btn:hover{
-    background-color: #A9A9A9;
-    border: 1px solid #A9A9A9;
+    background-color: #484848;
+    border: 1px solid #484848;
     color:#fff;
 }
 .SearchInput{
@@ -121,7 +124,7 @@ nav{
 
 }
 .custum-indicators li{
-    background-color:#A9A9A9;
+    background-color:#484848;
 }
 .custum-indicators li .active{
     width: 40px;
@@ -190,7 +193,7 @@ margin:0px 5px 0px 5px;
 }
 
 /* ul.Offers li:hover{
-    border-bottom: 1px solid #A9A9A9;
+    border-bottom: 1px solid #484848;
     transition: .5s;
 } */
 .inputform{
@@ -246,7 +249,7 @@ padding: 15px 0px;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    color:#A9A9A9;
+    color:#484848;
 }
 .trainee-img{
  width: 247px;
@@ -270,7 +273,7 @@ padding: 15px 0px;
     height:72px;
 }
 .stu-name{
-    color:#A9A9A9;
+    color:#484848;
     font-size: 26px;
     font-weight: bold;
     line-height: 70px;
@@ -299,15 +302,15 @@ ul.tranee-social li{
 }
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
 color:#fff;
-background-color: #A9A9A9;
-border:1px solid #A9A9A9;
+background-color: #484848;
+border:1px solid #484848;
 }
 .nav-tabs{
     background-color: #E4E4E4;
-    color:#A9A9A9;
+    color:#484848;
 }
 .nav-tabs .nav-item a{
-    color:#A9A9A9;
+    color:#484848;
 }
 /* Slider Style */
 @media (min-width: 768px) {
@@ -452,7 +455,7 @@ color:#fff;
 
   /* style the items (options), including the selected item: */
    .select-selected{
-       color:#A9A9A9 !important;
+       color:#484848 !important;
    }
   .select-items div,.select-selected {
     padding: 8px 16px;
@@ -463,7 +466,7 @@ color:#fff;
   /* Style items (options): */
   .select-items {
     position: absolute;
-    background-color:#A9A9A9;
+    background-color:#484848;
     color:#fff;
     top: 100%;
     left: 0;
@@ -481,7 +484,7 @@ color:#fff;
 	width: 0;
 	height: 0;
 	border: 7px solid transparent;
-	border-bottom-color: #A9A9A9;
+	border-bottom-color: #484848;
 	border-top: 0;
 	margin-left: -7px;
 	margin-top: -7px;
@@ -516,7 +519,7 @@ ul.rating li img{
     /* width:50%; */
 }
 .feature-box{
-    color:#A9A9A9;
+    color:#484848;
     padding: 50px 10px;
     position: relative;
 }
@@ -525,7 +528,7 @@ ul.feature-list li{
     margin: 0px 15px 0px 5px;
 }
 .feature{
-    border: 1px solid #A9A9A9;
+    border: 1px solid #484848;
     border-radius: 10px;
     padding: 20px 10px;
 }
@@ -556,10 +559,10 @@ ul.course-price li{
 }
 .height-2{
     height:2px;
-    background-color: #A9A9A9;
+    background-color: #484848;
 }
 .course-description{
-    color: #A9A9A9;
+    color: #484848;
     padding: 30px 10px;
 }
 .Description-text{
@@ -651,8 +654,15 @@ ul.course-price li{
 }
 .card-header{
     padding: 8  px 15px;
-    background-color: #A9A9A9;
+    background-color: #484848;
     color:#fff;
+}
+.pagina-footer{
+    display: flex;
+    justify-content: center;
+}
+.pagination.pg-blue .page-item.active .page-link{
+    background-color: #570055 !important;
 }
 /* End */
 @media screen and (min-width:320px) and (max-width:768px){
@@ -817,7 +827,9 @@ padding: 13px;
 }
 
 /* home page side bar css */
-
+.main_bg_color {
+    background-color: #484848;
+}
 .sidebar {
   height: auto;
   width: 0;
@@ -825,6 +837,7 @@ padding: 13px;
   z-index: 2;
   top: 0;
   left: 0;
+  right:0;
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
@@ -899,7 +912,7 @@ nav{
     padding: 0;
 }
 .sidebar_icons {
-    background-color: #A9A9A9;
+    background-color: #484848;
     padding: 50px;
 }
 
@@ -908,7 +921,7 @@ nav{
 }
 .singup_id_name {
     font-size: 20px !important;
-    color: #A9A9A9 !important;
+    color: #484848 !important;
 }
 .sidebar_icons > a > img{
     padding-right: 10px;
@@ -943,7 +956,7 @@ nav{
 }
 .course_content {
     font-size: 28px;
-    color: #A9A9A9;
+    color: #484848;
     margin: 10px;
     margin-bottom: -5px;
 }
@@ -961,7 +974,7 @@ nav{
     margin-top: 14px;
 }
 .checkbox_div {
-    color: #A9A9A9;
+    color: #484848;
 }
 .lession_video_length {
     padding-left: 35px;
@@ -971,7 +984,7 @@ nav{
     padding-left: 15px;
 }
 .checkbox_lession_1 {
-    background-color: #A9A9A908;
+    background-color: #48484808;
     padding-left: 10px;
     padding-top: 5px;
 }
@@ -1100,6 +1113,6 @@ margin: 0px 16px;
     width: 35px;
   }
   .color-picker .color {background-color: #570055;}
-  .color-picker .color1 {background-color: #A9A9A9;}
+  .color-picker .color1 {background-color: #484848;}
   .color-picker .color3 {background-color: #a0ce4e;}
   .color-picker .color4 {background-color: #f64243;}

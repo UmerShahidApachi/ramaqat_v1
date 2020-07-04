@@ -36,8 +36,8 @@ class CourseController extends Controller
             $category = Category::find($request->id);
             if (!$category) {
                 abort(404);
-            }         
-        $data = Course::whereRaw("find_in_set($request->id,category_id)")->paginate(9);   
+            }
+        $data = Course::whereRaw("find_in_set($request->id,category_id)")->paginate(9);
 
         }else{
             $category = "";
@@ -145,7 +145,7 @@ class CourseController extends Controller
     public function edit($id)
     {
         $course = Course::find($id);
-        $cate_id = explode(',', $course->category_id);        
+        $cate_id = explode(',', $course->category_id);
         $categories = Category::all();
         $check = 0;
         return view('backend.trainer.courses.edit', compact('categories','course','cate_id','check'));

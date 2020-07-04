@@ -18,9 +18,6 @@
             background-color: white;
         }
 
-        .main_bg_color {
-            background-color: #570055;
-        }
 
         .main_color {
             color: #570055;
@@ -461,7 +458,7 @@
         <div class="col-12 col-sm-10 offset-md-1 mt-5 mb-5">
             <div class="row text-center">
                 <div class="col-12 col-sm-9 pt-5 text-right">
-                    <div class="plum-text ">{!! $setting->about_us_description !!}
+                    <div class="plum-text font-25">{!! $setting->about_us_description !!}
                     </div>
                     <div class="social">
                         <ul class="tranee-social">
@@ -488,7 +485,7 @@
                 </div>
             </div>
         </div>
-            @endif
+
     </div>
     <div class="height-2"></div>
     <!-- Description -->
