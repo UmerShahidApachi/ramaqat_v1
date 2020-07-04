@@ -302,7 +302,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-4 text-center over-view">
-                    <img src="{{asset('assets/frontend/img/timeaccess.png')}}">
+                    <img src="{{asset('assets/frontend/img/time.png')}}">
                     <div class="ml-3">
                         <span class="font-23"><b>Lifetime access</b></span><br>
                         <span>Learn on your schedule</span>
@@ -417,16 +417,16 @@
                     <div class="social">
                         <ul class="tranee-social">
                             <li>
-                                <a href="#"><img src="{{asset('assets/frontend/img/twitter.png')}}"></a>
+                                <a href="#"><img src="{{asset('assets/frontend/img/t-twi.png')}}"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="{{asset('assets/frontend/img/facebook.png')}}"></a>
+                                <a href="#"><img src="{{asset('assets/frontend/img/t-fb.png')}}"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="{{asset('assets/frontend/img/instagram-sketched.png')}}"></a>
+                                <a href="#"><img src="{{asset('assets/frontend/img/t-insta.png')}}"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="{{asset('assets/frontend/img/linkedin.png')}}"></a>
+                                <a href="#"><img src="{{asset('assets/frontend/img/t-link.png')}}"></a>
                             </li>
                         </ul>
                     </div>
@@ -723,7 +723,7 @@
         </div>
     </div>
     <!-- End -->
-
+</div>
     <!-- Books Reading Section -->
     <div class="book-sec">
         <div class="container">
