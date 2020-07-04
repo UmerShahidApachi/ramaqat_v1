@@ -765,7 +765,15 @@
         </div>
     </div>
     <div id="to-top" title="back to top">↑</div>
-
-
+    <div class="sidepanel">
+<span><i class="fa fa-cog fa-spin"></i></span>
+<div class="color-picker">
+<h3>Choose Your Color</h3>
+<a class="color applied" onclick="setActiveStyleSheet('color'); return false;" href="{{url('/')}}"></a>
+<a class="color1" onclick="setActiveStyleSheet('color1'); return false;" href="{{url('/')}}"></a>
+</div>
+</div>
+    
 @endsection
 <!-- Latter Subscription End -->
+ 
