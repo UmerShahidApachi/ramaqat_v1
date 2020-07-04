@@ -498,424 +498,431 @@
     <!-- Cetegory slider -->
     <div class="col-md-12 float-left" id="img_slider">
         <!-- block 1 -->
-        <div class="col pt-1" style="min-height: 100px ;overflow: hidden; font-size: 17px;">
+{{--        <div class="col pt-1" style="min-height: 100px ;overflow: hidden; font-size: 17px;">--}}
 
 
-            <div class="slider_header text-center m-2" style="color:#570055;"><a href="#"><u>Art Courses</u></a>
-            </div>
-            <!--Carousel Wrapper-->
-            <div id="multi-item-example2" class="carousel slide carousel-multi-item" data-ride="carousel">
+{{--            <div class="slider_header text-center m-2" style="color:#570055;"><a href="#"><u>Art Courses</u></a>--}}
+{{--            </div>--}}
+{{--            <!--Carousel Wrapper-->--}}
+{{--            <div id="multi-item-example2" class="carousel slide carousel-multi-item" data-ride="carousel">--}}
 
-                <!--/.Indicators-->
+{{--                <!--/.Indicators-->--}}
 
-                <div class="col-md-1 controls-top float-left text-end">
-                    <a class="btn-floating" href="#multi-item-example2" style="color: #570055" data-slide="prev"><i
-                            class="fa fa-chevron-left"></i></a>
-                </div>
-                <!--Slides-->
+{{--                <div class="col-md-1 controls-top float-left text-end">--}}
+{{--                    <a class="btn-floating" href="#multi-item-example2" style="color: #570055" data-slide="prev"><i--}}
+{{--                            class="fa fa-chevron-left"></i></a>--}}
+{{--                </div>--}}
+{{--                <!--Slides-->--}}
 
-                <div class="col-md-10 float-left">
-                    <div class="carousel-inner" role="listbox">
-                        <!--First slide-->
-                        <div class="carousel-item active mb-2">
+{{--                <div class="col-md-10 float-left">--}}
+{{--                    <div class="carousel-inner" role="listbox">--}}
+{{--                        <!--First slide-->--}}
+{{--                        <div class="carousel-item active mb-2">--}}
 
-                            <div class="row">
-                                <div class="col-md-4 newcard">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+{{--                            <div class="row">--}}
+{{--                                <div class="col-md-4 newcard">--}}
+{{--                                    <div class="card">--}}
+{{--                                        <img class="card-img-top"--}}
+{{--                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"--}}
+{{--                                             alt="Card image cap">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col carousel_item_footer main_bg_color" style="color: white">--}}
 
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size:10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+{{--                                        <div class="col float-left">--}}
+{{--                                            <p>The Art Painting and Digital Art Course<br>--}}
+{{--                                                -12 Courses in 1</p>--}}
+{{--                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>--}}
+{{--                                            <p class="float-right p-0" style="font-size:10px">--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span> 5</span>--}}
+{{--                                                <span>(12345)</span>--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
 
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card mb-">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+{{--                                <div class="col-md-4 clearfix d-none d-md-block">--}}
+{{--                                    <div class="card mb-">--}}
+{{--                                        <img class="card-img-top"--}}
+{{--                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"--}}
+{{--                                             alt="Card image cap">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col carousel_item_footer main_bg_color" style="color: white">--}}
 
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+{{--                                        <div class="col float-left">--}}
+{{--                                            <p>The Art Painting and Digital Art Course<br>--}}
+{{--                                                -12 Courses in 1</p>--}}
+{{--                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>--}}
+{{--                                            <p class="float-right p-0" style="font-size: 10px">--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span> 5</span>--}}
+{{--                                                <span>(12345)</span>--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+{{--                                <div class="col-md-4 clearfix d-none d-md-block">--}}
+{{--                                    <div class="card">--}}
+{{--                                        <img class="card-img-top"--}}
+{{--                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"--}}
+{{--                                             alt="Card image cap">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col carousel_item_footer main_bg_color" style="color: white">--}}
 
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+{{--                                        <div class="col float-left">--}}
+{{--                                            <p>The Art Painting and Digital Art Course<br>--}}
+{{--                                                -12 Courses in 1</p>--}}
+{{--                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>--}}
+{{--                                            <p class="float-right p-0" style="font-size: 10px">--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span> 5</span>--}}
+{{--                                                <span>(12345)</span>--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
-                        </div>
-                        <!--/.First slide-->
+{{--                        </div>--}}
+{{--                        <!--/.First slide-->--}}
 
-                        <!--Second slide-->
-                        <div class="carousel-item mb-2">
+{{--                        <!--Second slide-->--}}
+{{--                        <div class="carousel-item mb-2">--}}
 
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+{{--                            <div class="row">--}}
+{{--                                <div class="col-md-4">--}}
+{{--                                    <div class="card">--}}
+{{--                                        <img class="card-img-top"--}}
+{{--                                             src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"--}}
+{{--                                             alt="Card image cap">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col carousel_item_footer main_bg_color" style="color: white">--}}
 
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+{{--                                        <div class="col float-left">--}}
+{{--                                            <p>The Art Painting and Digital Art Course<br>--}}
+{{--                                                -12 Courses in 1</p>--}}
+{{--                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>--}}
+{{--                                            <p class="float-right p-0" style="font-size: 10px">--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span> 5</span>--}}
+{{--                                                <span>(12345)</span>--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+{{--                                <div class="col-md-4 clearfix d-none d-md-block">--}}
+{{--                                    <div class="card">--}}
+{{--                                        <img class="card-img-top"--}}
+{{--                                             src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"--}}
+{{--                                             alt="Card image cap">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col carousel_item_footer main_bg_color" style="color: white">--}}
 
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+{{--                                        <div class="col float-left">--}}
+{{--                                            <p>The Art Painting and Digital Art Course<br>--}}
+{{--                                                -12 Courses in 1</p>--}}
+{{--                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>--}}
+{{--                                            <p class="float-right p-0" style="font-size: 10px">--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span> 5</span>--}}
+{{--                                                <span>(12345)</span>--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+{{--                                <div class="col-md-4 clearfix d-none d-md-block">--}}
+{{--                                    <div class="card">--}}
+{{--                                        <img class="card-img-top"--}}
+{{--                                             src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"--}}
+{{--                                             alt="Card image cap">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col carousel_item_footer main_bg_color" style="color: white">--}}
 
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+{{--                                        <div class="col float-left">--}}
+{{--                                            <p>The Art Painting and Digital Art Course<br>--}}
+{{--                                                -12 Courses in 1</p>--}}
+{{--                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>--}}
+{{--                                            <p class="float-right p-0" style="font-size: 10px">--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span> 5</span>--}}
+{{--                                                <span>(12345)</span>--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
-                        </div>
-                        <!--/.Second slide-->
+{{--                        </div>--}}
+{{--                        <!--/.Second slide-->--}}
 
-                    </div>
-                </div>
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="controls-top col-md-1 float-left">
-                    <a class="btn-floating" href="#multi-item-example2" style="color: #570055" data-slide="next"><i
-                            class="fa fa-chevron-right"></i></a>
-                </div>
-                <!--/.Slides-->
+{{--                <div class="controls-top col-md-1 float-left">--}}
+{{--                    <a class="btn-floating" href="#multi-item-example2" style="color: #570055" data-slide="next"><i--}}
+{{--                            class="fa fa-chevron-right"></i></a>--}}
+{{--                </div>--}}
+{{--                <!--/.Slides-->--}}
 
-            </div>
-            <!--/.Carousel Wrapper-->
-        </div>
+{{--            </div>--}}
+{{--            <!--/.Carousel Wrapper-->--}}
+{{--        </div>--}}
         <!-- col close -->
         <!-- block 2 -->
 
-        <div class="col" style="min-height: 100px ;overflow: hidden;">
-            <div class="slider_header text-center m-2"><a href="#"><u>IT & Tech</u></a>
-            </div>
-            <!--Carousel Wrapper-->
-            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+{{--        <div class="col" style="min-height: 100px ;overflow: hidden;">--}}
+{{--            <div class="slider_header text-center m-2"><a href="#"><u>IT & Tech</u></a>--}}
+{{--            </div>--}}
+{{--            <!--Carousel Wrapper-->--}}
+{{--            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">--}}
 
-                <!--/.Indicators-->
+{{--                <!--/.Indicators-->--}}
 
-                <div class="col-md-1 controls-top float-left text-end">
-                    <a class="btn-floating" href="#multi-item-example" style="color: #570055" data-slide="prev"><i
-                            class="fa fa-chevron-left"></i></a>
-                </div>
-                <!--Slides-->
+{{--                <div class="col-md-1 controls-top float-left text-end">--}}
+{{--                    <a class="btn-floating" href="#multi-item-example" style="color: #570055" data-slide="prev"><i--}}
+{{--                            class="fa fa-chevron-left"></i></a>--}}
+{{--                </div>--}}
+{{--                <!--Slides-->--}}
 
-                <div class="col-md-10 float-left">
-                    <div class="carousel-inner" role="listbox">
-                        <!--First slide-->
-                        <div class="carousel-item active mb-2">
+{{--                <div class="col-md-10 float-left">--}}
+{{--                    <div class="carousel-inner" role="listbox">--}}
+{{--                        <!--First slide-->--}}
+{{--                        <div class="carousel-item active mb-2">--}}
 
-                            <div class="row">
+{{--                            <div class="row">--}}
 
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+{{--                                <div class="col-md-4 clearfix d-none d-md-block">--}}
+{{--                                    <div class="card">--}}
+{{--                                        <img class="card-img-top"--}}
+{{--                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"--}}
+{{--                                             alt="Card image cap">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col carousel_item_footer main_bg_color" style="color: white">--}}
 
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+{{--                                        <div class="col float-left">--}}
+{{--                                            <p>The Art Painting and Digital Art Course<br>--}}
+{{--                                                -12 Courses in 1</p>--}}
+{{--                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>--}}
+{{--                                            <p class="float-right p-0" style="font-size: 10px">--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span> 5</span>--}}
+{{--                                                <span>(12345)</span>--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+{{--                                <div class="col-md-4 clearfix d-none d-md-block">--}}
+{{--                                    <div class="card">--}}
+{{--                                        <img class="card-img-top"--}}
+{{--                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"--}}
+{{--                                             alt="Card image cap">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col carousel_item_footer main_bg_color" style="color: white">--}}
 
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+{{--                                        <div class="col float-left">--}}
+{{--                                            <p>The Art Painting and Digital Art Course<br>--}}
+{{--                                                -12 Courses in 1</p>--}}
+{{--                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>--}}
+{{--                                            <p class="float-right p-0" style="font-size: 10px">--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span> 5</span>--}}
+{{--                                                <span>(12345)</span>--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+{{--                                <div class="col-md-4 clearfix d-none d-md-block">--}}
+{{--                                    <div class="card">--}}
+{{--                                        <img class="card-img-top"--}}
+{{--                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"--}}
+{{--                                             alt="Card image cap">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col carousel_item_footer main_bg_color" style="color: white">--}}
 
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+{{--                                        <div class="col float-left">--}}
+{{--                                            <p>The Art Painting and Digital Art Course<br>--}}
+{{--                                                -12 Courses in 1</p>--}}
+{{--                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>--}}
+{{--                                            <p class="float-right p-0" style="font-size: 10px">--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span> 5</span>--}}
+{{--                                                <span>(12345)</span>--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
-                        </div>
-                        <!--/.First slide-->
+{{--                        </div>--}}
+{{--                        <!--/.First slide-->--}}
 
-                        <!--Second slide-->
-                        <div class="carousel-item mb-2">
+{{--                        <!--Second slide-->--}}
+{{--                        <div class="carousel-item mb-2">--}}
 
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+{{--                            <div class="row">--}}
+{{--                                <div class="col-md-4">--}}
+{{--                                    <div class="card">--}}
+{{--                                        <img class="card-img-top"--}}
+{{--                                             src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"--}}
+{{--                                             alt="Card image cap">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col carousel_item_footer main_bg_color" style="color: white">--}}
 
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+{{--                                        <div class="col float-left">--}}
+{{--                                            <p>The Art Painting and Digital Art Course<br>--}}
+{{--                                                -12 Courses in 1</p>--}}
+{{--                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>--}}
+{{--                                            <p class="float-right p-0" style="font-size: 10px">--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span> 5</span>--}}
+{{--                                                <span>(12345)</span>--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
 
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+{{--                                <div class="col-md-4 clearfix d-none d-md-block">--}}
+{{--                                    <div class="card">--}}
+{{--                                        <img class="card-img-top"--}}
+{{--                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"--}}
+{{--                                             alt="Card image cap">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col carousel_item_footer main_bg_color" style="color: white">--}}
 
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+{{--                                        <div class="col float-left">--}}
+{{--                                            <p>The Art Painting and Digital Art Course<br>--}}
+{{--                                                -12 Courses in 1</p>--}}
+{{--                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>--}}
+{{--                                            <p class="float-right p-0" style="font-size: 10px">--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span> 5</span>--}}
+{{--                                                <span>(12345)</span>--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+{{--                                <div class="col-md-4 clearfix d-none d-md-block">--}}
+{{--                                    <div class="card">--}}
+{{--                                        <img class="card-img-top"--}}
+{{--                                             src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"--}}
+{{--                                             alt="Card image cap">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col carousel_item_footer main_bg_color" style="color: white">--}}
 
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+{{--                                        <div class="col float-left">--}}
+{{--                                            <p>The Art Painting and Digital Art Course<br>--}}
+{{--                                                -12 Courses in 1</p>--}}
+{{--                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>--}}
+{{--                                            <p class="float-right p-0" style="font-size: 10px">--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star checked"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span class="fa fa-star"></span>--}}
+{{--                                                <span> 5</span>--}}
+{{--                                                <span>(12345)</span>--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
-                        </div>
-                        <!--/.Second slide-->
+{{--                        </div>--}}
+{{--                        <!--/.Second slide-->--}}
 
-                    </div>
-                </div>
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="controls-top col-md-1 float-left">
-                    <a class="btn-floating" href="#multi-item-example" style="color: #570055" data-slide="next"><i
-                            class="fa fa-chevron-right"></i></a>
-                </div>
-                <!--/.Slides-->
+{{--                <div class="controls-top col-md-1 float-left">--}}
+{{--                    <a class="btn-floating" href="#multi-item-example" style="color: #570055" data-slide="next"><i--}}
+{{--                            class="fa fa-chevron-right"></i></a>--}}
+{{--                </div>--}}
+{{--                <!--/.Slides-->--}}
 
-            </div>
-            <!--/.Carousel Wrapper-->
-        </div>
+{{--            </div>--}}
+{{--            <!--/.Carousel Wrapper-->--}}
+{{--        </div>--}}
         <!-- col close -->
         <!-- block 3 -->
+        @foreach($categories1 as $cat)
+
         <div class="col" style="min-height: 100px ;overflow: hidden;">
-            <div class="slider_header text-center m-2"><a href="#"><u>Accountancy</u></a>
+            <div class="slider_header text-center m-2"><a href="#"><u>{{$cat->name}}</u></a>
             </div>
             <!--Carousel Wrapper-->
-            <div id="multi-item-example3" class="carousel slide carousel-multi-item" data-ride="carousel">
+            <div id="multi-item-{{$cat->name}}" class="carousel slide carousel-multi-item" data-ride="carousel">
 
                 <!--/.Indicators-->
 
                 <div class="col-md-1 controls-top float-left text-end">
-                    <a class="btn-floating" href="#multi-item-example3" style="color: #570055" data-slide="prev"><i
+                    <a class="btn-floating" href="#multi-item-{{$cat->name}}" style="color: #570055" data-slide="prev"><i
                             class="fa fa-chevron-left"></i></a>
                 </div>
                 <!--Slides-->
-
+                @php
+                    $data = \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->orderByRaw('RAND()')->take(3)->get();
+                @endphp
                 <div class="col-md-10 float-left">
                     <div class="carousel-inner" role="listbox">
                         <!--First slide-->
                         <div class="carousel-item active mb-2">
 
+                            {{--                            {{dd($data)}}--}}
                             <div class="row">
+                                @foreach($data as $c)
+
                                 <div class="col-md-4">
                                     <div class="card">
                                         <img class="card-img-top"
@@ -925,9 +932,9 @@
                                     <div class="col carousel_item_footer main_bg_color" style="color: white">
 
                                         <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
+                                            <p>{{$c->name}}<br>
+                                                {{$c->description}}</p>
+                                            <p>{{$c->users->name}}, {{$c->users->experience}}</p>
                                             <p class="float-right p-0" style="font-size: 10px">
                                                 <span class="fa fa-star checked"></span>
                                                 <span class="fa fa-star checked"></span>
@@ -940,56 +947,8 @@
                                         </div>
                                     </div>
                                 </div>
+                                @endforeach
 
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
 
                         </div>
@@ -997,92 +956,48 @@
 
                         <!--Second slide-->
                         <div class="carousel-item mb-2">
+                                <div class="row">
+                                    @php
+                                        $data1 = \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->orderByRaw('RAND()')->take(3)->get();
+                                    @endphp
+                                    @foreach($data1 as $c)
 
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <img class="card-img-top"
+                                                 src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+                                                 alt="Card image cap">
+                                        </div>
+                                        <div class="col carousel_item_footer main_bg_color" style="color: white">
 
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
+                                            <div class="col float-left">
+                                                <p>{{$c->name}}<br>
+                                                    {{$c->description}}</p>
+                                                <p>{{$c->users->name}}, {{$c->users->experience}}</p>
+                                                <p class="float-right p-0" style="font-size: 10px">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span> 5</span>
+                                                    <span>(12345)</span>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
+                                    @endforeach
+
                                 </div>
-
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 clearfix d-none d-md-block">
-                                    <div class="card">
-                                        <img class="card-img-top"
-                                             src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
-                                             alt="Card image cap">
-                                    </div>
-                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
-
-                                        <div class="col float-left">
-                                            <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                            <p>Miss Nabeela, Coderstars by rob percival Experien</p>
-                                            <p class="float-right p-0" style="font-size: 10px">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span> 5</span>
-                                                <span>(12345)</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
-                        <!--/.Second slide-->
+{{--                        <!--/.Second slide-->--}}
 
                     </div>
                 </div>
 
                 <div class="controls-top col-md-1 float-left">
-                    <a class="btn-floating" href="#multi-item-example3" style="color: #570055" data-slide="next"><i
+                    <a class="btn-floating" href="#multi-item-{{$cat->name}}" style="color: #570055" data-slide="next"><i
                             class="fa fa-chevron-right"></i></a>
                 </div>
                 <!--/.Slides-->
@@ -1090,6 +1005,7 @@
             </div>
             <!--/.Carousel Wrapper-->
         </div>
+        @endforeach
         <!-- col close -->
 
         <!-- slide close -->
