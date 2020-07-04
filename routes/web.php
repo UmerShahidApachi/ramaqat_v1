@@ -2,6 +2,7 @@
 
 use App\Models\Category;
 use App\Models\Course;
+use App\Setting;
 use App\Slider;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -26,11 +27,13 @@ Route::post('language/{locale}', function (Request $request,$locale) {
 Route::get('/', function () {
     $latest = Course::where('status',1)->get()->take(3);
     $categories = Category::all();
-    $categories1 = Category::all()->take(3);
+    $categories1 = Category::take(3)->get();
     $slider = Slider::all();
     $slider1 = Slider::where('id', '>=', 1)->first();
     $latest1 = Course::where('id', '>=', 1)->where('status',1)->first();
-    return view('home.frontend.index', compact('slider', 'categories', 'categories1', 'slider1', 'latest', 'latest1'));
+    $setting = Setting::where('id',1)->first();
+
+    return view('home.frontend.index', compact('slider', 'categories', 'categories1', 'slider1', 'latest', 'latest1','setting'));
 });
 /**
  * admin routes
@@ -40,6 +43,8 @@ Route::prefix('admin')->group(function () {
 
         Route::get('dashboard', 'Backend\DashboardController@dashboard')->name('dashboard');
         Route::get('sales', 'Backend\DashboardController@sell_courses')->name('sales');
+        Route::get('settings',  'SettingController@index')->name('settings');
+        Route::post('update-settings',  'SettingController@update')->name('update_settings');
         Route::get('all-users', 'Backend\DashboardController@all_users')->name('all-users');
         Route::get('all-trainers', 'Backend\DashboardController@all_trainers')->name('all_trainers');
         Route::get('delete-user', 'Backend\UserController@delete_users')->name('delete_users');
@@ -54,6 +59,11 @@ Route::prefix('admin')->group(function () {
         Route::get('all-accounts', 'Backend\DashboardController@accounts')->name('accounts');
 
         Route::get('all-courses', 'Backend\DashboardController@courses')->name('courses');
+        Route::get('add-course', 'Backend\DashboardController@add_course')->name('add-course');
+        Route::post('course/update', 'Backend\DashboardController@course_store')->name('course_store');
+        Route::get('course/edit/{id}', 'Backend\DashboardController@course_edit');
+        Route::post('course/updated', 'Backend\DashboardController@course_update')->name('update_course');
+
         Route::get('delete', 'Frontend\CourseController@delete')->name('delete');
 
         Route::get('change_course_status', 'Backend\DashboardController@change_course_status')->name('change_course_status');

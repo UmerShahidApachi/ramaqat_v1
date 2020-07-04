@@ -29,6 +29,8 @@ The above copyright notice and this permission notice shall be included in all c
     <link href="{{asset('assets/css/material-dashboard.css?v=2.1.2  ')}}" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="{{asset('assets\demo\demo.css')}}" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 
@@ -97,6 +99,12 @@ The above copyright notice and this permission notice shall be included in all c
                     <a class="nav-link" href="{{route('slider')}}">
                         <i class="material-icons">content_paste</i>
                         <p>Slider</p>
+                    </a>
+                </li>
+                <li class="nav-item {{ Request::segment(2) == 'settings'? 'active':'' }} ">
+                    <a class="nav-link" href="{{route('settings')}}">
+                        <i class="material-icons">settings</i>
+                        <p>Manage Settings</p>
                     </a>
                 </li>
                 <li class="nav-item {{ Request::segment(2) == 'logout'? 'active':'' }} ">

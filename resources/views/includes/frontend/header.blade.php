@@ -59,6 +59,10 @@
                             </a>
 
                         @endif
+                        @elseif(\Illuminate\Support\Facades\Auth::user()->role_id == 1)
+                        <a href="{{route('dashboard')}}">
+                            <button class="btn white-btn">Admin Dashboard</button>
+                        </a>
                     @endif
                 </li>
                 <li>
