@@ -1,7 +1,7 @@
 <footer class="white-bg">
     <div class="container">
         <div class="row">
-            <div class="col-4 text-center">
+            <div class="col-12 col-sm-4 text-center mb-5">
                <div>
                Our mission is to provide a free, world-class education to anyone, anywhere.
                </div>
@@ -10,7 +10,7 @@
                Ramaqat is a 501(c)(3) nonprofit organization. Donate or volunteer today!
                </div>
             </div>
-            <div class="col-2 text-start">
+            <div class="col-6 col-sm-2 text-start">
                 <ul class="Offers">
                     <li>All Courses</li>
                     <li>Online Courses</li>
@@ -20,7 +20,7 @@
                     <li>Contact us</li>
                 </ul>
             </div>
-            <div class="col-2 text-start">
+            <div class="col-6 col-sm-2 text-start">
                 <ul class="Offers">
                     <li>Add Coureses</li>
                     <li>Join</li>
@@ -30,7 +30,7 @@
                     <li>Ramaqat Mobile App</li>
                 </ul>
             </div>
-            <div class="col-2 col-sm-3 text-start d-none d-sm-block">
+            <div class="col-6 col-sm-4 text-start d-none d-sm-block">
             <ul class="Offers">
                     <li>Add Coureses</li>
                     <li>Join</li>
@@ -59,12 +59,12 @@
 
         <div class="height-2 mt-2"></div>
         <div class="row mt-3">
-            <div class="col-6 copyright">
+            <div class="col-12 col-sm-6 copyright">
              <div>Copy right C 2020 Ramaqat, inc. </div>
              <div>Terms</div>
              <div>Privacy Policy </div>
             </div>
-            <div class="col-6 text-end">
+            <div class="col-12 col-sm-6 text-end">
                 <ul class="Social">
                     <li>
                         <img src="{{asset('assets/frontend/img/face.png')}}">

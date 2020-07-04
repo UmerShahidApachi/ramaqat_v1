@@ -112,7 +112,6 @@ Route::prefix('trainer')->group(function () {
 });
 
 
-
 Route::prefix('user')->group(function () {
     Route::group(['middleware' => ['User']], function () {
         Route::get('become_trainer', 'Backend\UserController@become_trainer')->name('become_trainer');
@@ -123,7 +122,6 @@ Route::prefix('user')->group(function () {
 Route::get('userlogin', 'Frontend\LoginController@userLogin')->name('login-form');
 Route::post('login_user', 'Frontend\LoginController@login_user')->name('login_user');
 Route::get('user-register', 'Frontend\RegisterController@userRegister')->name('register');
-
 Route::get('all-course', 'Frontend\CourseController@onlineCourse')->name('all-course');
 Route::get('course-detail', 'Frontend\CourseController@course_detail')->name('detail-course');
 Route::get('offline-course', 'Frontend\CourseController@offlineCourse')->name('offline-course');
