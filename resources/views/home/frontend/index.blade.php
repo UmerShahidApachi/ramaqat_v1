@@ -457,6 +457,7 @@
     <!-- Product Slider End -->
     <hr style="border-top: 2px solid;height: 5px;width:100%;">
     <div>
+        @if(isset($setting))
         <div class="col-12 col-sm-10 offset-md-1 mt-5">
             <div class="row text-center">
                 <div class="col-12 col-sm-9 pt-5 text-right">
@@ -487,6 +488,7 @@
                 </div>
             </div>
         </div>
+            @endif
     </div>
 
     <!-- Description -->
