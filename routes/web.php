@@ -26,7 +26,7 @@ Route::post('language/{locale}', function (Request $request,$locale) {
 Route::get('/', function () {
     $latest = Course::where('status',1)->get()->take(3);
     $categories = Category::all();
-    $categories1 = Category::all()->take(3);
+    $categories1 = Category::take(3)->get();
     $slider = Slider::all();
     $slider1 = Slider::where('id', '>=', 1)->first();
     $latest1 = Course::where('id', '>=', 1)->where('status',1)->first();
