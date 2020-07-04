@@ -146,8 +146,10 @@ class CourseController extends Controller
     public function edit($id)
     {
         $course = Course::find($id);
+        $cate_id = explode(',', $course->category_id);        
         $categories = Category::all();
-        return view('backend.trainer.courses.edit', compact('categories','course'));
+        $check = 0;
+        return view('backend.trainer.courses.edit', compact('categories','course','cate_id','check'));
     }
     public function my_course()
     {
@@ -165,7 +167,7 @@ class CourseController extends Controller
      */
     public function update(Request $request)
     {
-//        dd($request->all());
+       // dd($request->all());
         $slider = Course::find($request->id);
         if($request->hasfile('image')){
 
@@ -199,11 +201,14 @@ class CourseController extends Controller
             $destinationpath=public_path('course');
             $file->move($destinationpath,$imgname);
         }else{
-            $imgname=$slider->image;
+            $imgname=$slider->thumbnail;
 
         }
 
-        $category = Course::where('id',$request->id)->update(['category_id'=>$request->category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
+        $category_id = implode(',', $request->category_id);
+
+
+        $category = Course::where('id',$request->id)->update(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
 
         if ($category){
             return redirect(url('trainer/my-courses'));
