@@ -10,6 +10,6 @@ class Category extends Model
 
     public function courses()
     {
-        return $this->hasMany(Course::class,'category_id','id')->where('status',1);
+        return $this->hasMany(Course::class,'category_id','id')->whereRaw("find_in_set(id,category_id)")->where('status',1);
     }
 }
