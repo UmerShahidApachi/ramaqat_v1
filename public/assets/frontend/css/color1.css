@@ -56,8 +56,8 @@ color:#A9A9A9;
     width: 100%;
     height: 45px;
     border:1px transparent;
-    border-radius: 5px;
-    padding: 5px;
+    border-radius: 50px;
+    padding: 5px 10px;
     position: relative;
 
 }
@@ -93,7 +93,8 @@ nav{
 .plumIcon{
     position: absolute;
     top: 40%;
-    right: 5%;
+    left: 89%;
+    right: 89%;
 }
 .HeaderSearch{
     position: relative;
@@ -126,9 +127,21 @@ nav{
     width: 40px;
     height: 40px;
 }
+.main-slider-height{
+    height:500px;
+}
+.full-img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.btn{
+    border-radius: 50px;
+}
 .SubBtn{
     background-color: #484848;
     padding: 10px 15px;
+    border-radius: 50px;
 }
 .SubBtn a{
     color: #FFFFFF;
@@ -137,6 +150,7 @@ nav{
     padding: 8.5px 15px;
     width:79%;
     border: 1px solid transparent;
+    border-radius: 50px;
 }
 footer{
     background-color: #fff;
@@ -642,6 +656,36 @@ ul.course-price li{
 }
 /* End */
 @media screen and (min-width:320px) and (max-width:768px){
+    .controls-top{
+        display: none !important;
+    }
+    .p-mob{
+        padding: 5px !important;
+    }
+    .copyright{
+        font-size: 10px !important;
+        margin-bottom: 15px !important;
+    }
+    .trainee-img {
+        width: 150px !important;
+        height: 170px !important;
+        text-align: center !important;
+    }
+    .over-view{
+        margin-bottom: 15px !important;
+    }
+    .main-slider-height {
+        height: 280px !important;
+    }
+    .cat-text{
+        display: none;
+    }
+    .fadeIn{
+
+    padding: 5px !important;
+    font-size: 15px !important;
+    margin-bottom: 7px !important;
+    }
     ul.ulDBlockMenu li{
         width:25%;
     }
@@ -674,6 +718,8 @@ ul.course-price li{
         left: -50%;
     }
 }
+
+
 
 
 
