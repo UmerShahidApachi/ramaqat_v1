@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
+use DB;
 
 class CourseController extends Controller
 {
@@ -29,14 +30,16 @@ class CourseController extends Controller
     }
     public function onlineCourse(Request $request)
     {
-//        dd($request->id);
+       // dd($request->id);
 
         if ($request->id){
             $category = Category::find($request->id);
             if (!$category) {
                 abort(404);
             }
-        $data = Course::where('category_id',$request->id)->get();
+         
+        $data = Course::whereRaw("find_in_set($request->id,category_id)")->get();
+      
         }else{
             $category = "";
             $data = Course::all();
@@ -72,7 +75,7 @@ class CourseController extends Controller
      */
     public function create(Request $request)
     {
-//        dd($request->all());
+       // dd($request->all());
         if ($request->hasfile('image')) {
             $postData = $request->only('image');
 
@@ -102,7 +105,9 @@ class CourseController extends Controller
         }
 //        dd($imgname);
 
-        $category = Course::create(['category_id'=>$request->category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
+        $category_id = implode(',', $request->category_id);
+
+        $category = Course::create(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
 
         if ($category){
             return redirect()->back();

@@ -11,10 +11,9 @@
             <div class="col-12">
             <div class="form-group select-dropdown">
                 <label>Category</label>
-                <select class="form-control" name="category_id" required>
+                <select class="form-control chosen chosen-height" name="category_id[]" multiple required>
                     @foreach($categories as $c)
                         <option value="{{$c->id}}">{{$c->name}}</option>
-
                     @endforeach
                 </select>
             </div>
@@ -67,8 +66,17 @@
         </div>
     </form>
     </div>
-@endsection
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 <script>
     CKEDITOR.replace('description');
 </script>
+<script>    
+    $(".chosen").chosen();
+</script>
+
+@endsection
+
