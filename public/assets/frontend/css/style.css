@@ -57,8 +57,9 @@ color:#570055;
     height: 45px;
     border:1px transparent;
     border-radius: 5px;
-    padding: 5px;
+    padding: 5px 10px;
     position: relative;
+    border-radius: 50px;
 
 }
 ul{
@@ -129,6 +130,7 @@ nav{
 .SubBtn{
     background-color: #484848;
     padding: 10px 15px;
+    border-radius: 50px;
 }
 .SubBtn a{
     color: #FFFFFF;
@@ -137,6 +139,7 @@ nav{
     padding: 8.5px 15px;
     width:79%;
     border: 1px solid transparent;
+    border-radius: 50px;
 }
 footer{
     background-color: #fff;
@@ -647,8 +650,29 @@ ul.course-price li{
 .cat-next{
     right:-100px !important;
 }
+.btn{
+    border-radius: 50px;
+}
 /* End */
 @media screen and (min-width:320px) and (max-width:768px){
+    .copyright{
+        font-size: 10px !important;
+        margin-bottom: 15px !important;
+    }
+    .trainee-img {
+        width: 150px !important;
+        height: 170px !important;
+        text-align: center !important;
+    }
+    .over-view{
+        margin-bottom: 15px !important;
+    }
+    .main-slider-height {
+        height: 280px !important;
+    }
+    .cat-text{
+        display: none;
+    }
     .fadeIn{
 
     padding: 5px !important;
@@ -767,6 +791,14 @@ padding: 13px;
 .carousel .cat-prev-icon{
     width:40px !important;
 }
+.main-slider-height{
+    height:500px;
+}
+.full-img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
 .ulDBlock li img{
   cursor: pointer;
 }
@@ -860,7 +892,7 @@ nav{
 }
 #mySidebar {
     position: absolute;
-    margin-top: 100px;
+    margin-top: 8%;
     background-color: #fff;
 }
 .login_id{
@@ -871,8 +903,13 @@ nav{
 .sidebar_icons {
     background-color: #570055;
     padding: 50px;
+    /* min-height: 416px;
+    height: 416px; */
 }
-
+.login-img{
+    width:98px;
+    height:98px;
+}
 .close_sidbar{
     background-color: #fff;
 }

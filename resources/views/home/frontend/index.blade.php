@@ -4,7 +4,7 @@
 <!-- Cetegory slider -->
 <div class="plum-bg pt-3 pb-3">
 <div class="container">
-    <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+    <div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel">
         <!--Indicators-->
         <!-- <ol class="carousel-indicators custum-indicators">
     <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
@@ -17,78 +17,79 @@
             <div class="col-12">
 
                 <div class="carousel-inner" role="listbox">
+
                     <div class="carousel-item active">
                         <div class="row">
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class=" col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
 
@@ -99,73 +100,73 @@
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">match</div>
+                                    <div class="font16 white-text cat-text">match</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">match</div>
+                                    <div class="font16 white-text cat-text">match</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">match</div>
+                                    <div class="font16 white-text cat-text">match</div>
                                 </div>
                             </div>
                             <div class=" col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
                             <div class="col-1 text-center">
                                 <div>
                                     <i class="fadeIn fa fa-youtube-play"></i>
-                                    <div class="font16 white-text">All</div>
+                                    <div class="font16 white-text cat-text">All</div>
                                 </div>
                             </div>
 
@@ -177,11 +178,11 @@
         </div>
         <!--/.Slides-->
         <!--Controls-->
- <a class="carousel-control-prev cat-prev" href="#carousel-example-2" role="button" data-slide="prev">
+ <a class="carousel-control-prev cat-prev" href="#carousel-example-1" role="button" data-slide="prev">
   <span class="carousel-control-prev-icon cat-prev-icon" aria-hidden="true"></span>
   <span class="sr-only">Previous</span>
 </a>
-<a class="carousel-control-next cat-next" href="#carousel-example-2" role="button" data-slide="next">
+<a class="carousel-control-next cat-next" href="#carousel-example-1" role="button" data-slide="next">
   <span class="carousel-control-next-icon cat-prev-icon" aria-hidden="true"></span>
   <span class="sr-only">Next</span>
 </a>
@@ -231,14 +232,16 @@
             <div class="carousel-inner" role="listbox">
                 @if(isset($slider1))
                     <div class="carousel-item active">
-                    <div class="view">
-                        <img class="d-block w-100" src="{{url('slider').'/'.$slider1['image']}}" alt="First slide">
-                        <div class="mask rgba-black-light"></div>
-                    </div>
-                    <div class="carousel-caption">
-                        <h3 class="h3-responsive font45">{{$slider1['title']}}</h3>
-                        <p class="font35">{{$slider1['heading']}}</p>
-                    </div>
+                      <div>
+                        <div class="view main-slider-height">
+                            <img class="d-block full-img w-100" src="{{url('slider').'/'.$slider1['image']}}" alt="First slide">
+                            <div class="mask rgba-black-light"></div>
+                        </div>
+                        <div class="carousel-caption">
+                            <h3 class="h3-responsive font45">{{$slider1['title']}}</h3>
+                            <p class="font35">{{$slider1['heading']}}</p>
+                        </div>
+                      </div>
                 </div>
                 @endif
                 @if(isset($slider))
@@ -246,8 +249,8 @@
                     @foreach($slider as $slide)
                         <div class="carousel-item">
                             <!--Mask color-->
-                            <div class="view">
-                                <img class="d-block w-100" src="{{url('slider').'/'.$slide['image']}}"
+                            <div class="view main-slider-height">
+                                <img class="d-block full-img w-100" src="{{url('slider').'/'.$slide['image']}}"
                                      alt="Second slide">
                                 <div class="mask rgba-black-strong"></div>
                             </div>

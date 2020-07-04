@@ -59,18 +59,20 @@
 
 <!--   sidebar -->
 
-    <div id="mySidebar" class="sidebar">
+    <div id="mySidebar" class="sidebar z-depth-1-half">
         @auth
             <div class="row login_id">
                 @if(Auth::user()->image == "")
                 <img src="{{asset('assets/frontend/img/singup_person.png')}}">
                 @else
-                    <img src="{{asset('users/'. Auth::user()->image)}}">
+                  <div class="login-img">
+                        <img class="rounded-circle full-img" src="{{asset('users/'. Auth::user()->image)}}">
+                  </div>
                 @endif
 
                 <!-- <div class="mb-1 white-text">Sign up to receive our weekly newsletter</div> -->
                 <div class="flex-center mb-1 mt-1 offline_courses">
-                    <u><a class="Socialb plum-text singup_id_name" href="">{{Auth::user()->name}}</a></u>
+                    <u><a class="Socialb plum-text singup_id_name p-0" href="">{{Auth::user()->name}}</a></u>
                 </div>
                 <p>{{Auth::user()->email}}</p>
             </div>
