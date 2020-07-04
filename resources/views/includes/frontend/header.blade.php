@@ -26,7 +26,7 @@
                 <div class="custom-select">
                 <select id="select_language">
                     <option class="plum-text" value="0">Language</option>
-                    <option value="1"><a href="#">English</a> </option>
+                    <option value="1"><a href="#">English</a></option>
                     <option value="2">Arabic</option>
                 </select>
                 </div>
@@ -46,6 +46,20 @@
             @auth
                 <li>
                     <a href=""><button class="btn white-btn">{{\Illuminate\Support\Facades\Auth::user()->name}}</button></a>
+                </li>
+                <li>
+                    @if(\Illuminate\Support\Facades\Auth::user()->role_id == 3)
+                        @if(\Illuminate\Support\Facades\Auth::user()->is_trainer == 0)
+                            <a href="{{route('become_trainer')}}">
+                                <button class="btn white-btn">Become a Trainer</button>
+                            </a>
+                        @else
+                            <a href="{{route('Trainer/dashboard')}}">
+                                <button class="btn white-btn">Trainer Dashboard</button>
+                            </a>
+
+                        @endif
+                    @endif
                 </li>
                 <li>
                     <a href="{{route('logout')}}"><button class="btn plum-btn">Logout</button></a>

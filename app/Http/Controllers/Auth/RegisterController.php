@@ -67,7 +67,7 @@ class RegisterController extends Controller
     {
         if (isset($data['trainer'])){
             $user = User::create([
-                'role_id'=>2,
+                'is_trainer'=>1,
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),

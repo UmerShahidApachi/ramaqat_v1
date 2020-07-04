@@ -56,7 +56,7 @@
                                                     <img src="{{url('image/dummy.jpg')}} " style="width: 75px;">
                                                 @endif
                                             </td>
-                                            <td>{{$row->description}}</td>
+                                            <td>{!! $row->description !!}</td>
                                             <td>{{$row->duration}}</td>
                                             <td>{{$row->created_at}}</td>
                                             <td>

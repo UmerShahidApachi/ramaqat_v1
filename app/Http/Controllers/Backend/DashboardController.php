@@ -55,7 +55,7 @@ class DashboardController extends Controller
 
     }
     public function all_trainers(){
-        $data = User::where('role_id',2)->get();
+        $data = User::where('is_trainer',1)->get();
         return view('backend.admin.trainers.home', compact('data'));
 
     }

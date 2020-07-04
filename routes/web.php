@@ -26,7 +26,7 @@ Route::post('language/{locale}', function (Request $request,$locale) {
 Route::get('/', function () {
     $latest = Course::where('status',1)->get()->take(3);
     $categories = Category::all();
-    $categories1 = Category::where('id', '>=', 1)->first();
+    $categories1 = Category::all()->take(3);
     $slider = Slider::all();
     $slider1 = Slider::where('id', '>=', 1)->first();
     $latest1 = Course::where('id', '>=', 1)->where('status',1)->first();
@@ -113,7 +113,8 @@ Route::prefix('trainer')->group(function () {
 
 
 Route::prefix('user')->group(function () {
-    Route::group(['middleware' => ['user']], function () {
+    Route::group(['middleware' => ['User']], function () {
+        Route::get('become_trainer', 'Backend\UserController@become_trainer')->name('become_trainer');
         Route::get('my-course', 'Frontend\CourseController@my_course')->name('my-courses');
 
     });
@@ -135,3 +136,4 @@ Route::get('/logout', 'Auth\LoginController@logout');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+
