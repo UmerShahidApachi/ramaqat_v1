@@ -19,7 +19,7 @@ class CreateSettingsTable extends Migration
             $table->text('about_us_image')->nullable();
             $table->string('fb_link')->nullable();
             $table->string('insta_link')->nullable();
-            $table->string('youtube_link')->nullable();
+            $table->string('twitter_link')->nullable();
             $table->string('in_link')->nullable();
             $table->timestamps();
         });

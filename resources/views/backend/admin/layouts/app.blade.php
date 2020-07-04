@@ -101,6 +101,12 @@ The above copyright notice and this permission notice shall be included in all c
                         <p>Slider</p>
                     </a>
                 </li>
+                <li class="nav-item {{ Request::segment(2) == 'settings'? 'active':'' }} ">
+                    <a class="nav-link" href="{{route('settings')}}">
+                        <i class="material-icons">settings</i>
+                        <p>Manage Settings</p>
+                    </a>
+                </li>
                 <li class="nav-item {{ Request::segment(2) == 'logout'? 'active':'' }} ">
                     <a class="nav-link" href="{{route('logout')}}">
                         <i class="material-icons">person</i>

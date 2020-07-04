@@ -460,23 +460,21 @@
         <div class="col-12 col-sm-10 offset-md-1 mt-5">
             <div class="row text-center">
                 <div class="col-12 col-sm-9 pt-5 text-right">
-                    <div class="plum-text font36">اشكرك أ.دانة عالطرح الرائع حقيقة استفدت من كلامك كثير واتمنى لو
-                        احضر
+                    <div class="plum-text ">{!! $setting->about_us_description !!}
                     </div>
-                    <div class="plum-text font36">عندك دورة مباشرة احس راح تضيفين لي الكثييير</div>
                     <div class="social">
                         <ul class="tranee-social">
                             <li>
-                                <a href="#"><img src="{{asset('assets/frontend/img/t-twi.png')}}"></a>
+                                <a href="{{$setting->twitter_link}}" target="_blank"><img src="{{asset('assets/frontend/img/t-twi.png')}}"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="{{asset('assets/frontend/img/t-fb.png')}}"></a>
+                                <a href="{{$setting->fb_link}}" target="_blank"><img src="{{asset('assets/frontend/img/t-fb.png')}}"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="{{asset('assets/frontend/img/t-insta.png')}}"></a>
+                                <a href="{{$setting->insta_link}}" target="_blank"><img src="{{asset('assets/frontend/img/t-insta.png')}}"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="{{asset('assets/frontend/img/t-link.png')}}"></a>
+                                <a href="{{$setting->in_link}}" target="_blank"><img src="{{asset('assets/frontend/img/t-link.png')}}"></a>
                             </li>
                         </ul>
                     </div>
@@ -484,7 +482,7 @@
                 <div class="col-12 col-sm-3">
                     <div class="trainee-img">
                         <img class="rounded-circle img-fluid"
-                             src="{{asset('assets/frontend/img/Mask Group 1.png')}}">
+                             src="{{asset('setting/'.$setting->about_us_image)}}">
                     </div>
                 </div>
             </div>

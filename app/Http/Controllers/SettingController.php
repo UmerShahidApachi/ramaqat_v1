@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use App\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class SettingController extends Controller
 {
@@ -14,7 +17,8 @@ class SettingController extends Controller
      */
     public function index()
     {
-        //
+        $data = Setting::where('id',1)->first();
+        return view('backend.admin.settings.home', compact('data'));
     }
 
     /**
@@ -69,8 +73,45 @@ class SettingController extends Controller
      */
     public function update(Request $request, Setting $setting)
     {
-        //
+
+        // dd($request->all());
+        if ($request->hasfile('image')) {
+            $postData = $request->only('image');
+
+            $file = $postData['image'];
+
+            $fileArray = array('image' => $file);
+
+            // Tell the validator that this file should be an image
+            $rules = array(
+                'image' => 'mimes:jpeg,jpg,png,gif|required|max:10000' // max 10000kb
+            );
+
+            // Now pass the input and rules into the validator
+            $validator = Validator::make($fileArray, $rules);
+
+
+            // Check to see if validation fails or passes
+            if ($validator->fails()) {
+                return redirect()->back()->with('alert', 'Upload Image only')->withInput();
+            }
+            $file = $request->file('image');
+            $filename = str_replace(' ', '', $file->getClientOriginalName());
+            $ext = $file->getClientOriginalExtension();
+            $imgname = uniqid() . $filename;
+            $destinationpath = public_path('setting');
+            $file->move($destinationpath, $imgname);
+        }
+//        dd($imgname);
+
+
+        $category = Setting::where('id',1)->update(['about_us_description'=>$request->description,'fb_link'=>$request->fb_link,'insta_link'=>$request->description,'twitter_link'=>$request->twitter_link,'in_link'=>$request->in_link,'about_us_image'=>$imgname]);
+
+        if ($category){
+            return redirect()->back();
+        }
     }
+
 
     /**
      * Remove the specified resource from storage.
