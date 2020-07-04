@@ -36,7 +36,7 @@ class CourseController extends Controller
             if (!$category) {
                 abort(404);
             }
-        $data = Course::where('category_id',$request->id)->get()->paginate(9);
+        $data = Course::where('category_id',$request->id)->paginate(9);
         }else{
             $category = "";
             $data = Course::paginate(9);
