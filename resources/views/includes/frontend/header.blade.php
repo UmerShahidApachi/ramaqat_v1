@@ -14,13 +14,13 @@
 
       </ul>
       </div>
-      <div class="col-12 col-sm-4">
+      <div class="col-12 col-sm-5">
       <div class="HeaderSearch d-none d-sm-block">
         <input class="SearchInput z-depth-1" type="search" placeholder="Search">
         <img class="plumIcon" src="{{asset('assets/frontend/img/search (2).png')}}">
       </div>
       </div>
-      <div class="col-12 col-sm-5">
+      <div class="col-12 col-sm-4 text-end">
         <ul class="ulDBlock d-none d-sm-block">
             <li>
                 <div class="custom-select">
@@ -39,9 +39,9 @@
             <li>
                 <a href="{{route('login')}}"><button class="btn white-btn">Login</button></a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="{{route('register')}}"><button class="btn plum-btn">Signup</button></a>
-            </li>
+            </li> -->
                 @endguest
             @auth
                 <li>

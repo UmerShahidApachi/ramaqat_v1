@@ -445,208 +445,63 @@
     </div>
 
     <!-- Description -->
-    <div class="heading mt-3">Courses Cetagories</div>
-    <div class="container mt-3 mb-3">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            @if(isset($categories1))
-                <li class="nav-item">
-                    <a class="nav-link active " id="{{$categories1->name}}-tab" data-toggle="tab"
-                       href="#{{$categories1->name}}" role="tab"
-                       aria-controls="{{$categories1->name}}"
-                       aria-selected="true">{{$categories1->name}}</a>
-                </li>
-            @endif
-            @if(isset($categories))
+    <div class="heading mt-3 mb-3">Different Courses</div>
+    <!-- Cetegory slider -->
+<div class="plum-bg pt-3 pb-3">
+<div class="container">
+    <div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel">
+        <!--Indicators-->
+        <!-- <ol class="carousel-indicators custum-indicators">
+    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-2" data-slide-to="1"></li>
+    <li data-target="#carousel-example-2" data-slide-to="2"></li>
+  </ol> -->
+        <!--/.Indicators-->
+        <!--Slides-->
+        <div class="row">
+            <div class="col-12">
 
-                @foreach($categories as $cat)
-                    <li class="nav-item">
-                        <a class="nav-link " id="{{$cat->name}}-tab" data-toggle="tab" href="#{{$cat->name}}" role="tab"
-                           aria-controls="{{$cat->name}}"
-                           aria-selected="true">{{$cat->name}}</a>
-                    </li>
-                @endforeach
-            @endif
+                <div class="carousel-inner" role="listbox">
 
-        </ul>
-        @if(isset($categories1))
-
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active  {{$categories1->name}}" id="{{$categories1->name}}"
-                     role="tabpanel" aria-labelledby="{{$categories1->name}}-tab">
-                    <div class="mt-3 mb-3">
-                        <div class="carousel slide multi-item-carousel" id="theCarousel">
-                            <div class="carousel-inner row w-100 mx-auto">
-                                @foreach($categories1->courses as $c)
-                                    <div class="carousel-item active col-md-4">
-                                        <div class="multi-img">
-                                            <img src="{{asset('course/'. $c->thumbnail)}}" class="thumbnail-img">
-                                            <div class="img-hover">
-                                                <div class="row hover-bg">
-                                                    <div class="col-3 p-0 text-center">
-                                                        <div class="course-traine-img">
-                                                            @if($c->users['image'] == "")
-                                                                <img src="{{asset('assets/frontend/img/user-1.png')}}"
-                                                                     class="">
-                                                            @else
-                                                                <img src="{{asset('users/'. $c->users['image'])}}"
-                                                                     class="">
-
-                                                            @endif
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-5 p-0">
-                                                        <div class="trainer-name">{{$c->users['name']}}</div>
-                                                        <div class="course-d mt-2">{{$c->name}}</div>
-                                                    </div>
-                                                    <div class="col-4 pt-3">
-                                                        <ul class="card-item">
-                                                            <li><img
-                                                                    src="{{asset('assets/frontend/img/star-small-fill.png')}}">
-                                                            </li>
-                                                            <li><img
-                                                                    src="{{asset('assets/frontend/img/star-small-fill.png')}}">
-                                                            </li>
-                                                            <li><img
-                                                                    src="{{asset('assets/frontend/img/star-small.png')}}">
-                                                            </li>
-                                                            <li>4.8</li>
-                                                            <li>(12)</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                @endforeach
-                                @endif
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-4 text-center">
+                                <div class="slider-box">
+                                 <img class="fill-img" src="{{asset('assets/frontend/img/ios.png')}}">
+                                </div>
                             </div>
-                            <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#theCarousel" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                @if(isset($categories))
-
-                    @foreach($categories as $cat)
-
-                        <div class="tab-pane fade    {{$cat->name}}" id="{{$cat->name}}" role="tabpanel"
-                             aria-labelledby="{{$cat->name}}-tab">
-                            <div class="mt-3 mb-3">
-                                <div class="carousel slide multi-item-carousel" id="theCarousel">
-                                    <div class="carousel-inner row w-100 mx-auto">
-                                        @foreach($cat->courses as $c)
-                                            <div class="carousel-item active col-md-4">
-                                                <div class="multi-img">
-                                                    <img src="{{asset('course/'. $c->thumbnail)}}"
-                                                         class="thumbnail-img">
-                                                    <div class="img-hover">
-                                                        <div class="row hover-bg">
-                                                            <div class="col-3 p-0 text-center">
-                                                                <div class="course-traine-img">
-                                                                    @if($c->users['image'] == "")
-                                                                        <img
-                                                                            src="{{asset('assets/frontend/img/user-1.png')}}"
-                                                                            class="">
-                                                                    @else
-                                                                        <img
-                                                                            src="{{asset('users/'. $c->users['image'])}}"
-                                                                            class="">
-
-                                                                    @endif
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-5 p-0">
-                                                                <div class="trainer-name">{{$c->users['name']}}</div>
-                                                                <div class="course-d mt-2">{{$c->name}}</div>
-                                                            </div>
-                                                            <div class="col-4 pt-3">
-                                                                <ul class="card-item">
-                                                                    <li><img
-                                                                            src="{{asset('assets/frontend/img/star-small-fill.png')}}">
-                                                                    </li>
-                                                                    <li><img
-                                                                            src="{{asset('assets/frontend/img/star-small-fill.png')}}">
-                                                                    </li>
-                                                                    <li><img
-                                                                            src="{{asset('assets/frontend/img/star-small.png')}}">
-                                                                    </li>
-                                                                    <li>4.8</li>
-                                                                    <li>(12)</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        @endforeach
-
-                                    </div>
-                                    <a class="carousel-control-prev" href="#theCarousel" role="button"
-                                       data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#theCarousel" role="button"
-                                       data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
+                            <div class="col-4 text-center">
+                                <div class="slider-box">
+                                 <img class="fill-img" src="{{asset('assets/frontend/img/ios.png')}}">
+                                </div>
+                            </div>
+                            <div class="col-4 text-center">
+                                <div class="slider-box">
+                                 <img class="fill-img" src="{{asset('assets/frontend/img/ios.png')}}">
                                 </div>
                             </div>
                         </div>
-                    @endforeach
-                @endif
-
-                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                    <div class="mt-3 mb-3">
-                    <!-- <div class="carousel slide multi-item-carousel" id="theCarousel">
-        <div class="carousel-inner row w-100 mx-auto">
-            <div class="carousel-item active col-md-4">
-                <a href="#"><img class="zoom" src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block"></a>
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img src="{{asset('assets/frontend/img/multislider-1.png')}}" class="img-fluid mx-auto d-block">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#theCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div> -->
                     </div>
                 </div>
+
             </div>
+        </div>
+        <!--/.Slides-->
+        <!--Controls-->
+ <a class="carousel-control-prev cat-prev" href="#carousel-example-1" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon cat-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next cat-next" href="#carousel-example-1" role="button" data-slide="next">
+  <span class="carousel-control-next-icon cat-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a>
+        <!--/.Controls-->
     </div>
+</div>
+</div>
+<!-- End -->
+
     <!--Description-->
 
     <!-- Student Comment Section -->
@@ -773,7 +628,6 @@
 <a class="color1" onclick="setActiveStyleSheet('color1'); return false;" href="{{url('/')}}"></a>
 </div>
 </div>
-    
+
 @endsection
 <!-- Latter Subscription End -->
- 
