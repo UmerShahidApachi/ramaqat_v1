@@ -94,7 +94,9 @@ nav{
 .plumIcon{
     position: absolute;
     top: 40%;
-    right: 5%;
+    /* right: 5%; */
+    left: 89%;
+    right: 89%;
 }
 .HeaderSearch{
     position: relative;
@@ -207,6 +209,12 @@ margin:0px 5px 0px 5px;
     overflow: hidden;
 
 }
+.controls-top{
+    /* position: absolute; */
+    text-align: center;
+    margin-top: 10%;
+}
+
 .t-img{
     width:65px;
     height:65px;
@@ -684,6 +692,12 @@ ul.course-price li{
 }
 /* End */
 @media screen and (min-width:320px) and (max-width:768px){
+    .controls-top{
+        display: none !important;
+    }
+    .p-mob{
+        padding: 5px !important;
+    }
     .copyright{
         font-size: 10px !important;
         margin-bottom: 15px !important;

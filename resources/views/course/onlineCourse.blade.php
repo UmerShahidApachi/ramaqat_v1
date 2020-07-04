@@ -209,7 +209,7 @@
     </div>
 </div>
 
----old /-->
+old-->
 
 <div class="next_previous flex-center mb-1 mt-1 offline_courses">
 
