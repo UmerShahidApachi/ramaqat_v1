@@ -127,7 +127,7 @@
 
                 <div class="col-md-8 float-left" id="img_slider">
 <!-- block 1 -->
-                    <div class="col pt-1" style="min-height: 100px ;overflow: hidden; font-size: 17px;font-weight: regular">
+                    <div class="col pt-1" style="min-height: 100px ;overflow: hidden; font-size: 17px;">
 
                           <div class="slider_header text-center m-2" style="color:#570055;"><a href="#"><u>Discount Courses</u></a>
                           </div>

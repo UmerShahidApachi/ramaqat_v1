@@ -49,7 +49,7 @@
 		}
 			.checkboxlabel span{
 				display: inline-grid;
-				margin-left: 2%;
+				margin-left: auto;
 				font-size: 1.1rem;
 			}.checkboxlabel span:nth-child(1){
 				font-size: 0.8rem;
@@ -62,7 +62,21 @@
 		color:#6c757d!important;
 	}
 	
+	.course_herder_font{
+		font-size: calc(100% + 1vw + 1vh);
+	}
+	.para_font{
+		font-size: calc(100% + 0.1vw + 0.1vh);
+	}
+@media screen and (max-width: 768px) and (min-width: 320px){
+
+	ul.ulDBlock-top li{
+		width:max-content;
+	}
 	
+  
+}
+
 </style>
 
 
@@ -70,44 +84,47 @@
 
   <!--Header End Here  -->
   <div class="plum-bg pt-3 pb-3">
-    <div class="container-fluid row">
-	    <div class="col-sm-7">
-	        <h3 class="complete_course_classes_heading pull-left">Finance compelet course Classes</h3>
-	    </div>
-	    <div class="col-sm-5 d-flex">
-	        <ul class="ulDBlock-top compelet_course_nav2 pull-right d-flex">
-	          <li>
-	            <div class="font18 white-text"><a href="#" style="color: white"> <i class="fa fa-share-alt mr-1" aria-hidden="true"></i> Share</a></div>
-	          </li>
-	          <li>
-	            <div class="font16 white-text"><button type="button" class="heading_btn_set">Favourit <i class="fa fa-star mr-1" aria-hidden="true"></i></button></div>
-	          </li>
-	          <li>
-				<div class="font16 white-text"><button type="button" class="heading_btn_set">Enroll for 25KWD</button></div>
-	          </li>
-	        </ul>
-	    </div>
+    <div class="container-fluid">
+    	<div class="row">
+    	
+		    <div class="col-sm-12 col-md-6">
+		        <h3 class="complete_course_classes_heading course_herder_font">Finance compelet course Classes</h3>
+		    </div>
+		    <div class="col-sm-12 col-md-6 d-flex">
+		        <ul class="ulDBlock-top compelet_course_nav2 d-flex">
+		          <li>
+		            <div class="font18 white-text"><a href="#" style="color: white"> <i class="fa fa-share-alt mr-1" aria-hidden="true"></i> Share</a></div>
+		          </li>
+		          <li>
+		            <div class="col font16 white-text"><button type="button" class=" btn btn-primary">Favourit <i class="fa fa-star mr-1" aria-hidden="true"></i></button></div>
+		          </li>
+		          <li>
+					<div class="col font16 white-text"><button type="button" class="btn btn-primary">Enroll for 25KWD</button></div>
+		          </li>
+		        </ul>
+		    </div>
+		
+	</div>
     </div>
   </div>
   <!-- add video iframe -->
- 	<div class="col-sm-12">
+ 	
  	<div class="row">
 	    <div class="col-sm-8 p-0" style="background-color: #570055;">
 		      	<iframe width="100%" height="400px;" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
-		      	</iframe>
-	   			
-	   			
-			    <div class="col-sm-12 pb-2">
+		      	</iframe> 			
 			    	<div class="row">	
-				      	<div class="col-sm-4 text-center " style="color: white;">
-				      	<div class="row">
-					      	<img src="{{asset('assets/frontend/img/completecourse/teacher_activ.png')}}" class="img-circle ml-md-4" alt="img1">
-					      	<div class="col" style="border-right: 1px solid white;">
-					      		<p class="trainername mb-0">Trainer Name</p>
-					      	</div>
-					      </div>
+				      	<div class="col-sm-12 col-md-4 col-md-4 text-center " style="color: white;">
+				      		<div class="row">
+				      			<div class="col-sm-4">
+						    	<img src="{{asset('assets/frontend/img/completecourse/teacher_activ.png')}}" class="img-circle ml-sm-0 ml-md-4" alt="img1">
+						    	</div>							
+								<div class="col-sm-8">
+						    		<p class="trainername mb-0">Trainer Name</p>
+						    	</div>
+						    </div>
 				    	</div>
-					    <div class="col-sm-8 pt-2" id="video_footer">
+					    <div class="col-sm-12 col-md-8 pt-2" id="video_footer">
 					      	<img src="{{asset('assets/frontend/img/completecourse/parson-1.png')}}" class="img-circle" alt="img2">
 					      	<img src="{{asset('assets/frontend/img/completecourse/parson-3.png')}}" class="img-circle" alt="img3">
 					      	<img src="{{asset('assets/frontend/img/completecourse/parson-4.png')}}" class="img-circle" alt="img4">
@@ -116,9 +133,8 @@
 					      	<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img7">
 					      	<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img8">
 					    </div>
-					</div>
+					</div>			
 				
-			</div>
 		</div>
 	    <div class="col-sm-4 mt-0 p-0">
 			    <div class="course_content d-flow-root">
@@ -244,19 +260,19 @@
 			                </div>
 			              </div>
 
-			              <div id="accordionBody4" class="collapse" role="tabpanel" aria-labelledby="accordionHeading4" aria-expanded="false" data-parent="accordion">
-			                <div class="card-block col-12 p-0">
-			                  	<div class="checkbox col">
-								  <label class="checkboxlabel">
-								  	<input type="checkbox" value=""><span> Lesson<span>123</span></span></label>
-								</div>
-								<div class="checkbox col">
-								  <label class="checkboxlabel">
-								  	<input type="checkbox" value=""><span> Lesson 2<span>123</span></span></label>
-								</div>
-			                </div>
+				            <div id="accordionBody4" class="collapse" role="tabpanel" aria-labelledby="accordionHeading4" aria-expanded="false" data-parent="accordion">
+				                <div class="card-block col-12 p-0">
+				                  	<div class="checkbox col">
+									  <label class="checkboxlabel">
+									  	<input type="checkbox" value=""><span> Lesson<span>123</span></span></label>
+									</div>
+									<div class="checkbox col">
+									  <label class="checkboxlabel">
+									  	<input type="checkbox" value=""><span> Lesson 2<span>123</span></span></label>
+									</div>
+				                </div>
 
-			              </div>
+				            </div>
 			            </div>
           
           	<!-- card close -->
@@ -264,8 +280,8 @@
 
 
        			</div>
-	    </div>
-	</div>
+	    	</div>
+		</div>
     </div> 
 
   <!--  add page content  -->
@@ -315,12 +331,12 @@
   <div class="plum-bg">
     <div class="col-12 col-sm-10 offset-md-1" style="padding: 40px 15px;line-height: 1;">
       <div class="row">
-        <div class="col-12 col-sm-6">
+        <div class="col-sm-12 col-md-6">
           <!-- <div class="mb-1 white-text">Sign up to receive our weekly newsletter</div> -->
-          <div class="white-text pull-right">Sign up to receive our weekly newsletter</div><br><br>
-          <div class="white-text pull-right">Stay uploaded on all new online and offline training courses</div>
+          <div class="white-text pull-right para_font">Sign up to receive our weekly newsletter</div><br><br>
+          <div class="white-text pull-right para_font">Stay uploaded on all new online and offline training courses</div>
         </div>
-        <div class="col-12 col-sm-6">
+        <div class="col-sm-12 col-md-6">
           <div class="Subscription">
             <input class="SubInput z-depth-1" type="text" placeholder="Enter your email"><span class="SubBtn"><a
                 href="#">Subscribe</a></span>
