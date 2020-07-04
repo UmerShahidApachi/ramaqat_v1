@@ -114,7 +114,8 @@ Route::prefix('trainer')->group(function () {
 
 
 Route::prefix('user')->group(function () {
-    Route::group(['middleware' => ['user']], function () {
+    Route::group(['middleware' => ['User']], function () {
+        Route::get('become_trainer', 'Backend\UserController@become_trainer')->name('become_trainer');
         Route::get('my-course', 'Frontend\CourseController@my_course')->name('my-courses');
 
     });
@@ -137,3 +138,4 @@ Route::get('/logout', 'Auth\LoginController@logout');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+

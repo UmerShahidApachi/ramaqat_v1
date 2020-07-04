@@ -42,6 +42,7 @@ class CreateUsersTable extends Migration
             $table->string('country')->nullable();
             $table->string('phone')->nullable();
             $table->date('date_of_birth')->nullable();
+            $table->boolean('is_trainer')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

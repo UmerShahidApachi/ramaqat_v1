@@ -14,7 +14,7 @@
                         <label>Role</label>
                         <select class="form-control" name="role_id">
                             <option value="1" @if($user->role_id == 1) selected @endif>Admin</option>
-                            <option value="2" @if($user->role_id == 2) selected @endif>Trainer</option>
+{{--                            <option value="2" @if($user->role_id == 2) selected @endif>Trainer</option>--}}
                             <option value="3" @if($user->role_id == 3) selected @endif>User</option>
                         </select>
                         <input type="hidden" name="id" value="{{$user->id}}">

@@ -17,7 +17,7 @@ class Trainer
     public function handle($request, Closure $next)
     {
         if(Auth::check()) {
-            if(Auth::user()->role_id == 2)
+            if(Auth::user()->is_trainer == 1)
             {
                 return $next($request);
             }
