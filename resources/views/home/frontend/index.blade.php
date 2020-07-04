@@ -1174,8 +1174,8 @@
 
 <!-- End -->
 
-    <!--Description-->
-<hr style="width: 100%; height: 5px; border-top:2px solid">
+    <!--Description ->
+ <hr style="width: 100%; height: 5px; border-top:2px solid">
     <!-- Student Comment Section -->
     <div class="heading mt-5">Student Feedback</div>
     <div class="container mt-3 mb-3">
