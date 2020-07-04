@@ -65,6 +65,12 @@ Route::prefix('admin')->group(function () {
         Route::get('delete-slider', 'Backend\DashboardController@delete_slider');
 
 
+        Route::get('currency', 'Backend\CurrencyController@index')->name('currency');
+        Route::post('currency/store', 'Backend\CurrencyController@store')->name('save_currency');
+        Route::get('edit/currency', 'Backend\CurrencyController@edit');
+        Route::post('currency/updates', 'Backend\CurrencyController@update')->name('update_currency');
+        Route::get('delete/currency', 'Backend\CurrencyController@destroy');
+
         Route::get('category', 'Backend\DashboardController@categories')->name('category');
         Route::POST('save_category', 'Frontend\CategoryController@create')->name('save_category');
         Route::get('delete/category', 'Frontend\CategoryController@delete_category')->name('delete_category');
@@ -95,15 +101,16 @@ Route::prefix('trainer')->group(function () {
         Route::get('edit-lessons/{id}', 'LessonController@edit')->name('edit_lesson');
         Route::get('add-lesson-form/{id}', 'LessonController@show')->name('form');
         Route::get('edit-lesson-form/{id}', 'LessonController@edit')->name('edit_form');
-        Route::post('add-lesson', 'LessonController@store')->name('add_lesson');
-        Route::post('update-lesson', 'LessonController@store')->name('update_lesson');
-        Route::get('delete-lesson/{id}', 'LessonController@delete')->name('delete');
-        Route::get('profile', 'Trainer\DashboardController@profile')->name('profile');
-        Route::post('update-profile', 'Trainer\DashboardController@update_profile')->name('update_profile');
-
-
+        Route::post('add-lesson',      'LessonController@store')->name('add_lesson');
+        Route::post('update-lesson',   'LessonController@store')->name('update_lesson');
+        Route::get('delete-lesson/{id}',    'LessonController@delete')->name('delete');
+        Route::get('profile',          'Trainer\DashboardController@profile')->name('profile');
+        Route::post('update-profile',  'Trainer\DashboardController@update_profile')->name('update_profile');
+        /*trainer page 11*/
+        Route::get('trainer-profile', 'Trainer\DashboardController@trainer_profile')->name('trainer_profile');
     });
 });
+
 
 
 Route::prefix('user')->group(function () {
@@ -115,14 +122,15 @@ Route::prefix('user')->group(function () {
 Route::get('userlogin', 'Frontend\LoginController@userLogin')->name('login-form');
 Route::post('login_user', 'Frontend\LoginController@login_user')->name('login_user');
 Route::get('user-register', 'Frontend\RegisterController@userRegister')->name('register');
+
 Route::get('all-course', 'Frontend\CourseController@onlineCourse')->name('all-course');
 Route::get('course-detail', 'Frontend\CourseController@course_detail')->name('detail-course');
 Route::get('offline-course', 'Frontend\CourseController@offlineCourse')->name('offline-course');
-Route::get('homePage', 'Frontend\HomeController@homePage')->name('homePage');
+Route::get('complete-course', 'Frontend\CourseController@completeCourse')->name('complete-course');
+Route::get('homePage',        'Frontend\HomeController@homePage')->name('homePage');
 
-Route::get('progressView', 'progresscontroller@fileUpload')->name('progressView');
-
-Route::post('progressStore', 'progresscontroller@fileStore')->name('progressStore');
+Route::get('progressView',    'progresscontroller@fileUpload')->name('progressView');
+Route::post('progressStore',  'progresscontroller@fileStore')->name('progressStore');
 
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
