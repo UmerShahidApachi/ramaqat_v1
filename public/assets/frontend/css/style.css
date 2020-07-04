@@ -370,6 +370,7 @@ border:1px solid #570055;
     width: 338px;
     height: 200px;
     position: relative;
+    margin-left: 15px;
 }
 .thumbnail-img{
     width:100%;
