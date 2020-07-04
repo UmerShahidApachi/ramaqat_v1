@@ -36,10 +36,10 @@ class CourseController extends Controller
             if (!$category) {
                 abort(404);
             }
-        $data = Course::where('category_id',$request->id)->get();
+        $data = Course::where('category_id',$request->id)->get()->paginate(9);
         }else{
             $category = "";
-            $data = Course::all();
+            $data = Course::paginate(9);
         }
         return view('course.onlineCourse',compact('data','category'));
     }

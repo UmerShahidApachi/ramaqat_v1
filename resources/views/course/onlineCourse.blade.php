@@ -55,6 +55,7 @@
 <div class="container mt-5 mb-5">
     <div class="carousel slide multi-item-carousel" id="theCarousel">
         <div class="carousel-inner row w-100 mx-auto">
+{{--            {{dd($data)}}--}}
             @foreach($data as $row)
             <div class="carousel-item active col-md-4">
 {{--                <a href="{{route('detail-course',['id'=>$row->id])}}"><img src="{{asset('course/'. $row->thumbnail)}}" class="img-fluid mx-auto d-block zoom"></a>--}}
@@ -96,8 +97,9 @@
 
 
 <div class="next_previous flex-center mb-1 mt-1 offline_courses">
-    <a href="#" class="Socialb plum-text previous">&laquo; Previous</a>
-    <a href="#" class=" Socialb plum-text next">Next &raquo;</a>
+
+    <a href="#" class="Socialb plum-text ">{{$data->links()}}</a>
+{{--    <a href="#" class=" Socialb plum-text next">Next &raquo;</a>--}}
 </div>
 <!--Description-->
 
