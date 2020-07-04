@@ -22,7 +22,9 @@
             font-size:24px;
             color: white;
         }
-
+    .newcard{
+        margin-bottom: 2%;
+    }
     .carousel_item_footer{
       overflow: hidden;
       position: relative;
@@ -52,25 +54,136 @@
     @endif
 </div>
 
+
+        <div class="container">
+            <div class="row">
+                <!-- start block -->
+                <div class="col-sm-12 col-md-4 newcard">
+                    <div class="card">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                    </div>
+                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+                        <div class="col float-left">
+                            <p>The Art Painting and Digital Art Course<br>
+                              -12 Courses in 1</p>
+                            <p>Miss Nabeela, Coderstars by rob  percival Experien</p>
+                            <p class="float-right p-0" style="font-size:10px">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span> 5</span>
+                                <span>(12345)</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- blocek close -->
+                 <!-- start block -->
+                <div class="col-sm-12 col-md-4 newcard">
+                    <div class="card">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                    </div>
+                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+                        <div class="col float-left">
+                            <p>The Art Painting and Digital Art Course<br>
+                              -12 Courses in 1</p>
+                            <p>Miss Nabeela, Coderstars by rob  percival Experien</p>
+                            <p class="float-right p-0" style="font-size:10px">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span> 5</span>
+                                <span>(12345)</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- blocek close -->
+                 <!-- start block -->
+                <div class="col-sm1-12 col-md-4 newcard">
+                    <div class="card">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                    </div>
+                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+                        <div class="col float-left">
+                            <p>The Art Painting and Digital Art Course<br>
+                              -12 Courses in 1</p>
+                            <p>Miss Nabeela, Coderstars by rob  percival Experien</p>
+                            <p class="float-right p-0" style="font-size:10px">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span> 5</span>
+                                <span>(12345)</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- blocek close -->
+                 <!-- start block -->
+                <div class="col-sm-12 col-md-4 newcard">
+                    <div class="card">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                    </div>
+                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+                        <div class="col float-left">
+                            <p>The Art Painting and Digital Art Course<br>
+                              -12 Courses in 1</p>
+                            <p>Miss Nabeela, Coderstars by rob  percival Experien</p>
+                            <p class="float-right p-0" style="font-size:10px">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span> 5</span>
+                                <span>(12345)</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- blocek close -->
+            </div>
+        </div>
+
+                                
+                                <!--/.First slide-->
+
+
+
+
+
+<!-- umer :P
+
 <div class="container mt-5 mb-5">
     <div class="carousel slide multi-item-carousel" id="theCarousel">
         <div class="carousel-inner row w-100 mx-auto">
+            <div class="row">
 {{--            {{dd($data)}}--}}
             @foreach($data as $row)
-            <div class="carousel-item active col-md-4">
-{{--                <a href="{{route('detail-course',['id'=>$row->id])}}"><img src="{{asset('course/'. $row->thumbnail)}}" class="img-fluid mx-auto d-block zoom"></a>--}}
+            <div class="carousel-item active col">
+{{--            <a href="{{route('detail-course',['id'=>$row->id])}}">
+                    <img src="{{asset('course/'. $row->thumbnail)}}" class="img-fluid mx-auto d-block zoom">
+                </a>--}}
                 <a href="{{route('detail-course',['id'=>$row->id])}}">
                     <img src="{{asset('course/'. $row->thumbnail)}}" class="img-fluid mx-auto d-block">
-                     <div class="carousel_item_header_icon">
-                       <p class="mb-1"><i class="fa fa-clock-o"></i></p>
-                       <p class="mb-0"><i class="fa fa-bars"></i></p>
-                     </div>
+                    <div class="carousel_item_header_icon">
+                        <p class="mb-1"><i class="fa fa-clock-o"></i></p>
+                        <p class="mb-0"><i class="fa fa-bars"></i></p>
+                    </div>
+
                     <div class="col carousel_item_footer main_bg_color" style="color: white">
                         <div class="col-md-3 float-left p-0">
                             @if($row->users['image'] == "")
-                                <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
+                            <img src="{{asset('assets/frontend/img/onlinecourse/iso.png')}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
                             @else
-                                <img src="{{asset('users/'. $row->users['image'])}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
+                            <img src="{{asset('users/'. $row->users['image'])}}" class="img-fluid mx-auto d-block rounded-circle"style= "width:60px;height: 60px">
                             @endif
                         </div>
                         <div class="col-md-9 float-left pl-0">
@@ -87,14 +200,16 @@
                             </p>
                         </div>
                     </div>
+
                 </a>
             </div>
             @endforeach
-
+            </div>
         </div>
     </div>
 </div>
 
+---old /-->
 
 <div class="next_previous flex-center mb-1 mt-1 offline_courses">
 
