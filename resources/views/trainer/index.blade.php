@@ -317,7 +317,7 @@
                     <!--/.Carousel Wrapper-->
                   </div>
                     <!-- col close -->
-<!-- block 2 -->
+
 <!-- block 2 -->
 
                     <div class="col" style="min-height: 100px ;overflow: hidden;">
@@ -702,6 +702,8 @@
                 </div>
 
             </div>
+        </div>
+        <div class="col-12 plum-bg mt-3" style="height:50px;">
         </div>
     </section>
 @endsection
