@@ -30,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-//    protected $redirectTo = RedirectIfAuthenticated::HOME;
+    //    protected $redirectTo = RedirectIfAuthenticated::HOME;
 
     /**
      * Create a new controller instance.
@@ -65,21 +65,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        if (isset($data['trainer'])){
-            $user = User::create([
-                'is_trainer'=>1,
-                'name' => $data['name'],
-                'email' => $data['email'],
-                'password' => Hash::make($data['password']),
-            ]);
-        }else {
-            $user = User::create([
-                'role_id'=>3,
-                'name' => $data['name'],
-                'email' => $data['email'],
-                'password' => Hash::make($data['password']),
-            ]);
-        }
+        $user = User::create([
+            'is_trainer' => isset($data['trainer']) ? 1 : 0,
+            'role_id' => isset($data['trainer']) ? 2 : 3,
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
         return $user;
     }
 }
