@@ -82,9 +82,6 @@
             margin: 0px;
         }
 
-        .col-md-1 {
-            margin-top: 10%;
-        }
 
         .hr_home {
             margin-top: 1rem;
@@ -230,7 +227,10 @@
 }
 @media (max-width: 500px) {
 
-#basicSlider .MS-content .item { width: 25%; }
+#basicSlider .MS-content .item {
+    width: 25%;
+}
+
 }
 
 #basicSlider .MS-content .item a {
@@ -392,7 +392,7 @@
                 <!--Carousel Wrapper-->
         <div id="multi-item-example2" class="carousel slide carousel-multi-item" data-ride="carousel">
                   <!--/.Indicators-->
-            <div class="row">
+            <div class="row" style="direction:ltr !important;">
                 <div class="col-md-1 controls-top p-0 text-end">
                     <a class="btn-floating" href="#multi-item-example2" style="color: #570055" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
                 </div>
