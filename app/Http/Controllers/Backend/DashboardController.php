@@ -55,7 +55,7 @@ class DashboardController extends Controller
 
     }
     public function all_trainers(){
-        $data = User::where('role_id',2)->get();
+        $data = User::where('is_trainer',1)->get();
         return view('backend.admin.trainers.home', compact('data'));
 
     }
@@ -168,4 +168,110 @@ class DashboardController extends Controller
         return view('backend.admin.category.category', compact('data'));
 
     }
+
+    public function add_course()
+    {
+         $categories = Category::all();
+        return view('backend.admin.courses.add', compact('categories'));
+    }
+
+    public function course_store(Request $request)
+    {
+        // dd($request->all());
+        if ($request->hasfile('image')) {
+            $postData = $request->only('image');
+
+            $file = $postData['image'];
+
+            $fileArray = array('image' => $file);
+
+            // Tell the validator that this file should be an image
+            $rules = array(
+                'image' => 'mimes:jpeg,jpg,png,gif|required|max:10000' // max 10000kb
+            );
+
+            // Now pass the input and rules into the validator
+            $validator = Validator::make($fileArray, $rules);
+
+
+            // Check to see if validation fails or passes
+            if ($validator->fails()) {
+                return redirect()->back()->with('alert', 'Upload Image only')->withInput();
+            }
+            $file = $request->file('image');
+            $filename = str_replace(' ', '', $file->getClientOriginalName());
+            $ext = $file->getClientOriginalExtension();
+            $imgname = uniqid() . $filename;
+            $destinationpath = public_path('course');
+            $file->move($destinationpath, $imgname);
+        }
+//        dd($imgname);
+
+        $category_id = implode(',', $request->category_id);
+
+        $category = Course::create(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
+
+        if ($category){
+            return redirect()->back();
+        }
+    }
+
+    public function course_edit($id)
+    {
+        $course = Course::find($id);
+        $cate_id = explode(',', $course->category_id);        
+        $categories = Category::all();
+        $check = 0;
+        return view('backend.admin.courses.edit', compact('categories','course','cate_id','check'));
+    }
+
+    public function course_update(Request $request)
+    {
+        $slider = Course::find($request->id);
+        if($request->hasfile('image')){
+
+            $postData = $request->only('image');
+
+            $file = $postData['image'];
+
+            $fileArray = array('image' => $file);
+
+            // Tell the validator that this file should be an image
+            $rules = array(
+                'image' => 'mimes:jpeg,jpg,png,gif|required|max:10000' // max 10000kb
+            );
+
+            // Now pass the input and rules into the validator
+            $validator = Validator::make($fileArray, $rules);
+
+
+            // Check to see if validation fails or passes
+            if ($validator->fails())
+            {
+                return redirect()->back()->with('alert','Upload Image only')->withInput();
+            }
+
+            $destinationpath=public_path("course/".$slider->image);
+            File::delete($destinationpath);
+            $file=$request->file('image');
+            $filename = str_replace(' ', '', $file->getClientOriginalName());
+            $ext=$file->getClientOriginalExtension();
+            $imgname=uniqid().$filename;
+            $destinationpath=public_path('course');
+            $file->move($destinationpath,$imgname);
+        }else{
+            $imgname=$slider->thumbnail;
+
+        }
+
+        $category_id = implode(',', $request->category_id);
+
+
+        $category = Course::where('id',$request->id)->update(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
+
+        if ($category){
+            return redirect(route('courses'));
+        }
+    }
+
 }

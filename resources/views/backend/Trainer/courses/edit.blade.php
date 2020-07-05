@@ -12,9 +12,11 @@
             <div class="col-12">
             <div class="form-group select-dropdown">
                 <label>Category</label>
-                <select class="form-control" name="category_id" required>
+                <select class="form-control chosen chosen-height" name="category_id[]" multiple required>
                     @foreach($categories as $c)
-                        <option value="{{$c->id}}" @if($course->category_id == $c->id) selected @endif>{{$c->name}}</option>
+                        
+                        <option value="{{$c->id}}" @if(isset($cate_id[$check])) @if($cate_id[$check] == $c->id) @php $check++ @endphp selected @endif @endif>{{$c->name}}</option>
+                    
                     @endforeach
                 </select>
             </div>
@@ -46,7 +48,7 @@
             <div class="col-6">
             <div class="btn btn-primary btn-sm float-left">
                 <span>Choose file</span>
-                <input type="file" name="image" accept="image/*"  required>
+                <input type="file" name="image" accept="image/*" >
             </div>
             </div>
             </div>
@@ -67,4 +69,14 @@
         </div>
     </form>
     </div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+<script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('description');
+</script>
+<script>    
+    $(".chosen").chosen();
+</script>
 @endsection

@@ -14,7 +14,7 @@
                         <label>Role</label>
                         <select class="form-control" name="role_id">
                             <option value="1">Admin</option>
-                            <option value="2">Trainer</option>
+{{--                            <option value="2">Trainer</option>--}}
                             <option value="3">User</option>
                         </select>
                     </div>

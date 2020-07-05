@@ -2,6 +2,7 @@
 
 use App\Models\Category;
 use App\Models\Course;
+use App\Setting;
 use App\Slider;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -26,11 +27,13 @@ Route::post('language/{locale}', function (Request $request,$locale) {
 Route::get('/', function () {
     $latest = Course::where('status',1)->get()->take(3);
     $categories = Category::all();
-    $categories1 = Category::where('id', '>=', 1)->first();
+    $categories1 = Category::take(3)->get();
     $slider = Slider::all();
     $slider1 = Slider::where('id', '>=', 1)->first();
     $latest1 = Course::where('id', '>=', 1)->where('status',1)->first();
-    return view('home.frontend.index', compact('slider', 'categories', 'categories1', 'slider1', 'latest', 'latest1'));
+    $setting = Setting::where('id',1)->first();
+
+    return view('home.frontend.index', compact('slider', 'categories', 'categories1', 'slider1', 'latest', 'latest1','setting'));
 });
 /**
  * admin routes
@@ -40,6 +43,8 @@ Route::prefix('admin')->group(function () {
 
         Route::get('dashboard', 'Backend\DashboardController@dashboard')->name('dashboard');
         Route::get('sales', 'Backend\DashboardController@sell_courses')->name('sales');
+        Route::get('settings',  'SettingController@index')->name('settings');
+        Route::post('update-settings',  'SettingController@update')->name('update_settings');
         Route::get('all-users', 'Backend\DashboardController@all_users')->name('all-users');
         Route::get('all-trainers', 'Backend\DashboardController@all_trainers')->name('all_trainers');
         Route::get('delete-user', 'Backend\UserController@delete_users')->name('delete_users');
@@ -54,6 +59,11 @@ Route::prefix('admin')->group(function () {
         Route::get('all-accounts', 'Backend\DashboardController@accounts')->name('accounts');
 
         Route::get('all-courses', 'Backend\DashboardController@courses')->name('courses');
+        Route::get('add-course', 'Backend\DashboardController@add_course')->name('add-course');
+        Route::post('course/update', 'Backend\DashboardController@course_store')->name('course_store');
+        Route::get('course/edit/{id}', 'Backend\DashboardController@course_edit');
+        Route::post('course/updated', 'Backend\DashboardController@course_update')->name('update_course');
+
         Route::get('delete', 'Frontend\CourseController@delete')->name('delete');
 
         Route::get('change_course_status', 'Backend\DashboardController@change_course_status')->name('change_course_status');
@@ -64,6 +74,12 @@ Route::prefix('admin')->group(function () {
         Route::post('edit-slider-data', 'Backend\DashboardController@update_slider')->name('slider-edit-data');
         Route::get('delete-slider', 'Backend\DashboardController@delete_slider');
 
+
+        Route::get('currency', 'Backend\CurrencyController@index')->name('currency');
+        Route::post('currency/store', 'Backend\CurrencyController@store')->name('save_currency');
+        Route::get('edit/currency', 'Backend\CurrencyController@edit');
+        Route::post('currency/updates', 'Backend\CurrencyController@update')->name('update_currency');
+        Route::get('delete/currency', 'Backend\CurrencyController@destroy');
 
         Route::get('category', 'Backend\DashboardController@categories')->name('category');
         Route::POST('save_category', 'Frontend\CategoryController@create')->name('save_category');
@@ -107,7 +123,8 @@ Route::prefix('trainer')->group(function () {
 
 
 Route::prefix('user')->group(function () {
-    Route::group(['middleware' => ['user']], function () {
+    Route::group(['middleware' => ['User']], function () {
+        Route::get('become_trainer', 'Backend\UserController@become_trainer')->name('become_trainer');
         Route::get('my-course', 'Frontend\CourseController@my_course')->name('my-courses');
 
     });
@@ -129,3 +146,4 @@ Route::get('/logout', 'Auth\LoginController@logout');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+

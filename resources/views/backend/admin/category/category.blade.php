@@ -116,7 +116,7 @@
                 <form  id="category_form" method="POST" action="{{url('admin/update/category')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-header">
-                        <h4 class="modal-title">Edit Slider</h4>
+                        <h4 class="modal-title">Edit Category</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body" id="replace1">

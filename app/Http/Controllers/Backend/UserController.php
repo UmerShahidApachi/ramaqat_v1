@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -109,6 +110,13 @@ class UserController extends Controller
     public function delete_users(Request $request)
     {
         User::where('id', $request->id)->delete();
+
+
+    }
+    public function become_trainer()
+    {
+        User::where('id', Auth::id())->update(['is_trainer'=>1]);
+        return redirect('/');
 
 
     }

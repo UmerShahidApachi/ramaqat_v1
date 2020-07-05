@@ -128,6 +128,7 @@
                 <div class="col-md-8 float-left" id="img_slider">
 <!-- block 1 -->
                     <div class="col pt-1" style="min-height: 100px ;overflow: hidden; font-size: 17px;">
+
                           <div class="slider_header text-center m-2" style="color:#570055;"><a href="#"><u>Discount Courses</u></a>
                           </div>
                         <!--Carousel Wrapper-->
@@ -316,7 +317,7 @@
                     <!--/.Carousel Wrapper-->
                   </div>
                     <!-- col close -->
-<!-- block 2 -->
+
 <!-- block 2 -->
 
                     <div class="col" style="min-height: 100px ;overflow: hidden;">
@@ -701,6 +702,8 @@
                 </div>
 
             </div>
+        </div>
+        <div class="col-12 plum-bg mt-3" style="height:50px;">
         </div>
     </section>
 @endsection

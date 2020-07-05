@@ -23,6 +23,10 @@
                             <div class="col-sm-6">
                                 <h2>Manage <b>Courses</b></h2>
                             </div>
+                            <div class="col-sm-6">
+                                <a href="{{route('add-course')}}" class="btn btn-success" data-toggle=""><i
+                                        class="material-icons">&#xE147;</i> <span>Add New Course</span></a>
+                            </div>
                             {{--                            <div class="col-sm-6">--}}
                             {{--                                <a href="#addCategory" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Category</span></a>--}}
                             {{--                                --}}{{--						<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>--}}
@@ -45,12 +49,7 @@
                             <table class="table table-striped table-hover" id="table_id">
                                 <thead>
                                 <tr>
-                                    {{--						<th>--}}
-                                    {{--							<span class="custom-checkbox">--}}
-                                    {{--								<input type="checkbox" id="selectAll">--}}
-                                    {{--								<label for="selectAll"></label>--}}
-                                    {{--							</span>--}}
-                                    {{--						</th>--}}
+                                
                                     <th>Category</th>
                                     <th>Name</th>
                                     <th>Trainer</th>
@@ -66,10 +65,10 @@
                                 @if($data)
                                     @foreach($data as $row)
                                         <tr>
-                                            <td>{{$row->category->name}}</td>
+                                            <td>{{$row->categories($row->category_id)}}</td>
                                             <td>{{$row->name}}</td>
                                             <td>{{$row->users['name']}}</td>
-                                            <td>{{$row->description}}</td>
+                                            <td>{!! $row->description !!}</td>
                                             <td>{{$row->duration}}</td>
                                             <td class="text-center" title="change status"><input type="checkbox" class="course_status" data-toggle="toggle" data-on="Enabled" data-off="Disabled" data-onstyle="success" rel="{{$row->id}}" data-offstyle="danger" @if($row->status=='1') checked @endif></td>
                                             <td>{{$row->created_at}}</td>
@@ -78,7 +77,8 @@
                                             {{--                        <td>(171) 555-2222</td>--}}
                                                                                         <td>
                                             {{--                                                <a href="" data-id="{{$row->id}}" id="edit_cat"  class="edit category_edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>--}}
-                                                                                            <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                             <a href="{{url('admin/course/edit/'.$row->id)}}"><i class="fa fa-edit"></i></a>
+                                            <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                                                                         </td>
 
                                         </tr>
@@ -105,7 +105,7 @@
 
     $(document).ready(function() {
         $('#table_id').DataTable( {
-            "order": [[ 5, "desc" ]]
+            "order": [[ 6, "desc" ]]
         } );
     } );
     $(document).on('click', '.removePartner', function (evt) {
