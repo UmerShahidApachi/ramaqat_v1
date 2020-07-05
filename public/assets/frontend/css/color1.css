@@ -666,6 +666,12 @@ ul.course-price li{
 }
 /* End */
 @media screen and (min-width:320px) and (max-width:768px){
+    #basicSlider .MS-content {
+        padding-top: 5% !important;
+    }
+    .font12 {
+        font-size: 10px;
+    }
     .controls-top{
         display: none !important;
     }
@@ -688,13 +694,13 @@ ul.course-price li{
         height: 280px !important;
     }
     .cat-text{
-        display: none;
+        /* display: none; */
     }
     .fadeIn{
 
-    padding: 5px !important;
+    padding: 3px !important;
     font-size: 15px !important;
-    margin-bottom: 7px !important;
+    /* margin-bottom: 7px !important; */
     }
     ul.ulDBlockMenu li{
         width:25%;
@@ -736,10 +742,10 @@ ul.course-price li{
 
 .fadeIn{
   background: #fff;
-    padding: 17px;
+    padding: 6px;
     border-radius: 55%;
     font-size: 23px;
-    margin-bottom: 10px;
+    /* margin-bottom: 5px; */
 }
 i.fadeIn:hover {
    background-color: #fff;
