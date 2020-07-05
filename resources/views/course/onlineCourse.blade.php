@@ -152,7 +152,7 @@
             </div>
         </div>
 
-                                
+
                                 <!--/.First slide-->
 
 
@@ -210,12 +210,28 @@
 </div>
 
 old-->
-
-<div class="next_previous flex-center mb-1 mt-1 offline_courses">
+<div class="pagina-footer">
+<nav aria-label="Page navigation example">
+  <ul class="pagination pg-blue">
+    <li class="page-item ">
+      <a class="page-link" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link">1</a></li>
+    <li class="page-item active">
+      <a class="page-link">2 <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="page-item"><a class="page-link">3</a></li>
+    <li class="page-item ">
+      <a class="page-link">Next</a>
+    </li>
+  </ul>
+</nav>
+</div>
+<!-- <div class="next_previous flex-center mb-1 mt-1 offline_courses">
 
     <a href="#" class="Socialb plum-text ">{{$data->links()}}</a>
-{{--    <a href="#" class=" Socialb plum-text next">Next &raquo;</a>--}}
-</div>
+  <a href="#" class=" Socialb plum-text next">Next &raquo;</a>
+</div> -->
 <!--Description-->
 
 <div class="plum-bg">
