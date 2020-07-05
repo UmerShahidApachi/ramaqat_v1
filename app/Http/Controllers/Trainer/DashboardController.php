@@ -17,7 +17,7 @@ class DashboardController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
     public function dashboard(){
         return view('backend.trainer.dashboard.home');
