@@ -1,9 +1,18 @@
 @extends('layouts.main')
 
 @section('online-course')
+
+  <link href="https://unpkg.com/video.js@7.5.4/dist/video-js.css" rel="stylesheet">
+   <script src="https://unpkg.com/video.js@7.5.4/dist/video.js"></script>
+   <script src="https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js"></script>
+   <link href="https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css" rel="stylesheet">
+
 <style>
    .main{
        margin-top:-40px;
+   }
+   .video-js{
+    width: 100%;
    }
 
 </style>
@@ -471,15 +480,19 @@
     <div class="modal-content">
       <div class="modal-header plum-bg white-text">
         <h5 class="modal-title" id="exampleModalLabel">Finance compelet course Classes</h5>
-        <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close white-text custom_close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <div class="row">
            <div class="col-12">
-           <iframe width="100%" height="250px;" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
-          </iframe>
+           <video id="video_1" class="video-js vjs-default-skin" controls preload="auto" data-setup='{}'>
+      <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ab/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm.720p.webm" type="video/webm" label="720P">
+      <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ab/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm.480p.webm" type="video/webm" label="480P" selected="true">
+      <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ab/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm.360p.webm" type="video/webm" label="360P">
+      <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ab/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm.240p.webm" type="video/webm" label="240P">
+   </video>
            </div>
         </div>
         <div class="plum-bg">
@@ -545,4 +558,25 @@
     </div>
   </div>
 </div>
+
+
+<script>
+      videojs("video_1", {}, function() {
+         var player = this;
+
+         player.controlBar.addChild('QualitySelector');
+      });
+
+      
+      $(function(){
+    $('#basicExampleModal').modal({
+        show: false
+    }).on('hidden.bs.modal', function(){
+        $(this).find('video')[0].pause();
+    });
+});
+   </script> 
+
+
+
 @endsection
