@@ -302,6 +302,16 @@ var mybutton = document.getElementById("myBtn");
     font-size: 0.9em;
   }
 
+  .book-sec h4{
+    font-size: 1.5em;
+  }
+  .book-sec p{
+    font-size: 0.9em;
+  }
+  .book-sec button.btn {
+    font-size: 0.6em;
+  }
+
   .carousel_item_footer div p:nth-child(1) {
             font-size:17px;
         }
@@ -348,7 +358,12 @@ var mybutton = document.getElementById("myBtn");
   #basicSlider .MS-content .item {
     width: 25%;
   }
-
+  .book-sec p{
+    font-size: 1em;
+  }
+  .book-sec button.btn {
+    font-size: 1em;
+  }
   .book-sec .row div:nth-child(2){
     margin-top: 3%;
   }
@@ -520,11 +535,6 @@ var mybutton = document.getElementById("myBtn");
 
             <div class="row">
                 <div class="col-md-1 controls-top p-0 text-end hide_on_mobile">
-            <div class="row" style="direction:ltr !important;">
-                <div class="col-md-1 controls-top p-0 text-end">
-
-
-
                     <a class="btn-floating" href="#multi-item-example2" style="color: #570055" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
                 </div>
                         <!--Slides-->
@@ -871,7 +881,7 @@ var mybutton = document.getElementById("myBtn");
                                       <div class="row">
                                           @foreach($data as $c)
 
-                                          <div class="col-sm-10 col-md-4 p-mob auto_margin">
+                                          <div class="col-10 col-sm-10 col-md-4 p-mob auto_margin">
                                               <div class="card">
                                                   <img class="card-img-top"
                                                       src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
@@ -910,7 +920,7 @@ var mybutton = document.getElementById("myBtn");
                                               @endphp
                                               @foreach($data1 as $c)
 
-                                              <div class="col-sm-10 col-md-4 p-mob auto_margin">
+                                              <div class="col-10 col-sm-10 col-md-4 p-mob auto_margin">
                                                   <div class="card">
                                                       <img class="card-img-top"
                                                           src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
