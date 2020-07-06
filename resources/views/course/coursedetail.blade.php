@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-md-8 offset-md-4 course-name">
                         <h3><b>{{$data->name}}</b></h3>
-                        <p>{{$data->description}}</p>
+                        <p>{!!$data->description!!}</p>
                         <ul class="rating">
                             <li><img src="{{asset('assets/frontend/img/star-fill.png')}}"></li>
                             <li><img src="{{asset('assets/frontend/img/star-fill.png')}}"></li>
@@ -38,7 +38,9 @@
                         <h5><b>What you'll learn</b></h5>
                         <ul class="feature-list">
                             <li><img src="{{asset('assets/frontend/img/tick.png')}}"></li>
-                            <li>{{$data->description}}</li>
+                            <li>
+                                {!!$data->description!!}
+                            </li>
                         </ul>
                     </div>
                     <div class="mob-position">
@@ -82,7 +84,7 @@
             <div class="row">
                 <div class="col-12 course-description">
                     <h2><b>Description</b></h2>
-                    <p>{{$data->description}}</p>
+                    <p>{!!$data->description!!}</p>
 {{--                    <div class="Description-text">--}}
 {{--                        You'll learn how to read and write complex queries to a database using one of the most in demand skills - PostgreSQL. These skills are also applicable to any other major SQL database, such as MySQL, Microsoft SQL Server, Amazon Redshift, Oracle, and much more.--}}
 {{--                        Learning SQL is one of the fastest ways to improve your career prospects as it is one of the most in demand tech skills! In this course you'll learn quickly and receive challenges and tests along the way to improve your understanding!--}}
@@ -180,7 +182,7 @@
 
                                 <div id="accordionBodyTwo" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingTwo" aria-expanded="false" data-parent="accordion">
                                     <div class="card-block col-12">
-                                        <p>{{$lesson->description}}</p>
+                                        <p>{!!$lesson->description!!}</p>
 {{--                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum--}}
 {{--                                            odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo--}}
 {{--                                            vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi--}}

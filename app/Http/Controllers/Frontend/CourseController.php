@@ -33,14 +33,14 @@ class CourseController extends Controller
        // dd($request->id);
 
         if ($request->id){
-            $category = Category::find($request->id);
+            $category = Category::where('id',$request->id)->first('name');
             if (!$category) {
                 abort(404);
             }
         $data = Course::whereRaw("find_in_set($request->id,category_id)")->paginate(9);
 
         }else{
-            $category = "";
+            $category = ['name'=>'All'];
             $data = Course::paginate(9);
         }
         return view('course.onlineCourse',compact('data','category'));
