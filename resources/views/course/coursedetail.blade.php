@@ -1,52 +1,12 @@
 @extends('layouts.main')
-<style>
-    .course-heading{
-        font-size:20px;
 
-    }
-    ul.course-accordian{
-        border-bottom:1px solid #570055;
-    }
-    ul.course-accordian li{
-        display:inline-block;
-        margin: 7px 10px;
-        cursor:pointer;
-    }
-    .trainer-image{
-        width:201;
-        height:201px;
-        text-align:center;
-    }
-    .t-img{
-        width:100%;
-        height:100%;
-    }
-    ul.trainer-rating{
-
-    }
-    ul.trainer-rating li{
-        display:inline-block;
-        margin: 5px 5px;
-    }
-    ul.review-rating li{
-        display:inline-block;
-    }
-    .comment-img{
-        width:84px;
-        height:84px;
-    }
-    .comment-description{
-        width:100%;
-        /* height:200px;
-        white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    -webkit-line-clamp: 5; */
-
-    }
-</style>
 @section('online-course')
-{{--    {{dd($data->lessons)}}--}}
+<style>
+   .main{
+       margin-top:-40px;
+   }
+
+</style>
     <!-- couser-detail main section -->
     <div class="main">
         <div class="plum-bg mt-5">
@@ -80,51 +40,37 @@
                             <li><img src="{{asset('assets/frontend/img/tick.png')}}"></li>
                             <li>{{$data->description}}</li>
                         </ul>
-{{--                        <ul class="feature-list">--}}
-{{--                            <li><img src="img/tick.png"></li>--}}
-{{--                            <li>Use SQL to query a database</li>--}}
-{{--                        </ul>--}}
-{{--                        <ul class="feature-list">--}}
-{{--                            <li><img src="img/tick.png"></li>--}}
-{{--                            <li>Use SQL to query a database</li>--}}
-{{--                        </ul>--}}
-{{--                        <ul class="feature-list">--}}
-{{--                            <li><img src="img/tick.png"></li>--}}
-{{--                            <li>Use SQL to query a database</li>--}}
-{{--                        </ul>--}}
-{{--                        <ul class="feature-list">--}}
-{{--                            <li><img src="img/tick.png"></li>--}}
-{{--                            <li>Use SQL to query a database</li>--}}
-{{--                        </ul>--}}
                     </div>
-                    <div class="course-cart z-depth-1-half">
-                        <div class="course-img">
-                            <img src="{{asset('assets/frontend/img/course-1.png')}}" alt="Name">
-                            <img class="course-play" src="{{asset('assets/frontend/img/play-course.png')}}" alt="play">
-                        </div>
-                        <div class="text-center mt-3">
-                            <ul class="course-price">
-                                <li><h3><b>${{$data->price}}</b></h3></li>
-                                <li><strike>$30.99</strike></li>
-                            </ul>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <a href="#"><button class="w-90 btn plum-btn">Add to cart</button></a>
+                    <div class="mob-position">
+                        <div class="course-cart z-depth-1-half">
+                            <a data-toggle="modal" data-target="#basicExampleModal"><div class="course-img">
+                                <img src="{{asset('assets/frontend/img/course-1.png')}}" alt="Name">
+                                <img class="course-play" src="{{asset('assets/frontend/img/play-course.png')}}" alt="play">
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <a href="#"><button class="btn white-btn w-90">Buy now</button></a>
+                            </a>
+                            <div class="text-center mt-3">
+                                <ul class="course-price">
+                                    <li><h3><b>${{$data->price}}</b></h3></li>
+                                    <li><strike>$30.99</strike></li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="height-2 mt-2"></div>
-                        <div class="mt-3">
-                            <h4><b>This course includes</b></h4>
-                            <div>  {{$data->duration}}</div>
-                            <div>  {{$data->lessons->count()}} articles</div>
-{{--                            <div>  5 downloadable resources</div>--}}
-                            <div>  Full lifetime access</div>
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <a href="#"><button class="w-90 btn plum-btn">Add to cart</button></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <a href="#"><button class="btn white-btn w-90">Buy now</button></a>
+                                </div>
+                            </div>
+                            <div class="height-2 mt-2"></div>
+                            <div class="mt-3">
+                                <h4><b>This course includes</b></h4>
+                                <div>  {{$data->duration}}</div>
+                                <div>  {{$data->lessons->count()}} articles</div>
+                                <div>  Full lifetime access</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -367,12 +313,12 @@
                         <div class="col-sm-1"></div>
                         <div class="col-12 col-sm-11">
                             <div class="row">
-                                <div class="col-5">
+                                <div class="col-12 col-sm-5">
                                     <div class="trainer-image">
                                         @if($data->users['image'] == "")
-                                            <img class="t-img rounded-circle" src="{{asset('assets/frontend/img/download.png')}}" alt="trainer-img">
+                                            <img class="full-img rounded-circle" src="{{asset('assets/frontend/img/download.png')}}" alt="trainer-img">
                                         @else
-                                            <img class="t-img rounded-circle" src="{{asset('users/'. $data->users['image'])}}" alt="trainer-img">
+                                            <img class="full-img rounded-circle" src="{{asset('users/'. $data->users['image'])}}" alt="trainer-img">
 
                                         @endif
                                     </div>
@@ -435,7 +381,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-7">
+                                <div class="col-12 col-sm-7">
                                     <div class="trainer-description plum-text">
                                         Jose Marcial Portilla has a BS and MS in Mechanical Engineering from Santa Clara University and years of experience as a professional instructor and trainer for Data Science and programming. He has publications and patents in various fields such as microfluidics, materials science, and data science technologies. Over the course of his career he has developed a skill set in analyzing data and he hopes to use his experience in teaching and data science to help other people learn the power of programming the ability to analyze data, as well as present the data in clear and beautiful visualizations. Currently he works as the Head of Data Science for Pierian Data Inc. and provides in-person data science and python
                                     </div>
@@ -512,4 +458,89 @@
             <div class="height-2"></div>
         </div>
     </div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header plum-bg white-text">
+        <h5 class="modal-title" id="exampleModalLabel">Finance compelet course Classes</h5>
+        <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+           <div class="col-12">
+           <iframe width="100%" height="250px;" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
+          </iframe>
+           </div>
+        </div>
+        <div class="plum-bg">
+        <div class="row pt-2 pb-2">
+            <div class="col-6">
+             <ul class="m-v-list">
+                 <li>
+                     <div class="model-video-img">
+                       <img class="full-img thumbnail" src="{{asset('assets/frontend/img/thumbnail.png')}}" alt="video-thumnail">
+                       <img class="model-play" src="{{asset('assets/frontend/img/course-video.png')}}" alt="play">
+                     </div>
+                 </li>
+                 <li>
+                     <div class="model-video-title">
+                         <h6>Title</h6>
+                     </div>
+                 </li>
+             </ul>
+            </div>
+            <div class="col-6 text-end model-video-time">
+            <ul class="m-v-list">
+
+                 <li>
+                     <div class="model-video-title">
+                         <h6>15:00</h6>
+                     </div>
+                 </li>
+             </ul>
+            </div>
+        </div>
+        <div class="row pt-2 pb-2 m-v-border">
+            <div class="col-6">
+             <ul class="m-v-list">
+                 <li>
+                     <div class="model-video-img">
+                       <img class="full-img thumbnail" src="{{asset('assets/frontend/img/thumbnail.png')}}" alt="video-thumnail">
+                       <img class="model-play" src="{{asset('assets/frontend/img/course-video.png')}}" alt="play">
+                     </div>
+                 </li>
+                 <li>
+                     <div class="model-video-title">
+                         <h6>Title</h6>
+                     </div>
+                 </li>
+             </ul>
+            </div>
+            <div class="col-6 text-end model-video-time">
+            <ul class="m-v-list">
+
+                 <li>
+                     <div class="model-video-title">
+                         <h6>15:00</h6>
+                     </div>
+                 </li>
+             </ul>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="modal-footer plum-bg">
+
+      </div>
+    </div>
+  </div>
+</div>
 @endsection

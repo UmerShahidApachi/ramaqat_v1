@@ -2,254 +2,7 @@
 
 @section('indexpage')
     <style>
-        #img_slider .slider_header a {
-            color: #570055;
-            font-size: 29px;
-        }
 
-        section div:nth-child(0) {
-            max-width: 1920px;
-        }
-
-        section #content_main_body {
-            /* margin-top:201px; */
-            margin-bottom: 41px;
-            padding-bottom: 2%;
-            background-color: white;
-        }
-
-
-        .main_color {
-            color: #570055;
-        }
-
-        .auto_height {
-            min-height: 100px;
-            /* overflow: hidden; */
-        }
-
-        #left_body {
-
-            /*background-color: lightpink;*/
-        }
-
-        #trainer11_logo {
-            /* margin-top:-150px */
-        }
-
-        #trainer11_logo_title p:nth-child(1) {
-            font-size: 43px;
-
-        }
-
-        #trainer11_logo_title p:nth-child(2) {
-            font-size: 19px;
-        }
-
-        .border_right {
-            border-right: 1px solid #570055;
-        }
-
-        .table_f_size {
-            font-size: 18px;
-        }
-
-        .carousel_item_footer {
-            overflow: hidden;
-            position: relative;
-            bottom: 0px;
-            right: 0px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            padding: 2%;
-        }
-
-        .carousel_item_footer div {
-            padding: 5px;
-        }
-
-        .carousel_item_footer div p:nth-child(1) {
-            font-size: 8px;
-        }
-
-        .carousel_item_footer div p:nth-child(2) {
-            font-size: 6px;
-            margin-top: 2%;
-            margin-bottom: 1%;
-        }
-
-        .carousel_item_footer div p {
-            margin: 0px;
-        }
-
-
-        .hr_home {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            border: 0;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-        }
-         /* basic slider style */
-
-#mixedSlider {
-  position: relative;
-}
-#mixedSlider .MS-content {
-  white-space: nowrap;
-  overflow: hidden;
-  margin: 0 5%;
-}
-#mixedSlider .MS-content .item {
-  display: inline-block;
-  width: 33.3333%;
-  position: relative;
-  vertical-align: top;
-  overflow: hidden;
-  height: 100%;
-  white-space: normal;
-  padding: 0 10px;
-}
-@media (max-width: 991px) {
-  #mixedSlider .MS-content .item {
-    width: 50%;
-  }
-}
-@media (max-width: 767px) {
-  #mixedSlider .MS-content .item {
-    width: 100%;
-  }
-}
-#mixedSlider .MS-content .item .imgTitle {
-  position: relative;
-}
-#mixedSlider .MS-content .item .imgTitle .blogTitle {
-  margin: 0;
-  text-align: left;
-  letter-spacing: 2px;
-  color: #252525;
-  font-style: italic;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 100%;
-  bottom: 0;
-  font-weight: bold;
-  padding: 0 0 2px 10px;
-}
-#mixedSlider .MS-content .item .imgTitle img {
-  height: auto;
-  width: 100%;
-}
-#mixedSlider .MS-content .item p {
-  font-size: 16px;
-  margin: 2px 10px 0 5px;
-  text-indent: 15px;
-}
-#mixedSlider .MS-content .item a {
-  float: right;
-  margin: 0 20px 0 0;
-  font-size: 16px;
-  font-style: italic;
-  color: rgba(173, 0, 0, 0.82);
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: linear 0.1s;
-}
-#mixedSlider .MS-content .item a:hover {
-  text-shadow: 0 0 1px grey;
-}
-#mixedSlider .MS-controls button {
-  position: absolute;
-  border: none;
-  background-color: transparent;
-  outline: 0;
-  font-size: 50px;
-  top: 95px;
-  color: rgba(0, 0, 0, 0.4);
-  transition: 0.15s linear;
-}
-#mixedSlider .MS-controls button:hover {
-  color: rgba(0, 0, 0, 0.8);
-}
-@media (max-width: 992px) {
-  #mixedSlider .MS-controls button {
-    font-size: 30px;
-  }
-}
-@media (max-width: 767px) {
-  #mixedSlider .MS-controls button {
-    font-size: 20px;
-  }
-}
-#mixedSlider .MS-controls .MS-left {
-  left: 0px;
-}
-@media (max-width: 767px) {
-  #mixedSlider .MS-controls .MS-left {
-    left: -10px;
-  }
-}
-#mixedSlider .MS-controls .MS-right {
-  right: 0px;
-}
-@media (max-width: 767px) {
-  #mixedSlider .MS-controls .MS-right {
-    right: -10px;
-  }
-}
-#basicSlider { position: relative; }
-
-#basicSlider .MS-content {
-  white-space: nowrap;
-  overflow: hidden;
-  margin: 0 2%;
-  padding-top:1%;
-
-}
-
-#basicSlider .MS-content .item {
-  display: inline-block;
-  width: 12%;
-  position: relative;
-  vertical-align: top;
-  overflow: hidden;
-  height: 100%;
-  white-space: normal;
-  line-height: 30px;
-  vertical-align: middle;
-}
-@media (max-width: 991px) {
-
-#basicSlider .MS-content .item { width: 25%; }
-}
-@media (max-width: 767px) {
-
-#basicSlider .MS-content .item { width: 35%; }
-}
-@media (max-width: 500px) {
-
-#basicSlider .MS-content .item {
-    width: 25%;
-}
-
-}
-
-#basicSlider .MS-content .item a {
-  line-height: 50px;
-  vertical-align: middle;
-}
-
-#basicSlider .MS-controls button { position: absolute; }
-
-#basicSlider .MS-controls .MS-left {
-  top: 35px;
-  left: 10px;
-}
-
-#basicSlider .MS-controls .MS-right {
-  top: 35px;
-  right: 10px;
-}
-         /* end */
     </style>
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 
@@ -409,19 +162,52 @@
                                         </div>
                                         <div class="col carousel_item_footer main_bg_color" style="color: white">
 
-                                            <div class="col float-left">
-                                                <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                                <p>Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                                <p class="float-right p-0" style="font-size:10px">
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span> 5</span>
-                                                    <span>(12345)</span>
-                                                </p>
+                                            <div class="">
+                                                <div class="row">
+                                                   <div class="col-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>Miss Nabeela</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                        The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
+                                                </div>
                                             </div>
                                         </div>
                                             </div>
@@ -434,21 +220,53 @@
                                                     alt="Card image cap">
                                                 </div>
                                                 <div class="col carousel_item_footer main_bg_color" style="color: white">
-
-                                                <div class="col float-left">
-                                                <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                                <p>Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                                <p class="float-right p-0" style="font-size: 10px">
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span> 5</span>
-                                                    <span>(12345)</span>
-                                                </p>
+                                                <div class="">
+                                                <div class="row">
+                                                   <div class="col-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>Miss Nabeela</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                        The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
                                                 </div>
+                                            </div>
                                                 </div>
                                             </div>
 
@@ -459,20 +277,53 @@
                                             </div>
                                             <div class="col carousel_item_footer main_bg_color" style="color: white">
 
-                                                <div class="col float-left">
-                                                <p>The Art Painting and Digital Art Course<br>
-                                                -12 Courses in 1</p>
-                                                <p>Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                                <p class="float-right p-0" style="font-size: 10px">
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span class="fa fa-star"></span>
-                                                    <span> 5</span>
-                                                    <span>(12345)</span>
-                                                </p>
+                                            <div class="">
+                                                <div class="row">
+                                                   <div class="col-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>Miss Nabeela</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                        The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
                                                 </div>
+                                            </div>
                                                 </div>
                                             </div>
                                 </div>
@@ -480,7 +331,7 @@
                             <!--/.First slide-->
 
                             <!--Second slide-->
-                            <div class="carousel-item mb-2">
+                             <div class="carousel-item mb-2">
                                 <div class="row">
                                     <div class="col-md-4">
                                     <div class="card">
@@ -489,20 +340,53 @@
                                     </div>
                                     <div class="col carousel_item_footer main_bg_color" style="color: white">
 
-                                        <div class="col float-left">
-                                        <p>The Art Painting and Digital Art Course<br>
-                                        -12 Courses in 1</p>
-                                        <p>Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                        <p class="float-right p-0" style="font-size: 10px">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span> 5</span>
-                                            <span>(12345)</span>
-                                        </p>
-                                        </div>
+                                    <div class="">
+                                                <div class="row">
+                                                   <div class="col-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>Miss Nabeela</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                        The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -513,20 +397,53 @@
                                     </div>
                                     <div class="col carousel_item_footer main_bg_color" style="color: white">
 
-                                        <div class="col float-left">
-                                        <p>The Art Painting and Digital Art Course<br>
-                                        -12 Courses in 1</p>
-                                        <p>Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                        <p class="float-right p-0" style="font-size: 10px">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span> 5</span>
-                                            <span>(12345)</span>
-                                        </p>
-                                        </div>
+                                    <div class="">
+                                                <div class="row">
+                                                   <div class="col-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>Miss Nabeela</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                        The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -537,24 +454,11 @@
                                     </div>
                                     <div class="col carousel_item_footer main_bg_color" style="color: white">
 
-                                        <div class="col float-left">
-                                        <p>The Art Painting and Digital Art Course<br>
-                                        -12 Courses in 1</p>
-                                        <p>Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                        <p class="float-right p-0" style="font-size: 10px">
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star checked"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span> 5</span>
-                                            <span>(12345)</span>
-                                        </p>
-                                        </div>
+
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!--/.Second slide-->
                     </div>
                 </div>
@@ -743,8 +647,49 @@
                                                     alt="Card image cap">
                                             </div>
                                             <div class="col carousel_item_footer main_bg_color" style="color: white">
-
-                                                <div class="col float-left">
+                                            <div class="row">
+                                                   <div class="col-12 col-sm-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-12 col-sm-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>{{$c->name}}</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       {{$c->description}}
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-12 col-sm-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
+                                                </div>
+                                                {{--<div class="col float-left">
                                                     <p>{{$c->name}}<br>
                                                         {{$c->description}}</p>
                                                     <p>{{$c->users->name}}, {{$c->users->experience}}</p>
@@ -757,7 +702,7 @@
                                                         <span> 5</span>
                                                         <span>(12345)</span>
                                                     </p>
-                                                </div>
+                                                </div>--}}
                                             </div>
                                         </div>
                                         @endforeach
@@ -782,8 +727,49 @@
                                                         alt="Card image cap">
                                                 </div>
                                                 <div class="col carousel_item_footer main_bg_color" style="color: white">
-
-                                                    <div class="col float-left">
+                                                <div class="row">
+                                                   <div class="col-12 col-sm-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-12 col-sm-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>{{$c->name}}</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       {{$c->description}}
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-12 col-sm-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
+                                                </div>
+                                                    {{--<div class="col float-left">
                                                         <p>{{$c->name}}<br>
                                                             {{$c->description}}</p>
                                                         <p>{{$c->users->name}}, {{$c->users->experience}}</p>
@@ -796,7 +782,7 @@
                                                             <span> 5</span>
                                                             <span>(12345)</span>
                                                         </p>
-                                                    </div>
+                                                    </div>--}}
                                                 </div>
                                             </div>
                                             @endforeach
