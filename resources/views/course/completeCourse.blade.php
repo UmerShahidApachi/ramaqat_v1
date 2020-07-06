@@ -68,96 +68,44 @@
 
 
 	#video_footer .personbody{
-		border: 1px solid;
+		padding: 5px;
 		width: 13%;
+		height: auto;
 		text-align: center;
 	}
 		#video_footer .personbody:hover{
 			border: 1px solid;
 			background-color: white;
 			outline: none;
+			margin-top: -10px;
 		}
 
 	#video_footer .personbody img{
 		max-width: 50%;
 	}	
-		#video_footer .personbody img:hover{
-			max-width: 80%;
+		#video_footer .personbody:hover img{
+			padding-top: 5px;
+			max-width: 100%;
 		}
 	
-	.personbody h5, .personbody p{
+	.persondetail{
 		display: none;
 	}
-	#video_footer .personbody h5:hover ,#video_footer .personbody p:hover{
-		border: 1px solid;
+		.personbody:hover .persondetail{
+		border-color: red;
 		background-color: white;
 		outline: none;
 		display: block;
-	}
 
-/*
-	#person1 h5 ,#person1 p{
-		display: none;
-	}#person1 h5:hover ,#person1 p:hover{
-		display: block;
 	}
-
-	#person2 h5 ,#person2 p{
-		display: none;
-	}#person2 h5:hover ,#person2 p:hover{
-		display: block;
-	}
-
-	#person3 h5 ,#person3 p{
-		display: none;
-	}#person3 h5:hover ,#person3 p:hover{
-		display: block;
-	}
-
-	#person4 h5 ,#person4 p{
-		display: none;
-	}#person4 h5:hover ,#person4 p:hover{
-		display: block;
-	}
-
-	#person5 h5 ,#person5 p{
-		display: none;
-	}#person5 h5:hover ,#person5 p:hover{
-		display: block;
-	}
-
-	#person6 h5 ,#person6 p{
-		display: none;
-	}#person6 h5:hover ,#person6 p:hover{
-		display: block;
-	}
-
-	#person7 h5 ,#person7 p{
-		display: none;
-	}#person7 h5:hover ,#person7 p:hover{
-		display: block;
-	}
-
-	#person8 h5 ,#person8 p{
-		display: none;
-	}#person8 h5:hover ,#person8 p:hover{
-		display: block;
-	}*/
-	
 
 @media screen and (max-width: 768px) and (min-width: 320px){
 
 	ul.ulDBlock-top li{
 		width:max-content;
-	}
-	
-  
+	} 
 }
-
-</style>
-
-
-
+</style> 
 
   <!--Header End Here  -->
   <div class="plum-bg pt-3 pb-3">
@@ -205,45 +153,45 @@
 					    	<div class="row">
 						    	<div class="personbody" id="person1">
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-1.png')}}" class="img-circle" alt="img2">
-						      		<h5>Name</h5>
-						      		<p>Description</p>
-						      		<p>stars</p>
+						      		<h5 class="persondetail">Name</h5>
+						      		<p class="persondetail">Description</p>
+						      		<p class="persondetail">stars</p>
 						      	</div>
 						      	<div class="personbody" id="person2">
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-3.png')}}" class="img-circle" alt="img3">
-						      		<h5>Name</h5>
-						      		<p>Description</p>
-						      		<p>stars</p>
+						      		<h5 class="persondetail">Name</h5>
+						      		<p class="persondetail">Description</p>
+						      		<p class="persondetail">stars</p>
 						      	</div>
 						      	<div class="personbody" id="person3">
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-4.png')}}" class="img-circle" alt="img4">
-						      		<h5>Name</h5>
-						      		<p>Description</p>
-						      		<p>stars</p>
+						      		<h5 class="persondetail">Name</h5>
+						      		<p class="persondetail">Description</p>
+						      		<p class="persondetail">stars</p>
 						      	</div>
 						      	<div class="personbody" id="person4">
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img5">
-						      		<h5>Name</h5>
-						      		<p>Description</p>
-						      		<p>stars</p>
+						      		<h5 class="persondetail">Name</h5>
+						      		<p class="persondetail">Description</p>
+						      		<p class="persondetail">stars</p>
 						      	</div>
 						      	<div class="personbody" id="person5">
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img6">
-						      		<h5>Name</h5>
-						      		<p>Description</p>
-						      		<p>stars</p>
+						      		<h5 class="persondetail">Name</h5>
+						      		<p class="persondetail">Description</p>
+						      		<p class="persondetail">stars</p>
 						      	</div>
 						      	<div class="personbody" id="person6">
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img7">
-						      		<h5>Name</h5>
-						      		<p>Description</p>
-						      		<p>stars</p>
+						      		<h5 class="persondetail">Name</h5>
+						      		<p class="persondetail">Description</p>
+						      		<p class="persondetail">stars</p>
 						      	</div>
 						      	<div class="personbody" id="person7">
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img8">
-						      		<h5>Name</h5>
-						      		<p>Description</p>
-						      		<p>stars</p>
+						      		<h5 class="persondetail">Name</h5>
+						      		<p class="persondetail">Description</p>
+						      		<p class="persondetail">stars</p>
 						      	</div>
 						    </div>
 						</div>
@@ -461,14 +409,5 @@
   </div>
 
 
-
-
-
-
-
-
-
-
-
-
+ 
 @endsection

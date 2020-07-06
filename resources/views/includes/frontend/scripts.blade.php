@@ -24,6 +24,7 @@ $('#basicSlider').multislider({
 			interval: 3000
 		});
 </script>
+
 </body>
 <script type="text/javascript">
 
