@@ -63,20 +63,51 @@
                     <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
                     </div>
                     <div class="col carousel_item_footer main_bg_color" style="color: white">
-                        <div class="col float-left">
-                            <p>The Art Painting and Digital Art Course<br>
-                              -12 Courses in 1</p>
-                            <p>Miss Nabeela, Coderstars by rob  percival Experien</p>
-                            <p class="float-right p-0" style="font-size:10px">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span> 5</span>
-                                <span>(12345)</span>
-                            </p>
-                        </div>
+                    <div class="row">
+                                                   <div class="col-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>Miss Nabeela</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                        The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
+                                                </div>
                     </div>
                 </div>
                 <!-- blocek close -->
@@ -159,18 +190,18 @@
 
 
 
-<!-- umer :P
+
 
 <div class="container mt-5 mb-5">
     <div class="carousel slide multi-item-carousel" id="theCarousel">
         <div class="carousel-inner row w-100 mx-auto">
             <div class="row">
-{{--            {{dd($data)}}--}}
+
             @foreach($data as $row)
             <div class="carousel-item active col">
-{{--            <a href="{{route('detail-course',['id'=>$row->id])}}">
+          <a href="{{route('detail-course',['id'=>$row->id])}}">
                     <img src="{{asset('course/'. $row->thumbnail)}}" class="img-fluid mx-auto d-block zoom">
-                </a>--}}
+                </a>
                 <a href="{{route('detail-course',['id'=>$row->id])}}">
                     <img src="{{asset('course/'. $row->thumbnail)}}" class="img-fluid mx-auto d-block">
                     <div class="carousel_item_header_icon">
@@ -209,7 +240,7 @@
     </div>
 </div>
 
-old-->
+
 <div class="pagina-footer">
 <nav aria-label="Page navigation example">
   <ul class="pagination pg-blue">

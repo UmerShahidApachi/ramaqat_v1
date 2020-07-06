@@ -1,19 +1,7 @@
 @extends('layouts.main')
 
 @section('indexpage')
-
-<script>
-//Get the button
-var mybutton = document.getElementById("myBtn");
-// When the user clicks on the button, scroll to the top of the document
-  function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
-
     <style>
-
       #myBtn{
         position: relative;
         float: right;
@@ -388,10 +376,20 @@ var mybutton = document.getElementById("myBtn");
   }
 }
          /* end */
- </style>
+</style>
 
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+// When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 
-<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+   <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+
 
     <div class="plum-bg">
 <div class="row">
@@ -549,7 +547,6 @@ var mybutton = document.getElementById("myBtn");
                                                 alt="Card image cap">
                                         </div>
                                         <div class="col carousel_item_footer main_bg_color" style="color: white">
-
                                             <div class="col float-left">
                                               <p>Miss Nabeela</p>
                                                 <p>The Art Painting and Digital Art Course<br>
@@ -564,6 +561,52 @@ var mybutton = document.getElementById("myBtn");
                                                     <span> 5</span>
                                                     <span>(12345)</span>
                                                 </p>
+                                            <div class="">
+                                                <div class="row">
+                                                   <div class="col-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>Miss Nabeela</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                        The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
+                                                </div>
                                             </div>
                                         </div>
                                             </div>
@@ -591,7 +634,53 @@ var mybutton = document.getElementById("myBtn");
                                                     <span> 5</span>
                                                     <span>(12345)</span>
                                                 </p>
+                                                <div class="">
+                                                <div class="row">
+                                                   <div class="col-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>Miss Nabeela</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                        The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
                                                 </div>
+                                            </div>
                                                 </div>
                                             </div>
 
@@ -601,7 +690,6 @@ var mybutton = document.getElementById("myBtn");
                                                 alt="Card image cap">
                                             </div>
                                             <div class="col carousel_item_footer main_bg_color" style="color: white">
-
                                                 <div class="col float-left">
                                                 <p>Miss Nabeela</p>
                                                 <p>The Art Painting and Digital Art Course<br>
@@ -616,7 +704,53 @@ var mybutton = document.getElementById("myBtn");
                                                     <span> 5</span>
                                                     <span>(12345)</span>
                                                 </p>
+                                            <div class="">
+                                                <div class="row">
+                                                   <div class="col-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>Miss Nabeela</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                        The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
                                                 </div>
+                                            </div>
                                                 </div>
                                             </div>
                                 </div>
@@ -624,7 +758,7 @@ var mybutton = document.getElementById("myBtn");
                             <!--/.First slide-->
 
                             <!--Second slide-->
-                            <div class="carousel-item mb-2">
+                             <div class="carousel-item mb-2">
                                 <div class="row">
                                     <div class="col-md-4">
                                     <div class="card">
@@ -632,7 +766,6 @@ var mybutton = document.getElementById("myBtn");
                                         alt="Card image cap">
                                     </div>
                                     <div class="col carousel_item_footer main_bg_color" style="color: white">
-
                                         <div class="col float-left">
                                           <p>Miss Nabeela</p>
                                         <p>The Art Painting and Digital Art Course<br>
@@ -648,6 +781,53 @@ var mybutton = document.getElementById("myBtn");
                                             <span>(12345)</span>
                                         </p>
                                         </div>
+                                    <div class="">
+                                                <div class="row">
+                                                   <div class="col-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>Miss Nabeela</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                        The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -657,7 +837,6 @@ var mybutton = document.getElementById("myBtn");
                                         alt="Card image cap">
                                     </div>
                                     <div class="col carousel_item_footer main_bg_color" style="color: white">
-
                                         <div class="col float-left">
                                           <p>Miss Nabeela</p>
                                         <p>The Art Painting and Digital Art Course<br>
@@ -673,6 +852,53 @@ var mybutton = document.getElementById("myBtn");
                                             <span>(12345)</span>
                                         </p>
                                         </div>
+                                    <div class="">
+                                                <div class="row">
+                                                   <div class="col-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>Miss Nabeela</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                        The Art Painting and Digital Art Course
+                                                        -12 Courses in 1
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -682,7 +908,6 @@ var mybutton = document.getElementById("myBtn");
                                         alt="Card image cap">
                                     </div>
                                     <div class="col carousel_item_footer main_bg_color" style="color: white">
-
                                         <div class="col float-left">
                                           <p>Miss Nabeela</p>
                                         <p>The Art Painting and Digital Art Course<br>
@@ -701,7 +926,7 @@ var mybutton = document.getElementById("myBtn");
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!--/.Second slide-->
                     </div>
                 </div>
@@ -962,9 +1187,203 @@ var mybutton = document.getElementById("myBtn");
 
                       </div>
                       <!--/.Carousel Wrapper-->
-
                       @endforeach
-                </div>
+    <div class="row">
+        <div class="col-12" id="img_slider">
+            <!-- block 1 -->
+            <div class="">
+                <div class="" style="min-height: 100px ;overflow: hidden;">
+                    @foreach($categories1 as $cat)
+
+                    <div class="slider_header text-center m-2"><u>{{$cat->name}}</u></div>
+                    <!--Carousel Wrapper-->
+                    <div id="multi-item-{{$cat->name}}" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                        <!--/.Indicators-->
+                      <div class="row" style="direction:ltr !important;">
+                        <div class="col-md-1 controls-top">
+                            <a class="btn-floating" href="#multi-item-{{$cat->name}}" style="color: #570055" data-slide="prev"><i
+                                    class="fa fa-chevron-left"></i></a>
+                        </div>
+                        <!--Slides-->
+                        @php
+                            $data = \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->orderByRaw('RAND()')->take(3)->get();
+                        @endphp
+                        <div class="col-12 col-sm-10 p-0">
+                            <div class="carousel-inner" role="listbox">
+                                <!--First slide-->
+                                <div class="carousel-item active mb-2">
+
+                                    {{--                            {{dd($data)}}--}}
+                                    <div class="row">
+                                        @foreach($data as $c)
+
+                                        <div class="col-4 col-md-4 p-mob">
+                                            <div class="card">
+                                                <img class="card-img-top"
+                                                    src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+                                                    alt="Card image cap">
+                                            </div>
+                                            <div class="col carousel_item_footer main_bg_color" style="color: white">
+                                            <div class="row">
+                                                   <div class="col-12 col-sm-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-12 col-sm-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>{{$c->name}}</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       {{$c->description}}
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-12 col-sm-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
+                                                </div>
+                                                {{--<div class="col float-left">
+                                                    <p>{{$c->name}}<br>
+                                                        {{$c->description}}</p>
+                                                    <p>{{$c->users->name}}, {{$c->users->experience}}</p>
+                                                    <p class="float-right p-0" style="font-size: 10px">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span> 5</span>
+                                                        <span>(12345)</span>
+                                                    </p>
+                                                </div>--}}
+                                            </div>
+                                        </div>
+                                        @endforeach
+
+                                    </div>
+
+                                </div>
+                                <!--/.First slide-->
+
+                                <!--Second slide-->
+                                <div class="carousel-item mb-2">
+                                        <div class="row">
+                                            @php
+                                                $data1 = \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->orderByRaw('RAND()')->take(3)->get();
+                                            @endphp
+                                            @foreach($data1 as $c)
+
+                                            <div class="col-4 col-md-4 p-mob">
+                                                <div class="card">
+                                                    <img class="card-img-top"
+                                                        src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+                                                        alt="Card image cap">
+                                                </div>
+                                                <div class="col carousel_item_footer main_bg_color" style="color: white">
+                                                <div class="row">
+                                                   <div class="col-12 col-sm-2">
+                                                        <div style="width:45px;height:45px;">
+                                                        <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                        </div>
+                                                   </div>
+                                                   <div class="col-12 col-sm-6 pr-0">
+                                                       <div class="trainer-n mb-1">
+                                                         <b>{{$c->name}}</b>
+                                                       </div>
+                                                       <div class="course-d">
+                                                       {{$c->description}}
+                                                       </div>
+                                                   </div>
+                                                   <div class="col-12 col-sm-4 text-center p-0">
+                                                     <ul class="course-rating-list">
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                        </li>
+                                                        <li>
+                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                        </li>
+                                                     </ul>
+                                                      <ul class="course-rating-list">
+                                                      <li>
+                                                        <span>4.8</span>
+                                                        </li>
+                                                        <li>
+                                                          (123)
+                                                        </li>
+                                                      </ul>
+                                                   </div>
+                                                </div>
+                                                    {{--<div class="col float-left">
+                                                        <p>{{$c->name}}<br>
+                                                            {{$c->description}}</p>
+                                                        <p>{{$c->users->name}}, {{$c->users->experience}}</p>
+                                                        <p class="float-right p-0" style="font-size: 10px">
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span> 5</span>
+                                                            <span>(12345)</span>
+                                                        </p>
+                                                    </div>--}}
+                                                </div>
+                                            </div>
+                                            @endforeach
+
+                                        </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-1 controls-top">
+                            <a class="btn-floating" href="#multi-item-{{$cat->name}}" style="color: #570055" data-slide="next"><i
+                                    class="fa fa-chevron-right"></i></a>
+                        </div>
+                        </div>
+                        <!--/.Slides-->
+
+                    </div>
+                    <!--/.Carousel Wrapper-->
+
+                    @endforeach
+                  </div>
               </div>
           </div>
       
