@@ -111,9 +111,6 @@ var mybutton = document.getElementById("myBtn");
             margin: 0px;
         }
 
-        .col-md-1 {
-            margin-top: 10%;
-        }
 
         .hr_home {
             margin-top: 1rem;
@@ -370,13 +367,16 @@ var mybutton = document.getElementById("myBtn");
 }
 }
 @media (max-width: 500px) {
-#basicSlider .MS-content .item { width: 25%; }
+
+  #basicSlider .MS-content .item {
+    width: 25%;
+  }
 }
-
-
          /* end */
-    </style>
-    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+ </style>
+
+
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 
     <div class="plum-bg">
 <div class="row">
@@ -517,8 +517,14 @@ var mybutton = document.getElementById("myBtn");
                 <!--Carousel Wrapper-->
         <div id="multi-item-example2" class="carousel slide carousel-multi-item" data-ride="carousel">
                   <!--/.Indicators-->
+
             <div class="row">
                 <div class="col-md-1 controls-top p-0 text-end hide_on_mobile">
+            <div class="row" style="direction:ltr !important;">
+                <div class="col-md-1 controls-top p-0 text-end">
+
+
+
                     <a class="btn-floating" href="#multi-item-example2" style="color: #570055" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
                 </div>
                         <!--Slides-->
@@ -856,7 +862,7 @@ var mybutton = document.getElementById("myBtn");
                           @php
                               $data = \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->orderByRaw('RAND()')->take(3)->get();
                           @endphp
-                          <div class="col-md-10 auto_margin p-0">
+                          <div class="col-md-10 p-0">
                               <div class="carousel-inner" role="listbox">
                                   <!--First slide-->
                                   <div class="carousel-item active mb-2">
@@ -865,7 +871,7 @@ var mybutton = document.getElementById("myBtn");
                                       <div class="row">
                                           @foreach($data as $c)
 
-                                          <div class="col-sm-12 col-md-4 p-mob">
+                                          <div class="col-sm-10 col-md-4 p-mob auto_margin">
                                               <div class="card">
                                                   <img class="card-img-top"
                                                       src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
@@ -904,7 +910,7 @@ var mybutton = document.getElementById("myBtn");
                                               @endphp
                                               @foreach($data1 as $c)
 
-                                              <div class="col-sm-12 col-md-4 p-mob auto_margin">
+                                              <div class="col-sm-10 col-md-4 p-mob auto_margin">
                                                   <div class="card">
                                                       <img class="card-img-top"
                                                           src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
