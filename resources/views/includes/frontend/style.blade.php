@@ -16,6 +16,7 @@
 <!-- Your custom styles (optional) -->
 <link rel="stylesheet" href="{{asset('assets/frontend/css/color.css')}}" title="color">
 <link rel="alternate stylesheet" href="{{asset('assets/frontend/css/color1.css')}}" title="color1">
+
 <style>
 	
 </style>
