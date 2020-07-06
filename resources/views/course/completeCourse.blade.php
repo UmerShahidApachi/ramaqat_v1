@@ -27,12 +27,8 @@
 		padding: 16px;
 		font-size: 1.4rem;
 	}
-	#video_footer img{
-		margin-right: 4.5%;
-	}
-	#video_footer img:last-child{
-		margin: 0px
-	}
+
+	
 
 	.card .cl_white{
 		color: white;
@@ -68,6 +64,87 @@
 	.para_font{
 		font-size: calc(100% + 0.1vw + 0.1vh);
 	}
+
+
+
+	#video_footer .personbody{
+		border: 1px solid;
+		width: 13%;
+		text-align: center;
+	}
+		#video_footer .personbody:hover{
+			border: 1px solid;
+			background-color: white;
+			outline: none;
+		}
+
+	#video_footer .personbody img{
+		max-width: 50%;
+	}	
+		#video_footer .personbody img:hover{
+			max-width: 80%;
+		}
+	
+	.personbody h5, .personbody p{
+		display: none;
+	}
+	#video_footer .personbody h5:hover ,#video_footer .personbody p:hover{
+		border: 1px solid;
+		background-color: white;
+		outline: none;
+		display: block;
+	}
+
+/*
+	#person1 h5 ,#person1 p{
+		display: none;
+	}#person1 h5:hover ,#person1 p:hover{
+		display: block;
+	}
+
+	#person2 h5 ,#person2 p{
+		display: none;
+	}#person2 h5:hover ,#person2 p:hover{
+		display: block;
+	}
+
+	#person3 h5 ,#person3 p{
+		display: none;
+	}#person3 h5:hover ,#person3 p:hover{
+		display: block;
+	}
+
+	#person4 h5 ,#person4 p{
+		display: none;
+	}#person4 h5:hover ,#person4 p:hover{
+		display: block;
+	}
+
+	#person5 h5 ,#person5 p{
+		display: none;
+	}#person5 h5:hover ,#person5 p:hover{
+		display: block;
+	}
+
+	#person6 h5 ,#person6 p{
+		display: none;
+	}#person6 h5:hover ,#person6 p:hover{
+		display: block;
+	}
+
+	#person7 h5 ,#person7 p{
+		display: none;
+	}#person7 h5:hover ,#person7 p:hover{
+		display: block;
+	}
+
+	#person8 h5 ,#person8 p{
+		display: none;
+	}#person8 h5:hover ,#person8 p:hover{
+		display: block;
+	}*/
+	
+
 @media screen and (max-width: 768px) and (min-width: 320px){
 
 	ul.ulDBlock-top li{
@@ -125,14 +202,51 @@
 						    </div>
 				    	</div>
 					    <div class="col-sm-12 col-md-8 pt-2" id="video_footer">
-					      	<img src="{{asset('assets/frontend/img/completecourse/parson-1.png')}}" class="img-circle" alt="img2">
-					      	<img src="{{asset('assets/frontend/img/completecourse/parson-3.png')}}" class="img-circle" alt="img3">
-					      	<img src="{{asset('assets/frontend/img/completecourse/parson-4.png')}}" class="img-circle" alt="img4">
-					      	<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img5">
-					      	<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img6">
-					      	<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img7">
-					      	<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img8">
-					    </div>
+					    	<div class="row">
+						    	<div class="personbody" id="person1">
+						      		<img src="{{asset('assets/frontend/img/completecourse/parson-1.png')}}" class="img-circle" alt="img2">
+						      		<h5>Name</h5>
+						      		<p>Description</p>
+						      		<p>stars</p>
+						      	</div>
+						      	<div class="personbody" id="person2">
+						      		<img src="{{asset('assets/frontend/img/completecourse/parson-3.png')}}" class="img-circle" alt="img3">
+						      		<h5>Name</h5>
+						      		<p>Description</p>
+						      		<p>stars</p>
+						      	</div>
+						      	<div class="personbody" id="person3">
+						      		<img src="{{asset('assets/frontend/img/completecourse/parson-4.png')}}" class="img-circle" alt="img4">
+						      		<h5>Name</h5>
+						      		<p>Description</p>
+						      		<p>stars</p>
+						      	</div>
+						      	<div class="personbody" id="person4">
+						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img5">
+						      		<h5>Name</h5>
+						      		<p>Description</p>
+						      		<p>stars</p>
+						      	</div>
+						      	<div class="personbody" id="person5">
+						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img6">
+						      		<h5>Name</h5>
+						      		<p>Description</p>
+						      		<p>stars</p>
+						      	</div>
+						      	<div class="personbody" id="person6">
+						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img7">
+						      		<h5>Name</h5>
+						      		<p>Description</p>
+						      		<p>stars</p>
+						      	</div>
+						      	<div class="personbody" id="person7">
+						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img8">
+						      		<h5>Name</h5>
+						      		<p>Description</p>
+						      		<p>stars</p>
+						      	</div>
+						    </div>
+						</div>
 					</div>			
 				
 		</div>
