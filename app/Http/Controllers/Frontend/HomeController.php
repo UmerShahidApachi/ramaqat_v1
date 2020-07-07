@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Rating;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -84,5 +86,42 @@ class HomeController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function gaveRating(Request $request)
+    {
+        // echo "<pre>"; print_r($request->all());exit;
+        if($request->rating==0)
+        {
+            return ['status'=>0, 'message'=>'You forgot to select Course Rating'];
+        }
+        if(isset($request->trainer_rating))
+        {
+            if($request->trainer_rating==0)
+            {
+                return ['status'=>0, 'message'=>'You forgot to select Trainer Rating'];
+            }
+            $rate = new Rating;
+            $rate->user_id = Auth::user()->id;
+            $rate->rating = $request->trainer_rating; 
+            $rate->type = 2;
+            $rate->commit = $request->message; 
+            $rate->course_id = $request->course_id;
+            $rate->trainer_id = $request->trainer_id;  
+            $success = $rate->save();
+        }
+        $rate = new Rating;
+        $rate->user_id = Auth::user()->id;
+        $rate->rating = $request->rating; 
+        $rate->type = 1;
+        $rate->commit = $request->message; 
+        $rate->course_id = $request->course_id; 
+        $success = $rate->save();
+        if($success)
+        {
+            return ['status'=>1, 'message'=>'Rating Added Successfully'];
+        }else{
+            return ['status'=>0, 'message'=>'There is some issue'];
+        }
     }
 }

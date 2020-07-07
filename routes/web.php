@@ -140,6 +140,9 @@ Route::get('offline-course', 'Frontend\CourseController@offlineCourse')->name('o
 Route::get('complete-course', 'Frontend\CourseController@completeCourse')->name('complete-course');
 Route::get('homePage',        'Frontend\HomeController@homePage')->name('homePage');
 
+Route::post('user/rating',        'Frontend\HomeController@gaveRating')->name('gaveRating');
+
+
 Route::get('progressView',    'progresscontroller@fileUpload')->name('progressView');
 Route::post('progressStore',  'progresscontroller@fileStore')->name('progressStore');
 

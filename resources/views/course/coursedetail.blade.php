@@ -6,6 +6,12 @@
    <script src="https://unpkg.com/video.js@7.5.4/dist/video.js"></script>
    <script src="https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js"></script>
    <link href="https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css" rel="stylesheet">
+        <script src="{{url('assets/starrr.js')}}"></script>
+        <link rel="stylesheet" href="{{url('assets/sweetalerts/sweetalert.css')}}">
+        <script src="{{url('assets/sweetalerts/sweetalert.js')}}"></script>
+
+
+    
 
 <style>
    .main{
@@ -14,6 +20,47 @@
    .video-js{
     width: 100%;
    }
+
+   .rating-stars input {
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+    padding: .375rem .75rem;
+    font-size: .9375rem;
+    line-height: 1.6;
+    color: #3d4e67;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #e0e8f3;
+    border-radius: 3px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.rating-stars .rating-stars-container .rating-star.sm {
+    display: inline-block;
+    font-size: 19px !important;
+    color: #83829c;
+    cursor: pointer;
+    padding: 1px;
+}
+
+.rating-stars .rating-stars-container .rating-star.is--active, .rating-stars .rating-stars-container .rating-star.is--hover {
+    color: #f1c40f;
+}
+
+.star-plugin-main {
+    width: 100%;
+    float: left;
+    text-align: left;
+}
+
+.star-plugin-main .fa {
+    color: #f7941d;
+}
+
+.star-plugin-main .fa-star {
+    color: #f7941d;
+}
 
 </style>
     <!-- couser-detail main section -->
@@ -469,6 +516,37 @@
                 </div>
                 <div class="col-sm-4"></div>
             </div>
+            @if(Auth::check() && Auth::user()->role_id == 3 && Auth::user()->is_trainer!=1)
+            @if(!isset($rate))
+<div class="othr_pages_popup" id="gaveFeedbackPopup">
+    
+            <div class="othr_pages_popup_nxt">
+                <div class="inner---modal">
+                    <form id="ratingForm_Rat">
+                        @if(!isset($trainer_check))
+                        <input type="hidden" name="trainer_id" value="{{$data->user_id}}">
+                        @endif
+                        <input type="hidden" name="type">
+                        <input type="hidden" name="course_id" value="{{$data->id}}">
+                        <input type="hidden" name="rating" value="0">
+                        @if(!isset($trainer_check))
+                        <input type="hidden" name="trainer_rating" value="0">
+                        @endif
+                        <textarea class="coment-feedback" placeholder="Write a review" name="message"
+                                  required></textarea><br>
+                        <label>Course Rating</label>                        
+                        <div class="star-plugin-main user_ratting"></div><br>
+                        @if(!isset($trainer_check))
+                        <label>Trainer Rating</label>                                            
+                        <div class="star-plugin-main trainer_ratting "></div><br>
+                        @endif 
+                        <button type="submit" class="submit-btn-popup">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        @endif
+        @endif
             <!-- End Comment Review Section-->
             <div class="row"></div>
             <div class="height-2"></div>
@@ -564,8 +642,73 @@
   </div>
 </div>
 
+<!-- Star Rating js-->
+        <!-- <script src="{{url('assets/rating/jquery.rating-stars.js')}}"></script> -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
+    $('.user_ratting').starrr({
+                    max: 5,
+                    change: function (e, value) {
+                        $("#ratingForm_Rat [name=rating]").val(value);
+                    }
+                });
+     $('.trainer_ratting').starrr({
+                    max: 5,
+                    change: function (e, value) {
+                        $("#ratingForm_Rat [name=trainer_rating]").val(value);
+                    }
+                });
+                $('.completed_rating').starrr({
+                    rating: $('.completed_rating').attr('complete-rating'),
+                    readOnly: true
+                });
+
+                // gave rating popup
+                $(document).on("click", ".gaveRatingBtnWorker", function (e) {
+                    $("#ratingForm_Rat").trigger("reset");
+                    let toId = $(this).data("trainer_id" );
+                    let type = $(this).data("type");
+                    let bookingId = $(this).data("course_id");
+                    $("#ratingForm_Rat").find("[name=trainer_id] ").val(toId);
+                    $("#ratingForm_Rat").find("[name=type]").val(type);
+                    $("#ratingForm_Rat").find("[name=course_id]").val(bookingId);
+                    $('#gaveFeedbackPopup, .overlay').fadeIn(700);
+                });
+
+                  // gave rating
+                $("body").on("submit", "#ratingForm_Rat", function (e) {
+                    e.preventDefault();
+                    let requestObject = $(this).serialize();
+                    axios.post('{{route("gaveRating")}}', requestObject)
+                        // place
+                        .then(function (response) {
+                            
+                            if (response.data.status == 1) {
+                                swal( response.data.message, '', 'success' );
+                        setTimeout( function () {
+                            location.reload();
+                        }, 2000 );
+                            } else {
+                                swal( response.data.message, '', 'success' );
+                            }
+                        })
+                        .catch(function (error) {
+                            // do something
+                        });
+                });
+              
+
+            </script>
+            <script>
+                $('#star1').starrr({
+                    change: function (e, value) {
+                        if (value) {
+                            $('#review_ratting').val(value);
+                        }
+                    }
+                });
+
       videojs("video_1", {}, function() {
          var player = this;
 
