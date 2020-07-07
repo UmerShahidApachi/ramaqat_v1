@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Course;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -37,4 +38,6 @@ protected $guarded = [''];
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
 }

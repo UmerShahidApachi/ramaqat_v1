@@ -95,16 +95,16 @@
                     </div>
 
                     <div class="col text-center mt-3" id="trainer11_logo_title">
-                        <p class="mb-0">Trainer  Name</p>
-                        <p>IT Tech & Networking Expert Trainer </p>
+                        <p class="mb-0">{{$user->name}}</p>
+                        <p>{{$user->experience}} </p>
                     </div>
                     <div class="col text-center table_f_size mt-5" style="min-height: 50px;overflow: hidden;">
                         <div class="col-md-4 text-center border_right float-left p-0">
                             <p>26,843</p>
-                            <p>My Stucdents</p>
+                            <p>My Students</p>
                         </div>
                         <div class="col-md-4 text-center border_right float-left p-0">
-                            <p>6</p>
+                            <p>{{$course_count}}</p>
                             <p>My Courses</p>
                         </div>
                         <div class="col-md-4 text-center float-left p-0">

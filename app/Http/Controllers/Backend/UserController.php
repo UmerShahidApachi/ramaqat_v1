@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Course;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -117,6 +118,17 @@ class UserController extends Controller
     {
         User::where('id', Auth::id())->update(['is_trainer'=>1]);
         return redirect('/');
+
+
+    }
+    public function trainer_profile(Request $request)
+    {
+        $user =User::find($request->id);
+        $discounted = Course::where('user_id',$user->id)->get();
+        $top = Course::where('user_id',$user->id)->get();
+        $latest = Course::where('user_id',$user->id)->get();
+        $course_count = Course::where('user_id',$user->id)->count();
+        return view('trainer.index',compact('user','discounted','top','latest','course_count'));
 
 
     }

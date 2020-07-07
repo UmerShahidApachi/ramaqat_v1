@@ -669,7 +669,9 @@
                                                     <div class="col float-left">
                                                         <p>{{$c->name}}<br>
                                                             {!! $c->description !!}</p>
-                                                        <p>{{$c->users->name}}, {{$c->users->experience}}</p>
+                                                        <a href="{{route('trainer_profile',['id'=>$c->users->id])}}">
+
+                                                            <p>{{$c->users->name}}, {{$c->users->experience}}</p></a>
                                                         <p class="float-right p-0" style="font-size: 10px">
                                                             <span class="fa fa-star checked"></span>
                                                             <span class="fa fa-star checked"></span>
@@ -709,7 +711,8 @@
                                                     <div class="col float-left">
                                                         <p>{{$c->name}}<br>
                                                             {!! $c->description !!}</p>
-                                                        <p>{{$c->users->name}}, {{$c->users->experience}}</p>
+                                                        <a href="{{route('trainer_profile',['id'=>$c->users->id])}}">
+                                                        <p>{{$c->users->name}}, {{$c->users->experience}}</p></a>
                                                         <p class="float-right p-0" style="font-size: 10px">
                                                             <span class="fa fa-star checked"></span>
                                                             <span class="fa fa-star checked"></span>
@@ -836,7 +839,9 @@
                                                         <div class="col float-left">
                                                             <p>{{$c->name}}<br>
                                                                 {!! $c->description !!}</p>
-                                                            <p>{{$c->users->name}}, {{$c->users->experience}}</p>
+                                                            <a href="{{route('trainer_profile',['id'=>$c->users->id])}}">
+
+                                                                <p>{{$c->users->name}}, {{$c->users->experience}}</p></a>
                                                             <p class="float-right p-0" style="font-size: 10px">
                                                                 <span class="fa fa-star checked"></span>
                                                                 <span class="fa fa-star checked"></span>
@@ -879,7 +884,9 @@
                                                         <div class="col float-left">
                                                             <p>{{$c->name}}<br>
                                                                 {!! $c->description !!}</p>
-                                                            <p>{{$c->users->name}}, {{$c->users->experience}}</p>
+                                                            <a href="{{route('trainer_profile',['id'=>$c->users->id])}}">
+
+                                                                <p>{{$c->users->name}}, {{$c->users->experience}}</p></a>
                                                             <p class="float-right p-0" style="font-size: 10px">
                                                                 <span class="fa fa-star checked"></span>
                                                                 <span class="fa fa-star checked"></span>
