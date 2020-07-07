@@ -21,6 +21,8 @@ class CourseSeeder extends Seeder
                 "price"=> "4500",
                 "user_id"=> 2,
                 "category_id"=> 1,
+                "status"=>1
+
 
             ],[
                 'name' => 'example17',
@@ -30,6 +32,8 @@ class CourseSeeder extends Seeder
                 "price"=> "4500",
                 "user_id"=> 2,
                 "category_id"=> 1,
+                "status"=>1
+
 
             ],[
                 'name' => 'example16',
@@ -39,6 +43,8 @@ class CourseSeeder extends Seeder
                 "price"=> "4500",
                 "user_id"=> 2,
                 "category_id"=> 1,
+                "status"=>1
+
 
             ],[
                 'name' => 'example14',
@@ -48,6 +54,8 @@ class CourseSeeder extends Seeder
                 "price"=> "4500",
                 "user_id"=> 2,
                 "category_id"=> 1,
+                "status"=>1
+
 
             ],[
                 'name' => 'example15',
@@ -57,6 +65,8 @@ class CourseSeeder extends Seeder
                 "price"=> "4500",
                 "user_id"=> 2,
                 "category_id"=> 1,
+                "status"=>1
+
 
             ],[
                 'name' => 'example14',
@@ -66,6 +76,8 @@ class CourseSeeder extends Seeder
                 "price"=> "4500",
                 "user_id"=> 2,
                 "category_id"=> 2,
+                "status"=>1
+
 
             ],[
                 "duration"=> "4500",
@@ -75,6 +87,8 @@ class CourseSeeder extends Seeder
                 "price"=> "4500",
                 "user_id"=> 2,
                 "category_id"=> 2,
+                "status"=>1
+
 
             ],[
                 'name' => 'example13',
@@ -84,6 +98,8 @@ class CourseSeeder extends Seeder
                 "price"=> "4500",
                 "user_id"=> 2,
                 "category_id"=> 2,
+                "status"=>1
+
 
             ],[
                 'name' => 'example14',
@@ -93,6 +109,8 @@ class CourseSeeder extends Seeder
                 "price"=> "4500",
                 "user_id"=> 2,
                 "category_id"=> 2,
+                "status"=>1
+
 
             ],[
                 'name' => 'example19',
@@ -102,6 +120,8 @@ class CourseSeeder extends Seeder
                 "price"=> "4500",
                 "user_id"=> 2,
                 "category_id"=> 3,
+                "status"=>1
+
 
             ],[
                 'name' => 'example14',
@@ -111,6 +131,8 @@ class CourseSeeder extends Seeder
                 "duration"=> "4500",
                 "user_id"=> 2,
                 "category_id"=> 3,
+                "status"=>1
+
 
             ],[
                 'name' => 'example10',
@@ -121,6 +143,8 @@ class CourseSeeder extends Seeder
 
                 "user_id"=> 2,
                 "category_id"=> 3,
+                "status"=>1
+
 
             ],[
                 'name' => 'example11',
@@ -131,6 +155,8 @@ class CourseSeeder extends Seeder
 
                 "user_id"=> 2,
                 "category_id"=> 3,
+                "status"=>1
+
 
             ],[
                 'name' => 'example12',
@@ -141,6 +167,7 @@ class CourseSeeder extends Seeder
 
                 "user_id"=> 2,
                 "category_id"=> 4,
+                "status"=>1
 
             ],[
                 'name' => 'example1',
@@ -150,6 +177,8 @@ class CourseSeeder extends Seeder
                 "duration"=> "4500",
                 "user_id"=> 2,
                 "category_id"=> 4,
+                "status"=>1
+
 
             ],
             ];
