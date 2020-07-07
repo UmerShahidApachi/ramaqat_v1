@@ -68,17 +68,53 @@
 
 
 	#video_footer .personbody{
-		padding: 5px;
+		padding: 2px;
 		width: 13%;
-		height: auto;
 		text-align: center;
 	}
 		#video_footer .personbody:hover{
+
 			border: 1px solid;
 			background-color: white;
 			outline: none;
-			margin-top: -10px;
+			margin-top: 0px;
+			position: absolute;
+			top: 0px;
+			width: 16%;
 		}
+			#video_footer #person2:hover{
+				left: 13%;
+			}
+			#video_footer #person3:hover{
+				left: 26%;
+			}
+			#video_footer #person4:hover{
+				left: 39%;
+			}
+			#video_footer #person5:hover{
+				left: 52%;
+			}
+			#video_footer #person6:hover{
+				left: 65%;
+			}
+			#video_footer #person7:hover{
+				left: 78%;
+			}
+
+	#video_footer .personbody h5{
+		font-size: 16px;
+		margin-bottom: 1%;
+		margin-top: 10%;	
+	}
+
+
+	#video_footer .personbody p{
+		font-size: 11px;
+		margin: 0px;	
+	}
+	#video_footer .personbody p:last-child{
+		margin-top: 2%;	
+	}
 
 	#video_footer .personbody img{
 		max-width: 50%;
@@ -92,7 +128,6 @@
 		display: none;
 	}
 		.personbody:hover .persondetail{
-		border-color: red;
 		background-color: white;
 		outline: none;
 		display: block;
@@ -155,43 +190,85 @@
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-1.png')}}" class="img-circle" alt="img2">
 						      		<h5 class="persondetail">Name</h5>
 						      		<p class="persondetail">Description</p>
-						      		<p class="persondetail">stars</p>
+						      		<p class="persondetail">
+						      			<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+						      		</p>
 						      	</div>
 						      	<div class="personbody" id="person2">
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-3.png')}}" class="img-circle" alt="img3">
 						      		<h5 class="persondetail">Name</h5>
 						      		<p class="persondetail">Description</p>
-						      		<p class="persondetail">stars</p>
+						      		<p class="persondetail">
+						      			<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+						      		</p>
 						      	</div>
 						      	<div class="personbody" id="person3">
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-4.png')}}" class="img-circle" alt="img4">
 						      		<h5 class="persondetail">Name</h5>
 						      		<p class="persondetail">Description</p>
-						      		<p class="persondetail">stars</p>
+						      		<p class="persondetail">
+						      			<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+						      		</p>
 						      	</div>
 						      	<div class="personbody" id="person4">
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img5">
 						      		<h5 class="persondetail">Name</h5>
 						      		<p class="persondetail">Description</p>
-						      		<p class="persondetail">stars</p>
+						      		<p class="persondetail">
+						      			<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+						      		</p>
 						      	</div>
 						      	<div class="personbody" id="person5">
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img6">
 						      		<h5 class="persondetail">Name</h5>
 						      		<p class="persondetail">Description</p>
-						      		<p class="persondetail">stars</p>
+						      		<p class="persondetail">
+						      			<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+						      		</p>
 						      	</div>
 						      	<div class="personbody" id="person6">
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img7">
 						      		<h5 class="persondetail">Name</h5>
 						      		<p class="persondetail">Description</p>
-						      		<p class="persondetail">stars</p>
+						      		<p class="persondetail">
+						      			<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+						      		</p>
 						      	</div>
 						      	<div class="personbody" id="person7">
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img8">
 						      		<h5 class="persondetail">Name</h5>
 						      		<p class="persondetail">Description</p>
-						      		<p class="persondetail">stars</p>
+						      		<p class="persondetail">
+						      			<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+						      		</p>
 						      	</div>
 						    </div>
 						</div>
