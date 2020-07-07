@@ -913,7 +913,7 @@
 
                                                                 <div class="col float-left">
                                                                     <p>{{$c->name}}<br>
-                                                                        {{$c->description}}</p>
+                                                                        {!! $c->description !!}</p>
                                                                     <p>{{$c->users->name}}, {{$c->users->experience}}</p>
                                                                     <p class="float-right p-0" style="font-size: 10px">
                                                                         <span class="fa fa-star checked"></span>
@@ -951,7 +951,7 @@
 
                                                                 <div class="col float-left">
                                                                     <p>{{$c->name}}<br>
-                                                                        {{$c->description}}</p>
+                                                                        {!! $c->description !!}</p>
                                                                     <p>{{$c->users->name}}, {{$c->users->experience}}</p>
                                                                     <p class="float-right p-0" style="font-size: 10px">
                                                                         <span class="fa fa-star checked"></span>
