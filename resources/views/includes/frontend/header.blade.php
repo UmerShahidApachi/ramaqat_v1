@@ -64,10 +64,10 @@
             font-weight: 400 !important;
         }
 
-       .white-btn{
+       li .white-btn{
             padding: 13px 25px;
        }
-       .siguup{
+       li .signup{
         padding: 13px 25px;
        }
         
