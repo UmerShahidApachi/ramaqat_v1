@@ -26,14 +26,15 @@ Route::post('language/{locale}', function (Request $request,$locale) {
 
 Route::get('/', function () {
     $latest = Course::where('status',1)->get()->take(3);
+    $latest2 = Course::where('status',1)->orderByRaw('RAND()')->take(3)->get();
     $categories = Category::all();
     $categories1 = Category::take(3)->get();
     $slider = Slider::all();
     $slider1 = Slider::where('id', '>=', 1)->first();
-    $latest1 = Course::where('id', '>=', 1)->where('status',1)->first();
+    $latest1 = Course::where('status',1)->orderByRaw('RAND()')->take(3)->get();
     $setting = Setting::where('id',1)->first();
 
-    return view('home.frontend.index', compact('slider', 'categories', 'categories1', 'slider1', 'latest', 'latest1','setting'));
+    return view('home.frontend.index', compact('slider', 'categories', 'categories1', 'slider1', 'latest', 'latest1','latest2','setting'));
 });
 /**
  * admin routes

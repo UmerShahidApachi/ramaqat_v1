@@ -25,7 +25,8 @@ class UserSeeder extends Seeder
                 "phone" => "090078601",
                 'email' => 'trainer@admin.com',
                 'password' => bcrypt("11111111"),
-                "role_id" => 2,
+                "role_id" => 3,
+                "is_trainer" => 1,
             ],
             [
                 'name' => 'Site User',

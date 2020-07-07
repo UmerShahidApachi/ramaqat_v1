@@ -27,12 +27,8 @@
 		padding: 16px;
 		font-size: 1.4rem;
 	}
-	#video_footer img{
-		margin-right: 4.5%;
-	}
-	#video_footer img:last-child{
-		margin: 0px
-	}
+
+	
 
 	.card .cl_white{
 		color: white;
@@ -68,19 +64,83 @@
 	.para_font{
 		font-size: calc(100% + 0.1vw + 0.1vh);
 	}
+
+
+
+	#video_footer .personbody{
+		padding: 2px;
+		width: 13%;
+		text-align: center;
+	}
+		#video_footer .personbody:hover{
+
+			border: 1px solid;
+			background-color: white;
+			outline: none;
+			margin-top: 0px;
+			position: absolute;
+			top: 0px;
+			width: 16%;
+		}
+			#video_footer #person2:hover{
+				left: 13%;
+			}
+			#video_footer #person3:hover{
+				left: 26%;
+			}
+			#video_footer #person4:hover{
+				left: 39%;
+			}
+			#video_footer #person5:hover{
+				left: 52%;
+			}
+			#video_footer #person6:hover{
+				left: 65%;
+			}
+			#video_footer #person7:hover{
+				left: 78%;
+			}
+
+	#video_footer .personbody h5{
+		font-size: 16px;
+		margin-bottom: 1%;
+		margin-top: 10%;	
+	}
+
+
+	#video_footer .personbody p{
+		font-size: 11px;
+		margin: 0px;	
+	}
+	#video_footer .personbody p:last-child{
+		margin-top: 2%;	
+	}
+
+	#video_footer .personbody img{
+		max-width: 50%;
+	}	
+		#video_footer .personbody:hover img{
+			padding-top: 5px;
+			max-width: 100%;
+		}
+	
+	.persondetail{
+		display: none;
+	}
+		.personbody:hover .persondetail{
+		background-color: white;
+		outline: none;
+		display: block;
+
+	}
+
 @media screen and (max-width: 768px) and (min-width: 320px){
 
 	ul.ulDBlock-top li{
 		width:max-content;
-	}
-	
-  
+	} 
 }
-
-</style>
-
-
-
+</style> 
 
   <!--Header End Here  -->
   <div class="plum-bg pt-3 pb-3">
@@ -125,14 +185,93 @@
 						    </div>
 				    	</div>
 					    <div class="col-sm-12 col-md-8 pt-2" id="video_footer">
-					      	<img src="{{asset('assets/frontend/img/completecourse/parson-1.png')}}" class="img-circle" alt="img2">
-					      	<img src="{{asset('assets/frontend/img/completecourse/parson-3.png')}}" class="img-circle" alt="img3">
-					      	<img src="{{asset('assets/frontend/img/completecourse/parson-4.png')}}" class="img-circle" alt="img4">
-					      	<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img5">
-					      	<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img6">
-					      	<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img7">
-					      	<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img8">
-					    </div>
+					    	<div class="row">
+						    	<div class="personbody" id="person1">
+						      		<img src="{{asset('assets/frontend/img/completecourse/parson-1.png')}}" class="img-circle" alt="img2">
+						      		<h5 class="persondetail">Name</h5>
+						      		<p class="persondetail">Description</p>
+						      		<p class="persondetail">
+						      			<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+						      		</p>
+						      	</div>
+						      	<div class="personbody" id="person2">
+						      		<img src="{{asset('assets/frontend/img/completecourse/parson-3.png')}}" class="img-circle" alt="img3">
+						      		<h5 class="persondetail">Name</h5>
+						      		<p class="persondetail">Description</p>
+						      		<p class="persondetail">
+						      			<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+						      		</p>
+						      	</div>
+						      	<div class="personbody" id="person3">
+						      		<img src="{{asset('assets/frontend/img/completecourse/parson-4.png')}}" class="img-circle" alt="img4">
+						      		<h5 class="persondetail">Name</h5>
+						      		<p class="persondetail">Description</p>
+						      		<p class="persondetail">
+						      			<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+						      		</p>
+						      	</div>
+						      	<div class="personbody" id="person4">
+						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img5">
+						      		<h5 class="persondetail">Name</h5>
+						      		<p class="persondetail">Description</p>
+						      		<p class="persondetail">
+						      			<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+						      		</p>
+						      	</div>
+						      	<div class="personbody" id="person5">
+						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img6">
+						      		<h5 class="persondetail">Name</h5>
+						      		<p class="persondetail">Description</p>
+						      		<p class="persondetail">
+						      			<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+						      		</p>
+						      	</div>
+						      	<div class="personbody" id="person6">
+						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img7">
+						      		<h5 class="persondetail">Name</h5>
+						      		<p class="persondetail">Description</p>
+						      		<p class="persondetail">
+						      			<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+						      		</p>
+						      	</div>
+						      	<div class="personbody" id="person7">
+						      		<img src="{{asset('assets/frontend/img/completecourse/parson-5.png')}}" class="img-circle" alt="img8">
+						      		<h5 class="persondetail">Name</h5>
+						      		<p class="persondetail">Description</p>
+						      		<p class="persondetail">
+						      			<span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+						      		</p>
+						      	</div>
+						    </div>
+						</div>
 					</div>			
 				
 		</div>
@@ -347,14 +486,5 @@
   </div>
 
 
-
-
-
-
-
-
-
-
-
-
+ 
 @endsection
