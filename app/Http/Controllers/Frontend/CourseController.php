@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 use DB;
+use App\Rating;
+
 
 class CourseController extends Controller
 {
@@ -37,36 +39,41 @@ class CourseController extends Controller
             if (!$category) {
                 abort(404);
             }
-        $data = Course::whereRaw("find_in_set($request->id,category_id)")->paginate(9);
+        $data = Course::whereRaw("find_in_set($request->id,category_id)")->where('status',1)->paginate(9);
 
         }else{
             $category = ['name'=>'All'];
-            $data = Course::paginate(9);
+            $data = Course::where('status',1)->paginate(9);
         }
         return view('course.onlineCourse',compact('data','category'));
     }
     public function course_detail(Request $request)
     {
-//        dd($request->id);
 
         if ($request->id) {
             $data = Course::find($request->id);
             if (!$data) {
                 abort(404);
             }
-//            dd($data->lessons);
-
+            if(Auth::check())
+            {
+              $rate = Rating::where('course_id',$request->id)->where('user_id',Auth::user()->id)->first();
+              $trainer_check = Rating::where('trainer_id',$data->user_id)->where('user_id',Auth::user()->id)->first();
+            return view('course.coursedetail', compact('data','rate','trainer_check'));
+            }
             return view('course.coursedetail', compact('data'));
+
+
         }
     }
     public function offlineCourse()
     {
 
     }
-    public function completeCourse()
-    {
-        return view('course.completeCourse');
-    }
+    // public function completeCourse()
+    // {
+    //     return view('course.completeCourse');
+    // }
     /**
      * Show the form for creating a new resource.
      *

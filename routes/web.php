@@ -134,10 +134,14 @@ Route::get('userlogin', 'Frontend\LoginController@userLogin')->name('login-form'
 Route::post('login_user', 'Frontend\LoginController@login_user')->name('login_user');
 Route::get('user-register', 'Frontend\RegisterController@userRegister')->name('register');
 Route::get('all-course', 'Frontend\CourseController@onlineCourse')->name('all-course');
+Route::get('trainer-profile', 'Backend\UserController@trainer_profile')->name('trainer_profile');
 Route::get('course-detail', 'Frontend\CourseController@course_detail')->name('detail-course');
 Route::get('offline-course', 'Frontend\CourseController@offlineCourse')->name('offline-course');
 Route::get('complete-course', 'Frontend\CourseController@completeCourse')->name('complete-course');
 Route::get('homePage',        'Frontend\HomeController@homePage')->name('homePage');
+
+Route::post('user/rating',        'Frontend\HomeController@gaveRating')->name('gaveRating');
+
 
 Route::get('progressView',    'progresscontroller@fileUpload')->name('progressView');
 Route::post('progressStore',  'progresscontroller@fileStore')->name('progressStore');
@@ -145,6 +149,8 @@ Route::post('progressStore',  'progresscontroller@fileStore')->name('progressSto
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
 
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/show_lesson/{id}', 'Frontend\LessonController@index');
+
 
