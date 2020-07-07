@@ -68,24 +68,35 @@
 
 
 	#video_footer .personbody{
-		padding: 2px;
+		padding: 5px;
 		width: 13%;
 		text-align: center;
+		border: 1px solid;
 	}
 		#video_footer .personbody:hover{
-
-			border: 1px solid;
+			padding: 1px;
+			border: 1px solid white;
 			background-color: white;
 			outline: none;
 			margin-top: 0px;
 			position: absolute;
 			top: 0px;
-			width: 16%;
+			width: 14%;
+			border-radius: 8px;
+
+			-webkit-box-shadow: 0 8px 6px -6px lightgrey;
+	   		-moz-box-shadow: 0 8px 6px -6px lightgrey;
+	        box-shadow: 0 8px 6px -6px lightgrey;
 		}
+			#video_footer #person1:hover{
+				left: 0px;
+			}
 			#video_footer #person2:hover{
+				right: -13%;
 				left: 13%;
 			}
 			#video_footer #person3:hover{
+				right: -13%;
 				left: 26%;
 			}
 			#video_footer #person4:hover{
@@ -120,7 +131,7 @@
 		max-width: 50%;
 	}	
 		#video_footer .personbody:hover img{
-			padding-top: 5px;
+			padding-top: 2px;
 			max-width: 100%;
 		}
 	
@@ -156,10 +167,14 @@
 		            <div class="font18 white-text"><a href="#" style="color: white"> <i class="fa fa-share-alt mr-1" aria-hidden="true"></i> Share</a></div>
 		          </li>
 		          <li>
-		            <div class="col font16 white-text"><button type="button" class=" btn btn-primary">Favourit <i class="fa fa-star mr-1" aria-hidden="true"></i></button></div>
+		            <div class="col font16 white-text">
+		            	<button type="button" class=" btn btn-primary">Favourit <i class="fa fa-star mr-1" aria-hidden="true"></i></button>
+		            </div>
 		          </li>
 		          <li>
-					<div class="col font16 white-text"><button type="button" class="btn btn-primary">Enroll for 25KWD</button></div>
+					<div class="col font16 white-text">
+						<button type="button" class="btn btn-primary">Enroll for 25KWD</button>
+					</div>
 		          </li>
 		        </ul>
 		    </div>
@@ -169,6 +184,7 @@
   </div>
   <!-- add video iframe -->
  	
+ 	
  	<div class="row">
 	    <div class="col-sm-8 p-0" style="background-color: #570055;">
 		      	<iframe width="100%" height="400px;" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
@@ -176,10 +192,10 @@
 			    	<div class="row">	
 				      	<div class="col-sm-12 col-md-4 col-md-4 text-center " style="color: white;">
 				      		<div class="row">
-				      			<div class="col-sm-4">
+				      			<div class="col-sm-5">
 						    	<img src="{{asset('assets/frontend/img/completecourse/teacher_activ.png')}}" class="img-circle ml-sm-0 ml-md-4" alt="img1">
 						    	</div>							
-								<div class="col-sm-8">
+								<div class="col-sm-7 pl-0">
 						    		<p class="trainername mb-0">Trainer Name</p>
 						    	</div>
 						    </div>
