@@ -335,7 +335,7 @@
             }
 
             .bottomsec p {
-                padding-left: : 5px;
+                padding-left:: 5px;
                 font-size: 12px;
             }
         }
@@ -529,6 +529,7 @@
     <script>
         //Get the button
         var mybutton = document.getElementById("myBtn");
+
         // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
             document.body.scrollTop = 0;
@@ -536,47 +537,18 @@
         }
     </script>
 
-    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 
-
-    <div class="plum-bg">
-        <div class="row">
-            <div class="container container_category">
-                <div id="basicSlider">
-                    <div class="MS-content">
-                        @if(isset($categories))
-                            @foreach($categories as $cat)
-                                <div class="item text-center">
-                                    <a href="{{route('all-course',['id'=>$cat->id])}}" target="">
-                                        <img class="fadeIn fa category_width" src="{{asset('category/'.$cat->logo)}}">
-                                        <div class="font12 white-text cat-text">{{$cat->name}}</div>
-                                    </a>
-                                </div>
-                            @endforeach
-                        @endif
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Services Section End Here -->
     <!--Carousel Wrapper-->
     <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-        <!--Indicators-->
-        <ol class="carousel-indicators custum-indicators">
-            <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-2" data-slide-to="1"></li>
-            <li data-target="#carousel-example-2" data-slide-to="2"></li>
-        </ol>
-        <!--/.Indicators-->
-        <!--Slides-->
         <div class="carousel-inner" role="listbox">
             @if(isset($slider1))
                 <div class="carousel-item active">
                     <div>
                         <div class="view main-slider-height">
-                            <img class="d-block full-img w-100" src="{{url('slider').'/'.$slider1['image']}}" alt="First slide">
+                            <img class="d-block full-img w-100" src="{{url('slider').'/'.$slider1['image']}}"
+                                 alt="First slide">
                             <div class="mask rgba-black-light"></div>
                         </div>
                         <div class="carousel-caption">
@@ -592,7 +564,8 @@
                     <div class="carousel-item">
                         <!--Mask color-->
                         <div class="view main-slider-height">
-                            <img class="d-block full-img w-100" src="{{url('slider').'/'.$slide['image']}}" alt="Second slide">
+                            <img class="d-block full-img w-100" src="{{url('slider').'/'.$slide['image']}}"
+                                 alt="Second slide">
                             <div class="mask rgba-black-strong"></div>
                         </div>
                         <div class="carousel-caption">
@@ -666,491 +639,472 @@
                 <!--Carousel Wrapper-->
                 <div id="multi-item-example2" class="carousel slide carousel-multi-item" data-ride="carousel">
                     <!--/.Indicators-->
-
                     <div class="row">
                         <div class="col-md-1 controls-top p-0 text-end hide_on_mobile">
-                            <a class="btn-floating" href="#multi-item-example2" style="color: #570055" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                            <a class="btn-floating" href="#multi-item-example2" style="color: #570055"
+                               data-slide="prev"><i class="fa fa-chevron-left"></i></a>
                         </div>
                         <!--Slides-->
+                        {{--                        {{dd($latest2)}}--}}
                         <div class="col-md-10">
                             <div class="carousel-inner" role="listbox">
                                 <!--First slide-->
-
                                 <div class="carousel-item active mb-2">
+
+                                    {{-- {{dd($data)}}--}}
                                     <div class="row">
-                                        @if(isset($latest1))
+                                        @foreach($latest1 as $c)
 
-                                            <div class="col-md-4 newcard">
-                                                <div class="card">
-                                                    <img class="card-img-top" src="{{asset('course/'. $latest1->thumbnail)}}"
-                                                         alt="Card image cap">
-                                                </div>
-                                                <div class="col carousel_item_footer main_bg_color" style="color: white">
+                                            <div class="col-10 col-sm-10 col-md-4 p-mob auto_margin">
+                                                <a href="{{route('all-course',['id'=>$c->id])}}">
+                                                    <div class="card">
+                                                        <img class="card-img-top"
+                                                             src="{{asset('course/'.$c->thumbnail)}}"
+                                                             alt="Card image cap">
+                                                    </div>
+                                                </a>
+                                                <div class="col carousel_item_footer main_bg_color"
+                                                     style="color: white">
 
-                                                    <div class="">
-                                                        <div class="row">
-                                                            <div class="col-2">
-                                                                <div style="width:45px;height:45px;">
-                                                                    @if($latest1->users['image'] == "")
-                                                                        <img src="{{asset('assets/frontend/img/user-1.png')}}"class="rounded-circle full-img">
-                                                                    @else
-                                                                        <img src="{{asset('users/'. $latest1->users['image'])}}" class="rounded-circle full-img">
-
-                                                                    @endif
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-6 pr-0">
-                                                                <div class="trainer-n mb-1">
-                                                                    <b>{{$latest1->users['name']}}</b>
-                                                                </div>
-                                                                <div class="course-d">
-                                                                    {{$latest1->name}}
-                                                                    {!! $latest1->description !!}
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 text-center p-0">
-                                                                <ul class="course-rating-list">
-                                                                    <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
-                                                                    </li>
-                                                                    <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
-                                                                    </li>
-                                                                    <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
-                                                                    </li>
-                                                                    <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
-                                                                    </li>
-                                                                    <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
-                                                                    </li>
-                                                                </ul>
-                                                                <ul class="course-rating-list">
-                                                                    <li>
-                                                                        <span>4.8</span>
-                                                                    </li>
-                                                                    <li>
-                                                                        (123)
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
+                                                    <div class="col float-left">
+                                                        <p>{{$c->name}}<br>
+                                                            {!! $c->description !!}</p>
+                                                        <p>{{$c->users->name}}, {{$c->users->experience}}</p>
+                                                        <p class="float-right p-0" style="font-size: 10px">
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span> 5</span>
+                                                            <span>(12345)</span>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
-                                        @endif
-
+                                        @endforeach
 
                                     </div>
+
                                 </div>
+                                <!--/.First slide-->
+
+                                <!--Second slide-->
+                                <div class="carousel-item mb-2">
+                                    <div class="row">
+
+                                        @foreach($latest2 as $c)
+
+                                            <div class="col-10 col-sm-10 col-md-4 p-mob auto_margin">
+                                                <a href="{{route('all-course',['id'=>$c->id])}}">
+                                                    <div class="card">
+                                                        <img class="card-img-top"
+                                                             src="{{asset('course/'.$c->thumbnail)}}"
+                                                             alt="Card image cap">
+                                                    </div>
+                                                </a>
+                                                <div class="col carousel_item_footer main_bg_color"
+                                                     style="color: white; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+
+                                                    <div class="col float-left">
+                                                        <p>{{$c->name}}<br>
+                                                            {!! $c->description !!}</p>
+                                                        <p>{{$c->users->name}}, {{$c->users->experience}}</p>
+                                                        <p class="float-right p-0" style="font-size: 10px">
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span> 5</span>
+                                                            <span>(12345)</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+
+                                    </div>
+
+                                </div>
+
                             </div>
                         </div>
                         <!--/.First slide-->
 
                         <!--Second slide-->
-                        <div class="carousel-item mb-2">
-                            <div class="row">
-                                @if(isset($latest2))
 
-                                    @foreach($latest2 as $c)
-                                        <div class="col-md-4">
-                                            <div class="card">
-                                                <img class="card-img-top" src="{{asset('course/'. $c->thumbnail)}}"
-                                                     alt="Card image cap">
-                                            </div>
-                                            <div class="col carousel_item_footer main_bg_color" style="color: white">
-
-                                                <div class="">
-                                                    <div class="row">
-                                                        <div class="col-2">
-                                                            <div style="width:45px;height:45px;">
-                                                                @if($c->users['image'] == "")
-                                                                    <img src="{{asset('assets/frontend/img/user-1.png')}}"class="rounded-circle full-img">
-                                                                @else
-                                                                    <img src="{{asset('users/'. $c->users['image'])}}" class="rounded-circle full-img">
-
-                                                                @endif
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-6 pr-0">
-                                                            <div class="trainer-n mb-1">
-                                                                <b>{{$c->users['name']}}</b>
-                                                            </div>
-                                                            <div class="course-d">
-                                                                {{$c->name}}
-                                                                {!! $c->description !!}
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-4 text-center p-0">
-                                                            <ul class="course-rating-list">
-                                                                <li>
-                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
-                                                                </li>
-                                                                <li>
-                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
-                                                                </li>
-                                                                <li>
-                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
-                                                                </li>
-                                                                <li>
-                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
-                                                                </li>
-                                                                <li>
-                                                                    <img src="{{asset('assets/frontend/img/star-small.png')}}">
-                                                                </li>
-                                                            </ul>
-                                                            <ul class="course-rating-list">
-                                                                <li>
-                                                                    <span>4.8</span>
-                                                                </li>
-                                                                <li>
-                                                                    (123)
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <div class="bottomsec">
-                                                    <img class="bottomsec-img" src="{{asset('assets/frontend/img/Mask Group 1.png')}}" />
-                                                    <p class="bottomsec-p">Mr Abcom</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                @endif
-
-
-
-                            </div>
-
-                            <div class="controls-top col-md-1 p-0 hide_on_mobile">
-                                <a class="btn-floating" href="#multi-item-example2" style="color: #570055" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- col close -->
-                </div>
-            </div>
-
-
-
-            <!-- Product Slider End -->
-            <div class="height-2 mt-sm-4 mt-md-5"></div>
-
-            <div class="col-12 col-sm-10 offset-md-1 mt-sm-4 mt-md-5 mb-sm-3 mb-md-5">
-                <div class="row text-center">
-                    <div class="col-12 col-sm-9 text-right">
-                        <div class="plum-text font-25">{!! $setting->about_us_description !!}
-                        </div>
-                        <div class="social">
-                            <ul class="tranee-social">
-                                <li>
-                                    <a href="{{$setting->twitter_link}}" target="_blank"><img src="{{asset('assets/frontend/img/t-twi.png')}}"></a>
-                                </li>
-                                <li>
-                                    <a href="{{$setting->fb_link}}" target="_blank"><img src="{{asset('assets/frontend/img/t-fb.png')}}"></a>
-                                </li>
-                                <li>
-                                    <a href="{{$setting->insta_link}}" target="_blank"><img src="{{asset('assets/frontend/img/t-insta.png')}}"></a>
-                                </li>
-                                <li>
-                                    <a href="{{$setting->in_link}}" target="_blank"><img src="{{asset('assets/frontend/img/t-link.png')}}"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-3">
-                        <div class="trainee-img">
-                            <img class="rounded-circle img-fluid" src="{{asset('setting/'.$setting->about_us_image)}}">
+                        <div class="controls-top col-md-1 p-0 hide_on_mobile">
+                            <a class="btn-floating" href="#multi-item-example2" style="color: #570055"
+                               data-slide="next"><i class="fa fa-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="height-2"></div>
-            <!-- Description -->
-            <div class="heading mt-3 mt-sm-4 mt-md-5 mb-3 mb-sm-3 mb-md-3">Different Courses</div>
-            <div class="container">
-                <!-- Cetegory slider -->
-                <div class="row">
-                    <div class="col-sm-12" id="img_slider" style="margin: 0 auto">
-                        <!-- block 1 -->
-                        @foreach($categories1 as $cat)
-
-                            <div class="slider_header text-center m-2"><u>{{$cat->name}}</u></div>
-                            <!--Carousel Wrapper-->
-                            <div id="multi-item-{{$cat->name}}" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-                                <!--/.Indicators-->
-                                <div class="row" style="direction:ltr !important;">
-
-                                    <div class="col-md-1 controls-top hide_on_mobile">
-                                        <a class="btn-floating" href="#multi-item-{{$cat->name}}" style="color: #570055" data-slide="prev">
-                                            <i class="fa fa-chevron-left"></i>
-                                        </a>
-                                    </div>
-                                    <!--Slides-->
-                                    @php
-                                        $data =
-                                        \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->orderByRaw('RAND()')->take(3)->get();
-                                    @endphp
-                                    <div class="col-md-10 p-0">
-                                        <div class="carousel-inner" role="listbox">
-                                            <!--First slide-->
-                                            <div class="carousel-item active mb-2">
-
-                                                {{-- {{dd($data)}}--}}
-                                                <div class="row">
-                                                    @foreach($data as $c)
-
-                                                        <div class="col-10 col-sm-10 col-md-4 p-mob auto_margin">
-                                                            <div class="card">
-                                                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
-                                                            </div>
-                                                            <div class="col carousel_item_footer main_bg_color" style="color: white">
-
-                                                                <div class="col float-left">
-                                                                    <p>{{$c->name}}<br>
-                                                                        {!! $c->description !!}</p>
-                                                                    <p>{{$c->users->name}}, {{$c->users->experience}}</p>
-                                                                    <p class="float-right p-0" style="font-size: 10px">
-                                                                        <span class="fa fa-star checked"></span>
-                                                                        <span class="fa fa-star checked"></span>
-                                                                        <span class="fa fa-star checked"></span>
-                                                                        <span class="fa fa-star"></span>
-                                                                        <span class="fa fa-star"></span>
-                                                                        <span> 5</span>
-                                                                        <span>(12345)</span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    @endforeach
-
-                                                </div>
-
-                                            </div>
-                                            <!--/.First slide-->
-
-                                            <!--Second slide-->
-                                            <div class="carousel-item mb-2">
-                                                <div class="row">
-                                                    @php
-                                                        $data1 =
-                                                        \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->orderByRaw('RAND()')->take(3)->get();
-                                                    @endphp
-                                                    @foreach($data1 as $c)
-
-                                                        <div class="col-10 col-sm-10 col-md-4 p-mob auto_margin">
-                                                            <div class="card">
-                                                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
-                                                            </div>
-                                                            <div class="col carousel_item_footer main_bg_color" style="color: white; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
-
-                                                                <div class="col float-left">
-                                                                    <p>{{$c->name}}<br>
-                                                                        {!! $c->description !!}</p>
-                                                                    <p>{{$c->users->name}}, {{$c->users->experience}}</p>
-                                                                    <p class="float-right p-0" style="font-size: 10px">
-                                                                        <span class="fa fa-star checked"></span>
-                                                                        <span class="fa fa-star checked"></span>
-                                                                        <span class="fa fa-star checked"></span>
-                                                                        <span class="fa fa-star"></span>
-                                                                        <span class="fa fa-star"></span>
-                                                                        <span> 5</span>
-                                                                        <span>(12345)</span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    @endforeach
-
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-1 controls-top hide_on_mobile">
-                                        <a class="btn-floating" href="#multi-item-{{$cat->name}}" style="color: #570055" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-                                    </div>
-
-                                    <!--/.Slides-->
-
-                                </div>
-                                <!--/.Carousel Wrapper-->
-                                @endforeach
-                                <div class="row">
-                                    <div class="col-12" id="img_slider">
-                                        <!-- block 1 -->
-                                        <div class="">
-                                            <div class="" style="min-height: 100px ;overflow: hidden;">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-                                <!-- slider close -->
+        </div>
+        <!-- col close -->
+    </div>
 
 
 
+    <!-- Product Slider End -->
+    <div class="height-2 mt-sm-4 mt-md-5"></div>
 
+    <div class="col-12 col-sm-10 offset-md-1 mt-sm-4 mt-md-5 mb-sm-3 mb-md-5">
+        <div class="row text-center">
+            <div class="col-12 col-sm-9 text-right">
+                <div class="plum-text font-25">{!! $setting->about_us_description !!}
+                </div>
+                <div class="social">
+                    <ul class="tranee-social">
+                        <li>
+                            <a href="{{$setting->twitter_link}}" target="_blank"><img
+                                    src="{{asset('assets/frontend/img/t-twi.png')}}"></a>
+                        </li>
+                        <li>
+                            <a href="{{$setting->fb_link}}" target="_blank"><img
+                                    src="{{asset('assets/frontend/img/t-fb.png')}}"></a>
+                        </li>
+                        <li>
+                            <a href="{{$setting->insta_link}}" target="_blank"><img
+                                    src="{{asset('assets/frontend/img/t-insta.png')}}"></a>
+                        </li>
+                        <li>
+                            <a href="{{$setting->in_link}}" target="_blank"><img
+                                    src="{{asset('assets/frontend/img/t-link.png')}}"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-3">
+                <div class="trainee-img">
+                    <img class="rounded-circle img-fluid" src="{{asset('setting/'.$setting->about_us_image)}}">
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="height-2"></div>
+    <!-- Description -->
+    <div class="heading mt-3 mt-sm-4 mt-md-5 mb-3 mb-sm-3 mb-md-3">Different Courses
+    </div>
+    <div class="container">
+        <!-- Cetegory slider -->
+        <div class="row">
+            <div class="col-sm-12" id="img_slider" style="margin: 0 auto">
+                <!-- block 1 -->
+                @foreach($categories1 as $cat)
 
-                                <!-- End -->
+                    <div class="slider_header text-center m-2"><u>{{$cat->name}}</u></div>
+                    <!--Carousel Wrapper-->
+                    <div id="multi-item-{{$cat->name}}" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-                                <!--Description-->
-                                <hr style="width: 100%;margin-top: 3%; border-top:2px solid">
-                                <!-- Student Comment Section -->
-                                <div class="col-12 heading mt-3 mt-sm-4 mt-md-4 text-center">Student Feedback</div>
-                                <div class="container mt-3 mb-3">
-                                    <div class="carousel slide multi-item-carousel" id="theCarousel">
-                                        <div class="carousel-inner row mx-auto">
-                                            <div class="carousel-item active col-sm-12 col-md-4 mb-5">
-                                                <div class="student-box shadow-sm bg-white rounded">
-                                                    <div class="d-flex">
-                                                        <div class="student-img">
-                                                            <img class="img-fluid rounded-circle" src="{{asset('assets/frontend/img/Mask Group 1.png')}}">
-                                                        </div>
-                                                        <div class="stu-name">Abcom</div>
-                                                    </div>
-                                                    <div class="stu-description">
-                                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                                        Ipsum
-                                                        has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                                        printer took a galley of type and scrambled it to make a type specimen book. It has
-                                                        survived not only five centuries, but also the leap into electronic typesetting,
-                                                        remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                                        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item active col-sm-12 col-md-4 mb-5">
-                                                <div class="student-box shadow-sm bg-white rounded">
-                                                    <div class="d-flex">
-                                                        <div class="student-img">
-                                                            <img class="img-fluid rounded-circle" src="{{asset('assets/frontend/img/Mask Group 1.png')}}">
-                                                        </div>
-                                                        <div class="stu-name">Abcom2</div>
-                                                    </div>
-                                                    <div class="stu-description">
-                                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                                        Ipsum
-                                                        has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                                        printer took a galley of type and scrambled it to make a type specimen book. It has
-                                                        survived not only five centuries, but also the leap into electronic typesetting,
-                                                        remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                                        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item active col-sm-12 col-md-4 mb-5">
-                                                <div class="student-box shadow-sm bg-white rounded">
-                                                    <div class="d-flex">
-                                                        <div class="student-img">
-                                                            <img class="img-fluid rounded-circle" src="{{asset('assets/frontend/img/Mask Group 1.png')}}">
-                                                        </div>
-                                                        <div class="stu-name">Abcom</div>
-                                                    </div>
-                                                    <div class="stu-description">
-                                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                                        Ipsum
-                                                        has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                                        printer took a galley of type and scrambled it to make a type specimen book. It has
-                                                        survived not only five centuries, but also the leap into electronic typesetting,
-                                                        remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                                        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a class="carousel-control-prev hide_on_mobile" href="#theCarousel" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next hide_on_mobile" href="#theCarousel" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- End -->
+                        <!--/.Indicators-->
+                        <div class="row" style="direction:ltr !important;">
+
+                            <div class="col-md-1 controls-top hide_on_mobile">
+                                <a class="btn-floating" href="#multi-item-{{$cat->name}}" style="color: #570055"
+                                   data-slide="prev">
+                                    <i class="fa fa-chevron-left"></i>
+                                </a>
                             </div>
-                            <!-- Books Reading Section -->
-                            <div class="book-sec">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-12 col-sm-6 text-center">
-                                            <h4><b>Become an instructor</b></h4>
-                                            <p>Top instructors from around the world teach millions of students on Udemy. We provide the
-                                                tools and skills to teach what you love.</p>
-                                            <button class="btn plum-btn waves-effect waves-light">Start teaching today</button>
-                                        </div>
-                                        <div class="col-12 col-sm-6 text-center">
-                                            <h4><b>Become an Student</b></h4>
-                                            <p>Top instructors from around the world teach millions of students on Udemy. We provide the
-                                                tools and skills to teach what you love.</p>
-                                            <button class="btn plum-btn waves-effect waves-light">Start learning today</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End -->
-                            <div class="container-fluid plum-bg" style="padding: 40px 15px;line-height: 1;">
-                                <!-- <div class="col-12 col-sm-12 offset-md-1" style="padding: 40px 15px;line-height: 1;">
-                             -->
-                                <div class="row">
-                                    <div class="col-12 col-sm-11 col-md-6" id="Subscribe_para">
-                                        <!-- <div class="mb-1 white-text">Sign up to receive our weekly newsletter</div> -->
-                                        <div class="white-text text-end">
-                                            <p>Sign up to receive our weekly newsletter</p>
-                                            <p>Stay uploaded on all new online and offline training courses</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-10 col-sm-10 col-md-6" id="Subscribe_body">
+                            <!--Slides-->
+                            @php
+                                $data =
+                                \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->orderByRaw('RAND()')->take(3)->get();
+                            @endphp
+                            <div class="col-md-10 p-0">
+                                <div class="carousel-inner" role="listbox">
+                                    <!--First slide-->
+                                    <div class="carousel-item active mb-2">
 
-                                        <div class="form-group" id="Subscribe_inner_body">
-                                            <div class="row">
+                                        {{-- {{dd($data)}}--}}
+                                        <div class="row">
+                                            @foreach($data as $c)
 
-                                                <div class="col-8 col-sm-8">
-                                                    <!-- <input type="text" class="form-control" id="filerAddress" placeholder="">
-                                             --><input class="SubInput z-depth-1 form-control" type="text" placeholder="Enter your email">
+                                                <div class="col-10 col-sm-10 col-md-4 p-mob auto_margin">
+                                                    <a href="{{route('all-course',['id'=>$c->id])}}">
+                                                        <div class="card">
+                                                            <img class="card-img-top"
+                                                                 src="{{asset('course/'.$c->thumbnail)}}"
+                                                                 alt="Card image cap">
+                                                        </div>
+                                                    </a>
+                                                    <div class="col carousel_item_footer main_bg_color"
+                                                         style="color: white">
+
+                                                        <div class="col float-left">
+                                                            <p>{{$c->name}}<br>
+                                                                {!! $c->description !!}</p>
+                                                            <p>{{$c->users->name}}, {{$c->users->experience}}</p>
+                                                            <p class="float-right p-0" style="font-size: 10px">
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span> 5</span>
+                                                                <span>(12345)</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-4 col-sm-4 p-0">
-                                                    <span class="SubBtn"><a href="#">Subscribe</a></span>
-                                                </div>
-                                            </div>
+                                            @endforeach
+
                                         </div>
 
-                                        <!-- <div class="Subscription form-group">
-                                            <input class="SubInput z-depth-1 form-control" type="text" placeholder="Enter your email">
-                                            <span class="SubBtn"><a href="#">Subscribe</a></span>
-                                        </div> -->
                                     </div>
-                                </div>
-                                <!-- </div> -->
-                            </div>
+                                    <!--/.First slide-->
 
-                            <!--  <div id="to-top" title="back to top">↑</div>
-                        -->
+                                    <!--Second slide-->
+                                    <div class="carousel-item mb-2">
+                                        <div class="row">
+                                            @php
+                                                $data1 =
+                                                \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->orderByRaw('RAND()')->take(3)->get();
+                                            @endphp
+                                            @foreach($data1 as $c)
 
-                            <div class="sidepanel">
-                                <span><i class="fa fa-cog fa-spin"></i></span>
-                                <div class="color-picker">
-                                    <h3>Choose Your Color</h3>
-                                    <a class="color applied" onclick="setActiveStyleSheet('color'); return false;" href="{{url('/')}}"></a>
-                                    <a class="color1" onclick="setActiveStyleSheet('color1'); return false;" href="{{url('/')}}"></a>
+                                                <div class="col-10 col-sm-10 col-md-4 p-mob auto_margin">
+                                                    <a href="{{route('all-course',['id'=>$c->id])}}">
+                                                        <div class="card">
+                                                            <img class="card-img-top"
+                                                                 src="{{asset('course/'.$c->thumbnail)}}"
+                                                                 alt="Card image cap">
+                                                        </div>
+                                                    </a>
+                                                    <div class="col carousel_item_footer main_bg_color"
+                                                         style="color: white; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+
+                                                        <div class="col float-left">
+                                                            <p>{{$c->name}}<br>
+                                                                {!! $c->description !!}</p>
+                                                            <p>{{$c->users->name}}, {{$c->users->experience}}</p>
+                                                            <p class="float-right p-0" style="font-size: 10px">
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star checked"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span class="fa fa-star"></span>
+                                                                <span> 5</span>
+                                                                <span>(12345)</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+
+                                        </div>
+
+                                    </div>
+
                                 </div>
                             </div>
 
-                            <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
-                        @endsection
-                        <!-- Latter Subscription End -->
+                            <div class="col-sm-1 controls-top hide_on_mobile">
+                                <a class="btn-floating" href="#multi-item-{{$cat->name}}" style="color: #570055"
+                                   data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                            </div>
+
+                            <!--/.Slides-->
+
+                        </div>
+                        <!--/.Carousel Wrapper-->
+                        @endforeach
+                        <div class="row">
+                            <div class="col-12" id="img_slider">
+                                <!-- block 1 -->
+                                <div class="">
+                                    <div class="" style="min-height: 100px ;overflow: hidden;">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- slider close -->
+
+
+                        <!-- End -->
+
+                        <!--Description-->
+                        <hr style="width: 100%;margin-top: 3%; border-top:2px solid">
+                        <!-- Student Comment Section -->
+                        <div class="col-12 heading mt-3 mt-sm-4 mt-md-4 text-center">Student Feedback</div>
+                        <div class="container mt-3 mb-3">
+                            <div class="carousel slide multi-item-carousel" id="theCarousel">
+                                <div class="carousel-inner row mx-auto">
+                                    <div class="carousel-item active col-sm-12 col-md-4 mb-5">
+                                        <div class="student-box shadow-sm bg-white rounded">
+                                            <div class="d-flex">
+                                                <div class="student-img">
+                                                    <img class="img-fluid rounded-circle"
+                                                         src="{{asset('assets/frontend/img/Mask Group 1.png')}}">
+                                                </div>
+                                                <div class="stu-name">Abcom</div>
+                                            </div>
+                                            <div class="stu-description">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem
+                                                Ipsum
+                                                has been the industry's standard dummy text ever since the 1500s, when
+                                                an unknown
+                                                printer took a galley of type and scrambled it to make a type specimen
+                                                book. It has
+                                                survived not only five centuries, but also the leap into electronic
+                                                typesetting,
+                                                remaining essentially unchanged. It was popularised in the 1960s with
+                                                the release of
+                                                Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                                desktop
+                                                publishing software like Aldus PageMaker including versions of Lorem
+                                                Ipsum.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item active col-sm-12 col-md-4 mb-5">
+                                        <div class="student-box shadow-sm bg-white rounded">
+                                            <div class="d-flex">
+                                                <div class="student-img">
+                                                    <img class="img-fluid rounded-circle"
+                                                         src="{{asset('assets/frontend/img/Mask Group 1.png')}}">
+                                                </div>
+                                                <div class="stu-name">Abcom2</div>
+                                            </div>
+                                            <div class="stu-description">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem
+                                                Ipsum
+                                                has been the industry's standard dummy text ever since the 1500s, when
+                                                an unknown
+                                                printer took a galley of type and scrambled it to make a type specimen
+                                                book. It has
+                                                survived not only five centuries, but also the leap into electronic
+                                                typesetting,
+                                                remaining essentially unchanged. It was popularised in the 1960s with
+                                                the release of
+                                                Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                                desktop
+                                                publishing software like Aldus PageMaker including versions of Lorem
+                                                Ipsum.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item active col-sm-12 col-md-4 mb-5">
+                                        <div class="student-box shadow-sm bg-white rounded">
+                                            <div class="d-flex">
+                                                <div class="student-img">
+                                                    <img class="img-fluid rounded-circle"
+                                                         src="{{asset('assets/frontend/img/Mask Group 1.png')}}">
+                                                </div>
+                                                <div class="stu-name">Abcom</div>
+                                            </div>
+                                            <div class="stu-description">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem
+                                                Ipsum
+                                                has been the industry's standard dummy text ever since the 1500s, when
+                                                an unknown
+                                                printer took a galley of type and scrambled it to make a type specimen
+                                                book. It has
+                                                survived not only five centuries, but also the leap into electronic
+                                                typesetting,
+                                                remaining essentially unchanged. It was popularised in the 1960s with
+                                                the release of
+                                                Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                                desktop
+                                                publishing software like Aldus PageMaker including versions of Lorem
+                                                Ipsum.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev hide_on_mobile" href="#theCarousel" role="button"
+                                   data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next hide_on_mobile" href="#theCarousel" role="button"
+                                   data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End -->
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- Books Reading Section -->
+    <div class="book-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 text-center">
+                    <h4><b>Become an instructor</b></h4>
+                    <p>Top instructors from around the world teach millions of students on Udemy. We provide the
+                        tools and skills to teach what you love.</p>
+                    <button class="btn plum-btn waves-effect waves-light">Start teaching today</button>
+                </div>
+                <div class="col-12 col-sm-6 text-center">
+                    <h4><b>Become an Student</b></h4>
+                    <p>Top instructors from around the world teach millions of students on Udemy. We provide the
+                        tools and skills to teach what you love.</p>
+                    <button class="btn plum-btn waves-effect waves-light">Start learning today</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+    <div class="container-fluid plum-bg" style="padding: 40px 15px;line-height: 1;">
+        <!-- <div class="col-12 col-sm-12 offset-md-1" style="padding: 40px 15px;line-height: 1;">
+     -->
+        <div class="row">
+            <div class="col-12 col-sm-11 col-md-6" id="Subscribe_para">
+                <!-- <div class="mb-1 white-text">Sign up to receive our weekly newsletter</div> -->
+                <div class="white-text text-end">
+                    <p>Sign up to receive our weekly newsletter</p>
+                    <p>Stay uploaded on all new online and offline training courses</p>
+                </div>
+            </div>
+            <div class="col-10 col-sm-10 col-md-6" id="Subscribe_body">
+
+                <div class="form-group" id="Subscribe_inner_body">
+                    <div class="row">
+
+                        <div class="col-8 col-sm-8">
+                            <!-- <input type="text" class="form-control" id="filerAddress" placeholder="">
+                     --><input class="SubInput z-depth-1 form-control" type="text" placeholder="Enter your email">
+                        </div>
+                        <div class="col-4 col-sm-4 p-0">
+                            <span class="SubBtn"><a href="#">Subscribe</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="Subscription form-group">
+                    <input class="SubInput z-depth-1 form-control" type="text" placeholder="Enter your email">
+                    <span class="SubBtn"><a href="#">Subscribe</a></span>
+                </div> -->
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+
+    <!--  <div id="to-top" title="back to top">↑</div>
+-->
+    <button style="display: none;" onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+    <div class="sidepanel">
+        <span><i class="fa fa-cog fa-spin"></i></span>
+        <div class="color-picker">
+            <h3>Choose Your Color</h3>
+            <a class="color applied" onclick="setActiveStyleSheet('color'); return false;" href="{{url('/')}}"></a>
+            <a class="color1" onclick="setActiveStyleSheet('color1'); return false;" href="{{url('/')}}"></a>
+        </div>
+    </div>
+
+
+@endsection
+<!-- Latter Subscription End -->

@@ -100,6 +100,31 @@
       </div>
 
     </div>
+     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+@php
+    $categories = \App\Models\Category::all();
+@endphp
+
+     <div class="plum-bg">
+         <div class="row">
+             <div class="container container_category">
+                 <div id="basicSlider">
+                     <div class="MS-content">
+                         @if(isset($categories))
+                             @foreach($categories as $cat)
+                                 <div class="item text-center">
+                                     <a href="{{route('all-course',['id'=>$cat->id])}}" target="">
+                                         <img class="fadeIn fa category_width" src="{{asset('category/'.$cat->logo)}}">
+                                         <div class="font12 white-text cat-text">{{$cat->name}}</div>
+                                     </a>
+                                 </div>
+                             @endforeach
+                         @endif
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
 </nav>
 
 <!--   sidebar -->

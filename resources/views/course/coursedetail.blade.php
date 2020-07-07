@@ -75,6 +75,11 @@
                                     <a href="#"><button class="btn white-btn w-90">Buy now</button></a>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <a href="#"><button class="btn white-btn w-90">Add To Favorite</button></a>
+                                </div>
+                            </div>
                             <div class="height-2 mt-2"></div>
                             <div class="mt-3">
                                 <h4><b>This course includes</b></h4>
@@ -567,7 +572,7 @@
          player.controlBar.addChild('QualitySelector');
       });
 
-      
+
       $(function(){
     $('#basicExampleModal').modal({
         show: false
@@ -575,7 +580,7 @@
         $(this).find('video')[0].pause();
     });
 });
-   </script> 
+   </script>
 
 
 
