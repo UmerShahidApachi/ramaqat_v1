@@ -490,6 +490,7 @@ class ComposerStaticInit417ee0e2ff336eec7b7ae8cf378944b7
         'App\\CourseVideo' => __DIR__ . '/../..' . '/app/CourseVideo.php',
         'App\\Currency' => __DIR__ . '/../..' . '/app/Currency.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Favorite' => __DIR__ . '/../..' . '/app/Favorite.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',

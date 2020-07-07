@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Ramaqat</title>
     @include('includes.frontend.style')
+    
 </head>
 
 <body>
