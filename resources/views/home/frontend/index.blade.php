@@ -814,7 +814,7 @@
                             <!--Slides-->
                             @php
                                 $data =
-                                \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->orderByRaw('RAND()')->take(3)->get();
+                                \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->where('status',1)->orderByRaw('RAND()')->take(3)->get();
                             @endphp
                             <div class="col-md-10 p-0">
                                 <div class="carousel-inner" role="listbox">
@@ -866,7 +866,7 @@
                                         <div class="row">
                                             @php
                                                 $data1 =
-                                                \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->orderByRaw('RAND()')->take(3)->get();
+                                                \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->where('status',1)->orderByRaw('RAND()')->take(3)->get();
                                             @endphp
                                             @foreach($data1 as $c)
 
