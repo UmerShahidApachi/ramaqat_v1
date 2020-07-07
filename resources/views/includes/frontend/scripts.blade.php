@@ -1,6 +1,4 @@
-<!-- jQuery -->
 
-<script type="text/javascript" src="{{asset('assets/frontend/js/jquery.min.js')}}"></script>
 
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="{{asset('assets/frontend/js/popper.min.js')}}"></script>
@@ -82,11 +80,11 @@ document.getElementById("main").style.marginLeft= "0";
 </script>
 
 <script>
- $('.select-selected').bind('DOMSubtreeModified', function(){
-  var lang = $('.select-selected').text();
-  // alert(lang);
-  if (lang !="") {
-      if(lang=="Arabic"){
+ $('#change_lamguage').on('click', function(){
+  var lang = $('#change_lamguage').text();
+  var language = $.trim(lang);
+  if (language !="") {
+      if(language=="Arabic"){
         set_lang= 'ar';
       }else{
         set_lang= 'en';

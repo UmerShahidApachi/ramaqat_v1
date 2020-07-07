@@ -50,11 +50,16 @@
         <ul class="ulDBlock d-sm-block">
             <li>
                 <div class="custom-select">
-                <select id="select_language">
+              <!--   <select id="select_language">
                     <option class="plum-text" value="0">Language</option>
-                    <option value="1"><a href="#">English</a></option>
+                    <option value="1">English</option>
                     <option value="2">Arabic</option>
-                </select>
+                </select> -->
+                @if(Session::has('lang'))
+                <button id="change_lamguage"> @if(Session::get('lang')=="ar") English @else Arabic @endif</button>
+                @else
+                <button id="change_lamguage">Arabic</button>
+                @endif
                 </div>
             </li>
 {{--       <li><img src="{{asset('assets/frontend/img/line.png')}}" alt="cart"></li>--}}
