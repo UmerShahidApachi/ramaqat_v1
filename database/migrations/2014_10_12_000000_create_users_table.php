@@ -47,6 +47,7 @@ class CreateUsersTable extends Migration
             $table->string('insta_link')->nullable();
             $table->string('twitter_link')->nullable();
             $table->string('in_link')->nullable();
+            $table->string('about')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

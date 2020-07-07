@@ -134,6 +134,7 @@ Route::get('userlogin', 'Frontend\LoginController@userLogin')->name('login-form'
 Route::post('login_user', 'Frontend\LoginController@login_user')->name('login_user');
 Route::get('user-register', 'Frontend\RegisterController@userRegister')->name('register');
 Route::get('all-course', 'Frontend\CourseController@onlineCourse')->name('all-course');
+Route::get('trainer-profile', 'Backend\UserController@trainer_profile')->name('trainer_profile');
 Route::get('course-detail', 'Frontend\CourseController@course_detail')->name('detail-course');
 Route::get('offline-course', 'Frontend\CourseController@offlineCourse')->name('offline-course');
 Route::get('complete-course', 'Frontend\CourseController@completeCourse')->name('complete-course');

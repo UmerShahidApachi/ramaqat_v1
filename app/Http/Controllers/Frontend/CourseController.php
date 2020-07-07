@@ -39,11 +39,11 @@ class CourseController extends Controller
             if (!$category) {
                 abort(404);
             }
-        $data = Course::whereRaw("find_in_set($request->id,category_id)")->paginate(9);
+        $data = Course::whereRaw("find_in_set($request->id,category_id)")->where('status',1)->paginate(9);
 
         }else{
             $category = ['name'=>'All'];
-            $data = Course::paginate(9);
+            $data = Course::where('status',1)->paginate(9);
         }
         return view('course.onlineCourse',compact('data','category'));
     }
@@ -59,11 +59,11 @@ class CourseController extends Controller
             {
               $rate = Rating::where('course_id',$request->id)->where('user_id',Auth::user()->id)->first();
               $trainer_check = Rating::where('trainer_id',$data->user_id)->where('user_id',Auth::user()->id)->first();
-            return view('course.coursedetail', compact('data','rate','trainer_check'));  
+            return view('course.coursedetail', compact('data','rate','trainer_check'));
             }
-            return view('course.coursedetail', compact('data'));  
+            return view('course.coursedetail', compact('data'));
 
-            
+
         }
     }
     public function offlineCourse()
