@@ -6,7 +6,6 @@
    <script src="https://unpkg.com/video.js@7.5.4/dist/video.js"></script>
    <script src="https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js"></script>
    <link href="https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css" rel="stylesheet">
-        <script src="{{url('assets/jquery-3.2.1.js')}}"></script>
         <script src="{{url('assets/starrr.js')}}"></script>
         <link rel="stylesheet" href="{{url('assets/sweetalerts/sweetalert.css')}}">
         <script src="{{url('assets/sweetalerts/sweetalert.js')}}"></script>
