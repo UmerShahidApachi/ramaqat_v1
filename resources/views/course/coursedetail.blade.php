@@ -235,8 +235,11 @@
                                             <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyTwo" aria-expanded="false" aria-controls="accordionBodyTwo"
                                                class="collapsed ">
                                                 <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                 </a>
+                                                 <a href="{{url('show_lesson/'.$lesson->id)}}">
                                                 <h6>{{$lesson->title}}</h6>
-                                            </a>
+                                                </a>
+                                           
                                         </div>
                                     </div>
                                 </div>

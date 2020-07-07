@@ -149,6 +149,8 @@ Route::post('progressStore',  'progresscontroller@fileStore')->name('progressSto
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
 
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/show_lesson/{id}', 'Frontend\LessonController@index');
+
 

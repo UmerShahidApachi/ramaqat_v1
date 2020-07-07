@@ -656,7 +656,7 @@
                                         @foreach($latest1 as $c)
 
                                             <div class="col-10 col-sm-10 col-md-4 p-mob auto_margin">
-                                                <a href="{{route('all-course',['id'=>$c->id])}}">
+                                                <a href="{{route('detail-course',['id'=>$c->id])}}">
                                                     <div class="card">
                                                         <img class="card-img-top"
                                                              src="{{asset('course/'.$c->thumbnail)}}"
@@ -665,6 +665,11 @@
                                                 </a>
                                                 <div class="col carousel_item_footer main_bg_color"
                                                      style="color: white">
+                                                    <div class="col-2">
+                                                        <div style="width:45px;height:45px;">
+                                                            <img class="rounded-circle full-img" src="{{asset('users/'.$c->users['image'])}}">
+                                                        </div>
+                                                    </div>
 
                                                     <div class="col float-left">
                                                         <p>{{$c->name}}<br>
@@ -698,30 +703,59 @@
                                         @foreach($latest2 as $c)
 
                                             <div class="col-10 col-sm-10 col-md-4 p-mob auto_margin">
-                                                <a href="{{route('all-course',['id'=>$c->id])}}">
+                                                <a href="{{route('detail-course',['id'=>$c->id])}}">
                                                     <div class="card">
                                                         <img class="card-img-top"
                                                              src="{{asset('course/'.$c->thumbnail)}}"
                                                              alt="Card image cap">
                                                     </div>
                                                 </a>
-                                                <div class="col carousel_item_footer main_bg_color"
-                                                     style="color: white; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+                                                <div class="col carousel_item_footer main_bg_color" style="color: white">
+                                                    <div class="row">
+                                                        <div class="col-2">
+                                                            <div style="width:45px;height:45px;">
+                                                                <img class="rounded-circle full-img" src="{{asset('users/'.$c->users['image'])}}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 pr-0">
+                                                            <div class="trainer-n mb-1">
+                                                                <b>{{$c->users['name']}}</b>
+                                                            </div>
+                                                            <div class="course-d">
+                                                                {{$c->name}}
+                                                                -{{$c->lessons->count()}} Courses in 1 <br>
+                                                                {!! $c->description !!}
 
-                                                    <div class="col float-left">
-                                                        <p>{{$c->name}}<br>
-                                                            {!! $c->description !!}</p>
-                                                        <a href="{{route('trainer_profile',['id'=>$c->users->id])}}">
-                                                        <p>{{$c->users->name}}, {{$c->users->experience}}</p></a>
-                                                        <p class="float-right p-0" style="font-size: 10px">
-                                                            <span class="fa fa-star checked"></span>
-                                                            <span class="fa fa-star checked"></span>
-                                                            <span class="fa fa-star checked"></span>
-                                                            <span class="fa fa-star"></span>
-                                                            <span class="fa fa-star"></span>
-                                                            <span> 5</span>
-                                                            <span>(12345)</span>
-                                                        </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-4 text-center p-0">
+                                                            <ul class="course-rating-list">
+                                                                <li>
+                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="course-rating-list">
+                                                                <li>
+                                                                    <span>4.8</span>
+                                                                </li>
+                                                                <li>
+                                                                    (123)
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -826,31 +860,59 @@
                                             @foreach($data as $c)
 
                                                 <div class="col-10 col-sm-10 col-md-4 p-mob auto_margin">
-                                                    <a href="{{route('all-course',['id'=>$c->id])}}">
+                                                    <a href="{{route('detail-course',['id'=>$c->id])}}">
                                                         <div class="card">
                                                             <img class="card-img-top"
                                                                  src="{{asset('course/'.$c->thumbnail)}}"
                                                                  alt="Card image cap">
                                                         </div>
                                                     </a>
-                                                    <div class="col carousel_item_footer main_bg_color"
-                                                         style="color: white">
+                                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+                                                        <div class="row">
+                                                            <div class="col-2">
+                                                                <div style="width:45px;height:45px;">
+                                                                    <img class="rounded-circle full-img" src="{{asset('users/'.$c->users['image'])}}">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6 pr-0">
+                                                                <div class="trainer-n mb-1">
+                                                                    <b>{{$c->users['name']}}</b>
+                                                                </div>
+                                                                <div class="course-d">
+                                                                    {{$c->name}}
+                                                                    -{{$c->lessons->count()}} Courses in 1 <br>
+                                                                    {!! $c->description !!}
 
-                                                        <div class="col float-left">
-                                                            <p>{{$c->name}}<br>
-                                                                {!! $c->description !!}</p>
-                                                            <a href="{{route('trainer_profile',['id'=>$c->users->id])}}">
 
-                                                                <p>{{$c->users->name}}, {{$c->users->experience}}</p></a>
-                                                            <p class="float-right p-0" style="font-size: 10px">
-                                                                <span class="fa fa-star checked"></span>
-                                                                <span class="fa fa-star checked"></span>
-                                                                <span class="fa fa-star checked"></span>
-                                                                <span class="fa fa-star"></span>
-                                                                <span class="fa fa-star"></span>
-                                                                <span> 5</span>
-                                                                <span>(12345)</span>
-                                                            </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4 text-center p-0">
+                                                                <ul class="course-rating-list">
+                                                                    <li>
+                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                                    </li>
+                                                                </ul>
+                                                                <ul class="course-rating-list">
+                                                                    <li>
+                                                                        <span>4.8</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        (123)
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -871,31 +933,59 @@
                                             @foreach($data1 as $c)
 
                                                 <div class="col-10 col-sm-10 col-md-4 p-mob auto_margin">
-                                                    <a href="{{route('all-course',['id'=>$c->id])}}">
+                                                    <a href="{{route('detail-course',['id'=>$c->id])}}">
                                                         <div class="card">
                                                             <img class="card-img-top"
                                                                  src="{{asset('course/'.$c->thumbnail)}}"
                                                                  alt="Card image cap">
                                                         </div>
                                                     </a>
-                                                    <div class="col carousel_item_footer main_bg_color"
-                                                         style="color: white; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+                                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+                                                        <div class="row">
+                                                            <div class="col-2">
+                                                                <div style="width:45px;height:45px;">
+                                                                    <img class="rounded-circle full-img" src="{{asset('users/'.$c->users['image'])}}">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6 pr-0">
+                                                                <div class="trainer-n mb-1">
+                                                                    <b>{{$c->users['name']}}</b>
+                                                                </div>
+                                                                <div class="course-d">
+                                                                    {{$c->name}}
+                                                                    -{{$c->lessons->count()}} Courses in 1 <br>
+                                                                    {!! $c->description !!}
 
-                                                        <div class="col float-left">
-                                                            <p>{{$c->name}}<br>
-                                                                {!! $c->description !!}</p>
-                                                            <a href="{{route('trainer_profile',['id'=>$c->users->id])}}">
 
-                                                                <p>{{$c->users->name}}, {{$c->users->experience}}</p></a>
-                                                            <p class="float-right p-0" style="font-size: 10px">
-                                                                <span class="fa fa-star checked"></span>
-                                                                <span class="fa fa-star checked"></span>
-                                                                <span class="fa fa-star checked"></span>
-                                                                <span class="fa fa-star"></span>
-                                                                <span class="fa fa-star"></span>
-                                                                <span> 5</span>
-                                                                <span>(12345)</span>
-                                                            </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4 text-center p-0">
+                                                                <ul class="course-rating-list">
+                                                                    <li>
+                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                    </li>
+                                                                    <li>
+                                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                                    </li>
+                                                                </ul>
+                                                                <ul class="course-rating-list">
+                                                                    <li>
+                                                                        <span>4.8</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        (123)
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
