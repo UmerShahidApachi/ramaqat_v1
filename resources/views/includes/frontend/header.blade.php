@@ -1,27 +1,53 @@
+<style>
+
+  header ul.ulDBlock li {
+    display: contents;
+}
+
+@media (max-width: 900px) {
+  #searchbox_header{
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  header ul.ulDBlock li:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 370px) {
+  header #hide_on_mobile {
+    display: none;
+  }
+}
+</style>
+
 <!-- Start your project here-->
 <header>
  <!-- Start your project here-->
  <nav>
     <div class="d-flex justify-content-between top-header">
-      <div class="col-12 col-sm-3">
-      <ul class="ulDBlockMenu">
-        <li>
-          <img src="{{asset('assets/frontend/img/toggle.png')}}" class="openbtn" onclick="openNav()">
-        </li>
-        <li>
-         <a href="{{url('/')}}"> <img class="animated fadeIn logo_img" src="{{asset('assets/frontend/img/logo.png')}}"></a>
-        </li>
+      <div class="col">
+        <ul class="ulDBlockMenu">
+          <li>
+            <img src="{{asset('assets/frontend/img/toggle.png')}}" class="openbtn" onclick="openNav()">
+          </li>
+          <li>
+           <a href="{{url('/')}}"> <img class="animated fadeIn logo_img" src="{{asset('assets/frontend/img/logo.png')}}"></a>
+          </li>
+        </ul>
+      </div>
 
-      </ul>
+      <div class="col-4" id="searchbox_header">
+        <div class="HeaderSearch d-none d-sm-block">
+          <input class="SearchInput z-depth-1" type="search" placeholder="Search">
+          <img class="plumIcon" src="{{asset('assets/frontend/img/search (2).png')}}">
+        </div>
       </div>
-      <div class="col-12 col-sm-4">
-      <div class="HeaderSearch d-none d-sm-block">
-        <input class="SearchInput z-depth-1" type="search" placeholder="Search">
-        <img class="plumIcon" src="{{asset('assets/frontend/img/search (2).png')}}">
-      </div>
-      </div>
-      <div class="col-12 col-sm-5 text-end">
-        <ul class="ulDBlock d-none d-sm-block">
+
+      <div class="col text-end" id="hide_on_mobile">
+        <ul class="ulDBlock d-sm-block">
             <li>
                 <div class="custom-select">
                 <select id="select_language">
@@ -31,9 +57,9 @@
                 </select>
                 </div>
             </li>
-{{--            <li><img src="{{asset('assets/frontend/img/line.png')}}" alt="cart"></li>--}}
+{{--       <li><img src="{{asset('assets/frontend/img/line.png')}}" alt="cart"></li>--}}
             <li>
-            <a href="#"><img src="{{asset('assets/frontend/img/cart.png')}}" alt="cart"></a>
+              <a href="#"><img src="{{asset('assets/frontend/img/cart.png')}}" alt="cart"></a>
             </li>
             @guest
             <li>
@@ -58,6 +84,7 @@
                             </a>
 
                         @endif
+                      </li>
                     @endif
 
                 <li>
@@ -103,9 +130,6 @@
                     </div>
 
                     @endguest
-
-
-
             <div class="row sidebar_icons">
               <a href="javascript:void(0)" class="closebtn close_sidbar" onclick="closeNav()">×</a>
                 @auth
