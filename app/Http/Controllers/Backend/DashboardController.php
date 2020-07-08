@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 
 
 use App\CourseSale;
+use App\Favorite;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Course;
@@ -70,6 +71,7 @@ class DashboardController extends Controller
         return view('backend.admin.courses.sales', compact('data'));
 
     }
+
     public function sliderdata(Request $request){
 //        dd($request->all());
 
@@ -219,7 +221,7 @@ class DashboardController extends Controller
     public function course_edit($id)
     {
         $course = Course::find($id);
-        $cate_id = explode(',', $course->category_id);        
+        $cate_id = explode(',', $course->category_id);
         $categories = Category::all();
         $check = 0;
         return view('backend.admin.courses.edit', compact('categories','course','cate_id','check'));

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Favorite;
 use App\Http\Controllers\Controller;
+use App\Models\Course;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -99,7 +101,23 @@ class UserController extends Controller
 
         }
 
-        User::where('id', $request->id)->update(['name' => $request->name, 'role_id' => $request->role_id, 'email' => $request->email, 'cnic' => $request->cnic, 'password' => Hash::make($request->password), 'address' => $request->address, 'experience' => $request->experience, 'country' => $request->country, 'phone' => $request->phone, 'date_of_birth' => $request->date_of_birth, 'image' => $imgname]);
+        User::where('id', $request->id)->update(['name' => $request->name,
+            'role_id' => $request->role_id,
+            'email' => $request->email,
+            'cnic' => $request->cnic,
+            'password' => Hash::make($request->password),
+            'address' => $request->address,
+            'experience' => $request->experience,
+            'country' => $request->country,
+            'phone' => $request->phone,
+            'date_of_birth' => $request->date_of_birth,
+            'image' => $imgname,
+            'fb_link'=>$request->fb_link,
+            'insta_link'=>$request->description,
+            'twitter_link'=>$request->twitter_link,
+            'in_link'=>$request->in_link,
+            'about'=>$request->about
+        ]);
         if ($request->redirect == "trainer") {
             return redirect(url('admin/all-trainers'));
         } else {
@@ -120,6 +138,20 @@ class UserController extends Controller
 
 
     }
+    public function trainer_profile(Request $request)
+    {
+        $user =User::find($request->id);
+        $discounted = Course::where('user_id',$user->id)->orderByRaw('RAND()')->take(3)->get();
+        $discounted2 = Course::where('user_id',$user->id)->orderByRaw('RAND()')->take(3)->get();
+        $top = Course::where('user_id',$user->id)->orderByRaw('RAND()')->take(3)->get();
+        $top2 = Course::where('user_id',$user->id)->orderByRaw('RAND()')->take(3)->get();
+        $latest = Course::where('user_id',$user->id)->orderByRaw('RAND()')->take(3)->get();
+        $latest2 = Course::where('user_id',$user->id)->orderByRaw('RAND()')->take(3)->get();
+        $course_count = Course::where('user_id',$user->id)->orderByRaw('RAND()')->take(3)->count();
+        return view('trainer.index',compact('user','discounted','top','top2','latest','latest2','course_count','discounted2'));
+
+
+    }
 
     public function edit(Request $request)
     {
@@ -127,6 +159,17 @@ class UserController extends Controller
         $redirect = $request->redirect;
         $user = User::where('id', $request->id)->first();
         return view('backend.admin.trainers.edit', compact('user','redirect'));
+
+
+    }
+    public function fvt(Request $request)
+    {
+//        dd($request->all());
+        $course = Course::find($request->course_id);
+        if ($course && Auth::check()){
+            Favorite::create(['user_id'=>Auth::id(),'course_id'=>$request->course_id]);
+        }
+        return redirect()->back();
 
 
     }

@@ -81,8 +81,9 @@
                                 </div>
                             </div>
                             <div class="col-6 pr-0">
-                                <div class="trainer-n mb-1">
-                                    <b>{{$c->users['name']}}</b>
+                                <div class="trainer-n mb-1">                                                                    <a href="{{route('trainer_profile',['id'=>$c->users['id']])}}">
+
+                                        <b>{{$c->users['name']}}</b></a>
                                 </div>
                                 <div class="course-d">
                                     {{$c->name}}

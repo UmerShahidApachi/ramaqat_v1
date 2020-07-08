@@ -1,10 +1,15 @@
 @extends('backend.Trainer.layouts.app')
 @section('customSection')
-    <div class="container mt-5">
+<style>
+    .form-group .bmd-label-static {
+        top: -20px;
+    }
+</style>
+    <div class="mt-5">
         <form  id="course_form" method="POST" action="{{route('update_profile')}}" enctype="multipart/form-data">
             @csrf
-            <div class="modal-header">
-                <h4 class="modal-title">Update Profile</h4>
+            <div class="modal-header mb-2">
+                <h4 class="modal-title" style="color: #570055">Update Profile</h4>
             </div>
 
 
@@ -66,6 +71,44 @@
                 </div>
 
             </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Facebook</label>
+                        <input type="url" class="form-control" name="fb_link" value="{{Auth::user()->fb_link}}" required>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Linkedin</label>
+                        <input type="url" class="form-control" name="in_link" value="{{Auth::user()->in_link}}" required>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Twitter</label>
+                        <input type="url" class="form-control" name="twitter_link" value="{{Auth::user()->twitter_link}}" required>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Instagram</label>
+                        <input type="url" class="form-control" name="insta_link" value="{{Auth::user()->insta_link}}" required>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label>About</label>
+                        <textarea id="description"  class="form-control description" name="about" required>{!! Auth::user()->about !!}</textarea>
+                    </div>
+                </div>
+            </div>
             <div class="col-6">
                 <div class="btn btn-primary btn-sm float-left">
                     <span>Choose Profile Photo</span>
@@ -82,4 +125,10 @@
             </div>
         </form>
     </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('description');
+    </script>
 @endsection
