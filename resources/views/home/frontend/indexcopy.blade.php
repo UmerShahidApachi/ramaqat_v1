@@ -1,6 +1,344 @@
 @extends('layouts.main')
 
 @section('indexpage')
+<<<<<<< HEAD
+<style>
+    #myBtn {
+        position: relative;
+        float: right;
+        bottom: -30px;
+        right: -80px;
+        border-radius: 50%;
+        padding: 10px 15px;
+        color: #570055;
+        border-color: #570055;
+        background-color: white;
+        outline: none;
+    }
+
+
+    #img_slider .slider_header a {
+        color: #570055;
+        font-size: 29px;
+    }
+
+    section div:nth-child(0) {
+        max-width: 1920px;
+    }
+
+    section #content_main_body {
+        /* margin-top:201px; */
+        margin-bottom: 41px;
+        padding-bottom: 2%;
+        background-color: white;
+    }
+
+
+    .main_color {
+        color: #570055;
+    }
+
+    .auto_height {
+        min-height: 100px;
+        /* overflow: hidden; */
+    }
+
+    #left_body {
+
+        /*background-color: lightpink;*/
+    }
+
+    #trainer11_logo {
+        /* margin-top:-150px */
+    }
+
+    #trainer11_logo_title p:nth-child(1) {
+        font-size: 43px;
+
+    }
+
+    #trainer11_logo_title p:nth-child(2) {
+        font-size: 19px;
+    }
+
+    .border_right {
+        border-right: 1px solid #570055;
+    }
+
+    .table_f_size {
+        font-size: 18px;
+    }
+
+    .carousel_item_footer {
+        overflow: hidden;
+        position: relative;
+        bottom: 0px;
+        right: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 2%;
+    }
+
+    .carousel_item_footer div {
+        padding: 5px;
+    }
+
+    .carousel_item_footer div p:nth-child(1) {
+        font-size: 1.2vw;
+        min-height: 25px;
+    }
+
+    .carousel_item_footer div p:nth-child(2) {
+        font-size: 0.9vw;
+        font-weight: lighter;
+        letter-spacing: .5px;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+
+    .carousel_item_footer div p {
+        margin: 0px;
+    }
+
+
+    .hr_home {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    /* basic slider style */
+
+    #mixedSlider {
+        position: relative;
+    }
+
+    #mixedSlider .MS-content {
+        white-space: nowrap;
+        overflow: hidden;
+        margin: 0 5%;
+    }
+
+    #mixedSlider .MS-content .item {
+        display: inline-block;
+        width: 33.3333%;
+        position: relative;
+        vertical-align: top;
+        overflow: hidden;
+        height: 100%;
+        white-space: normal;
+        padding: 0 10px;
+    }
+
+    #mixedSlider .MS-content .item .imgTitle {
+        position: relative;
+    }
+
+    #mixedSlider .MS-content .item .imgTitle .blogTitle {
+        margin: 0;
+        text-align: left;
+        letter-spacing: 2px;
+        color: #252525;
+        font-style: italic;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 100%;
+        bottom: 0;
+        font-weight: bold;
+        padding: 0 0 2px 10px;
+    }
+
+    #mixedSlider .MS-content .item .imgTitle img {
+        height: auto;
+        width: 100%;
+    }
+
+    #mixedSlider .MS-content .item p {
+        font-size: 16px;
+        margin: 2px 10px 0 5px;
+        text-indent: 15px;
+    }
+
+    #mixedSlider .MS-content .item a {
+        float: right;
+        margin: 0 20px 0 0;
+        font-size: 16px;
+        font-style: italic;
+        color: rgba(173, 0, 0, 0.82);
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: linear 0.1s;
+    }
+
+    #mixedSlider .MS-content .item a:hover {
+        text-shadow: 0 0 1px grey;
+    }
+
+    #mixedSlider .MS-controls button {
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        outline: 0;
+        font-size: 50px;
+        top: 95px;
+        color: rgba(0, 0, 0, 0.4);
+        transition: 0.15s linear;
+    }
+
+    #mixedSlider .MS-controls button:hover {
+        color: rgba(0, 0, 0, 0.8);
+    }
+
+    #basicSlider {
+        position: relative;
+    }
+
+    #basicSlider img {
+        width: 65px;
+        height: 65px;
+    }
+
+    #basicSlider .MS-content {
+        white-space: nowrap;
+        overflow: hidden;
+        margin: 0 2%;
+        padding-top: 1%;
+
+    }
+
+    #basicSlider .MS-content .item {
+        display: inline-block;
+        width: 12%;
+        position: relative;
+        vertical-align: top;
+        overflow: hidden;
+        height: 100%;
+        white-space: normal;
+        line-height: 30px;
+        vertical-align: middle;
+    }
+
+    #basicSlider .MS-content .item a {
+        line-height: 50px;
+        vertical-align: middle;
+    }
+
+    #basicSlider .MS-controls button {
+        position: absolute;
+    }
+
+    #basicSlider .MS-controls .MS-left {
+        top: 35px;
+        left: 10px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: lightgray;
+        font-size: 30px;
+        font-weight: 400 !important;
+    }
+
+    #basicSlider .MS-controls .MS-right {
+        top: 35px;
+        right: 10px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: lightgray;
+        font-size: 30px;
+        font-weight: 400 !important;
+    }
+
+    /* custom-css-start */
+    .newcard {
+        border-bottom-width: 3px;
+        border-radius: 0.8rem;
+        border: 1px solid #e9ecef;
+        padding: .3rem;
+        margin-top: 3px;
+        /*transition: all ease-in-out .2s;*/
+    }
+
+    .newcard .card {
+        border-radius: 0.6rem;
+    }
+
+    .newcard img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow: hidden;
+    }
+
+    .newcard:hover {
+        overflow: hidden;
+        -webkit-transform: scale(1.02);
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.102) !important;
+    }
+
+    .middlesec {
+        color: white;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .middlesec-p1,
+    .middlesec-p2 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .middlesec-p3 {
+        font-size: 12px;
+    }
+
+    .bottomsec {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2px 10px;
+        background-color: #343a40;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .bottomsec-img {
+        width: 50px;
+    }
+
+    .bottomsec-p {
+        margin-bottom: 0;
+        font-weight: 600;
+        padding-left: 10px;
+        color: white;
+    }
+    .cat-title {
+      font-weight: 600;
+      font-size: 28px;
+      color: #343A40;
+      text-transform: capitalize;
+    }
+    .student-box {
+      border-radius: 10px 20px !important;
+      box-shadow: 5px 5px 4px 4px rgba(0, 0, 0, 0.102) !important;
+    }
+    .student-box:hover {
+      overflow: hidden;
+      -webkit-transform: scale(1.02);
+    }
+    .stu-description {
+      font-size: 13px;
+      font-weight: 400;
+      padding: 0 5px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 767px) {
+        #mixedSlider .MS-content .item {
+            width: 100%;
+=======
     <style>
         #myBtn {
             position: relative;
@@ -13,6 +351,7 @@
             border-color: #570055;
             background-color: white;
             outline: none;
+>>>>>>> b4adcd0c42bf51ed976aa4dc25a3251e50932a7a
         }
 
 
@@ -894,9 +1233,15 @@
                 <!-- block 1 -->
                 @foreach($categories1 as $cat)
 
+<<<<<<< HEAD
+                <!-- <div class="slider_header text-center m-2"><u>{{$cat->name}}</u></div> -->
+                <!--Carousel Wrapper-->
+                <div id="multi-item-{{$cat->name}}" class="carousel slide carousel-multi-item" data-ride="carousel">
+=======
                     <div class="slider_header text-center m-2"><u>{{$cat->name}}</u></div>
                     <!--Carousel Wrapper-->
                     <div id="multi-item-{{$cat->name}}" class="carousel slide carousel-multi-item" data-ride="carousel">
+>>>>>>> b4adcd0c42bf51ed976aa4dc25a3251e50932a7a
 
                         <!--/.Indicators-->
                         <div class="row" style="direction:ltr !important;">
@@ -943,16 +1288,140 @@
 
                                                                     <div class="trainer-n mb-1">
 
+<<<<<<< HEAD
+                                        <!-- <div class="col-10 col-sm-10 col-md-4 p-mob auto_margin">
+                                            <div class="card">
+                                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                                            </div>
+                                            <div class="col carousel_item_footer main_bg_color" style="color: white">
+
+                                                <div class="col float-left">
+                                                    <p>{{$c->name}}<br>
+                                                        {{$c->description}}</p>
+                                                    <p>{{$c->users->name}}, {{$c->users->experience}}</p>
+                                                    <p class="float-right p-0" style="font-size: 10px">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span> 5</span>
+                                                        <span>(12345)</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div> -->
+
+
+                                        <div class="col-md-4">
+                                            <div class="newcard">
+                                                <div class="card topsec">
+                                                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                                                </div>
+                                                <div class="col carousel_item_footer main_bg_color middlesec">
+                                                    <div class="col float-left">
+                                                        <p class="middlesec-p1">{{$c->name}}<br>
+                                                            {{$c->description}}
+                                                        </p>
+                                                        <p class="middlesec-p2">
+                                                            {{$c->users->name}}, {{$c->users->experience}}
+                                                        </p>
+                                                        <p class="float-right p-0 mt-1 middlesec-p3">
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span> 5</span>
+                                                            <span>(12345)</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="bottomsec">
+                                                    <img class="bottomsec-img" src="{{asset('assets/frontend/img/Mask Group 1.png')}}" />
+                                                    <p class="bottomsec-p">Mr Abcom</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        @endforeach
+=======
                                                                         <b>{{$c->users['name']}}</b>
                                                                     </div>
                                                                 </a>
                                                                 <div class="course-d">
+>>>>>>> b4adcd0c42bf51ed976aa4dc25a3251e50932a7a
 
                                                                     {{$c->name}}
                                                                     -{{$c->lessons->count()}} Courses in 1 <br>
                                                                     {!! $c->description !!}
 
 
+<<<<<<< HEAD
+                                <!--Second slide-->
+                                <div class="carousel-item mb-2">
+                                    <div class="row">
+                                        @php
+                                        $data1 =
+                                        \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->orderByRaw('RAND()')->take(3)->get();
+                                        @endphp
+                                        @foreach($data1 as $c)
+
+                                        <div class="col-md-4">
+                                            <div class="newcard">
+                                                <div class="card topsec">
+                                                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                                                </div>
+                                                <div class="col carousel_item_footer main_bg_color middlesec">
+                                                    <div class="col float-left">
+                                                        <p class="middlesec-p1">{{$c->name}}<br>
+                                                            {{$c->description}}
+                                                        </p>
+                                                        <p class="middlesec-p2">
+                                                            {{$c->users->name}}, {{$c->users->experience}}
+                                                        </p>
+                                                        <p class="float-right p-0 mt-1 middlesec-p3">
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span> 5</span>
+                                                            <span>(12345)</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="bottomsec">
+                                                    <img class="bottomsec-img" src="{{asset('assets/frontend/img/Mask Group 1.png')}}" />
+                                                    <p class="bottomsec-p">Mr Abcom</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="col-10 col-sm-10 col-md-4 p-mob auto_margin">
+                                            <div class="card">
+                                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                                            </div>
+                                            <div class="col carousel_item_footer main_bg_color" style="color: white; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+
+                                                <div class="col float-left">
+                                                    <p>{{$c->name}}<br>
+                                                        {{$c->description}}</p>
+                                                    <p>{{$c->users->name}}, {{$c->users->experience}}</p>
+                                                    <p class="float-right p-0" style="font-size: 10px">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span> 5</span>
+                                                        <span>(12345)</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                        @endforeach
+=======
                                                                 </div>
                                                             </div>
                                                             <div class="col-4 text-center p-0">
@@ -993,13 +1462,48 @@
                                             @endforeach
 
                                         </div>
+>>>>>>> b4adcd0c42bf51ed976aa4dc25a3251e50932a7a
 
                                     </div>
                                     <!--/.First slide-->
 
+<<<<<<< HEAD
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-1 controls-top hide_on_mobile">
+                            <a class="btn-floating" href="#multi-item-{{$cat->name}}" style="color: #570055" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                        </div>
+
+                        <!--/.Slides-->
+
+                    </div>
+                    <!--/.Carousel Wrapper-->
+                    @endforeach
+                    <div class="row">
+                        <div class="col-12" id="img_slider">
+                            <!-- block 1 -->
+                            <div class="">
+                                <div class="" style="min-height: 100px ;overflow: hidden;">
+                                    @foreach($categories1 as $cat)
+
+                                    <!-- <div class="slider_header text-center m-2"><u>{{$cat->name}}</u></div> -->
+                                    <!--Carousel Wrapper-->
+                                    <div id="multi-item-{{$cat->name}}" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                                        <!--/.Indicators-->
+                                        <div class="row" style="direction:ltr !important;">
+                                            <div class="col-md-1 controls-top">
+                                                <a class="btn-floating" href="#multi-item-{{$cat->name}}" style="color: #570055" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                                            </div>
+                                            <!--Slides-->
+=======
                                     <!--Second slide-->
                                     <div class="carousel-item mb-2">
                                         <div class="row">
+>>>>>>> b4adcd0c42bf51ed976aa4dc25a3251e50932a7a
                                             @php
                                                 $data1 =
                                                 \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->where('status',1)->orderByRaw('RAND()')->take(3)->get();
@@ -1017,13 +1521,59 @@
                                                     <div class="col carousel_item_footer main_bg_color"
                                                          style="color: white">
                                                         <div class="row">
+<<<<<<< HEAD
+                                                            @foreach($data as $c)
+
+                                                            <div class="col-md-4">
+                                                                <div class="newcard">
+                                                                    <div class="card topsec">
+                                                                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                                                                    </div>
+                                                                    <div class="col carousel_item_footer main_bg_color middlesec">
+                                                                        <div class="col float-left">
+                                                                            <p class="middlesec-p1">{{$c->name}}<br>
+                                                                                {{$c->description}}
+                                                                            </p>
+                                                                            <p class="middlesec-p2">
+                                                                                {{$c->users->name}}, {{$c->users->experience}}
+                                                                            </p>
+                                                                            <p class="float-right p-0 mt-1 middlesec-p3">
+                                                                                <span class="fa fa-star checked"></span>
+                                                                                <span class="fa fa-star checked"></span>
+                                                                                <span class="fa fa-star checked"></span>
+                                                                                <span class="fa fa-star"></span>
+                                                                                <span class="fa fa-star"></span>
+                                                                                <span> 5</span>
+                                                                                <span>(12345)</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="bottomsec">
+                                                                        <img class="bottomsec-img" src="{{asset('assets/frontend/img/Mask Group 1.png')}}" />
+                                                                        <p class="bottomsec-p">Mr Abcom</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- <div class="col-4 col-md-4 p-mob">
+                                                                <div class="card">
+                                                                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+=======
                                                             <div class="col-2">
                                                                 <div style="width:45px;height:45px;">
                                                                     <img class="rounded-circle full-img"
                                                                          src="{{asset('users/'.$c->users['image'])}}">
+>>>>>>> b4adcd0c42bf51ed976aa4dc25a3251e50932a7a
                                                                 </div>
                                                             </div>
+<<<<<<< HEAD
+                                                        </div> -->
+
+
+                                                        @endforeach
+=======
                                                             <div class="col-6 pr-0">                                                                    <a href="{{route('trainer_profile',['id'=>$c->users->id])}}">
+>>>>>>> b4adcd0c42bf51ed976aa4dc25a3251e50932a7a
 
                                                                 <div class="trainer-n mb-1">
                                                                     <b>{{$c->users['name']}}</b>
@@ -1035,6 +1585,95 @@
                                                                     {!! $c->description !!}
 
 
+<<<<<<< HEAD
+                                                <!--Second slide-->
+                                                <div class="carousel-item mb-2">
+                                                    <div class="row">
+                                                        @php
+                                                        $data1 =
+                                                        \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->orderByRaw('RAND()')->take(3)->get();
+                                                        @endphp
+                                                        @foreach($data1 as $c)
+
+                                                        <div class="col-md-4">
+                                                                <div class="newcard">
+                                                                    <div class="card topsec">
+                                                                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                                                                    </div>
+                                                                    <div class="col carousel_item_footer main_bg_color middlesec">
+                                                                        <div class="col float-left">
+                                                                            <p class="middlesec-p1">{{$c->name}}<br>
+                                                                                {{$c->description}}
+                                                                            </p>
+                                                                            <p class="middlesec-p2">
+                                                                                {{$c->users->name}}, {{$c->users->experience}}
+                                                                            </p>
+                                                                            <p class="float-right p-0 mt-1 middlesec-p3">
+                                                                                <span class="fa fa-star checked"></span>
+                                                                                <span class="fa fa-star checked"></span>
+                                                                                <span class="fa fa-star checked"></span>
+                                                                                <span class="fa fa-star"></span>
+                                                                                <span class="fa fa-star"></span>
+                                                                                <span> 5</span>
+                                                                                <span>(12345)</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="bottomsec">
+                                                                        <img class="bottomsec-img" src="{{asset('assets/frontend/img/Mask Group 1.png')}}" />
+                                                                        <p class="bottomsec-p">Mr Abcom</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        <!-- <div class="col-4 col-md-4 p-mob">
+                                                            <div class="card">
+                                                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
+                                                            </div>
+                                                            <div class="col carousel_item_footer main_bg_color" style="color: white">
+                                                                <div class="row">
+                                                                    <div class="col-12 col-sm-2">
+                                                                        <div style="width:45px;height:45px;">
+                                                                            <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/user-1.png')}}">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-6 pr-0">
+                                                                        <div class="trainer-n mb-1">
+                                                                            <b>{{$c->name}}</b>
+                                                                        </div>
+                                                                        <div class="course-d">
+                                                                            {{$c->description}}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-4 text-center p-0">
+                                                                        <ul class="course-rating-list">
+                                                                            <li>
+                                                                                <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                            </li>
+                                                                            <li>
+                                                                                <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                            </li>
+                                                                            <li>
+                                                                                <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                            </li>
+                                                                            <li>
+                                                                                <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                            </li>
+                                                                            <li>
+                                                                                <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                                            </li>
+                                                                        </ul>
+                                                                        <ul class="course-rating-list">
+                                                                            <li>
+                                                                                <span>4.8</span>
+                                                                            </li>
+                                                                            <li>
+                                                                                (123)
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+=======
+>>>>>>> b4adcd0c42bf51ed976aa4dc25a3251e50932a7a
                                                                 </div>
                                                             </div>
                                                             <div class="col-4 text-center p-0">
@@ -1070,6 +1709,42 @@
                                                                 </ul>
                                                             </div>
                                                         </div>
+<<<<<<< HEAD
+                                                    </div> -->
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1 controls-top">
+                                        <a class="btn-floating" href="#multi-item-{{$cat->name}}" style="color: #570055" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                                <!--/.Slides-->
+                            </div>
+                            <!--/.Carousel Wrapper-->
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- slider close -->
+
+            <!-- End -->
+
+            <!--Description-->
+            <hr class="mt-5" style="width: 100%; height: 5px; border-top:2px solid">
+            <!-- Student Comment Section -->
+            <div class="col-12 heading mt-3 mt-sm-4 mt-md-4 text-center">Student Feedback</div>
+            <div class="container mt-3 mb-3">
+                <div class="carousel slide multi-item-carousel" id="theCarousel">
+                    <div class="carousel-inner row mx-auto">
+                        <div class="carousel-item active col-sm-12 col-md-4 mb-5">
+                            <div class="student-box shadow-sm bg-white rounded">
+                                <div class="d-flex">
+                                    <div class="student-img">
+                                        <img class="img-fluid rounded-circle" src="{{asset('assets/frontend/img/Mask Group 1.png')}}">
+=======
                                                     </div>
                                                 </div>
                                             @endforeach
@@ -1142,6 +1817,7 @@
                                                 Ipsum.
                                             </div>
                                         </div>
+>>>>>>> b4adcd0c42bf51ed976aa4dc25a3251e50932a7a
                                     </div>
                                     <div class="carousel-item active col-sm-12 col-md-4 mb-5">
                                         <div class="student-box shadow-sm bg-white rounded">
@@ -1217,6 +1893,26 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
+
+
+        <div class="container-fluid px-0">
+            <!-- Books Reading Section -->
+            <div class="book-sec" style="padding: 50px 20px">
+              <div class="row">
+                <div class="col-1"></div>
+                <div class="col-lg-5 col-md-12 col-sm-12 text-center">
+                    <h4><b>Become an instructor</b></h4>
+                    <p style="font-size: 14px;width: 80%;text-align: center;margin: auto;line-height: 24px">Top instructors from around the world teach millions of students on Udemy. We provide the
+                        tools and skills to teach what you love.</p>
+                    <button class="btn plum-btn waves-effect waves-light mt-3">Start teaching today</button>
+                </div>
+                <div class="col-lg-5 col-md-12 col-sm-12 text-center">
+                    <h4><b>Become an Student</b></h4>
+                    <p style="font-size: 14px;width: 80%;text-align: center;margin: auto;line-height: 24px">Top instructors from around the world teach millions of students on Udemy. We provide the
+                        tools and skills to teach what you love.</p>
+                    <button class="btn plum-btn waves-effect waves-light mt-3">Start learning today</button>
+=======
     <!-- Books Reading Section -->
     <div class="book-sec">
         <div class="container">
@@ -1232,9 +1928,25 @@
                     <p>Top instructors from around the world teach millions of students on Udemy. We provide the
                         tools and skills to teach what you love.</p>
                     <button class="btn plum-btn waves-effect waves-light">Start learning today</button>
+>>>>>>> b4adcd0c42bf51ed976aa4dc25a3251e50932a7a
                 </div>
+                <div class="col-1"></div>
+              </div>
             </div>
+            <!-- End -->
         </div>
+<<<<<<< HEAD
+        <div class="container-fluid plum-bg" style="padding: 40px 15px;line-height: 1;">
+            <!-- <div class="col-12 col-sm-12 offset-md-1" style="padding: 40px 15px;line-height: 1;">
+         -->
+            <div class="row">
+                <div class="col-12 col-sm-11 col-md-6" id="Subscribe_para">
+                    <!-- <div class="mb-1 white-text">Sign up to receive our weekly newsletter</div> -->
+                    <div class="white-text text-end">
+                        <p>Sign up to receive our weekly newsletter</p>
+                        <p>Stay uploaded on all new online and offline training courses</p>
+                    </div>
+=======
     </div>
     <!-- End -->
     <div class="container-fluid plum-bg" style="padding: 40px 15px;line-height: 1;">
@@ -1246,6 +1958,7 @@
                 <div class="white-text text-end">
                     <p>Sign up to receive our weekly newsletter</p>
                     <p>Stay uploaded on all new online and offline training courses</p>
+>>>>>>> b4adcd0c42bf51ed976aa4dc25a3251e50932a7a
                 </div>
             </div>
             <div class="col-10 col-sm-10 col-md-6" id="Subscribe_body">
@@ -1253,12 +1966,22 @@
                 <div class="form-group" id="Subscribe_inner_body">
                     <div class="row">
 
+<<<<<<< HEAD
+                            <div class="col-8 col-sm-8">
+                                <!-- <input type="text" class="form-control" id="filerAddress" placeholder="">
+                         --><input class="SubInput z-depth-1 form-control" type="text" placeholder="Enter your email">
+                            </div>
+                            <div class="col-4 col-sm-4 p-0">
+                                <span class="SubBtn ml-2 px-4"><a href="#">Subscribe</a></span>
+                            </div>
+=======
                         <div class="col-8 col-sm-8">
                             <!-- <input type="text" class="form-control" id="filerAddress" placeholder="">
                      --><input class="SubInput z-depth-1 form-control" type="text" placeholder="Enter your email">
                         </div>
                         <div class="col-4 col-sm-4 p-0">
                             <span class="SubBtn"><a href="#">Subscribe</a></span>
+>>>>>>> b4adcd0c42bf51ed976aa4dc25a3251e50932a7a
                         </div>
                     </div>
                 </div>

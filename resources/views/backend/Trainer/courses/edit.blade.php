@@ -1,6 +1,11 @@
 @extends('backend.Trainer.layouts.app')
 @section('customSection')
-    <div class="container mt-5">
+<style>
+    .form-group .bmd-label-static{
+        top: -18px !important ;
+    }
+</style>
+    <div class="container">
     <form  id="course_form" method="POST" action="{{route('update-course')}}" enctype="multipart/form-data">
         @csrf
         <input type="hidden" name="id" value="{{$course->id}}">
@@ -14,9 +19,9 @@
                 <label>Category</label>
                 <select class="form-control chosen chosen-height" name="category_id[]" multiple required>
                     @foreach($categories as $c)
-                        
+
                         <option value="{{$c->id}}" @if(isset($cate_id[$check])) @if($cate_id[$check] == $c->id) @php $check++ @endphp selected @endif @endif>{{$c->name}}</option>
-                    
+
                     @endforeach
                 </select>
             </div>
@@ -76,7 +81,7 @@
 <script>
     CKEDITOR.replace('description');
 </script>
-<script>    
+<script>
     $(".chosen").chosen();
 </script>
 @endsection
