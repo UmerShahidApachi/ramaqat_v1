@@ -251,7 +251,7 @@
                 @if(Session::has('lang'))
 
                 <button id="change_lamguage"  class="btn white-btn"> <!-- <i style="pointer-events: none;" class="fa fa-language fa-2x" aria-hidden="true"></i> -->
-             @if(Session::get('lang')=="ar") English @else اللغة العربية @endif </button>
+             @if(Session::get('lang')=="ar") English @else Arabic @endif </button>
                 @else
                 <button id="change_lamguage" class="btn white-btn">Arabic</button>
                 @endif
@@ -364,7 +364,7 @@
                     @if(Auth::user()->role_id == 2)
               <a href="{{route('Trainer/dashboard')}}"><img src="{{asset('assets/frontend/img/dark_mode.png')}}">Dashboard</a>
                     @endif
-              <a href="#"><img src="{{asset('assets/frontend/img/dark_mode.png')}}">Dark Mode</a>
+              <a href="#" onclick="setActiveStyleSheet('color1'); return false;" href="{{url('/')}}" ><img src="{{asset('assets/frontend/img/dark_mode.png')}}" >Dark Mode</a>
                         @if(Auth::user()->role_id == 3)
 
                         <a href="{{route('my_courses')}}"><img src="{{asset('assets/frontend/img/online_courses.png')}}">My Courses</a>
