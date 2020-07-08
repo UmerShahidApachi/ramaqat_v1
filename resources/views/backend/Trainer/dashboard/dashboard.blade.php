@@ -100,6 +100,7 @@
 {{--        </ul>--}}
 {{--      </div>--}}
 {{--    </div>--}}
+
 {{--    <div class="main-panel">--}}
 {{--      <!-- Navbar -->--}}
 {{--      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">--}}
@@ -166,11 +167,13 @@
 {{--          </div>--}}
 {{--        </div>--}}
 {{--      </nav>--}}
+
 {{--      <!-- End Navbar -->--}}
+
 {{--      <div class="content">--}}
 {{--        <div class="container-fluid">--}}
 {{--          <div class="row">--}}
-{{--            <div class="col-lg-3 col-md-6 col-sm-6">--}}
+{{--            <div class="col-lg-6 col-md-6 col-sm-6">--}}
 {{--              <div class="card card-stats">--}}
 {{--                <div class="card-header card-header-warning card-header-icon">--}}
 {{--                  <div class="card-icon">--}}
@@ -189,7 +192,7 @@
 {{--                </div>--}}
 {{--              </div>--}}
 {{--            </div>--}}
-{{--            <div class="col-lg-3 col-md-6 col-sm-6">--}}
+{{--            <div class="col-lg-6 col-md-6 col-sm-6">--}}
 {{--              <div class="card card-stats">--}}
 {{--                <div class="card-header card-header-success card-header-icon">--}}
 {{--                  <div class="card-icon">--}}
@@ -205,7 +208,7 @@
 {{--                </div>--}}
 {{--              </div>--}}
 {{--            </div>--}}
-{{--            <div class="col-lg-3 col-md-6 col-sm-6">--}}
+{{--            <div class="col-lg-6 col-md-6 col-sm-6">--}}
 {{--              <div class="card card-stats">--}}
 {{--                <div class="card-header card-header-danger card-header-icon">--}}
 {{--                  <div class="card-icon">--}}
@@ -581,7 +584,7 @@
 {{--            </div>--}}
 {{--          </div>--}}
 {{--        </div>--}}
-{{--      </div>--}}
+
 {{--      <footer class="footer">--}}
 {{--        <div class="container-fluid">--}}
 {{--          <nav class="float-left">--}}
@@ -619,6 +622,7 @@
 {{--      </footer>--}}
 {{--    </div>--}}
 {{--  </div>--}}
+{{--	</div>--}}
 {{--  <div class="fixed-plugin">--}}
 {{--    <div class="dropdown show-dropdown">--}}
 {{--      <a href="#" data-toggle="dropdown">--}}

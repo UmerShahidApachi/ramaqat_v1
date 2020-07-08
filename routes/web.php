@@ -26,14 +26,15 @@ Route::post('language/{locale}', function (Request $request,$locale) {
 
 Route::get('/', function () {
     $latest = Course::where('status',1)->get()->take(3);
+    $latest2 = Course::where('status',1)->orderByRaw('RAND()')->take(3)->get();
     $categories = Category::all();
     $categories1 = Category::take(3)->get();
     $slider = Slider::all();
     $slider1 = Slider::where('id', '>=', 1)->first();
-    $latest1 = Course::where('id', '>=', 1)->where('status',1)->first();
+    $latest1 = Course::where('status',1)->orderByRaw('RAND()')->take(3)->get();
     $setting = Setting::where('id',1)->first();
 
-    return view('home.frontend.index', compact('slider', 'categories', 'categories1', 'slider1', 'latest', 'latest1','setting'));
+    return view('home.frontend.index', compact('slider', 'categories', 'categories1', 'slider1', 'latest', 'latest1','latest2','setting'));
 });
 /**
  * admin routes
@@ -102,6 +103,7 @@ Route::prefix('trainer')->group(function () {
         Route::get('dashboard', 'Trainer\DashboardController@dashboard')->name('Trainer/dashboard');
         Route::get('my-courses', 'Trainer\DashboardController@courses')->name('my_courses');
         Route::get('sell-courses', 'Trainer\DashboardController@sell_courses')->name('sell_courses');
+        Route::get('favorite-courses', 'Trainer\DashboardController@fvt')->name('user_fvt');
         Route::get('add-form', 'Frontend\CourseController@show')->name('form');
         Route::post('add-course', 'Frontend\CourseController@create')->name('course_data');
         Route::get('edit-course/{id}', 'Frontend\CourseController@edit')->name('edit-course');
@@ -133,10 +135,15 @@ Route::get('userlogin', 'Frontend\LoginController@userLogin')->name('login-form'
 Route::post('login_user', 'Frontend\LoginController@login_user')->name('login_user');
 Route::get('user-register', 'Frontend\RegisterController@userRegister')->name('register');
 Route::get('all-course', 'Frontend\CourseController@onlineCourse')->name('all-course');
+Route::get('trainer-profile', 'Backend\UserController@trainer_profile')->name('trainer_profile');
+Route::get('add-to-favorite', 'Backend\UserController@fvt')->name('fvt');
 Route::get('course-detail', 'Frontend\CourseController@course_detail')->name('detail-course');
 Route::get('offline-course', 'Frontend\CourseController@offlineCourse')->name('offline-course');
 Route::get('complete-course', 'Frontend\CourseController@completeCourse')->name('complete-course');
 Route::get('homePage',        'Frontend\HomeController@homePage')->name('homePage');
+
+Route::post('user/rating',        'Frontend\HomeController@gaveRating')->name('gaveRating');
+
 
 Route::get('progressView',    'progresscontroller@fileUpload')->name('progressView');
 Route::post('progressStore',  'progresscontroller@fileStore')->name('progressStore');
@@ -144,6 +151,8 @@ Route::post('progressStore',  'progresscontroller@fileStore')->name('progressSto
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
 
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/show_lesson/{id}', 'Frontend\LessonController@index');
+
 

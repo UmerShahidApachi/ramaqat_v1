@@ -43,6 +43,11 @@ class CreateUsersTable extends Migration
             $table->string('phone')->nullable();
             $table->date('date_of_birth')->nullable();
             $table->boolean('is_trainer')->default(0);
+            $table->string('fb_link')->nullable();
+            $table->string('insta_link')->nullable();
+            $table->string('twitter_link')->nullable();
+            $table->string('in_link')->nullable();
+            $table->string('about')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

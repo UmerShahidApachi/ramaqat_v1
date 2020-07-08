@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Trainer;
 
 use App\CourseSale;
+use App\Favorite;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Course;
@@ -18,6 +19,11 @@ class DashboardController extends Controller
     public function __construct()
     {
         // $this->middleware('auth');
+    }
+    public function fvt(){
+        $data = Favorite::where('user_id',Auth::id())->get();
+        return view('backend.trainer.courses.fvt', compact('data'));
+
     }
     public function dashboard(){
         return view('backend.trainer.dashboard.home');
@@ -72,14 +78,19 @@ class DashboardController extends Controller
             'phone'=>$request->phone,
             'date_of_birth'=>$request->date_of_birth,
             'email'=>$request->email,
-            'image'=>$imgname
+            'image'=>$imgname,
+            'fb_link'=>$request->fb_link,
+            'insta_link'=>$request->description,
+            'twitter_link'=>$request->twitter_link,
+            'in_link'=>$request->in_link,
+            'about'=>$request->about
         ]);
         if ($check){
             return redirect(route('Trainer/dashboard'));
         }
     }
     public function courses(){
-        $data = Course::where('user_id',Auth::id())->get();
+        $data = Course::where('user_id',Auth::id())->orderby('id','desc')->get();
         $categories = Category::all();
         return view('backend.trainer.courses.home', compact('data','categories'));
 
