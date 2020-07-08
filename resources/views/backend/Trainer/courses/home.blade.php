@@ -2,87 +2,107 @@
 @section('customSection')
     {{--    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>--}}
     {{--    <script type="text/javascript" src="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>--}}
-    <div class="content">
-        <div class="container-fluid">
-            <div class="card">
-                <div class="card-header card-header-primary">
-                    <div class="table-title">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h2>My <b>Courses</b></h2>
-                            </div>
-                            <div class="col-sm-6">
-                                <a href="{{url('trainer/add-form')}}" class="btn btn-success" data-toggle=""><i
-                                        class="material-icons">&#xE147;</i> <span>Add New Course</span></a>
-                            </div>
+{{--    <div class="content">--}}
+{{--        <div class="container-fluid">--}}
+{{--            <div class="card">--}}
+{{--                <div class="card-header card-header-primary">--}}
+{{--                    <div class="table-title">--}}
+{{--                        <div class="row">--}}
+{{--                            <div class="col-sm-6">--}}
+{{--                                <h2>My <b>Courses</b></h2>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-sm-6">--}}
+{{--                                <a href="{{url('trainer/add-form')}}" class="btn btn-success" data-toggle=""><i--}}
+{{--                                        class="material-icons">&#xE147;</i> <span>Add New Course</span></a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+    <div class="col-9 pt-3 pb-3">
+        <div class="container-fluid pr-5 pl-3">
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="plum-text"><b>Dashboard</b></h4>
+                </div>
+            </div>
+            <div class="crud-sec z-depth-1-half mt-5">
+                <div class="course-heading plum-bg">
+                    <div class="row">
+                        <div class="col-6">
+                            <h4><b>My Course</b></h4>
+                        </div>
+                        <div class="col-6 text-end">
+                          <a href="{{url('trainer/add-form')}}" > <buton class="btn white-btn" data-toggle="" data-target="#">Add New Courses</buton></a>
                         </div>
                     </div>
                 </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="table-responsive">
+                <div class="crud-opration">
+                    <div class="table-responsive">
 
-                            <table class="table table-striped table-hover" id="table_id">
-                                <thead>
-                                <tr>
-                                    {{--						<th>--}}
-                                    {{--							<span class="custom-checkbox">--}}
-                                    {{--								<input type="checkbox" id="selectAll">--}}
-                                    {{--								<label for="selectAll"></label>--}}
-                                    {{--							</span>--}}
-                                    {{--						</th>--}}
-                                    <th>Category</th>
-                                    <th>Name</th>
-                                    <th>Thumbnail</th>
-                                    <th>Description</th>
-                                    <th>Duration</th>
-                                    <th>Created at</th>
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
+                        <table class="table table-striped table-hover" id="table_id">
+                            <thead>
+                            <tr>
+                                {{--						<th>--}}
+                                {{--							<span class="custom-checkbox">--}}
+                                {{--								<input type="checkbox" id="selectAll">--}}
+                                {{--								<label for="selectAll"></label>--}}
+                                {{--							</span>--}}
+                                {{--						</th>--}}
+                                <th>Category</th>
+                                <th>Name</th>
+                                <th>Thumbnail</th>
+                                <th>Description</th>
+                                <th>Duration</th>
+                                <th>Created at</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
 
-                                <tbody>
-                                @if($data)
-                                    @foreach($data as $row)
-                                        <tr>
-{{--                                            {{dd($row->category)}}--}}
-                                            <td>{{$row->category->name}}</td>
-                                            <td>{{$row->name}}</td>
-                                            <td>
-                                                @if($row->thumbnail!="")
-                                                    <img src="{{asset('course/' .$row->thumbnail)}}"
-                                                         style="width: 75px;">
-                                                @else
-                                                    <img src="{{url('image/dummy.jpg')}} " style="width: 75px;">
-                                                @endif
-                                            </td>
-                                            <td>{!! $row->description !!}</td>
-                                            <td>{{$row->duration}}</td>
-                                            <td>{{$row->created_at}}</td>
-                                            <td>
-                                                <a href="{{url('trainer/view-lessons/'.$row->id)}}"><i class="fa fa-eye"></i></a>
+                            <tbody>
+                            @if($data)
+                                @foreach($data as $row)
+                                    <tr>
+                                        {{--                                            {{dd($row->category)}}--}}
+                                        <td>{{$row->category->name}}</td>
+                                        <td>{{$row->name}}</td>
+                                        <td>
+                                            @if($row->thumbnail!="")
+                                                <img src="{{asset('course/' .$row->thumbnail)}}"
+                                                     style="width: 75px;">
+                                            @else
+                                                <img src="{{url('image/dummy.jpg')}} " style="width: 75px;">
+                                            @endif
+                                        </td>
+                                        <td>{!! $row->description !!}</td>
+                                        <td>{{$row->duration}}</td>
+                                        <td>{{$row->created_at}}</td>
+                                        <td>
+                                            <a href="{{url('trainer/view-lessons/'.$row->id)}}"><i class="fa fa-eye"></i></a>
                                             <a href="{{url('trainer/edit-course/'.$row->id)}}"><i class="fa fa-edit"></i></a>
-                                                <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                            </td>
+                                            <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                        </td>
 
-                                            {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
-                                            {{--                        <td>(171) 555-2222</td>--}}
-                                            {{--                                            <td>--}}
-                                            {{--                                                <a href="" data-id="{{$row->id}}" id="edit_cat"  class="edit category_edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>--}}
-                                            {{--                                                <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>--}}
-                                            {{--                                            </td>--}}
+                                        {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
+                                        {{--                        <td>(171) 555-2222</td>--}}
+                                        {{--                                            <td>--}}
+                                        {{--                                                <a href="" data-id="{{$row->id}}" id="edit_cat"  class="edit category_edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>--}}
+                                        {{--                                                <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>--}}
+                                        {{--                                            </td>--}}
 
-                                        </tr>
-                                    @endforeach
-                                @endif
-                                </tbody>
-                            </table>
-                        </div>
+                                    </tr>
+                                @endforeach
+                            @endif
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
+    </div>
+
 
     <div id="addCourse" class="modal fade">
         <div class="modal-dialog">

@@ -11,7 +11,7 @@
         <script src="{{url('assets/sweetalerts/sweetalert.js')}}"></script>
 
 
-    
+
 
 <style>
    .main{
@@ -124,7 +124,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-center">
-                                    <a href="#"><button class="btn white-btn w-90">Add To Favorite</button></a>
+                                    <a href="{{route()}}"><button class="btn white-btn w-90">Add To Favorite</button></a>
                                 </div>
                             </div>
                             <div class="height-2 mt-2"></div>
@@ -239,7 +239,7 @@
                                                  <a href="{{url('show_lesson/'.$lesson->id)}}">
                                                 <h6>{{$lesson->title}}</h6>
                                                 </a>
-                                           
+
                                         </div>
                                     </div>
                                 </div>
@@ -522,7 +522,7 @@
             @if(Auth::check() && Auth::user()->role_id == 3 && Auth::user()->is_trainer!=1)
             @if(!isset($rate))
 <div class="othr_pages_popup" id="gaveFeedbackPopup">
-    
+
             <div class="othr_pages_popup_nxt">
                 <div class="inner---modal">
                     <form id="ratingForm_Rat">
@@ -537,12 +537,12 @@
                         @endif
                         <textarea class="coment-feedback" placeholder="Write a review" name="message"
                                   required></textarea><br>
-                        <label>Course Rating</label>                        
+                        <label>Course Rating</label>
                         <div class="star-plugin-main user_ratting"></div><br>
                         @if(!isset($trainer_check))
-                        <label>Trainer Rating</label>                                            
+                        <label>Trainer Rating</label>
                         <div class="star-plugin-main trainer_ratting "></div><br>
-                        @endif 
+                        @endif
                         <button type="submit" class="submit-btn-popup">Submit</button>
                     </form>
                 </div>
@@ -686,7 +686,7 @@
                     axios.post('{{route("gaveRating")}}', requestObject)
                         // place
                         .then(function (response) {
-                            
+
                             if (response.data.status == 1) {
                                 swal( response.data.message, '', 'success' );
                         setTimeout( function () {
@@ -700,7 +700,7 @@
                             // do something
                         });
                 });
-              
+
 
             </script>
             <script>
