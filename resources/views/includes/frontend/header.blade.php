@@ -234,18 +234,19 @@
             <li>
               <a href="#"><img src="{{asset('assets/frontend/img/cart.png')}}" alt="cart"></a>
             </li>
-  
 
             <li>
-                <div class="custom-select mr-2">
-              <!--   <select id="select_language">
+                <div class="custom-select ml-1">
+                <!--
+                 <select id="select_language">
                     <option class="plum-text" value="0">Language</option>
                     <option value="1">English</option>
                     <option value="2">Arabic</option>
-                </select> -->
+                </select>
+                -->
                 @if(Session::has('lang'))
                 
-                <button id="change_lamguage"  class="btn white-btn"><!-- <i style="pointer-events: none;" class="fa fa-language fa-2x" aria-hidden="true"></i> -->
+                <button id="change_lamguage"  class="btn white-btn"> <i style="pointer-events: none;" class="fa fa-language fa-2x" aria-hidden="true"></i>
              @if(Session::get('lang')=="ar") English @else Arabic @endif </button>
                 @else
                 <button id="change_lamguage"></button>
@@ -262,7 +263,7 @@
                 <a href="{{route('login')}}"><button class="btn white-btn">Login</button></a>
             </li>
 
-                @endguest
+            @endguest
             @auth
                 <li>
                     <a href=""><button class="btn white-btn"><!-- <i class="fa fa-user fa-2x" aria-hidden="true"></i> -->{{\Illuminate\Support\Facades\Auth::user()->name}}</button></a>
