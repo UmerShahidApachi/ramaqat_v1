@@ -78,7 +78,12 @@ class DashboardController extends Controller
             'phone'=>$request->phone,
             'date_of_birth'=>$request->date_of_birth,
             'email'=>$request->email,
-            'image'=>$imgname
+            'image'=>$imgname,
+            'fb_link'=>$request->fb_link,
+            'insta_link'=>$request->description,
+            'twitter_link'=>$request->twitter_link,
+            'in_link'=>$request->in_link,
+            'about'=>$request->about
         ]);
         if ($check){
             return redirect(route('Trainer/dashboard'));

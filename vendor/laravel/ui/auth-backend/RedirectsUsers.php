@@ -20,8 +20,8 @@ trait RedirectsUsers
 //        if (Auth::check()) {
             if (Auth::user()->role_id == 3) {
 //                return redirect(RouteServiceProvider::HOME);
-                        return property_exists($this, 'redirectTo') ? $this->redirectTo : '/home';
-            }elseif (Auth::user()->role_id == 2){
+                        return property_exists($this, 'redirectTo') ? $this->redirectTo : '/';
+            }elseif (Auth::user()->role_id == 3 and Auth::user()->is_trainer == 1){
 //                return redirect(route('Trainer/dashboard'));
                         return property_exists($this, 'redirectTo') ? $this->redirectTo : '/trainer/dashboard';
 

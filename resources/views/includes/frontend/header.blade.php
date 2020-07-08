@@ -1,9 +1,9 @@
-<style> 
+<style>
         .main_color {
             color: #570055;
         }
 
-        
+
         #basicSlider {
             position: relative;
         }
@@ -70,7 +70,7 @@
        li .signup{
         padding: 13px 25px;
        }
-        
+
         #Subscribe_body .SubBtn {
             display: inline-block;
         }
@@ -79,7 +79,7 @@
             width: inherit;
         }
 
-       
+
 
         @media (max-width: 991px) {
 
@@ -98,7 +98,7 @@
                 font-size: 0.9em;
             }
 
-           
+
             .auto_margin {
                 margin: 0 auto;
             }
@@ -107,7 +107,7 @@
                 display: none;
             }
 
-  
+
             .book-sec h4 {
                 font-size: 1.5em;
             }
@@ -122,7 +122,7 @@
         }
 
         @media (max-width: 767px) {
-         
+
             #subscribebody .SubInput {
                 margin-top: 0px;
             }
@@ -159,7 +159,7 @@
                 margin-top: 3%;
             }
 
-          
+
 
             .container.container_category {
                 max-width: 83%;
@@ -232,7 +232,7 @@
 
       <div class="col-5 text-end" id="hide_on_mobile">
         <ul class="ulDBlock d-sm-block">
-          
+
 
 {{--       <li><img src="{{asset('assets/frontend/img/line.png')}}" alt="cart"></li>--}}
             <li>
@@ -249,15 +249,15 @@
                 </select>
                 -->
                 @if(Session::has('lang'))
-                
+
                 <button id="change_lamguage"  class="btn white-btn"> <!-- <i style="pointer-events: none;" class="fa fa-language fa-2x" aria-hidden="true"></i> -->
-             @if(Session::get('lang')=="ar") English @else Arabic @endif </button>
+             @if(Session::get('lang')=="ar") English @else اللغة العربية @endif </button>
                 @else
                 <button id="change_lamguage" class="btn white-btn">Arabic</button>
                 @endif
                 </div>
             </li>
-<!-- 
+<!--
 {{--       <li><img src="{{asset('assets/frontend/img/line.png')}}" alt="cart"></li>--}}
             <li>
               <a href="#"><img src="{{asset('assets/frontend/img/cart.png')}}" alt="cart"></a>
