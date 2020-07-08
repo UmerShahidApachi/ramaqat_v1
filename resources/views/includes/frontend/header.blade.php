@@ -202,16 +202,20 @@
   }
 }
 </style>
-
-<!-- Start your project here-->
+<!-- <script>
+  $( "openbtn" ).click(function() {
+  $( "#mySidebar" ).toggle();
+});
+</script>
+ --><!-- Start your project here-->
 <header>
  <!-- Start your project here-->
  <nav>
     <div class="d-flex justify-content-between top-header">
-      <div class="col-3">
+      <div class="col-3" id="leftmenu">
         <ul class="ulDBlockMenu">
           <li>
-            <img src="{{asset('assets/frontend/img/toggle.png')}}" class="openbtn" onclick="openNav()">
+            <img src="{{asset('assets/frontend/img/toggle.png')}}" class="openbtn" id="openbtn" value="1" onclick="openNav()">
           </li>
           <li>
            <a href="{{url('/')}}"> <img class="animated fadeIn logo_img" src="{{asset('assets/frontend/img/logo.png')}}"></a>

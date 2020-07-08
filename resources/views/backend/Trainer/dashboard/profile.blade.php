@@ -1,10 +1,15 @@
 @extends('backend.Trainer.layouts.app')
 @section('customSection')
-    <div class="container mt-5">
+<style>
+    .form-group .bmd-label-static {
+        top: -20px;
+    }
+</style>
+    <div class="mt-5">
         <form  id="course_form" method="POST" action="{{route('update_profile')}}" enctype="multipart/form-data">
             @csrf
-            <div class="modal-header">
-                <h4 class="modal-title">Update Profile</h4>
+            <div class="modal-header mb-2">
+                <h4 class="modal-title" style="color: #570055">Update Profile</h4>
             </div>
 
 

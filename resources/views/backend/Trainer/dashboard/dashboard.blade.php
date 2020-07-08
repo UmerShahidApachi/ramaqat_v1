@@ -100,6 +100,7 @@
 {{--        </ul>--}}
 {{--      </div>--}}
 {{--    </div>--}}
+
 {{--    <div class="main-panel">--}}
 {{--      <!-- Navbar -->--}}
 {{--      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">--}}
@@ -167,6 +168,7 @@
 {{--        </div>--}}
 {{--      </nav>--}}
 {{--      <!-- End Navbar -->--}}
+{{--	<div class="col-9">		--}}
 {{--      <div class="content">--}}
 {{--        <div class="container-fluid">--}}
 {{--          <div class="row">--}}
@@ -619,6 +621,7 @@
 {{--      </footer>--}}
 {{--    </div>--}}
 {{--  </div>--}}
+{{--	</div>--}}
 {{--  <div class="fixed-plugin">--}}
 {{--    <div class="dropdown show-dropdown">--}}
 {{--      <a href="#" data-toggle="dropdown">--}}

@@ -103,6 +103,7 @@ Route::prefix('trainer')->group(function () {
         Route::get('dashboard', 'Trainer\DashboardController@dashboard')->name('Trainer/dashboard');
         Route::get('my-courses', 'Trainer\DashboardController@courses')->name('my_courses');
         Route::get('sell-courses', 'Trainer\DashboardController@sell_courses')->name('sell_courses');
+        Route::get('favorite-courses', 'Trainer\DashboardController@fvt')->name('user_fvt');
         Route::get('add-form', 'Frontend\CourseController@show')->name('form');
         Route::post('add-course', 'Frontend\CourseController@create')->name('course_data');
         Route::get('edit-course/{id}', 'Frontend\CourseController@edit')->name('edit-course');
