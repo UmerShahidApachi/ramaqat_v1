@@ -932,7 +932,7 @@
                 <!-- block 1 -->
                 @foreach($categories1 as $cat)
 
-                <div class="slider_header text-center m-2"><u>{{$cat->name}}</u></div>
+                <!-- <div class="slider_header text-center m-2"><u>{{$cat->name}}</u></div> -->
                 <!--Carousel Wrapper-->
                 <div id="multi-item-{{$cat->name}}" class="carousel slide carousel-multi-item" data-ride="carousel">
 
@@ -1107,7 +1107,7 @@
                                 <div class="" style="min-height: 100px ;overflow: hidden;">
                                     @foreach($categories1 as $cat)
 
-                                    <div class="slider_header text-center m-2"><u>{{$cat->name}}</u></div>
+                                    <!-- <div class="slider_header text-center m-2"><u>{{$cat->name}}</u></div> -->
                                     <!--Carousel Wrapper-->
                                     <div id="multi-item-{{$cat->name}}" class="carousel slide carousel-multi-item" data-ride="carousel">
 
@@ -1439,8 +1439,7 @@
             <!-- End -->
         </div>
     </div>
-</div>
-</div>
+
 
         <div class="container-fluid px-0">
             <!-- Books Reading Section -->
