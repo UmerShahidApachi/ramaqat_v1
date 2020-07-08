@@ -116,7 +116,7 @@ class CourseController extends Controller
         $category = Course::create(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
 
         if ($category){
-            return redirect()->back();
+            return ['status'=>1, 'course'=>$category];
         }
     }
 
@@ -217,7 +217,7 @@ class CourseController extends Controller
         $category = Course::where('id',$request->id)->update(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
 
         if ($category){
-            return redirect(url('trainer/my-courses'));
+            return ['status'=>1, 'course'=>$category];
         }
 
     }
