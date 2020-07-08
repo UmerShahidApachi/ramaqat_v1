@@ -108,7 +108,7 @@
                         </div>
                         <div class="col-md-4 text-center border_right float-left p-0">
                             <p>{{$course_count}}</p>
-                            <p>My Courses</p>
+                            <p>My course</p>
                         </div>
                         <div class="col-md-4 text-center float-left p-0">
                             <p>{{$user->rating->avg('rating')}} / 5</p>
@@ -155,7 +155,7 @@
                                       @foreach($discounted as $discounted)
                                     <div class="col-md-4 newcard">
                                       <div class="card">
-                                        <img class="card-img-top" src="{{asset('courses/'.$discounted->thumbnail)}}"
+                                        <img class="card-img-top" src="{{asset('course/'.$discounted->thumbnail)}}"
                                           alt="Card image cap">
                                         </div>
                                         <div class="col carousel_item_footer main_bg_color" style="color: white">
@@ -192,7 +192,7 @@
                                       @foreach($discounted2 as $discounted)
                                           <div class="col-md-4 newcard">
                                               <div class="card">
-                                                  <img class="card-img-top" src="{{asset('courses/'.$discounted->thumbnail)}}"
+                                                  <img class="card-img-top" src="{{asset('course/'.$discounted->thumbnail)}}"
                                                        alt="Card image cap">
                                               </div>
                                               <div class="col carousel_item_footer main_bg_color" style="color: white">
@@ -258,7 +258,7 @@
                                           @foreach($top as $discounted)
                                               <div class="col-md-4 newcard">
                                                   <div class="card">
-                                                      <img class="card-img-top" src="{{asset('courses/'.$discounted->thumbnail)}}"
+                                                      <img class="card-img-top" src="{{asset('course/'.$discounted->thumbnail)}}"
                                                            alt="Card image cap">
                                                   </div>
                                                   <div class="col carousel_item_footer main_bg_color" style="color: white">
@@ -293,7 +293,7 @@
                                           @foreach($top2 as $discounted)
                                               <div class="col-md-4 newcard">
                                                   <div class="card">
-                                                      <img class="card-img-top" src="{{asset('courses/'.$discounted->thumbnail)}}"
+                                                      <img class="card-img-top" src="{{asset('course/'.$discounted->thumbnail)}}"
                                                            alt="Card image cap">
                                                   </div>
                                                   <div class="col carousel_item_footer main_bg_color" style="color: white">
@@ -356,7 +356,7 @@
                                           @foreach($latest as $discounted)
                                               <div class="col-md-4 newcard">
                                                   <div class="card">
-                                                      <img class="card-img-top" src="{{asset('courses/'.$discounted->thumbnail)}}"
+                                                      <img class="card-img-top" src="{{asset('course/'.$discounted->thumbnail)}}"
                                                            alt="Card image cap">
                                                   </div>
                                                   <div class="col carousel_item_footer main_bg_color" style="color: white">
@@ -390,7 +390,7 @@
                                           @foreach($latest2 as $discounted)
                                               <div class="col-md-4 newcard">
                                                   <div class="card">
-                                                      <img class="card-img-top" src="{{asset('courses/'.$discounted->thumbnail)}}"
+                                                      <img class="card-img-top" src="{{asset('course/'.$discounted->thumbnail)}}"
                                                            alt="Card image cap">
                                                   </div>
                                                   <div class="col carousel_item_footer main_bg_color" style="color: white">

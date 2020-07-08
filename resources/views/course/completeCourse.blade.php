@@ -6,10 +6,10 @@
    <script src="https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js"></script>
    <link href="https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css" rel="stylesheet">
 <style>
-	/*.video-js{
+	.video-js{
 	    width: 100%;
 	   }
-*/	iframe{
+	iframe{
 		border-width: 0px;
 	}
 	.request_set{

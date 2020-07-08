@@ -717,7 +717,8 @@
                                                      style="color: white">
                                                     <div class="col-2">
                                                         <div style="width:45px;height:45px;">
-                                                            <img class="rounded-circle full-img" src="{{asset('users/'.$c->users['image'])}}">
+                                                            <img class="rounded-circle full-img"
+                                                                 src="{{asset('users/'.$c->users['image'])}}">
                                                         </div>
                                                     </div>
 
@@ -760,18 +761,24 @@
                                                              alt="Card image cap">
                                                     </div>
                                                 </a>
-                                                <div class="col carousel_item_footer main_bg_color" style="color: white">
+                                                <div class="col carousel_item_footer main_bg_color"
+                                                     style="color: white">
                                                     <div class="row">
                                                         <div class="col-2">
                                                             <div style="width:45px;height:45px;">
-                                                                <img class="rounded-circle full-img" src="{{asset('users/'.$c->users['image'])}}">
+                                                                <img class="rounded-circle full-img"
+                                                                     src="{{asset('users/'.$c->users['image'])}}">
                                                             </div>
                                                         </div>
                                                         <div class="col-6 pr-0">
-                                                            <div class="trainer-n mb-1">
-                                                                <b>{{$c->users['name']}}</b>
-                                                            </div>
+                                                            <a href="{{route('trainer_profile',['id'=>$c->users->id])}}">
+
+                                                                <div class="trainer-n mb-1">
+                                                                    <b>{{$c->users['name']}}</b>
+                                                                </div>
+                                                            </a>
                                                             <div class="course-d">
+
                                                                 {{$c->name}}
                                                                 -{{$c->lessons->count()}} Courses in 1 <br>
                                                                 {!! $c->description !!}
@@ -782,19 +789,24 @@
                                                         <div class="col-4 text-center p-0">
                                                             <ul class="course-rating-list">
                                                                 <li>
-                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                    <img
+                                                                        src="{{asset('assets/frontend/img/star-small-fill.png')}}">
                                                                 </li>
                                                                 <li>
-                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                    <img
+                                                                        src="{{asset('assets/frontend/img/star-small-fill.png')}}">
                                                                 </li>
                                                                 <li>
-                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                    <img
+                                                                        src="{{asset('assets/frontend/img/star-small-fill.png')}}">
                                                                 </li>
                                                                 <li>
-                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                    <img
+                                                                        src="{{asset('assets/frontend/img/star-small-fill.png')}}">
                                                                 </li>
                                                                 <li>
-                                                                    <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                                    <img
+                                                                        src="{{asset('assets/frontend/img/star-small.png')}}">
                                                                 </li>
                                                             </ul>
                                                             <ul class="course-rating-list">
@@ -917,18 +929,25 @@
                                                                  alt="Card image cap">
                                                         </div>
                                                     </a>
-                                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+                                                    <div class="col carousel_item_footer main_bg_color"
+                                                         style="color: white">
                                                         <div class="row">
                                                             <div class="col-2">
                                                                 <div style="width:45px;height:45px;">
-                                                                    <img class="rounded-circle full-img" src="{{asset('users/'.$c->users['image'])}}">
+                                                                    <img class="rounded-circle full-img"
+                                                                         src="{{asset('users/'.$c->users['image'])}}">
                                                                 </div>
                                                             </div>
                                                             <div class="col-6 pr-0">
-                                                                <div class="trainer-n mb-1">
-                                                                    <b>{{$c->users['name']}}</b>
-                                                                </div>
+                                                                <a href="{{route('trainer_profile',['id'=>$c->users->id])}}">
+
+                                                                    <div class="trainer-n mb-1">
+
+                                                                        <b>{{$c->users['name']}}</b>
+                                                                    </div>
+                                                                </a>
                                                                 <div class="course-d">
+
                                                                     {{$c->name}}
                                                                     -{{$c->lessons->count()}} Courses in 1 <br>
                                                                     {!! $c->description !!}
@@ -939,19 +958,24 @@
                                                             <div class="col-4 text-center p-0">
                                                                 <ul class="course-rating-list">
                                                                     <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                        <img
+                                                                            src="{{asset('assets/frontend/img/star-small-fill.png')}}">
                                                                     </li>
                                                                     <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                        <img
+                                                                            src="{{asset('assets/frontend/img/star-small-fill.png')}}">
                                                                     </li>
                                                                     <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                        <img
+                                                                            src="{{asset('assets/frontend/img/star-small-fill.png')}}">
                                                                     </li>
                                                                     <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                        <img
+                                                                            src="{{asset('assets/frontend/img/star-small-fill.png')}}">
                                                                     </li>
                                                                     <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                                        <img
+                                                                            src="{{asset('assets/frontend/img/star-small.png')}}">
                                                                     </li>
                                                                 </ul>
                                                                 <ul class="course-rating-list">
@@ -990,20 +1014,24 @@
                                                                  alt="Card image cap">
                                                         </div>
                                                     </a>
-                                                    <div class="col carousel_item_footer main_bg_color" style="color: white">
+                                                    <div class="col carousel_item_footer main_bg_color"
+                                                         style="color: white">
                                                         <div class="row">
                                                             <div class="col-2">
                                                                 <div style="width:45px;height:45px;">
-                                                                    <img class="rounded-circle full-img" src="{{asset('users/'.$c->users['image'])}}">
+                                                                    <img class="rounded-circle full-img"
+                                                                         src="{{asset('users/'.$c->users['image'])}}">
                                                                 </div>
                                                             </div>
-                                                            <div class="col-6 pr-0">
+                                                            <div class="col-6 pr-0">                                                                    <a href="{{route('trainer_profile',['id'=>$c->users->id])}}">
+
                                                                 <div class="trainer-n mb-1">
                                                                     <b>{{$c->users['name']}}</b>
-                                                                </div>
+                                                                </div></a>
                                                                 <div class="course-d">
-                                                                    {{$c->name}}
-                                                                    -{{$c->lessons->count()}} Courses in 1 <br>
+
+                                                                        {{$c->name}}
+                                                                        -{{$c->lessons->count()}} Courses in 1 <br>
                                                                     {!! $c->description !!}
 
 
@@ -1012,19 +1040,24 @@
                                                             <div class="col-4 text-center p-0">
                                                                 <ul class="course-rating-list">
                                                                     <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                        <img
+                                                                            src="{{asset('assets/frontend/img/star-small-fill.png')}}">
                                                                     </li>
                                                                     <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                        <img
+                                                                            src="{{asset('assets/frontend/img/star-small-fill.png')}}">
                                                                     </li>
                                                                     <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                        <img
+                                                                            src="{{asset('assets/frontend/img/star-small-fill.png')}}">
                                                                     </li>
                                                                     <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                        <img
+                                                                            src="{{asset('assets/frontend/img/star-small-fill.png')}}">
                                                                     </li>
                                                                     <li>
-                                                                        <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                                        <img
+                                                                            src="{{asset('assets/frontend/img/star-small.png')}}">
                                                                     </li>
                                                                 </ul>
                                                                 <ul class="course-rating-list">
