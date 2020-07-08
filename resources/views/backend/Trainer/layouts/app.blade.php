@@ -83,6 +83,7 @@ Trainer Dashboard
     </div>
 </nav>
 <!-- header End  Here-->
+
 <div class="row">
     <div class="col-3">
         <div class="sidebar-dashboard plum-bg text-center">
@@ -157,8 +158,9 @@ Trainer Dashboard
             </div>
         </div>
     </div>
+    <div class="col-9">
     @yield('customSection')
-
+</div>
 
 <!-- footer -->
                     <div class="col-6">
