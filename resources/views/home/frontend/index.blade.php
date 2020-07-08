@@ -577,17 +577,17 @@
             @endif
         </div>
 
-    {{-- <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <img class="d-block w-100" src="img/slider-11.png" alt="Third slide">
-        <div class="mask rgba-black-slight"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive font45">Slight mask</h3>
-        <p class="font35">Third text</p>
-      </div>
-    </div> --}}
+    {{--<div class="carousel-item">
+          <!--Mask color-->
+          <div class="view">
+            <img class="d-block w-100" src="img/slider-11.png" alt="Third slide">
+            <div class="mask rgba-black-slight"></div>
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive font45">Slight mask</h3>
+            <p class="font35">Third text</p>
+          </div>
+        </div> --}}
     <!--/.Slides-->
         <!--Controls-->
         <a class="carousel-control-prev" href="#carousel-example-2 arrow_top" role="button" data-slide="prev">
@@ -663,6 +663,56 @@
                                                              alt="Card image cap">
                                                     </div>
                                                 </a>
+
+                                                <div class="col carousel_item_footer main_bg_color" style="color: white">
+                                                    <div class="row">
+                                                        <div class="col-2">
+                                                            <div style="width:45px;height:45px;">
+                                                                <img class="rounded-circle full-img" src="{{asset('users/'.$c->users['image'])}}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 pr-0">
+                                                            <div class="trainer-n mb-1">
+                                                                <b>{{$c->users['name']}}</b>
+                                                            </div>
+                                                            <div class="course-d">
+                                                                {{$c->name}}
+                                                                -{{$c->lessons->count()}} Courses in 1 <br>
+                                                                {!! $c->description !!}
+
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-4 text-center p-0">
+                                                            <ul class="course-rating-list">
+                                                                <li>
+                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="{{asset('assets/frontend/img/star-small-fill.png')}}">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="{{asset('assets/frontend/img/star-small.png')}}">
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="course-rating-list">
+                                                                <li>
+                                                                    <span>4.8</span>
+                                                                </li>
+                                                                <li>
+                                                                    (123)
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--
                                                 <div class="col carousel_item_footer main_bg_color"
                                                      style="color: white">
                                                     <div class="col-2">
@@ -688,7 +738,7 @@
                                                             <span>(12345)</span>
                                                         </p>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         @endforeach
 
