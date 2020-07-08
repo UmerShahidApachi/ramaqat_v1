@@ -124,7 +124,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-center">
-                                    <a href="{{route()}}"><button class="btn white-btn w-90">Add To Favorite</button></a>
+                                    <a href="#"><button class="btn white-btn w-90">Add To Favorite</button></a>
                                 </div>
                             </div>
                             <div class="height-2 mt-2"></div>
