@@ -1,7 +1,18 @@
 @extends('backend.Trainer.layouts.app')
 @section('customSection')
+<style>
+    .table-responsive{
+        overflow-x: initial;
+        overflow-y: initial;
+    }
+    #table_id_filter{
+        margin-right: 2%;
+    }
+</style>
+
     {{--    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>--}}
     {{--    <script type="text/javascript" src="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>--}}
+<div class="col-9">
     <div class="content">
         <div class="container-fluid">
             <div class="card">
@@ -68,6 +79,7 @@
                                             {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
                                             {{--                        <td>(171) 555-2222</td>--}}
                                             {{--                                            <td>--}}
+
                                             {{--                                                <a href="" data-id="{{$row->id}}" id="edit_cat"  class="edit category_edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>--}}
                                             {{--                                                <a href="#" data-id="{{$row->id}}"  class="delete removePartner" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>--}}
                                             {{--                                            </td>--}}
@@ -83,7 +95,7 @@
             </div>
         </div>
     </div>
-
+</div>
 
     {{--@section('script')--}}
 
