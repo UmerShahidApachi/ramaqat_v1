@@ -41,7 +41,12 @@ Trainer Dashboard
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-
+<style>
+    body{
+        overflow-y: scroll;
+    }
+    
+</style>
 
 <body class="">
 <!-- Header Start Here -->
@@ -158,9 +163,9 @@ Trainer Dashboard
             </div>
         </div>
     </div>
-    <div class="col-9">
+  
     @yield('customSection')
-</div>
+
 
 <!-- footer -->
                     <div class="col-6">

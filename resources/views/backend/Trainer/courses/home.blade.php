@@ -2,6 +2,7 @@
 @section('customSection')
     {{--    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>--}}
     {{--    <script type="text/javascript" src="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>--}}
+
 {{--    <div class="content">--}}
 {{--        <div class="container-fluid">--}}
 {{--            <div class="card">--}}
@@ -19,7 +20,7 @@
 {{--                    </div>--}}
 {{--                </div>--}}
     <div class="col-9 pt-3 pb-3">
-        <div class="container-fluid pr-5 pl-3">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <h4 class="plum-text"><b>Dashboard</b></h4>
