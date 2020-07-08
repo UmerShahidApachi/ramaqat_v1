@@ -6,12 +6,26 @@
    <script src="https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js"></script>
    <link href="https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css" rel="stylesheet">
 <style>
+	body{
+		margin:0px;
+	}
 	.video-js{
 	    width: 100%;
 	   }
-	iframe{
-		border-width: 0px;
+
+	div#video_1{
+		max-height: 450px;
 	}
+	video{
+		border-width: 0px;
+		max-height: inherit;
+	}
+	.video-js .vjs-big-play-button{
+		left: 20px;
+	}
+
+
+
 	.request_set{
 		padding: 15px 100px;
 		border-radius: 10px;
@@ -215,7 +229,7 @@
 						    </div>
 				    	</div>
 					    <div class="col-sm-12 col-md-8 pt-2" id="video_footer">
-					    	<div class="row">
+					    	<div class="row m-0">
 						    	<div class="personbody" id="person1">
 						      		<img src="{{asset('assets/frontend/img/completecourse/parson-1.png')}}" class="img-circle" alt="img2">
 						      		<h5 class="persondetail">Name</h5>

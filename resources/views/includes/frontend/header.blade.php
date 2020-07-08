@@ -246,7 +246,7 @@
                 -->
                 @if(Session::has('lang'))
                 
-                <button id="change_lamguage"  class="btn white-btn"> <i style="pointer-events: none;" class="fa fa-language fa-2x" aria-hidden="true"></i>
+                <button id="change_lamguage"  class="btn white-btn"> <!-- <i style="pointer-events: none;" class="fa fa-language fa-2x" aria-hidden="true"></i> -->
              @if(Session::get('lang')=="ar") English @else Arabic @endif </button>
                 @else
                 <button id="change_lamguage" class="btn white-btn">Arabic</button>
