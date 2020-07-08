@@ -74,7 +74,7 @@ Trainer Dashboard
                         @if(Auth::user()->image == "")
                         <img class="rounded-circle full-img" src="{{asset('assets/frontend/img/dummy.png')}}" alt="user">
                             @else
-                            <img class="rounded-circle full-img" src="{{asset('users/'.Auth::user()->image)}}" alt="user">
+                            <img class="rounded-circle full-img" src="{{asset('users/'. Auth::user()->image)}}" alt="user">
                         @endif
                     </div>
                 </li>
@@ -91,7 +91,7 @@ Trainer Dashboard
                     @if(Auth::user()->image == "")
                         <img class="img-fluid" src="{{asset('assets/frontend/img/download.png')}}" alt="user">
                     @else
-                        <img class="img-fluid" src="{{asset('users/'.Auth::user()->image)}}" alt="user">
+                        <img class="img-fluid" src="{{asset('users/'. Auth::user()->image)}}" alt="user">
                     @endif
                     <div class="edit-box">
 {{--                        <div class="edit-sec text-center">--}}
@@ -100,7 +100,7 @@ Trainer Dashboard
 {{--                        </div>--}}
                     </div>
                 </div>
-                <div class="trainer-name mt-3">Trainer Name</div>
+                <div class="trainer-name mt-3">{{Auth::user()->name}}</div>
             </div>
             <div class="mt-3">
                 <a href="{{route('Trainer/dashboard')}}">
