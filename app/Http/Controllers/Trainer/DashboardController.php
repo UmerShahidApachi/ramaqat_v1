@@ -90,7 +90,7 @@ class DashboardController extends Controller
         }
     }
     public function courses(){
-        $data = Course::where('user_id',Auth::id())->get();
+        $data = Course::where('user_id',Auth::id())->orderby('id','desc')->get();
         $categories = Category::all();
         return view('backend.trainer.courses.home', compact('data','categories'));
 
