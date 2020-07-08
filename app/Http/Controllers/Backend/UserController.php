@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Favorite;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\User;
@@ -158,6 +159,17 @@ class UserController extends Controller
         $redirect = $request->redirect;
         $user = User::where('id', $request->id)->first();
         return view('backend.admin.trainers.edit', compact('user','redirect'));
+
+
+    }
+    public function fvt(Request $request)
+    {
+//        dd($request->all());
+        $course = Course::find($request->course_id);
+        if ($course && Auth::check()){
+            Favorite::create(['user_id'=>Auth::id(),'course_id'=>$request->course_id]);
+        }
+        return redirect()->back();
 
 
     }
