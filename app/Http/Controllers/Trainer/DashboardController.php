@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Trainer;
 
 use App\CourseSale;
+use App\Favorite;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Course;
@@ -18,6 +19,11 @@ class DashboardController extends Controller
     public function __construct()
     {
         // $this->middleware('auth');
+    }
+    public function fvt(){
+        $data = Favorite::where('user_id',Auth::id())->get();
+        return view('backend.trainer.courses.fvt', compact('data'));
+
     }
     public function dashboard(){
         return view('backend.trainer.dashboard.home');

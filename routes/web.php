@@ -103,6 +103,7 @@ Route::prefix('trainer')->group(function () {
         Route::get('dashboard', 'Trainer\DashboardController@dashboard')->name('Trainer/dashboard');
         Route::get('my-courses', 'Trainer\DashboardController@courses')->name('my_courses');
         Route::get('sell-courses', 'Trainer\DashboardController@sell_courses')->name('sell_courses');
+        Route::get('favorite-courses', 'Trainer\DashboardController@fvt')->name('user_fvt');
         Route::get('add-form', 'Frontend\CourseController@show')->name('form');
         Route::post('add-course', 'Frontend\CourseController@create')->name('course_data');
         Route::get('edit-course/{id}', 'Frontend\CourseController@edit')->name('edit-course');
@@ -135,6 +136,7 @@ Route::post('login_user', 'Frontend\LoginController@login_user')->name('login_us
 Route::get('user-register', 'Frontend\RegisterController@userRegister')->name('register');
 Route::get('all-course', 'Frontend\CourseController@onlineCourse')->name('all-course');
 Route::get('trainer-profile', 'Backend\UserController@trainer_profile')->name('trainer_profile');
+Route::get('add-to-favorite', 'Backend\UserController@fvt')->name('fvt');
 Route::get('course-detail', 'Frontend\CourseController@course_detail')->name('detail-course');
 Route::get('offline-course', 'Frontend\CourseController@offlineCourse')->name('offline-course');
 Route::get('complete-course', 'Frontend\CourseController@completeCourse')->name('complete-course');
