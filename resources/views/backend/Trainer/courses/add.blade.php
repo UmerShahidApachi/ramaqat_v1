@@ -2,6 +2,7 @@
 @section('customSection')
 
     <div class="col-8 container mt-5">
+
     <form id="ratingForm_Rat">
         @csrf
 
