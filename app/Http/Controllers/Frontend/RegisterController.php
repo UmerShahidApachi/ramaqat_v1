@@ -18,7 +18,7 @@ class RegisterController extends Controller
     }
     public function userRegister()
     {
-        return view('Register.register');
+        return view('auth.trainer_register');
     }
 
     /**

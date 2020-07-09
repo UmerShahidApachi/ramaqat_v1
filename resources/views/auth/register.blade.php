@@ -55,9 +55,9 @@
                             <!-- Default input -->
                                 <input id="password-confirm" placeholder="Re-Type Password" type="password" class="custom-height form-control" name="password_confirmation" required autocomplete="new-password">
                         </div>
-                        <div class="col-12 mx-auto mb-3">
-                            <input type="checkbox" name="trainer" value="1" > As Trainer
-                        </div>
+{{--                        <div class="col-12 mx-auto mb-3">--}}
+{{--                            <input type="checkbox" name="trainer" value="1" > As Trainer--}}
+{{--                        </div>--}}
 
                     </div>
                     <!-- Grd row -->
@@ -66,11 +66,13 @@
                 </form>
                 <!-- Default form row -->
 
-                <div>Aleady Register?&nbsp;<span><a href="">Login</a></span></div>
+                <div>Aleady Register?&nbsp;<span><a href="{{route("login")}}">Login</a></span></div>
                 <hr style="background-color:#fff;">
+                <a href="{{route("trainer_register")}}">
                 <div class="col-12">
-                    <bitton style="border-radius:5px;" class="btn white-btn waves-effect waves-light w-100">Trainer</buton>
+                    <button style="border-radius:5px;"  class="btn white-btn waves-effect waves-light w-100">Trainer</buton>
                 </div>
+                </a>
             </div>
             <div class="font36 plum-text mt-3 mb-3">تخطى</div>
         </div>
