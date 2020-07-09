@@ -23,7 +23,11 @@ Route::post('language/{locale}', function (Request $request,$locale) {
     // App::setLocale($locale);
     $request->session()->put('lang', $locale);
 });
+Route::get('contact', function () {
+    $data = Setting::where('id',1)->first();
 
+    return view('contact',compact('data'));
+});
 Route::get('/', function () {
     $latest = Course::where('status',1)->get()->take(3);
     $latest2 = Course::where('status',1)->orderByRaw('RAND()')->take(3)->get();
@@ -111,7 +115,7 @@ Route::prefix('trainer')->group(function () {
         Route::post('update-course', 'Frontend\CourseController@update')->name('update-course');
         Route::get('view-lessons/{id}', 'LessonController@index')->name('lessons');
         Route::get('edit-lessons/{id}', 'LessonController@edit')->name('edit_lesson');
-        Route::get('add-lesson-form/{id}', 'LessonController@show')->name('form');
+        Route::get('add-lesson-form/{id}', 'LessonController@show')->name('lesson_form');
         Route::get('edit-lesson-form/{id}', 'LessonController@edit')->name('edit_form');
         Route::post('add-lesson',      'LessonController@store')->name('add_lesson');
         Route::post('update-lesson',   'LessonController@store')->name('update_lesson');
@@ -120,6 +124,11 @@ Route::prefix('trainer')->group(function () {
         Route::post('update-profile',  'Trainer\DashboardController@update_profile')->name('update_profile');
         /*trainer page 11*/
         Route::get('trainer-profile', 'Trainer\DashboardController@trainer_profile')->name('trainer_profile');
+
+        Route::post('section/add',      'LessonController@add_section')->name('add_section'); 
+        Route::get('get_section/{id}',      'LessonController@get_section'); 
+
+
     });
 });
 
@@ -133,7 +142,7 @@ Route::prefix('user')->group(function () {
 });
 Route::get('userlogin', 'Frontend\LoginController@userLogin')->name('login-form');
 Route::post('login_user', 'Frontend\LoginController@login_user')->name('login_user');
-Route::get('user-register', 'Frontend\RegisterController@userRegister')->name('register');
+Route::get('trainer-register', 'Frontend\RegisterController@userRegister')->name('trainer_register');
 Route::get('all-course', 'Frontend\CourseController@onlineCourse')->name('all-course');
 Route::get('trainer-profile', 'Backend\UserController@trainer_profile')->name('trainer_profile');
 Route::get('add-to-favorite', 'Backend\UserController@fvt')->name('fvt');

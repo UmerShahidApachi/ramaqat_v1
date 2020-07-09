@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Ramaqat</title>
     @include('includes.frontend.style')
-    
+
 </head>
 
 <body>
@@ -21,6 +21,7 @@
 <!--- sections -->
 {{--    @yield('headerbody')--}}
     @yield('indexpage')
+    @yield('contact')
     @yield('userlogin')
     @yield('register')
    @yield('offline-course')
