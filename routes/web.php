@@ -23,7 +23,7 @@ Route::post('language/{locale}', function (Request $request,$locale) {
     // App::setLocale($locale);
     $request->session()->put('lang', $locale);
 });
-Route::get('contact', function () {
+Route::get('contact-us', function () {
     $data = Setting::where('id',1)->first();
 
     return view('contact',compact('data'));
@@ -125,8 +125,8 @@ Route::prefix('trainer')->group(function () {
         /*trainer page 11*/
         Route::get('trainer-profile', 'Trainer\DashboardController@trainer_profile')->name('trainer_profile');
 
-        Route::post('section/add',      'LessonController@add_section')->name('add_section'); 
-        Route::get('get_section/{id}',      'LessonController@get_section'); 
+        Route::post('section/add',      'LessonController@add_section')->name('add_section');
+        Route::get('get_section/{id}',      'LessonController@get_section');
 
 
     });
