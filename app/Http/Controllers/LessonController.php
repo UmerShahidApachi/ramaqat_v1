@@ -45,7 +45,7 @@ class LessonController extends Controller
      */
     public function store(Request $request)
     {
-//        dd(phpinfo());
+       // dd($request->all());
 
         $course = Course::find($request->course_id);
         if ($request->hasfile('document')) {
@@ -108,21 +108,15 @@ class LessonController extends Controller
             $file->move($destinationpath, $video);
         }
 
-//        $video=$request->video;
-//        $input = time().$video->getClientOriginalExtension();
-//        $destinationPath = public_path('course/' . $course->name . '/');
-//        $video->move($destinationPath, $input);
-//        dd($input);
         if ($request->hasfile('document')) {
-
-            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'video_path' => $video, 'extra_document' => $imgname]);
+            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'section_id' => $request->sections, 'video_path' => $video, 'extra_document' => $imgname]);
         } else {
 
-            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'video_path' => $video]);
+            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description,'section_id' => $request->sections, 'video_path' => $video]);
 
         }
         if ($category) {
-            return redirect()->back();
+           return ['status'=>1, 'lesson'=>$category];
         }
 
 
@@ -259,11 +253,23 @@ class LessonController extends Controller
         $section->section = $request->section;
         $section->course_id = $request->course_ids;
         $success = $section->save();
+        $get_section = $section;
         if($success)
         {
-            return ['status'=>1];
+            return ['status'=>1, 'section'=>$get_section];
         }
     }
+
+    public function get_section($id)
+    {
+        // dd($id);
+        $section = Section::where('course_id',$id)->get();
+        if($section)
+        {
+            return ['status'=>1, 'data'=>$section];
+        }
+    }
+
 
 
 }

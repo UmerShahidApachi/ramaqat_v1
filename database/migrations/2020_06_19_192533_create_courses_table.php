@@ -17,10 +17,12 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->string('duration');
+            $table->string('duration')->nullable();
+            $table->text('attach_doc')->nullable();
             $table->text('thumbnail');
             $table->string('views_counter')->default(0);
             $table->integer('price');
+            $table->integer('discount_price')->unsigned()->nullable();
             $table->bigInteger('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('category_id','150')->nullable();
