@@ -1,7 +1,7 @@
 @extends('backend.Trainer.layouts.app')
 @section('customSection')
     <div class="container mt-5">
-    <form id="ratingForm_Rat">
+    <form id="course_form">
         @csrf
 
         <input type="hidden" name="id" id="course_idd">
@@ -81,7 +81,45 @@
         <h4 class="modal-title">Modal Header</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+         <form  id="section_form">
+            @csrf
+            <input type="hidden" name="course_ids" id="course_ids">
+            <div class="row">
+            <div class="col-12">
+            <div class="form-group">
+                <label>Section</label>
+                <input type="test" class="form-control" name="section" placeholder="section" required>                
+            </div>
+            </div>
+            </div>
+            <button type="submit" class="btn btn-success cat">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- Modal -->
+<div id="add_modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+
+            <input type="hidden" name="course_ids" id="course_ids">
+
+            <button id="add_section" class="btn btn-success cat">Add section</button> <br>
+            <button id="add_lesson" class="btn btn-success cat">Add lesson</button> <br>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -106,7 +144,7 @@
 <script>
   
 
-    $('#ratingForm_Rat').on('submit', function(event){
+    $('#course_form').on('submit', function(event){
   event.preventDefault();
   for ( instance in CKEDITOR.instances ) {
         CKEDITOR.instances[instance].updateElement();
@@ -122,10 +160,11 @@
    contentType: false,
    cache: false,
    processData: false,
-   success:function(data)
+   success:function(data) 
    {
         $('#course_idd').val(data.course.id);
-        $('#myModal').modal('show');
+        $('#course_ids').val(data.course.id);
+        $('#add_modal').modal('show');
    }
   })
 }else{
@@ -139,14 +178,38 @@
    processData: false,
    success:function(data)
    {
-        $('#myModal').modal('show');
-
+        $('#add_modal').modal('show');
    }
   })
 }
+ });
 
+    $('#add_section').click(function(){
+        $('#add_modal').modal('hide');
+        $('#myModal').modal('show');
+    });
+
+
+
+     $('#section_form').on('submit', function(event){
+  event.preventDefault();      
+  $.ajax({
+   url:"{{ route('add_section') }}",
+   method:"POST",
+   data:new FormData(this),
+   dataType:'JSON',
+   contentType: false,
+   cache: false,
+   processData: false,
+   success:function(data) 
+   {
+        $('#myModal').modal('hide');
+        $('#add_modal').modal('show');
+   }
+  })
 
  });
+
 </script>
 
 @endsection

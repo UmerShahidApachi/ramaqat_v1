@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Lesson;
+use App\Lesson; 
+use App\Section;
 use App\Models\Course;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -250,4 +251,19 @@ class LessonController extends Controller
     {
         //
     }
+
+    public function add_section(Request $request)
+    {
+        // echo "<pre>"; print_r($request->all());exit();
+        $section = new Section;
+        $section->section = $request->section;
+        $section->course_id = $request->course_ids;
+        $success = $section->save();
+        if($success)
+        {
+            return ['status'=>1];
+        }
+    }
+
+
 }

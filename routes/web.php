@@ -120,6 +120,9 @@ Route::prefix('trainer')->group(function () {
         Route::post('update-profile',  'Trainer\DashboardController@update_profile')->name('update_profile');
         /*trainer page 11*/
         Route::get('trainer-profile', 'Trainer\DashboardController@trainer_profile')->name('trainer_profile');
+
+        Route::post('section/add',      'LessonController@add_section')->name('add_section');
+
     });
 });
 
