@@ -1,5 +1,11 @@
 @extends('backend.Trainer.layouts.app')
 @section('customSection')
+
+<style>
+    .dataTables_filter{
+        margin-right: 8px;
+    }
+</style>
     {{--    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>--}}
     {{--    <script type="text/javascript" src="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>--}}
     <div class="content">
@@ -19,6 +25,7 @@
                     </div>
                 </div>
                 {{--                {{dd(Auth::id())}}--}}
+                <div class="crud-opration">
                 <div class="card-body">
                     <div class="row">
                         <div class="table-responsive">
@@ -79,6 +86,7 @@
                             </table>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>

@@ -107,9 +107,26 @@
             display: none;
         }
 
+<<<<<<< HEAD
+       li .white-btn{
+            padding: 12px 15px;
+       }
+       li .logout-btn{
+          padding: 12px 15px; 
+       }
+       li .signup{
+        padding: 12px 15px;
+       }
+       .custom-select {
+        width: 85px;
+       }
+        #Subscribe_body .SubBtn {
+            display: inline-block;
+=======
 
         .book-sec h4 {
             font-size: 1.5em;
+>>>>>>> a2cc6b14101a2edbad438bc98041d78dabbc14f2
         }
 
         .book-sec p {
@@ -296,17 +313,12 @@
                                 @endif
                             </li>
                         @endif
-
-                        <li>
-                            <a href="{{route('logout')}}">
-                                <button class="btn plum-btn"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>
-                                </button>
-                            </a>
-                        </li>
-                    @endauth
-                </ul>
-            </div>
-
+                <li>
+                    <a href="{{route('logout')}}"><button class="btn plum-btn logout-btn">Logout</button></a>
+                </li>
+                @endauth
+        </ul>
+      </div>
         </div>
         <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
         @php
