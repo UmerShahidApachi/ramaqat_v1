@@ -37,7 +37,7 @@
                             <tr>
 
                                 <td>{{$row->title}}</td>
-                                <td>{{$row->heading}}A</td>
+                                <td>{{$row->heading}}</td>
                                     <td>
                                         @if($row->image!="")
                                             <img src="{{asset('slider/'.$row->image)}}" style="width: 75px;" >

@@ -5,7 +5,7 @@
         top: -22px;
     }
 </style>
-    <div class="col-8 mt-3 mb-2">
+    <div class="mt-3 mb-2">
         <form  id="course_form" method="POST" action="{{route('update_profile')}}" enctype="multipart/form-data">
             @csrf
             <div class="modal-header mb-4">

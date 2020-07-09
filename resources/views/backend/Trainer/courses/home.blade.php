@@ -19,7 +19,7 @@
 {{--                        </div>--}}
 {{--                    </div>--}}
 {{--                </div>--}}
-    <div class="col-9 pt-3 pb-3">
+    <div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -100,6 +100,15 @@
             </div>
 
 
+        </div>
+        <div class="row mt-3">
+        <div class="col-6">
+                        <ul class="bottom-menu">
+                            <li>About Us</li>
+                            <li>Blog</li>
+                            <li>Licesnses</li>
+                        </ul>
+                    </div>
         </div>
     </div>
     </div>

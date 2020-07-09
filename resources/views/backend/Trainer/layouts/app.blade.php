@@ -25,9 +25,9 @@ Trainer Dashboard
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!-- CSS Files -->
-    <link href="{{asset('assets/css/material-dashboard.css?v=2.1.2  ')}}" rel="stylesheet" />
+<link href="{{asset('assets/css/material-dashboard.css?v=2.1.2  ')}}" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="{{asset('assets\demo\demo.css')}}" rel="stylesheet" />
+    <!-- <link href="{{asset('assets\demo\demo.css')}}" rel="stylesheet" /> -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Fonts Roboto -->
@@ -41,12 +41,6 @@ Trainer Dashboard
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<style>
-    body{
-        overflow-y: scroll;
-    }
-    
-</style>
 
 <body class="">
 <!-- Header Start Here -->
@@ -90,7 +84,7 @@ Trainer Dashboard
 <!-- header End  Here-->
 
 <div class="row">
-    <div class="col-3">
+    <div class="col-3" style="height:100vh;overflow-y:hidden;">
         <div class="sidebar-dashboard plum-bg text-center">
             <div class="change-sec">
                 <div class="change-img">
@@ -173,19 +167,11 @@ Trainer Dashboard
             </div>
         </div>
     </div>
-  
+    <div class="col-9" style="height:90vh;overflow-y:scroll;">
     @yield('customSection')
 
 
 <!-- footer -->
-                    <div class="col-6">
-                        <ul class="bottom-menu">
-                            <li>About Us</li>
-                            <li>Blog</li>
-                            <li>Licesnses</li>
-                        </ul>
-                    </div>
-
 
 </div>
 
