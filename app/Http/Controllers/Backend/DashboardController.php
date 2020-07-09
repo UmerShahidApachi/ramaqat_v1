@@ -166,7 +166,7 @@ class DashboardController extends Controller
 
     public function categories(){
 //        dd('sda');
-        $data = Category::all();
+        $data = Category::orderby('id','desc')->get();
         return view('backend.admin.category.category', compact('data'));
 
     }

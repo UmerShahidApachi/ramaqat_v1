@@ -3,7 +3,7 @@
 
     <div class="col-8 container mt-5">
 
-    <form id="ratingForm_Rat">
+    <form id="ratingForm_Rat" action="{{ route('course_data') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <input type="hidden" name="id" id="course_idd">
@@ -67,7 +67,7 @@
 
         <div class="modal-footer">
             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-            <input type="submit" class="btn btn-success cat" id="cat" value="next">
+            <input type="submit" class="btn btn-success cat" id="cat" value="Submit">
         </div>
     </form>
     </div>
@@ -101,55 +101,55 @@
 <script>
     CKEDITOR.replace('description');
 </script>
-<script>    
+<script>
     $(".chosen").chosen();
 </script>
 
-<script>
-  
+{{--<script>--}}
+{{--  --}}
 
-    $('#ratingForm_Rat').on('submit', function(event){
-  event.preventDefault();
-  for ( instance in CKEDITOR.instances ) {
-        CKEDITOR.instances[instance].updateElement();
-    }
-  var check = $('#course_idd').val();
-    if(check=="")
-    { 
-  $.ajax({
-   url:"{{ route('course_data') }}",
-   method:"POST",
-   data:new FormData(this),
-   dataType:'JSON',
-   contentType: false,
-   cache: false,
-   processData: false,
-   success:function(data)
-   {
-        $('#course_idd').val(data.course.id);
-        $('#myModal').modal('show');
-   }
-  })
-}else{
-    $.ajax({
-   url:"{{ route('update-course') }}",
-   method:"POST",
-   data:new FormData(this),
-   dataType:'JSON',
-   contentType: false,
-   cache: false,
-   processData: false,
-   success:function(data)
-   {
-        $('#myModal').modal('show');
+{{--    $('#ratingForm_Rat').on('submit', function(event){--}}
+{{--  event.preventDefault();--}}
+{{--  for ( instance in CKEDITOR.instances ) {--}}
+{{--        CKEDITOR.instances[instance].updateElement();--}}
+{{--    }--}}
+{{--  var check = $('#course_idd').val();--}}
+{{--    if(check=="")--}}
+{{--    { --}}
+{{--  $.ajax({--}}
+{{--   url:"{{ route('course_data') }}",--}}
+{{--   method:"POST",--}}
+{{--   data:new FormData(this),--}}
+{{--   dataType:'JSON',--}}
+{{--   contentType: false,--}}
+{{--   cache: false,--}}
+{{--   processData: false,--}}
+{{--   success:function(data)--}}
+{{--   {--}}
+{{--        $('#course_idd').val(data.course.id);--}}
+{{--        $('#myModal').modal('show');--}}
+{{--   }--}}
+{{--  })--}}
+{{--}else{--}}
+{{--    $.ajax({--}}
+{{--   url:"{{ route('update-course') }}",--}}
+{{--   method:"POST",--}}
+{{--   data:new FormData(this),--}}
+{{--   dataType:'JSON',--}}
+{{--   contentType: false,--}}
+{{--   cache: false,--}}
+{{--   processData: false,--}}
+{{--   success:function(data)--}}
+{{--   {--}}
+{{--        $('#myModal').modal('show');--}}
 
-   }
-  })
-}
+{{--   }--}}
+{{--  })--}}
+{{--}--}}
 
 
- });
-</script>
+{{-- });--}}
+{{--</script>--}}
 
 @endsection
 

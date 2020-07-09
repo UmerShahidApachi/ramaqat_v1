@@ -116,7 +116,8 @@ class CourseController extends Controller
         $category = Course::create(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
 
         if ($category){
-            return ['status'=>1, 'course'=>$category];
+//            return ['status'=>1, 'course'=>$category];
+            return redirect(route('my_courses'));
         }
     }
 
