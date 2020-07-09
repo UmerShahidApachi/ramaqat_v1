@@ -109,15 +109,26 @@ class CourseController extends Controller
             $destinationpath = public_path('course');
             $file->move($destinationpath, $imgname);
         }
-//        dd($imgname);
 
+        if ($request->hasfile('attachment')) {
+          foreach ($request->file('attachment') as $key => $value) {
+            $file = $value;
+            $filename = str_replace(' ', '', $file->getClientOriginalName());
+            $ext = $file->getClientOriginalExtension();
+            $name[] = uniqid() . $filename;
+            $destinationpath = public_path('course/attachment');
+            $file->move($destinationpath, $name[$key]);
+          }          
+        }
+       // dd($name);
+        $attachments = implode(',', $name);
         $category_id = implode(',', $request->category_id);
 
-        $category = Course::create(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
+        $category = Course::create(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price, 'discount_price'=>$request->discount_price,'attach_doc'=>$attachments,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
 
         if ($category){
-//            return ['status'=>1, 'course'=>$category];
-            return redirect(route('my_courses'));
+           return ['status'=>1, 'course'=>$category];
+            // return redirect(route('my_courses'));
         }
     }
 
