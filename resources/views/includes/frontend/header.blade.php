@@ -65,12 +65,17 @@
         }
 
        li .white-btn{
-            padding: 13px 25px;
+            padding: 12px 15px;
+       }
+       li .logout-btn{
+          padding: 12px 15px; 
        }
        li .signup{
-        padding: 13px 25px;
+        padding: 12px 15px;
        }
-
+       .custom-select {
+        width: 85px;
+       }
         #Subscribe_body .SubBtn {
             display: inline-block;
         }
@@ -291,7 +296,7 @@
                     @endif
 
                 <li>
-                    <a href="{{route('logout')}}"><button class="btn plum-btn"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></button></a>
+                    <a href="{{route('logout')}}"><button class="btn plum-btn logout-btn">Logout</button></a>
                 </li>
                 @endauth
         </ul>

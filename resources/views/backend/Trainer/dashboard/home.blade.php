@@ -1,9 +1,7 @@
 @extends('backend.trainer.layouts.app')
 @section('customSection')
 <style>
-  body{
-    overflow-y: hidden;
-  }
+ 
   .card-footer a{
     color: #999999;
   }

@@ -25,6 +25,7 @@
                     </div>
                 </div>
                 {{--                {{dd(Auth::id())}}--}}
+                <div class="crud-opration">
                 <div class="card-body">
                     <div class="row">
                         <div class="table-responsive">
@@ -85,6 +86,7 @@
                             </table>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
