@@ -167,7 +167,7 @@ Trainer Dashboard
             </div>
         </div>
     </div>
-    <div class="col-9" style="height:100vh;overflow-y:scroll;">
+    <div class="col-9" style="height:90vh;overflow-y:scroll;">
     @yield('customSection')
 
 
