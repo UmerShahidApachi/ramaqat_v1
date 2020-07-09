@@ -1,9 +1,17 @@
 @extends('backend.trainer.layouts.app')
 @section('customSection')
+<style>
+  body{
+    overflow-y: hidden;
+  }
+  .card-footer a{
+    color: #999999;
+  }
+</style>
 <div class="col-9 content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="col-lg-6 col-md-6 col-sm-6">
           <div class="card card-stats">
             <div class="card-header card-header-warning card-header-icon">
               <div class="card-icon">
@@ -22,7 +30,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="col-lg-6 col-md-6 col-sm-6">
           <div class="card card-stats">
             <div class="card-header card-header-success card-header-icon">
               <div class="card-icon">
@@ -38,7 +46,7 @@
             </div>
           </div>
         </div>
-{{--        <div class="col-lg-4 col-md-6 col-sm-6">--}}
+{{--        <div class="col-lg-6 col-md-6 col-sm-6">--}}
 {{--          <div class="card card-stats">--}}
 {{--            <div class="card-header card-header-danger card-header-icon">--}}
 {{--              <div class="card-icon">--}}
@@ -54,7 +62,7 @@
 {{--            </div>--}}
 {{--          </div>--}}
 {{--        </div>--}}
-{{--        <div class="col-lg-4 col-md-6 col-sm-6">--}}
+{{--        <div class="col-lg-6 col-md-6 col-sm-6">--}}
 {{--          <div class="card card-stats">--}}
 {{--            <div class="card-header card-header-info card-header-icon">--}}
 {{--              <div class="card-icon">--}}
@@ -72,7 +80,7 @@
 {{--        </div>--}}
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="card card-chart">
             <div class="card-header card-header-success">
               <div class="ct-chart" id="dailySalesChart"></div>
@@ -89,7 +97,7 @@
             </div>
           </div>
         </div>
-{{--        <div class="col-md-4">--}}
+{{--        <div class="col-md-6">--}}
 {{--          <div class="card card-chart">--}}
 {{--            <div class="card-header card-header-warning">--}}
 {{--              <div class="ct-chart" id="websiteViewsChart"></div>--}}
@@ -105,7 +113,7 @@
 {{--            </div>--}}
 {{--          </div>--}}
 {{--        </div>--}}
-{{--        <div class="col-md-4">--}}
+{{--        <div class="col-md-6">--}}
 {{--          <div class="card card-chart">--}}
 {{--            <div class="card-header card-header-danger">--}}
 {{--              <div class="ct-chart" id="completedTasksChart"></div>--}}

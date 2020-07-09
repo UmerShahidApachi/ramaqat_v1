@@ -41,7 +41,23 @@ Trainer Dashboard
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-
+<style>
+    body{
+        overflow-y: initial;
+    }
+    .table-responsive{
+        overflow-x: hidden;
+    }
+    .dataTables_filter{
+        margin-right: 24px;
+    }
+    .sidebar-dashboard{
+        height: initial;
+    }
+    .crud-sec{
+        padding: 20px 15px;
+    }
+</style>
 <body class="">
 <!-- Header Start Here -->
 <nav class="z-depth-1-half top-nav">
@@ -84,7 +100,7 @@ Trainer Dashboard
 <!-- header End  Here-->
 
 <div class="row">
-    <div class="col-3" style="height:100vh;overflow-y:hidden;">
+    <div class="col-3" style="height:100vh;">
         <div class="sidebar-dashboard plum-bg text-center">
             <div class="change-sec">
                 <div class="change-img">
