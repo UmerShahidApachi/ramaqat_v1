@@ -209,6 +209,7 @@
             padding-top: 1%;
 
         }
+        
 
         #basicSlider .MS-content .item {
             display: inline-block;
@@ -1195,7 +1196,7 @@
       <!--/.Indicators-->
       <div class="row">
         <div class="col-1 text-center">
-            <a class="btn-floating text-center" href=".multi-item-example" data-slide="prev" style="display: none;">
+            <a class="btn-floating text-center" href=".multi-item-example" data-slide="prev">
                 <i class="fa fa-chevron-left"></i>
             </a>
         </div>
@@ -1444,7 +1445,7 @@
           <!--/.Slides-->
         </div>
         <div class="col-1 text-center">
-            <a class="btn-floating" href=".multi-item-example" data-slide="next" style="display: none;">
+            <a class="btn-floating" href=".multi-item-example" data-slide="next">
                 <i class="fa fa-chevron-right"></i>
             </a>
         </div>
