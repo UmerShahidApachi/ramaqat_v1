@@ -118,7 +118,7 @@ Route::prefix('trainer')->group(function () {
         Route::get('add-lesson-form/{id}', 'LessonController@show')->name('lesson_form');
         Route::get('edit-lesson-form/{id}', 'LessonController@edit')->name('edit_form');
         Route::post('add-lesson',      'LessonController@store')->name('add_lesson');
-        Route::post('update-lesson',   'LessonController@store')->name('update_lesson');
+        Route::post('update-lesson',   'LessonController@update')->name('update_lesson');
         Route::get('delete-lesson/{id}',    'LessonController@delete')->name('delete');
         Route::get('profile',          'Trainer\DashboardController@profile')->name('profile');
         Route::post('update-profile',  'Trainer\DashboardController@update_profile')->name('update_profile');
@@ -127,6 +127,9 @@ Route::prefix('trainer')->group(function () {
 
         Route::post('section/add',      'LessonController@add_section')->name('add_section');
         Route::get('get_section/{id}',      'LessonController@get_section');
+
+        Route::get('edit_lessons/{id}', 'LessonController@edit');
+
 
 
     });

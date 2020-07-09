@@ -228,6 +228,97 @@
   </div>
 </div>
 
+<!-- Modal -->
+<div id="edit_lesson" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add Section</h4>
+      </div>
+      <div class="modal-body">
+        <form id="update_lesson_form" >
+            @csrf
+            <input type="hidden" name="course_id" id="les_course_id">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Lesson</h4>
+            </div>
+            <input type="hidden" name="course_id" id="lesson_courses_id" value="">
+            <input type="hidden" name="id" id="lesson_id" value="">
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Lesson Number*</label>
+                        <input type="number" min="0" class="form-control" name="l_num" id="lesson_num" required>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Lesson Name*</label>
+                        <input type="text" class="form-control" name="name" id="lesson_name" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="btn btn-primary btn-sm float-left">
+                        <span>Choose Video*</span>
+                        <input type="file" name="video" accept="video/*" >
+                        <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow=""
+                             aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                            0%
+                        </div>
+                    </div>
+                        <div id="success">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="btn btn-primary btn-sm float-left">
+                        <span>Choose Document (Optional)</span>
+                        <input type="file" name="document" >
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label>Section*</label><br>
+                        <select name="sections" id="section2" required>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label>Description*</label>
+                        <textarea id="lesson_desc"  class="form-control description" name="description" required></textarea>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="modal-footer">
+                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                <input type="submit" class="btn btn-success cat" id="cat">
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 
 <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -269,7 +360,7 @@ aria-hidden="true">
 </div>
 <div class="col-6 col-sm-4 text-center">
 <div>
-<span class="plum-text"><b>8:00</b></span>
+<!-- <span class="plum-text"><b>8:00</b></span> -->
 </div>
 </div>
 <div class="col-4 col-sm-4 text-end">
@@ -285,18 +376,7 @@ aria-hidden="true">
 <div class="show_lesson">
 
 </div>
-<!-- <ul class="header-list-sec">
-<li>
-<img src="img/traneedashboard/lession.png"><span class="mr-3"><h6>Lession#</h6></span>
-</li>
-<li>
-<img class="d-none" src="img/traneedashboard/clock.png"><span class="ml-3 plum-text"><b>8:00</b></span>
-</li>
-<li>
-<button class="btn white-btn">Edit</button>
-</li>
-</ul> -->
-</li>
+
 </ul>
 
 <!-- footerbutton -->
@@ -421,7 +501,7 @@ Or
         // find('.show_section').text(data.section[i].section +"");
 
         var html = '';
-        html +='<div>';
+        html +='<div class="remove_section">';
         html +='<h5 class="plum-text"><b>'+ data.section.section + ':Section</b></h5>';
         html +='</div>';
         $('.my_section').append(html);
@@ -446,24 +526,115 @@ Or
    success:function(data) 
    {
         $('#lessonModal').modal('hide');
+        $('.remove_section').remove();
+        $('.remove_lesson').remove();
+            $.each(data.section, function( index, value ) {
+            var html_1 = '';
+        html_1 +='<div class="remove_section">';
+        html_1 +='<h5 class="plum-text"><b>'+ value.section + ':Section</b></h5>';
+        html_1 +='</div>';
+        $('.my_section').append(html_1);
+
+        if(typeof(value.lessons) != "undefined" && value.lessons !== null) {
+            $.each(value.lessons, function( indx, val) {
         var html = '';
-        html +='<div class="row detail-bg">';
+        html +='<div class="row detail-bg remove_lesson">';
         html +='<div class="col-6 col-sm-4 c-text">';
         html +='<div>';
-        html +='<img src="img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+data.lesson.title + data.lesson.lesson_no +'</span>';
+        html +='<img src="img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + val.lesson_no +'</span>';
         html +='</div>';
         html +='</div>';
         html +='<div class="col-6 col-sm-4 text-center">';
-        html +='<div>';
-        html +='<span class=" plum-text"><b>8:00</b></span>';
-        html +='</div>';
+        // html +='<div>';
+        // html +='<span class=" plum-text"><b>8:00</b></span>';
+        // html +='</div>';
         html +='</div>';
         html +='<div class="col-12 col-sm-4 text-end">';
-        html +='<a class="edit-btn" href="#">Edit</a>';
+        html +='<a class="edit-btn lessons_edit" id="'+val.id+'" href="#" >Edit</a>';
         html +='</div>';
         html +='</div>';
          $('.show_lesson').append(html);
+         });
+     }
+         });
         $('#basicExampleModal').modal('show');
+    
+   }
+  })
+
+ });
+        $('body').on('click','.lessons_edit',function(){
+            var lesson_id = $(this).attr('id');
+            // var course_id = $('#lesson_course_id').val();
+            $.ajax({
+   url:"{{ url('trainer/edit_lessons') }}/"+ lesson_id,
+   method:"get",
+ 
+   success:function(data) 
+   {
+        $('#basicExampleModal').modal('hide');
+        var i;
+        for (i = 0; i < data.data.length; i++) {
+        $("#section2").append(new Option(data.data[i].section, data.data[i].id));
+    }
+        $('#lesson_num').val(data.lesson.lesson_no);
+        $('#lesson_name').val(data.lesson.title); 
+        $('#lesson_desc').text(data.lesson.description);     
+        $('#lesson_courses_id').val(data.lesson.course_id); 
+        $('#lesson_id').val(data.lesson.id); 
+
+
+        $('#edit_lesson').modal('show');
+   }
+  })
+        });
+
+        $('#update_lesson_form').on('submit', function(event){
+  event.preventDefault();      
+  $.ajax({
+   url:"{{route('update_lesson')}}",
+   method:"POST",
+   data:new FormData(this),
+   dataType:'JSON',
+   contentType: false,
+   cache: false,
+   processData: false,
+   success:function(data) 
+   {
+        $('#edit_lesson').modal('hide');
+        $('.remove_section').remove();
+        $('.remove_lesson').remove();
+            $.each(data.section, function( index, value ) {
+            var html_1 = '';
+        html_1 +='<div class="remove_section">';
+        html_1 +='<h5 class="plum-text"><b>'+ value.section + ':Section</b></h5>';
+        html_1 +='</div>';
+        $('.my_section').append(html_1);
+
+        if(typeof(value.lessons) != "undefined" && value.lessons !== null) {
+            $.each(value.lessons, function( indx, val) {
+        var html = '';
+        html +='<div class="row detail-bg remove_lesson">';
+        html +='<div class="col-6 col-sm-4 c-text">';
+        html +='<div>';
+        html +='<img src="img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + val.lesson_no +'</span>';
+        html +='</div>';
+        html +='</div>';
+        html +='<div class="col-6 col-sm-4 text-center">';
+        // html +='<div>';
+        // html +='<span class=" plum-text"><b>8:00</b></span>';
+        // html +='</div>';
+        html +='</div>';
+        html +='<div class="col-12 col-sm-4 text-end">';
+        html +='<a class="edit-btn lessons_edit" id="'+val.id+'" href="#" >Edit</a>';
+        html +='</div>';
+        html +='</div>';
+         $('.show_lesson').append(html);
+         });
+     }
+         });
+        $('#basicExampleModal').modal('show');
+    
    }
   })
 
