@@ -45,7 +45,6 @@ class LessonController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request->all());
 
         $course = Course::find($request->course_id);
         if ($request->hasfile('document')) {
@@ -115,8 +114,20 @@ class LessonController extends Controller
             $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description,'section_id' => $request->sections, 'video_path' => $video]);
 
         }
+        $section = Section::with('lessons')->where('course_id',$request->course_id)->get();
+        // dd($section);
+        // $section = Section::where('course_id',$request->course_id)->get()->toArray();
+        // foreach ($section as $key => $value) {
+        //     $id= $value['id'];
+        //     $check = Lesson::where('section_id',$id)->first();
+        //     if(isset($check))
+        //     {
+        //      $lessons[$id] = $check->toArray();
+        //     }
+        // }
+        // echo "<pre>"; print_r($lessons);exit();
         if ($category) {
-           return ['status'=>1, 'lesson'=>$category];
+           return ['status'=>1, 'lesson'=>$category,'section'=>$section];
         }
 
 
@@ -143,8 +154,9 @@ class LessonController extends Controller
     public function edit($id)
     {
         $data = Lesson::find($id);
-        return view('backend.trainer.courses.lessons.edit', compact('data'));
-
+        $section = Section::where('course_id',$id)->get();
+        // return view('backend.trainer.courses.lessons.edit', compact('data'));
+        return ['status'=>1, 'lesson'=>$data, 'data'=>$section];
     }
 
     public function delete($id)
@@ -162,7 +174,10 @@ class LessonController extends Controller
      */
     public function update(Request $request, Lesson $lesson)
     {
+
+        // dd($request->all());exit();
         $course = Course::find($request->course_id);
+        $lesson = Lesson::where('id',$request->id)->first();
         if ($request->hasfile('document')) {
             $postData = $request->only('document');
 
@@ -179,9 +194,9 @@ class LessonController extends Controller
 
 
             // Check to see if validation fails or passes
-            if ($validator->fails()) {
-                return redirect()->back()->with('alert', 'Upload Image only')->withInput();
-            }
+            // if ($validator->fails()) {
+            //     return redirect()->back()->with('alert', 'Upload Image only')->withInput();
+            // }
             $file = $request->file('document');
             $filename = str_replace(' ', '', $file->getClientOriginalName());
             $ext = $file->getClientOriginalExtension();
@@ -221,6 +236,8 @@ class LessonController extends Controller
             $video = uniqid() . $filename;
             $destinationpath = public_path('course/' . $course->name . '/');
             $file->move($destinationpath, $video);
+        }else{
+            $video = $lesson->video_path;
         }
         if ($request->hasfile('document')) {
 
@@ -230,9 +247,14 @@ class LessonController extends Controller
             $category = Lesson::where('id',$request->id)->update(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'video_path' => $video]);
 
         }
+
+        $section = Section::with('lessons')->where('course_id',$request->course_id)->get();
         if ($category) {
-            return redirect()->back();
+           return ['status'=>1, 'lesson'=>$category,'section'=>$section];
         }
+        // if ($category) {
+        //     return redirect()->back();
+        // }
     }
 
     /**
