@@ -2,13 +2,13 @@
 @section('customSection')
 <style>
     .form-group .bmd-label-static {
-        top: -20px;
+        top: -22px;
     }
 </style>
-    <div class="mt-5">
+    <div class="col-8 mt-3 mb-2">
         <form  id="course_form" method="POST" action="{{route('update_profile')}}" enctype="multipart/form-data">
             @csrf
-            <div class="modal-header mb-2">
+            <div class="modal-header mb-4">
                 <h4 class="modal-title" style="color: #570055">Update Profile</h4>
             </div>
 

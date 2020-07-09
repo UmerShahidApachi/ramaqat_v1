@@ -61,7 +61,6 @@ class UserController extends Controller
 
     public function update_profile(Request $request)
     {
-//        dd($request->all());
         $user = User::find($request->id);
 //        if ($user){
 //            return redirect()->back()->with('message','Email Already Exists');

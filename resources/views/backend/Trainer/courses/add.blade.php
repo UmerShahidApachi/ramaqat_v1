@@ -1,13 +1,13 @@
 @extends('backend.Trainer.layouts.app')
 @section('customSection')
+
     <div class="container mt-5">
     <form id="course_form">
-        @csrf
 
         <input type="hidden" name="id" id="course_idd">
 
         <div class="modal-header">
-            <h4 class="modal-title">Add Course</h4>
+            <h4 class="modal-title" style="color: #570055;">Add Course</h4>
         </div>
 
             <div class="row">
@@ -65,7 +65,7 @@
 
         <div class="modal-footer">
             <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-            <input type="submit" class="btn btn-success cat" id="cat" value="next">
+            <input type="submit" class="btn btn-success cat" id="cat" value="Submit">
         </div>
     </form>
     </div>
@@ -137,7 +137,7 @@
 <script>
     CKEDITOR.replace('description');
 </script>
-<script>    
+<script>
     $(".chosen").chosen();
 </script>
 
@@ -211,6 +211,7 @@
  });
 
 </script>
+
 
 @endsection
 
