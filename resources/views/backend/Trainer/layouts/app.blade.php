@@ -42,6 +42,10 @@ Trainer Dashboard
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <style>
+
+  .card-header-primary{
+    background: #570055 !important;
+    }
     body{
         overflow-y: hidden;
     }
@@ -62,6 +66,7 @@ Trainer Dashboard
     .crud-sec{
         padding: 20px 15px;
     }
+
 </style>
 <body class="">
 <!-- Header Start Here -->

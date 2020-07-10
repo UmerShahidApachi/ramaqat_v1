@@ -4,8 +4,13 @@
     .form-group .bmd-label-static{
         top: -20px;
     }
+    #add_cource_scroll{
+      position: relative;
+      overflow-y: scroll;
+      height: 73vh;
+    }
 </style>
-    <div class="container mt-5">
+    <div class="container mt-5" id="add_cource_scroll">
     <form id="course_formss">
         @csrf
         <input type="hidden" name="id" id="course_idd">
@@ -342,28 +347,37 @@ aria-hidden="true">
 <li>
 <!-- Forst empty box -->
 </li>
-<li>
-<div class="row">
-<div class="col-6 col-sm-4">
-    <div class="my_section">
-<div>
-   <h5 class="plum-text"><b></b></h5>
-</div>
-</div>
-</div>
-<div class="col-6 col-sm-4 text-center">
-<div>
-<!-- <span class="plum-text"><b>8:00</b></span> -->
-</div>
-</div>
-<div class="col-4 col-sm-4 text-end">
+  <li>
+    <div class="row">
+      <div class="col-12">
+        <div class="col-6 col-sm-4">
+          <div class="my_section">
+            <div>
+               <h5 class="plum-text"><b></b></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 text-center">
+          <div>
+          <!-- <span class="plum-text"><b>8:00</b></span> -->
+          </div>
+        </div>
+        <div class="col-4 col-sm-4 text-end">
+        </div>
 
-</div>
-</div>
-</li>
+        <!-- inner body -->
+        <ul class="course-list-sec">
+          <div class="show_lesson">
+          </div>
+        </ul>
+
+      <!-- close -->
+    </div>
+  </div>
+  </li>
 </ul>
 
-<!-- course list -->
+<!-- course list --
 
 <ul class="course-list-sec">
 <div class="show_lesson">
@@ -371,6 +385,8 @@ aria-hidden="true">
 </div>
 
 </ul>
+
+
 
 <!-- footerbutton -->
 <div class="row mt-5">
