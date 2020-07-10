@@ -42,6 +42,9 @@ Trainer Dashboard
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <style>
+    body{
+        overflow-y: hidden;
+    }
 
   .card-header-primary{
     background: #570055 !important;
