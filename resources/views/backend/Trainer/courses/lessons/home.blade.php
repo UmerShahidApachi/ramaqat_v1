@@ -1,4 +1,4 @@
-@extends('backend.Trainer.layouts.app')
+@extends('backend.trainer.layouts.app')
 @section('customSection')
     {{--    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>--}}
     {{--    <script type="text/javascript" src="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>--}}

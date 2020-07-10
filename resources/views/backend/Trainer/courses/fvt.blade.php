@@ -1,4 +1,4 @@
-@extends('backend.Trainer.layouts.app')
+@extends('backend.trainer.layouts.app')
 @section('customSection')
 
 <style>
