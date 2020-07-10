@@ -68,9 +68,17 @@ class PercentageController extends Controller
      * @param  \App\Percentage  $percentage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Percentage $percentage)
+    public function update(Request $request)
     {
-        //
+        $category = Percentage::where('id',1)->update([
+            'admin_percentage'=>$request->admin_percentage,
+            'author_percentage'=>$request->author_percentage,
+            'producer_percentage'=>$request->producer_percentage,
+        ]);
+
+        if ($category){
+            return redirect()->back();
+        }
     }
 
     /**
