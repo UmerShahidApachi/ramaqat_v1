@@ -107,7 +107,7 @@
             display: none;
         }
 
-<<<<<<< HEAD
+
        li .white-btn{
             padding: 12px 15px;
        }
@@ -122,11 +122,11 @@
        }
         #Subscribe_body .SubBtn {
             display: inline-block;
-=======
+          }
 
         .book-sec h4 {
             font-size: 1.5em;
->>>>>>> a2cc6b14101a2edbad438bc98041d78dabbc14f2
+
         }
 
         .book-sec p {

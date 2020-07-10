@@ -111,7 +111,7 @@
 
         /* basic slider style */
         .arrow_newtop{
-            top: 40%;
+            top: 45%;
         }
         #mixedSlider {
             position: relative;
@@ -209,6 +209,7 @@
             padding-top: 1%;
 
         }
+        
 
         #basicSlider .MS-content .item {
             display: inline-block;
@@ -1113,7 +1114,7 @@
     <!-- <hr class="my-4"> -->
 
     <!--Carousel Wrapper-->
-    <div id="multi-item-example" class="carousel slide carousel-multi-item multi-item-example" data-ride="carousel">
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
       <!--Controls--
       <div class="">
@@ -1131,7 +1132,7 @@
       <!--/.Indicators-->
       <div class="row">
         <div class="col-1 text-center">
-            <a class="btn-floating text-center" href=".multi-item-example" data-slide="prev" style="display: none;">
+            <a class="btn-floating arrow_newtop" href="#multi-item-example" data-slide="prev">
                 <i class="fa fa-chevron-left"></i>
             </a>
         </div>
@@ -1201,6 +1202,219 @@
                  <div class="col-md-3 clearfix d-none d-md-block">
                   <div class="card mb-2 carousel_border">
                     <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                      alt="Card image cap">
+                    <div class="card-body carousel_border main_bg_color">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
+                            </div>
+                            <div class="col-9" style="color: white">
+                                <p class="m-0">Your Name</p>
+                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
+                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
+                                <p class="float-right m-0" style="font-size:10px">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span> 5</span>
+                                    <span>(12345)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                 <div class="col-md-3 clearfix d-none d-md-block">
+                  <div class="card mb-2 carousel_border">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                      alt="Card image cap">
+                    <div class="card-body carousel_border main_bg_color">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
+                            </div>
+                            <div class="col-9" style="color: white">
+                                <p class="m-0">Your Name</p>
+                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
+                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
+                                <p class="float-right m-0" style="font-size:10px">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span> 5</span>
+                                    <span>(12345)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                 <div class="col-md-3 clearfix d-none d-md-block">
+                  <div class="card mb-2 carousel_border">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                      alt="Card image cap">
+                    <div class="card-body carousel_border main_bg_color">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
+                            </div>
+                            <div class="col-9" style="color: white">
+                                <p class="m-0">Your Name</p>
+                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
+                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
+                                <p class="float-right m-0" style="font-size:10px">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span> 5</span>
+                                    <span>(12345)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 clearfix d-none d-md-block">
+                  <div class="card mb-2  carousel_border">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                      alt="Card image cap">
+                    <div class="card-body carousel_border main_bg_color">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
+                            </div>
+                            <div class="col-9" style="color: white">
+                                <p class="m-0">Your Name</p>
+                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
+                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
+                                <p class="float-right m-0" style="font-size:10px">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span> 5</span>
+                                    <span>(12345)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 clearfix d-none d-md-block">
+                  <div class="card mb-2  carousel_border">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                      alt="Card image cap">
+                    <div class="card-body carousel_border main_bg_color">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
+                            </div>
+                            <div class="col-9" style="color: white">
+                                <p class="m-0">Your Name</p>
+                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
+                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
+                                <p class="float-right m-0" style="font-size:10px">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span> 5</span>
+                                    <span>(12345)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 clearfix d-none d-md-block">
+                  <div class="card mb-2  carousel_border">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                      alt="Card image cap">
+                    <div class="card-body carousel_border main_bg_color">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
+                            </div>
+                            <div class="col-9" style="color: white">
+                                <p class="m-0">Your Name</p>
+                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
+                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
+                                <p class="float-right m-0" style="font-size:10px">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span> 5</span>
+                                    <span>(12345)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div><div class="col-md-3 clearfix d-none d-md-block">
+                  <div class="card mb-2  carousel_border">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                      alt="Card image cap">
+                    <div class="card-body carousel_border main_bg_color">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
+                            </div>
+                            <div class="col-9" style="color: white">
+                                <p class="m-0">Your Name</p>
+                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
+                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
+                                <p class="float-right m-0" style="font-size:10px">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span> 5</span>
+                                    <span>(12345)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div><div class="col-md-3 clearfix d-none d-md-block">
+                  <div class="card mb-2  carousel_border">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                      alt="Card image cap">
+                    <div class="card-body carousel_border main_bg_color">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
+                            </div>
+                            <div class="col-9" style="color: white">
+                                <p class="m-0">Your Name</p>
+                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
+                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
+                                <p class="float-right m-0" style="font-size:10px">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span> 5</span>
+                                    <span>(12345)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div><div class="col-md-3 clearfix d-none d-md-block">
+                  <div class="card mb-2  carousel_border">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
                       alt="Card image cap">
                     <div class="card-body carousel_border main_bg_color">
                         <div class="row">
@@ -1317,6 +1531,7 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="col-md-3 clearfix d-none d-md-block">
                   <div class="card mb-2  carousel_border">
                     <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
@@ -1344,216 +1559,9 @@
                     </div>
                   </div>
                 </div>
-
                 <div class="col-md-3 clearfix d-none d-md-block">
-                  <div class="card mb-2 carousel_border">
+                  <div class="card mb-2  carousel_border">
                     <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
-                      alt="Card image cap">
-                    <div class="card-body carousel_border main_bg_color">
-                        <div class="row">
-                            <div class="col-3">
-                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
-                            </div>
-                            <div class="col-9" style="color: white">
-                                <p class="m-0">Your Name</p>
-                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
-                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                <p class="float-right m-0" style="font-size:10px">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span> 5</span>
-                                    <span>(12345)</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <!--/.Second slide-->
-          </div>
-          <!--/.Slides-->
-        </div>
-        <div class="col-1 text-center">
-            <a class="btn-floating" href=".multi-item-example" data-slide="next" style="display: none;">
-                <i class="fa fa-chevron-right"></i>
-            </a>
-        </div>
-      </div>
-        <!--/.Carousel Wrapper-->
-
-
-
-          <!--/.Indicators-->
-      <div class="row">
-        <div class="col-1 text-center ">
-            <a class="btn-floating arrow_newtop" href=".multi-item-example" data-slide="prev">
-                <i class="fa fa-chevron-left"></i>
-            </a>
-        </div>
-        <div class="col-10">
-          <!--Slides-->
-          <div class="carousel-inner" role="listbox">
-
-            <!--First slide-->
-            <div class="carousel-item active">
-
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="card mb-2 carousel_border">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-                      alt="Card image cap">
-                    <div class="card-body carousel_border main_bg_color">
-                        <div class="row">
-                            <div class="col-3">
-                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
-                            </div>
-                            <div class="col-9" style="color: white">
-                                <p class="m-0">Your Name</p>
-                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
-                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                <p class="float-right m-0" style="font-size:10px">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span> 5</span>
-                                    <span>(12345)</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-3 clearfix d-none d-md-block">
-                  <div class="card mb-2 carousel_border">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                      alt="Card image cap">
-                    <div class="card-body carousel_border main_bg_color">
-                        <div class="row">
-                            <div class="col-3">
-                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
-                            </div>
-                            <div class="col-9" style="color: white">
-                                <p class="m-0">Your Name</p>
-                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
-                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                <p class="float-right m-0" style="font-size:10px">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span> 5</span>
-                                    <span>(12345)</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                 <div class="col-md-3 clearfix d-none d-md-block">
-                  <div class="card mb-2 carousel_border">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                      alt="Card image cap">
-                    <div class="card-body carousel_border main_bg_color">
-                        <div class="row">
-                            <div class="col-3">
-                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
-                            </div>
-                            <div class="col-9" style="color: white">
-                                <p class="m-0">Your Name</p>
-                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
-                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                <p class="float-right m-0" style="font-size:10px">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span> 5</span>
-                                    <span>(12345)</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-3 clearfix d-none d-md-block">
-                  <div class="card mb-2 carousel_border">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                      alt="Card image cap">
-                    <div class="card-body carousel_border main_bg_color">
-                        <div class="row">
-                            <div class="col-3">
-                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
-                            </div>
-                            <div class="col-9" style="color: white">
-                                <p class="m-0">Your Name</p>
-                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
-                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                <p class="float-right m-0" style="font-size:10px">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span> 5</span>
-                                    <span>(12345)</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <!--/.First slide-->
-
-            <!--Second slide-->
-            <div class="carousel-item">
-
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="card mb-2 carousel_border">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
-                      alt="Card image cap">
-                    <div class="card-body carousel_border main_bg_color">
-                        <div class="row">
-                            <div class="col-3">
-                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
-                            </div>
-                            <div class="col-9" style="color: white">
-                                <p class="m-0">Your Name</p>
-                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
-                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                <p class="float-right m-0" style="font-size:10px">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span> 5</span>
-                                    <span>(12345)</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-3 clearfix d-none d-md-block">
-                  <div class="card mb-2 carousel_border">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
                       alt="Card image cap">
                     <div class="card-body carousel_border main_bg_color">
                         <div class="row">
@@ -1607,7 +1615,7 @@
                 </div>
 
                 <div class="col-md-3 clearfix d-none d-md-block">
-                  <div class="card mb-2 carousel_border">
+                  <div class="card mb-2  carousel_border">
                     <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
                       alt="Card image cap">
                     <div class="card-body carousel_border main_bg_color">
@@ -1633,68 +1641,9 @@
                     </div>
                   </div>
                 </div>
-              </div>
-
-            </div>
-            <!--/.Second slide-->
-          </div>
-          <!--/.Slides-->
-        </div>
-        <div class="col-1 text-center arrow_top">
-            <a class="btn-floating arrow_newtop" href=".multi-item-example" data-slide="next">
-                <i class="fa fa-chevron-right"></i>
-            </a>
-        </div>
-      </div>
-        <!--/.Carousel Wrapper-->
-
-
-          <!--/.Indicators-->
-      <div class="row">
-        <div class="col-1 text-center">
-            <a class="btn-floating" href=".multi-item-example" data-slide="prev" style="display: none;">
-                <i class="fa fa-chevron-left"></i>
-            </a>
-        </div>
-        <div class="col-10">
-          <!--Slides-->
-          <div class="carousel-inner" role="listbox">
-
-            <!--First slide-->
-            <div class="carousel-item active">
-
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="card mb-2 carousel_border">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-                      alt="Card image cap">
-                    <div class="card-body carousel_border main_bg_color">
-                        <div class="row">
-                            <div class="col-3">
-                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
-                            </div>
-                            <div class="col-9" style="color: white">
-                                <p class="m-0">Your Name</p>
-                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
-                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                <p class="float-right m-0" style="font-size:10px">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span> 5</span>
-                                    <span>(12345)</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
                 <div class="col-md-3 clearfix d-none d-md-block">
-                  <div class="card mb-2 carousel_border">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                  <div class="card mb-2  carousel_border">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
                       alt="Card image cap">
                     <div class="card-body carousel_border main_bg_color">
                         <div class="row">
@@ -1719,37 +1668,9 @@
                     </div>
                   </div>
                 </div>
-                 <div class="col-md-3 clearfix d-none d-md-block">
-                  <div class="card mb-2 carousel_border">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                      alt="Card image cap">
-                    <div class="card-body carousel_border main_bg_color">
-                        <div class="row">
-                            <div class="col-3">
-                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
-                            </div>
-                            <div class="col-9" style="color: white">
-                                <p class="m-0">Your Name</p>
-                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
-                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                <p class="float-right m-0" style="font-size:10px">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span> 5</span>
-                                    <span>(12345)</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
                 <div class="col-md-3 clearfix d-none d-md-block">
-                  <div class="card mb-2 carousel_border">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
+                  <div class="card mb-2  carousel_border">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
                       alt="Card image cap">
                     <div class="card-body carousel_border main_bg_color">
                         <div class="row">
@@ -1774,46 +1695,36 @@
                     </div>
                   </div>
                 </div>
-              </div>
-
-            </div>
-            <!--/.First slide-->
-
-            <!--Second slide-->
-            <div class="carousel-item">
-
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="card mb-2 carousel_border">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
-                      alt="Card image cap">
-                    <div class="card-body carousel_border main_bg_color">
-                        <div class="row">
-                            <div class="col-3">
-                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
-                            </div>
-                            <div class="col-9" style="color: white">
-                                <p class="m-0">Your Name</p>
-                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
-                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
-                                <p class="float-right m-0" style="font-size:10px">
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span> 5</span>
-                                    <span>(12345)</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-
                 <div class="col-md-3 clearfix d-none d-md-block">
-                  <div class="card mb-2 carousel_border">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
+                  <div class="card mb-2  carousel_border">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                      alt="Card image cap">
+                    <div class="card-body carousel_border main_bg_color">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top rounded-circle" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="image" style="width: 45px;height: 45px;">
+                            </div>
+                            <div class="col-9" style="color: white">
+                                <p class="m-0">Your Name</p>
+                                <p class="m-0" style="font-size: 12px;">Cat_1</p>
+                                <p class="m-0" style="font-size: 11px;">Miss Nabeela, Coderstars by rob  percival Experien</p>
+                                <p class="float-right m-0" style="font-size:10px">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span> 5</span>
+                                    <span>(12345)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 clearfix d-none d-md-block">
+                  <div class="card mb-2  carousel_border">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
                       alt="Card image cap">
                     <div class="card-body carousel_border main_bg_color">
                         <div class="row">
@@ -1901,12 +1812,15 @@
           <!--/.Slides-->
         </div>
         <div class="col-1 text-center">
-            <a class="btn-floating" href=".multi-item-example" data-slide="next" style="display: none;">
+            <a class="btn-floating arrow_newtop" href="#multi-item-example" data-slide="next">
                 <i class="fa fa-chevron-right"></i>
             </a>
         </div>
       </div>
         <!--/.Carousel Wrapper-->
+
+
+
 
     </div>
 </div>
