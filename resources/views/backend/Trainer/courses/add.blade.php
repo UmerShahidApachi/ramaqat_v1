@@ -4,8 +4,29 @@
     .form-group .bmd-label-static{
         top: -20px;
     }
+    #add_cource_scroll{
+      position: relative;
+      overflow-y: scroll;
+      height: 73vh;
+    }
+    .custom-file-label:after{
+      content: "Choose file";
+    }
+    .custom-file-input:lang(en)~.custom-file-label::after{
+      content: "Choose file";
+    }
+    #checkbox_setting{
+      margin-top: 9%;
+    }
+    .bg_setting ,.bg_color{
+      background-color:#570055 !important;
+ 
+    }
+    .font_color{
+      color: #570055 !important;
+    }
 </style>
-    <div class="container mt-5">
+    <div class="container mt-5" id="add_cource_scroll">
     <form id="course_formss">
         @csrf
         <input type="hidden" name="id" id="course_idd">
@@ -15,60 +36,89 @@
         </div>
 
             <div class="row">
-            <div class="col-12">
-            <div class="form-group select-dropdown">
-                <label>Category</label>
-                <select class="form-control chosen chosen-height" name="category_id[]" multiple required>
-                    @foreach($categories as $c)
-                        <option value="{{$c->id}}">{{$c->name}}</option>
-                    @endforeach
-                </select>
-            </div>
-            </div>
-
-            </div>
-            <div class="row">
-            <div class="col-6">
-            <div class="form-group">
-                <label>Course Name</label>
-                <input type="text" class="form-control" name="name" required>
-            </div>
-            </div>
-            <div class="col-6">
-                <label style="margin-bottom: -4px; display: flex;">Attachment</label>
-            <div class="btn btn-primary btn-sm float-left">                
-                <span>Choose file</span>
-                <input type="file" name="attachment[]" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,image/*" multiple required>
-            </div>
-            </div>
+              <div class="col-6">
+                <div class="form-group select-dropdown">
+                    <label>Category</label>
+                    <select class="form-control chosen chosen-height" name="category_id[]" multiple required>
+                        @foreach($categories as $c)
+                            <option value="{{$c->id}}">{{$c->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group select-dropdown">
+                    <label>Auther</label>
+                    <!-- <select class="form-control chosen chosen-height" name="" multiple required>                        
+                      <option value=""></option>
+                    </select> -->
+                </div>
+              </div>
             </div>
 
             <div class="row">
-            <div class="col-6">
-            <div class="form-group">
-                <label>Price</label>
-                <input type="number" class="form-control" name="price" required>
+              <div class="col-6">
+              <div class="form-group">
+                  <label>Course Name</label>
+                  <input type="text" class="form-control" name="name" required>
+              </div>
+              </div>
+              <div class="col-6">
+              <div class="form-group">
+                  <label>Name</label>
+                  <!-- <input type="text" class="form-control" name="newname"> -->
+              </div>
+              </div>
+              
             </div>
-            </div>
-            <div class="col-6">
-                <label style="margin-bottom: -4px; display: flex;">Cover Image</label>
-            <div class="btn btn-primary btn-sm float-left">
-                               
-                <span>Choose file</span>
-                <input type="file" name="image" accept="image/*" required>
-            </div>
-            </div>
+
+            <div class="row">
+              <div class="col-6">
+              <div class="form-group">
+                  <label>Price</label>
+                  <input type="number" class="form-control" name="price" required>
+              </div>
+              </div>
+              <div class="col-6">
+              <div class="form-group">
+                  <label>Discount Price</label>
+                  <input type="number" class="form-control" name="discount_price" required>
+              </div>
+              </div>
+
+              
             </div>
             <div class="row">
-            <div class="col-6">
-            <div class="form-group">
-                <label>Discount Price</label>
-                <input type="number" class="form-control" name="discount_price" required>
+              <div class="col-6">
+                <label>Attachment</label>
+
+                 <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input" id="customFile2" name="image" accept="image/*">
+                  <label class="custom-file-label" for="customFile1">No file attached</label>
+                </div> 
+               
+                 <!-- <div class="btn btn-primary btn-sm float-left">                
+                  <span>Choose file</span>
+                  <input type="file" name="attachment[]" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,image/*" multiple required>
+                </div> -->
+              </div>
+
+              <div class="col-6">
+                <label>Cover Image</label>
+                 <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input" id="customFile2" name="image" accept="image/*">
+                  <label class="custom-file-label" for="customFile1">No file attached</label>
+                </div> 
+               <!--  <div class="btn btn-primary btn-sm float-left">
+                                   
+                    <span>Choose file</span>
+                    <input type="file" name="image" accept="image/*" required>
+                </div> -->
+              </div>
+              
             </div>
-            </div>
-        </div>
             <div class="row">
-            <div class="col-12">
+            <div class="col-12 mt-4">
             <div class="form-group">
                 <label>Description</label>
                 <textarea id="description"  class="form-control description" name="description" required></textarea>
@@ -123,16 +173,16 @@
   <div class="modal-dialog">
 
     <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <div class="modal-content ">
+      <div class="modal-header bg_color p-3">
+        <button type="button" class="close" data-dismiss="modal" style="position: absolute;right: 20px;">&times;</button>
         <h4 class="modal-title">Add Section</h4>
       </div>
       <div class="modal-body">
         <form id="lesson_form" >
             @csrf
-            <div class="modal-header">
-                <h4 class="modal-title">Add Lesson</h4>
+            <div class="modal-header mb-3">
+                <h4 class="modal-title font_color ">Add Lesson</h4>
             </div>
 
 {{--            <div class="row">--}}
@@ -166,7 +216,11 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <div class="btn btn-primary btn-sm float-left">
+                  <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input" id="customFile2" name="image" accept="image/*">
+                  <label class="custom-file-label" for="customFile1">No file attached</label>
+                </div> 
+                    <!-- <div class="btn btn-primary btn-sm float-left">
                         <span>Choose Video*</span>
                         <input type="file" name="video" accept="video/*" required>
                         <div class="progress">
@@ -178,22 +232,35 @@
                         <div id="success">
 
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-6">
-                    <div class="btn btn-primary btn-sm float-left">
+                  <div class="custom-file mb-3">
+                  <input type="file" class="custom-file-input" id="customFile2" name="image" accept="image/*">
+                  <label class="custom-file-label" for="customFile1">No file attached</label>
+                </div> 
+                    <!-- <div class="btn btn-primary btn-sm float-left">
                         <span>Choose Document (Optional)</span>
                         <input type="file" name="document" >
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
                         <label>Section*</label><br>
-                        <select name="sections" id="section" required>
+                        <select class="form-control" name="sections" id="section" required>
                         </select>
                     </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                      <div class="form-check-inline" id="checkbox_setting">                        
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="">Option select
+                        </label>
+                      </div>
+                  </div>
                 </div>
             </div>
             <div class="row">
@@ -342,28 +409,37 @@ aria-hidden="true">
 <li>
 <!-- Forst empty box -->
 </li>
-<li>
-<div class="row">
-<div class="col-6 col-sm-4">
-    <div class="my_section">
-<div>
-   <h5 class="plum-text"><b></b></h5>
-</div>
-</div>
-</div>
-<div class="col-6 col-sm-4 text-center">
-<div>
-<!-- <span class="plum-text"><b>8:00</b></span> -->
-</div>
-</div>
-<div class="col-4 col-sm-4 text-end">
+  <li>
+    <div class="row">
+      <div class="col-12">
+        <div class="col-6 col-sm-4">
+          <div class="my_section">
+            <div>
+               <h5 class="plum-text"><b></b></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 text-center">
+          <div>
+          <!-- <span class="plum-text"><b>8:00</b></span> -->
+          </div>
+        </div>
+        <div class="col-4 col-sm-4 text-end">
+        </div>
 
-</div>
-</div>
-</li>
+        <!-- inner body -->
+        <ul class="course-list-sec">
+          <div class="show_lesson">
+          </div>
+        </ul>
+
+      <!-- close -->
+    </div>
+  </div>
+  </li>
 </ul>
 
-<!-- course list -->
+<!-- course list --
 
 <ul class="course-list-sec">
 <div class="show_lesson">
@@ -371,6 +447,8 @@ aria-hidden="true">
 </div>
 
 </ul>
+
+
 
 <!-- footerbutton -->
 <div class="row mt-5">

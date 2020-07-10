@@ -1,11 +1,17 @@
 @extends('backend.trainer.layouts.app')
 @section('customSection')
 <style>
+    #scroll_set{
+        overflow-y: scroll;
+        position: relative;
+        height: 83vh;
+        padding: 2%;
+    }
     .form-group .bmd-label-static {
         top: -22px;
     }
 </style>
-    <div class="mt-3 mb-2">
+    <div class="mt-3 mb-2" id="scroll_set">
         <form  id="course_form" method="POST" action="{{route('update_profile')}}" enctype="multipart/form-data">
             @csrf
             <div class="modal-header mb-4">

@@ -45,6 +45,13 @@ Trainer Dashboard
     body{
         overflow-y: hidden;
     }
+
+  .card-header-primary{
+    background: #570055 !important;
+    }
+    body{
+        overflow-y: hidden;
+    }
     #sidebar_setting a{
         padding:0px;
     }
@@ -54,6 +61,7 @@ Trainer Dashboard
     }
     .table-responsive{
         overflow-x: hidden;
+        padding: 1%;
     }
     .sidebar-dashboard{
         height: initial;
@@ -61,6 +69,7 @@ Trainer Dashboard
     .crud-sec{
         padding: 20px 15px;
     }
+
 </style>
 <body class="">
 <!-- Header Start Here -->
