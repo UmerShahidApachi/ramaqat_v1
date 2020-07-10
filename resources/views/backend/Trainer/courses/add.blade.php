@@ -49,9 +49,9 @@
               <div class="col-6">
                 <div class="form-group select-dropdown">
                     <label>Auther</label>
-                    <!-- <select class="form-control chosen chosen-height" name="" multiple required>                        
+                     <select class="form-control chosen chosen-height" name="" multiple required>                        
                       <option value=""></option>
-                    </select> -->
+                    </select>
                 </div>
               </div>
             </div>
@@ -66,7 +66,7 @@
               <div class="col-6">
               <div class="form-group">
                   <label>Name</label>
-                  <!-- <input type="text" class="form-control" name="newname"> -->
+                  <input type="text" class="form-control" name="newname">
               </div>
               </div>
               

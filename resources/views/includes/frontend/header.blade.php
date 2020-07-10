@@ -64,14 +64,6 @@
         font-weight: 400 !important;
     }
 
-    li .white-btn {
-        padding: 13px 25px;
-    }
-
-    li .signup {
-        padding: 13px 25px;
-    }
-
     #Subscribe_body .SubBtn {
         display: inline-block;
     }
@@ -79,8 +71,19 @@
     #Subscribe_inner_body input {
         width: inherit;
     }
+     .custom-select {
+        width: 85px;
+       }
 
-
+     li .white-btn{
+            padding: 12px 15px;
+       }
+       li .logout-btn{
+          padding: 12px 20px;
+       }
+       li .signup{
+        padding: 12px 15px;
+       }
     @media (max-width: 991px) {
 
         .container.container_category {
@@ -108,18 +111,8 @@
         }
 
 
-       li .white-btn{
-            padding: 12px 15px;
-       }
-       li .logout-btn{
-          padding: 12px 15px;
-       }
-       li .signup{
-        padding: 12px 15px;
-       }
-       .custom-select {
-        width: 85px;
-       }
+      
+      
         #Subscribe_body .SubBtn {
             display: inline-block;
           }

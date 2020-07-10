@@ -118,12 +118,12 @@ Trainer Dashboard
             <div class="change-sec">
                 <div class="change-img">
                     @if(Auth::user()->image == "")
-                        <img class="img-fluid rounded-circle" src="{{asset('assets/frontend/img/download.png')}}" alt="user">
+                        <img class="img-fluid rounded-circle" style="height: inherit;" src="{{asset('assets/frontend/img/download.png')}}" alt="user">
                     @else
-                        <img class="img-fluid rounded-circle" src="{{asset('users/'. Auth::user()->image)}}" alt="user">
+                        <img class="img-fluid rounded-circle" style="height: inherit;" src="{{asset('users/'. Auth::user()->image)}}" alt="user">
                     @endif
                     <div class="edit-box">
-{{--                        <div class="edit-sec text-center rounded-circle">--}}
+{{--                        <div class="edit-sec text-center rounded-circle" >--}}
 {{--                            <img class="edit" src="{{asset('assets/frontend/img/Subtraction 1.png')}}">--}}
 {{--                            <div class="edit-text"><a href="#">edit</a></div>--}}
 {{--                        </div>--}}
