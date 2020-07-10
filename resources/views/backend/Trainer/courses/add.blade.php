@@ -20,7 +20,7 @@
     }
     .bg_setting ,.bg_color{
       background-color:#570055 !important;
- 
+
     }
     .font_color{
       color: #570055 !important;
@@ -49,9 +49,9 @@
               <div class="col-6">
                 <div class="form-group select-dropdown">
                     <label>Auther</label>
-                    <!-- <select class="form-control chosen chosen-height" name="" multiple required>                        
+                    <select class="form-control chosen chosen-height" name="" multiple >
                       <option value=""></option>
-                    </select> -->
+                    </select>
                 </div>
               </div>
             </div>
@@ -66,10 +66,10 @@
               <div class="col-6">
               <div class="form-group">
                   <label>Name</label>
-                  <!-- <input type="text" class="form-control" name="newname"> -->
+                  <input type="text" class="form-control" name="newname">
               </div>
               </div>
-              
+
             </div>
 
             <div class="row">
@@ -86,18 +86,18 @@
               </div>
               </div>
 
-              
+
             </div>
             <div class="row">
               <div class="col-6">
                 <label>Attachment</label>
 
                  <div class="custom-file mb-3">
-                  <input type="file" class="custom-file-input" id="customFile2" name="image" accept="image/*">
+                  <input type="file" class="custom-file-input" id="customFile2" name="attachment" accept="image/*">
                   <label class="custom-file-label" for="customFile1">No file attached</label>
-                </div> 
-               
-                 <!-- <div class="btn btn-primary btn-sm float-left">                
+                </div>
+
+                 <!-- <div class="btn btn-primary btn-sm float-left">
                   <span>Choose file</span>
                   <input type="file" name="attachment[]" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,image/*" multiple required>
                 </div> -->
@@ -108,14 +108,14 @@
                  <div class="custom-file mb-3">
                   <input type="file" class="custom-file-input" id="customFile2" name="image" accept="image/*">
                   <label class="custom-file-label" for="customFile1">No file attached</label>
-                </div> 
+                </div>
                <!--  <div class="btn btn-primary btn-sm float-left">
-                                   
+
                     <span>Choose file</span>
                     <input type="file" name="image" accept="image/*" required>
                 </div> -->
               </div>
-              
+
             </div>
             <div class="row">
             <div class="col-12 mt-4">
@@ -153,7 +153,7 @@
             <div class="col-12">
             <div class="form-group">
                 <label>Section</label>
-                <input type="test" class="form-control" name="section" placeholder="section" required>                
+                <input type="test" class="form-control" name="section" placeholder="section" required>
             </div>
             </div>
             </div>
@@ -219,7 +219,7 @@
                   <div class="custom-file mb-3">
                   <input type="file" class="custom-file-input" id="customFile2" name="image" accept="image/*">
                   <label class="custom-file-label" for="customFile1">No file attached</label>
-                </div> 
+                </div>
                     <!-- <div class="btn btn-primary btn-sm float-left">
                         <span>Choose Video*</span>
                         <input type="file" name="video" accept="video/*" required>
@@ -238,7 +238,7 @@
                   <div class="custom-file mb-3">
                   <input type="file" class="custom-file-input" id="customFile2" name="image" accept="image/*">
                   <label class="custom-file-label" for="customFile1">No file attached</label>
-                </div> 
+                </div>
                     <!-- <div class="btn btn-primary btn-sm float-left">
                         <span>Choose Document (Optional)</span>
                         <input type="file" name="document" >
@@ -255,7 +255,7 @@
                 </div>
                 <div class="col-6">
                   <div class="form-group">
-                      <div class="form-check-inline" id="checkbox_setting">                        
+                      <div class="form-check-inline" id="checkbox_setting">
                         <label class="form-check-label">
                           <input type="checkbox" class="form-check-input" value="">Option select
                         </label>
@@ -488,7 +488,7 @@ Or
 </script>
 
 <script>
-  
+
 
     $('#course_formss').on('submit', function(event){
   event.preventDefault();
@@ -497,7 +497,7 @@ Or
     }
   var check = $('#course_idd').val();
     if(check=="")
-    { 
+    {
   $.ajax({
    url:"{{ route('course_data') }}",
    method:"POST",
@@ -506,7 +506,7 @@ Or
    contentType: false,
    cache: false,
    processData: false,
-   success:function(data) 
+   success:function(data)
    {
         $('#course_idd').val(data.course.id);
         $('#course_ids').val(data.course.id);
@@ -528,7 +528,7 @@ Or
    }
   })
 }
- }); 
+ });
 
     $('#add_lesson').click(function(){
     $('#basicExampleModal').modal('hide');
@@ -536,8 +536,8 @@ Or
     $.ajax({
    url:"{{ url('trainer/get_section') }}/"+ course_id,
    method:"get",
-   success:function(data) 
-   {    
+   success:function(data)
+   {
         var i;
         for (i = 0; i < data.data.length; i++) {
         $("#section").append(new Option(data.data[i].section, data.data[i].id));
@@ -545,7 +545,7 @@ Or
         $('#lesson_course_id').val(course_id);
         $('#lessonModal').modal('show');
    }
-  })        
+  })
     });
 
     $('#add_section').click(function(){
@@ -556,7 +556,7 @@ Or
 
 
      $('#section_form').on('submit', function(event){
-  event.preventDefault();      
+  event.preventDefault();
   $.ajax({
    url:"{{ route('add_section') }}",
    method:"POST",
@@ -565,7 +565,7 @@ Or
    contentType: false,
    cache: false,
    processData: false,
-   success:function(data) 
+   success:function(data)
    {
         $('#myModal').modal('hide');
         // for (i = 0; i < data.section.length; i++) {
@@ -585,7 +585,7 @@ Or
  });
 
         $('#lesson_form').on('submit', function(event){
-  event.preventDefault();      
+  event.preventDefault();
   $.ajax({
    url:"{{route('add_lesson')}}",
    method:"POST",
@@ -594,7 +594,7 @@ Or
    contentType: false,
    cache: false,
    processData: false,
-   success:function(data) 
+   success:function(data)
    {
         $('#lessonModal').modal('hide');
         $('.remove_section').remove();
@@ -629,7 +629,7 @@ Or
      }
          });
         $('#basicExampleModal').modal('show');
-    
+
    }
   })
 
@@ -640,8 +640,8 @@ Or
             $.ajax({
    url:"{{ url('trainer/edit_lessons') }}/"+ lesson_id,
    method:"get",
- 
-   success:function(data) 
+
+   success:function(data)
    {
         $('#basicExampleModal').modal('hide');
         var i;
@@ -649,10 +649,10 @@ Or
         $("#section2").append(new Option(data.data[i].section, data.data[i].id));
     }
         $('#lesson_num').val(data.lesson.lesson_no);
-        $('#lesson_name').val(data.lesson.title); 
-        $('#lesson_desc').text(data.lesson.description);     
-        $('#lesson_courses_id').val(data.lesson.course_id); 
-        $('#lesson_id').val(data.lesson.id); 
+        $('#lesson_name').val(data.lesson.title);
+        $('#lesson_desc').text(data.lesson.description);
+        $('#lesson_courses_id').val(data.lesson.course_id);
+        $('#lesson_id').val(data.lesson.id);
 
 
         $('#edit_lesson').modal('show');
@@ -661,7 +661,7 @@ Or
         });
 
         $('#update_lesson_form').on('submit', function(event){
-  event.preventDefault();      
+  event.preventDefault();
   $.ajax({
    url:"{{route('update_lesson')}}",
    method:"POST",
@@ -670,7 +670,7 @@ Or
    contentType: false,
    cache: false,
    processData: false,
-   success:function(data) 
+   success:function(data)
    {
         $('#edit_lesson').modal('hide');
         $('.remove_section').remove();
@@ -705,7 +705,7 @@ Or
      }
          });
         $('#basicExampleModal').modal('show');
-    
+
    }
   })
 

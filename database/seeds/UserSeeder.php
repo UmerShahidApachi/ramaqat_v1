@@ -29,7 +29,7 @@ class UserSeeder extends Seeder
                 'password' => bcrypt("11111111"),
                 "role_id" => 3,
                 "is_trainer" => 1,
-                'image'=>'5f0312f052d81947e5b0aa4c3b5053a4dcc5b0aaf9439ec760b14r1-250-250v2_00.jpg',
+                'image'=>'5f08998bb2839download.png',
             ],
             [
                 'name' => 'Site User',
