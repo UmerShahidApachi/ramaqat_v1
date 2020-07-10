@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/logo.png" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+  <!-- Start your project here-->
+  <nav>
+    <div class="d-flex justify-content-between top-header">
+      <div class="col-12 col-sm-3">
+        <ul class="ulDBlockMenu">
+          <li>
+            <img src="img/toggle.png" class="openbtn" onclick="openNav()">
+          </li>
+          <li>
+            <img class="animated fadeIn logo_img" src="img/logo.png">
+          </li>
+
+        </ul>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="HeaderSearch d-none d-sm-block">
+          <input class="SearchInput z-depth-1" type="search" placeholder="Search">
+          <img class="plumIcon" src="img/search (2).png">
+        </div>
+      </div>
+      <div class="col-12 col-sm-5">
+        <ul class="ulDBlock d-none d-sm-block">
+          <li>
+            <div class="custom-select">
+              <select>
+                <option class="plum-text" value="0">Language</option>
+                <option value="1">English</option>
+                <option value="1">Arabic</option>
+              </select>
+            </div>
+          </li>
+          <li><img src="img/Line.png" alt="cart"></li>
+          <li>
+            <a href="#"><img src="img/cart.png" alt="cart"></a>
+          </li>
+          <li>
+            <a href="{{route('login')}}"><button class="btn white-btn">Login</button></a>
+          </li>
+          <li>
+            <a href="{{route('register')}}"><button class="btn plum-btn">Signup</button></a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!--Coantct main start here  -->
+  <div class="contact-first-sec">
+    <div class="text-center p-center text-white">
+      <div>Expanding learning opportunities</div>
+    </div>
+  </div>
+
+  <div class="address pt-3 pb-3">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-10 col-sm-6 mx-auto text-center plum-text">
+          <h3>Our Office</h3>
+          <div class="">
+            By connecting students all over the world to the best instructors, Udemy is
+            helping individuals reach their goals and pursue their dreams
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-11 col-sm-10 mx-auto">
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <div class="office-img">
+                <img class="full-img" src="../raqamat/img/contact/office.png">
+              </div>
+              <h5 class="plum-text"><b>San Francisco, CA</b></h5>
+              <div><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;<span>ramaqat@gmail.com</span></div>
+              <div><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;<span>address</span></div>
+              <div><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;<span>123456789</span></div>
+            </div>
+            <div class="col-12 col-sm-6 pt-4">
+              <div class="row">
+                <div class="col-6">
+    
+                  <div class="md-form">
+                    <input type="text" id="form1" class="form-control">
+                    <label for="form1">Name</label>
+                  </div>
+    
+                </div>
+                <div class="col-6">
+    
+                  <div class="md-form">
+                    <input type="email" id="form2" class="form-control">
+                    <label for="form1">Email</label>
+                  </div>
+    
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+    
+                  <div class="md-form amber-textarea active-amber-textarea">
+                    <textarea id="form19" class="md-textarea form-control" rows="3"></textarea>
+                    <label for="form19">Description</label>
+                  </div>
+    
+                </div>
+               
+              </div>
+              <div class="row">
+                <div class="col-12 text-end">
+                  <button class="btn plum-btn">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="follow plum-bg">
+    <div class="row">
+      <div class="col-12 col-sm-6 mx-auto text-center text-white">
+            <div>
+              
+              <ul class="follow-social">
+                <li><span class="follow-text">Follow us</span></li>
+                <li>
+                  <img src="../raqamat/img/contact/f-fb.png">
+                </li>
+                <li>
+                  <img src="../raqamat/img/contact/f-insta.png">
+                </li>
+                <li>
+                  <img src="../raqamat/img/contact/f-ln.png">
+                </li>
+                <li>
+                  <img src="../raqamat/img/contact/f-twi.png">
+                </li>
+              </ul>
+            </div>
+      </div>
+    </div>
+  </div>
+  <!--Coantct main end here  -->
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript" src="js/custom.js"></script>
+
+
+
+</body>
+
+</html>

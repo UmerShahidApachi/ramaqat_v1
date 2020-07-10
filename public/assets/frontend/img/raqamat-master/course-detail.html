@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/logo.png" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Start your project here-->
+  <nav class="shadow-sm">
+    <div class="d-flex justify-content-between top-header">
+      <div class="col-12 col-sm-3">
+        <ul class="ulDBlockMenu">
+          <li>
+            <img src="img/toggle.png" class="openbtn" onclick="openNav()">
+          </li>
+          <li>
+            <img class="animated fadeIn logo_img" src="img/logo.png">
+          </li>
+
+        </ul>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="HeaderSearch d-none d-sm-block">
+          <input class="SearchInput z-depth-1" type="search" placeholder="Search">
+          <img class="plumIcon" src="img/search (2).png">
+        </div>
+      </div>
+      <div class="col-12 col-sm-5">
+        <ul class="ulDBlock d-none d-sm-block">
+          <li>
+            <div class="custom-select">
+              <select>
+                <option class="plum-text" value="0">Language</option>
+                <option value="1">English</option>
+                <option value="1">Arabic</option>
+              </select>
+            </div>
+          </li>
+          <li><img src="img/Line.png" alt="cart"></li>
+          <li>
+            <a href="#"><img src="img/cart.png" alt="cart"></a>
+          </li>
+          <li>
+            <a href="{{route('login')}}"><button class="btn white-btn">Login</button></a>
+          </li>
+          <li>
+            <a href="{{route('register')}}"><button class="btn plum-btn">Signup</button></a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!--   sidebar -->
+
+  <div id="mySidebar" class="sidebar">
+    <div class="row login_id">
+      <img src="img/singup_person.png">
+
+      <!-- <div class="mb-1 white-text">Sign up to receive our weekly newsletter</div> -->
+      <div class="flex-center mb-1 mt-1 offline_courses">
+        <u><a class="Socialb plum-text singup_id_name" href="#">Sayed Muhammad Ahtesham</a></u>
+      </div>
+      <p>mahtesham42@gmail.com</p>
+
+
+    </div>
+    <div class="row sidebar_icons">
+      <a href="javascript:void(0)" class="closebtn close_sidbar" onclick="closeNav()">×</a>
+      <a href="#"><img src="img/dark_mode.png">Dark Mode</a>
+      <a href="#"><img src="img/online_courses.png">Online Courses</a>
+      <a href="#"><img src="img/offline_courses.png">Offline Courses</a>
+      <a href="#"><img src="img/your_courses.png">Your Courses</a>
+      <a href="#"><img src="img/favourites%20.png">Favourites </a>
+      <a href="#"><img src="img/currency_rate.png">Currency Rate</a>
+      <a href="#"><img src="img/contact_us.png">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- couser-detail main section -->
+  <div class="main">
+    <div class="plum-bg mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-4 course-name">
+            <h3><b>The Complete SQL Bootcamp 2020 :Go From</b></h3>
+            <p>Becom expert at SQL !</p>
+            <ul class="rating">
+              <li><img src="img/star-fill.png"></li>
+              <li><img src="img/star-fill.png"></li>
+              <li><img src="img/star-fill.png"></li>
+              <li><img src="img/star-fill.png"></li>
+              <li><img src="img/star.png"></li>
+              <li>4.8</li>
+              <li>(1234,567)</li>
+            </ul>
+            <h6 class="mt-3">Trainer : Jose Portilla</h6>
+            <h6>Language : English/Arabic</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+         <div class="row">
+          <div class="col-md-8 offset-md-4 feature-box">
+            <div class="feature">
+              <h5><b>What you'll learn</b></h5>
+              <ul class="feature-list">
+                <li><img src="img/tick.png"></li>
+                <li>Use SQL to query a database</li>
+              </ul>
+              <ul class="feature-list">
+                <li><img src="img/tick.png"></li>
+                <li>Use SQL to query a database</li>
+              </ul>
+              <ul class="feature-list">
+                <li><img src="img/tick.png"></li>
+                <li>Use SQL to query a database</li>
+              </ul>
+              <ul class="feature-list">
+                <li><img src="img/tick.png"></li>
+                <li>Use SQL to query a database</li>
+              </ul>
+              <ul class="feature-list">
+                <li><img src="img/tick.png"></li>
+                <li>Use SQL to query a database</li>
+              </ul>
+            </div>
+            <div class="course-cart z-depth-1-half">
+              <div class="course-img">
+                <img src="img/course-1.png" alt="Name">
+                <img class="course-play" src="img/play.png" alt="play">
+              </div>
+              <div class="text-center mt-3">
+              <ul class="course-price">
+                <li><h3><b>$18.99</b></h3></li>
+                <li><strike>$30.99</strike></li>
+              </ul>
+            </div>
+            <div class="row">
+              <div class="col-12 text-center">
+                <a href="#"><button class="w-90 btn plum-btn">Add to cart</button></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 text-center">
+                <a href="#"><button class="btn white-btn w-90">Buy now</button></a>
+              </div>
+            </div>
+            <div class="height-2 mt-2"></div>
+            <div class="mt-3">
+              <h4><b>This course includes</b></h4>
+              <div>  9 hours on-demand video</div>
+              <div>  15 articles</div>
+              <div>  5 downloadable resources</div>
+              <div>  Full lifetime access</div>
+            </div>
+            </div>
+          </div>
+          </div>
+    </div>
+    <div class="height-2"></div>
+
+    <div class="container">
+     <div class="row">
+       <div class="col-12 course-description">
+        <h2><b>Description</b></h2>
+        <p>Learn how to use SQL quickly and effectively with this course!</p>
+        <div class="Description-text">
+          You'll learn how to read and write complex queries to a database using one of the most in demand skills - PostgreSQL. These skills are also applicable to any other major SQL database, such as MySQL, Microsoft SQL Server, Amazon Redshift, Oracle, and much more.
+Learning SQL is one of the fastest ways to improve your career prospects as it is one of the most in demand tech skills! In this course you'll learn quickly and receive challenges and tests along the way to improve your understanding!
+        </div>
+       </div>
+     </div>
+    </div>
+
+    <div class="height-2"></div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-8">
+         <div class="row">
+           <div class="col-6">
+             <h6><b>Course content</b></h6>
+           </div>
+           <div class="col-2">
+             <h6><b>Extend all</b></h6>
+           </div>
+           <div class="col-2">
+            <h6><b>81 Lectures</b></h6>
+          </div>
+          <div class="col-2">
+            <h6><b>08:52:11</b></h6>
+          </div>
+         </div>
+        </div>
+        <div class="col-12 col-sm-4"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-8">
+         <!-- Accordian -->
+      <div class="height">
+        <div id="accordion" role="tablist" aria-multiselectable="true">
+
+          <!-- Accordion Item 1 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="accordionHeadingOne">
+              <div class="mb-0 row">
+                <div class="col-12 no-padding accordion-head">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyOne" aria-expanded="false" aria-controls="accordionBodyOne"
+                    class="collapsed ">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <h6>Course Introduction</h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="accordionBodyOne" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingOne" aria-expanded="false" data-parent="accordion">
+              <div class="card-block col-12">
+                <p>Accordion Item 1 - Body</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum
+                  odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo
+                  vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi
+                  tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum
+                  interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="accordionHeadingTwo">
+              <div class="mb-0 row">
+                <div class="col-12 no-padding accordion-head">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyTwo" aria-expanded="false" aria-controls="accordionBodyTwo"
+                    class="collapsed ">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <h6>Section 1: Course Name And Detail</h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="accordionBodyTwo" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingTwo" aria-expanded="false" data-parent="accordion">
+              <div class="card-block col-12">
+                <p>Accordion Item 2 - Body</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum
+                  odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo
+                  vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi
+                  tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum
+                  interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="accordionHeadingThree">
+              <div class="mb-0 row">
+                <div class="col-12 no-padding accordion-head">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyThree" aria-expanded="false" aria-controls="accordionBodyThree"
+                    class="collapsed ">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <h6>Section 1: Course Name And Detail</h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="accordionBodyThree" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingThree" aria-expanded="false" data-parent="accordion">
+              <div class="card-block col-12">
+                <p>Accordion Item 3 - Body</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum
+                  odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo
+                  vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi
+                  tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum
+                  interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="accordionHeadingThree">
+              <div class="mb-0 row">
+                <div class="col-12 no-padding accordion-head">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyThree" aria-expanded="false" aria-controls="accordionBodyThree"
+                    class="collapsed ">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <h6>Section 1: Course Name And Detail</h6>
+                    <div class="black-text">1/4/25</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="accordionBodyThree" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingThree" aria-expanded="false" data-parent="accordion">
+              <div class="card-block col-12">
+                <p>Accordion Item 3 - Body</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum
+                  odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo
+                  vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi
+                  tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum
+                  interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="accordionHeadingThree">
+              <div class="mb-0 row">
+                <div class="col-12 no-padding accordion-head">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyThree" aria-expanded="false" aria-controls="accordionBodyThree"
+                    class="collapsed ">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <h6>Section 1: Course Name And Detail</h6>
+                    <div class="black-text">1/4/25</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="accordionBodyThree" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingThree" aria-expanded="false" data-parent="accordion">
+              <div class="card-block col-12">
+                <p>Accordion Item 3 - Body</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum
+                  odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo
+                  vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi
+                  tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum
+                  interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="card">
+            <div class="card-header" role="tab" id="accordionHeadingThree">
+              <div class="mb-0 row">
+                <div class="col-12 no-padding accordion-head">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#accordionBodyThree" aria-expanded="false" aria-controls="accordionBodyThree"
+                    class="collapsed ">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <h6>Section 1: Course Name And Detail</h6>
+                    <div class="black-text">1/4/25</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="accordionBodyThree" class="collapse" role="tabpanel" aria-labelledby="accordionHeadingThree" aria-expanded="false" data-parent="accordion">
+              <div class="card-block col-12">
+                <p>Accordion Item 3 - Body</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet ante at nisi tempus, maximus bibendum
+                  odio consequat. Proin eleifend elit nec facilisis luctus. Donec ut ornare tellus. Proin posuere et leo
+                  vel congue. Nunc ipsum eros, vestibulum non mi et, porttitor tristique nulla. Pellentesque habitant morbi
+                  tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum a turpis eu quam bibendum
+                  interdum a quis erat. Fusce porta odio sed nulla ultrices, gravida viverra nunc imperdiet.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+    <!-- End -->
+        </div>
+        <div class="col-12 col-sm-4"></div>
+      </div>
+    </div>
+  </div>
+    
+    
+  <!-- </div> -->
+
+  <!-- Footer -->
+
+  <footer class="">
+    <div class="col-10 offset-md-1">
+      <div class="row text-center white-text">
+        <div class="col-6 col-sm-3">
+          <ul class="Offers">
+            <li>About</li>
+            <li>Terms & Conditions</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div class="col-6 col-sm-3">
+          <ul class="Offers">
+            <li>Add Coureses</li>
+            <li>Join</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div class="col-6 col-sm-3 d-none d-sm-block">
+          <ul class="Offers">
+            <li>All Courses</li>
+            <li>Online Courses</li>
+            <li>Free Courses</li>
+          </ul>
+        </div>
+        <div class="col- col-sm-3">
+          <div class="mb-2">Follow us</div>
+          <ul class="SocialLinks mb-3">
+            <li>
+              <i class="fa fa-facebook"></i>
+            </li>
+            <li>
+              <i class="fa fa-twitter"></i>
+            </li>
+            <li>
+              <i class="fa fa-instagram"></i>
+            </li>
+          </ul>
+          <div class="font17">Copyright 2020 All Right Reserved</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+
+</html>

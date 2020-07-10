@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/logo.png" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  
+</head>
+
+<body>
+
+ <!-- Start your project here-->
+ <nav>
+  <div class="d-flex justify-content-between top-header">
+    <div class="col-12 col-sm-3">
+    <ul class="ulDBlockMenu">
+      <li>
+        <img src="img/toggle.png" class="openbtn" onclick="openNav()">
+      </li>
+      <li>
+        <img class="animated fadeIn logo_img" src="img/logo.png">
+      </li>
+
+    </ul>
+    </div>
+    <div class="col-12 col-sm-4">
+    <div class="HeaderSearch d-none d-sm-block">
+      <input class="SearchInput z-depth-1" type="search" placeholder="Search">
+      <img class="plumIcon" src="img/search (2).png">
+    </div>
+    </div>
+    <div class="col-12 col-sm-5">
+      <ul class="ulDBlock d-none d-sm-block">
+          <li>
+              <div class="custom-select">
+              <select>
+                  <option class="plum-text" value="0">Language</option>
+                  <option value="1">English</option>
+                  <option value="1">Arabic</option>
+              </select>
+              </div>
+          </li>
+          <li><img src="img/Line.png" alt="cart"></li>
+          <li>
+          <a href="#"><img src="img/cart.png" alt="cart"></a>
+          </li>
+          <li>
+              <a href="{{route('login')}}"><button class="btn white-btn">Login</button></a>
+          </li>
+          <li>
+              <a href="{{route('register')}}"><button class="btn plum-btn">Signup</button></a>
+          </li>
+              
+      </ul>
+    </div>
+
+  </div>
+</nav>
+    
+<!--   sidebar -->
+    
+    <div id="mySidebar" class="sidebar">
+            <div class="row login_id">
+                <img src="img/singup_person.png">
+
+              <!-- <div class="mb-1 white-text">Sign up to receive our weekly newsletter</div> -->
+              <div class="flex-center mb-1 mt-1 offline_courses">
+                <u><a class="Socialb plum-text singup_id_name" href="#">Sayed Muhammad Ahtesham</a></u>
+              </div>
+              <p>mahtesham42@gmail.com</p>
+
+
+            </div>
+            <div class="row sidebar_icons">
+              <a href="javascript:void(0)" class="closebtn close_sidbar" onclick="closeNav()">×</a>
+              <a href="#"><img src="img/dark_mode.png">Dark Mode</a>
+              <a href="#"><img src="img/online_courses.png">Online Courses</a>
+              <a href="#"><img src="img/offline_courses.png">Offline Courses</a>
+              <a href="#"><img src="img/your_courses.png">Your Courses</a>
+              <a href="#"><img src="img/favourites%20.png">Favourites </a>
+              <a href="#currencymodal" data-toggle="modal" data-target=""><img src="img/currency_rate.png">Currency Rate</a>
+              <a href="#"><img src="img/contact_us.png">Contact Us</a>
+            </div>
+    </div>
+
+<!-- Category slider -->
+<div class="container plum-bg">
+<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+  <!--Indicators-->
+  <!-- <ol class="carousel-indicators custum-indicators">
+    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-2" data-slide-to="1"></li>
+    <li data-target="#carousel-example-2" data-slide-to="2"></li>
+  </ol> -->
+  <!--/.Indicators-->
+  <!--Slides-->
+  <div class="row">
+    <div class="col-12">
+
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <div class="row">
+        <div class="col-md-1 text-center">
+           <div>
+            <i class="fadeIn fa fa-youtube-play"></i>
+            <div class="font16 white-text">All</div>
+           </div>
+        </div>
+        <div class="col-md-1 text-center">
+          <div>
+           <i class="fadeIn fa fa-youtube-play"></i>
+           <div class="font16 white-text">All</div>
+          </div>
+       </div>
+       <div class="col-md-1 text-center">
+        <div>
+         <i class="fadeIn fa fa-youtube-play"></i>
+         <div class="font16 white-text">All</div>
+        </div>
+     </div>
+     <div class="col-md-1 text-center">
+      <div>
+       <i class="fadeIn fa fa-youtube-play"></i>
+       <div class="font16 white-text">All</div>
+      </div>
+   </div>
+   <div class="col-md-1 text-center">
+    <div>
+     <i class="fadeIn fa fa-youtube-play"></i>
+     <div class="font16 white-text">All</div>
+    </div>
+ </div>
+ <div class="col-md-1 text-center">
+  <div>
+   <i class="fadeIn fa fa-youtube-play"></i>
+   <div class="font16 white-text">All</div>
+  </div>
+</div>
+<div class="col-md-1 text-center">
+  <div>
+   <i class="fadeIn fa fa-youtube-play"></i>
+   <div class="font16 white-text">All</div>
+  </div>
+</div>
+<div class="col-md-1 text-center">
+  <div>
+   <i class="fadeIn fa fa-youtube-play"></i>
+   <div class="font16 white-text">All</div>
+  </div>
+</div>
+<div class="col-md-1 text-center">
+  <div>
+   <i class="fadeIn fa fa-youtube-play"></i>
+   <div class="font16 white-text">All</div>
+  </div>
+</div>
+<div class="col-md-1 text-center">
+  <div>
+   <i class="fadeIn fa fa-youtube-play"></i>
+   <div class="font16 white-text">All</div>
+  </div>
+</div>
+<div class="col-md-1 text-center">
+  <div>
+   <i class="fadeIn fa fa-youtube-play"></i>
+   <div class="font16 white-text">All</div>
+  </div>
+</div>
+<div class="col-md-1 text-center">
+  <div>
+   <i class="fadeIn fa fa-youtube-play"></i>
+   <div class="font16 white-text">All</div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+</div>
+  <!--/.Slides-->
+  <!--Controls-->
+  <!-- <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a> -->
+  <!--/.Controls-->
+</div>
+</div>
+  <!--Header End Here  -->
+  <div class="plum-bg pt-3 pb-3">
+    <div class="container">
+      <ul class="ulDBlock-top">
+        <li>
+          <i class="fadeIn fa fa-youtube-play"></i>
+          <div class="font16 white-text">All</div>
+        </li>
+        <li>
+          <i class='fadeIn fa fa-calculator'></i>
+          <div class="font16 white-text">Accountancy</div>
+        </li>
+        <li>
+          <i class='fadeIn fa fa-area-chart'></i>
+          <div class="font16 white-text">Art</div>
+        </li>
+        <li>
+          <i class='fadeIn fa fa-cc-amex'></i>
+          <div class="font16 white-text">Cooking</div>
+        </li>
+        <li>
+          <i class="fadeIn fa fa-graduation-cap"></i>
+          <div class="font16 white-text">Educational</div>
+        </li>
+        <li>
+          <i class='fadeIn fa fa-balance-scale'></i>
+          <div class="font16 white-text">Finance</div>
+        </li>
+        <li>
+          <i class='fadeIn fa fa-photo'></i>
+          <div class="font16 white-text">Graphic design</div>
+        </li>
+        <li>
+          <i class='fadeIn fa fa-medkit'></i>
+          <div class="font16 white-text">Health</div>
+        </li>
+        <li>
+          <i class='fadeIn fa fa-sitemap'></i>
+          <div class="font16 white-text">Interior design</div>
+        </li>
+        <li>
+          <i class="fadeIn fa fa-desktop"></i>
+          <div class="font16 white-text">IT and Tech</div>
+        </li>
+        <li>
+          <i class="fadeIn fa fa-language"></i>
+          <div class="font16 white-text">language</div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <!-- Services Section End Here -->
+  <!--Carousel Wrapper-->
+  <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators custum-indicators">
+      <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-2" data-slide-to="1"></li>
+      <li data-target="#carousel-example-2" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <div class="view">
+          <img class="d-block w-100" src="img/slider-11.png" alt="First slide">
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <div class="carousel-caption">
+          <h3 class="h3-responsive font45">Light mask</h3>
+          <p class="font35">First text</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!--Mask color-->
+        <div class="view">
+          <img class="d-block w-100" src="img/slider-11.png" alt="Second slide">
+          <div class="mask rgba-black-strong"></div>
+        </div>
+        <div class="carousel-caption">
+          <h3 class="h3-responsive font45">Strong mask</h3>
+          <p class="font35">Secondary text</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!--Mask color-->
+        <div class="view">
+          <img class="d-block w-100" src="img/slider-11.png" alt="Third slide">
+          <div class="mask rgba-black-slight"></div>
+        </div>
+        <div class="carousel-caption">
+          <h3 class="h3-responsive font45">Slight mask</h3>
+          <p class="font35">Third text</p>
+        </div>
+      </div>
+    </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+    <!--/.Controls-->
+  </div>
+  <!--/.Carousel Wrapper-->
+
+
+  <div class="container mt-5 mb-5">
+    <!-- <div class="carousel slide multi-item-carousel" id="theCarousel">
+      <div class="carousel-inner row w-100 mx-auto">
+        <div class="carousel-item active">
+          <a href="#"><img class="zoom" src="img/multislider-1.png" class="img-fluid mx-auto d-block"></a>
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#theCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div> -->
+  </div>
+  <!-- Product Slider End -->
+  <div>
+    <div class="col-12 col-sm-10 offset-md-1">
+      <div class="row text-center">
+        <div class="col-12 col-sm-7 pt-5">
+          <div class="plum-text font36">اشكرك أ.دانة عالطرح الرائع حقيقة استفدت من كلامك كثير واتمنى لو احضر</div>
+          <div class="plum-text font36">عندك دورة مباشرة احس راح تضيفين لي الكثييير</div>
+        </div>
+        <div class="col-12 col-sm-5">
+          <img src="img/Mask Group 1.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Description -->
+  <div class="flex-center mb-1 mt-1">
+    <u><a class="Socialb plum-text" href="#">Social Buldle</a></u>
+  </div>
+  <div class="container mt-5 mb-5">
+    <div class="carousel slide multi-item-carousel" id="theCarousel">
+      <div class="carousel-inner row w-100 mx-auto">
+        <div class="carousel-item active col-md-4">
+          <a href="#"><img src="img/multislider-1.png" class="img-fluid mx-auto d-block"></a>
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="img/multislider-1.png" class="img-fluid mx-auto d-block">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#theCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!--Description-->
+
+  <div class="plum-bg">
+    <div class="col-12 col-sm-10 offset-md-1" style="padding: 40px 15px;line-height: 1;">
+      <div class="row">
+        <div class="col-12 col-sm-6">
+           <div class="mb-1 white-text">Sign up to receive our weekly newsletter</div> 
+          <div class="white-text">Stay uploaded on all new online and offline training courses</div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <div class="Subscription">
+            <input class="SubInput z-depth-1" type="text" placeholder="Enter your email"><span class="SubBtn"><a
+                href="#">Subscribe</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Latter Subscription End -->
+
+  <footer class="">
+    <div class="col-10 offset-md-1">
+      <div class="row text-center white-text">
+        <div class="col-6 col-sm-3">
+          <ul class="Offers">
+            <li>About</li>
+            <li>Terms & Conditions</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div class="col-6 col-sm-3">
+          <ul class="Offers">
+            <li>Add Coureses</li>
+            <li>Join</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div class="col-6 col-sm-3 d-none d-sm-block">
+          <ul class="Offers">
+            <li>All Courses</li>
+            <li>Online Courses</li>
+            <li>Free Courses</li>
+          </ul>
+        </div>
+        <div class="col- col-sm-3">
+          <div class="mb-2">Follow us</div>
+          <ul class="SocialLinks mb-3">
+            <li>
+              <i class="fa fa-facebook"></i>
+            </li>
+            <li>
+              <i class="fa fa-twitter"></i>
+            </li>
+            <li>
+              <i class="fa fa-instagram"></i>
+            </li>
+          </ul>
+          <div class="font17">Copyright 2020 All Right Reserved</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- modal For curency -->
+
+<!-- Modal -->
+<div class="modal fade" id="currencymodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-10 mx-auto">
+              <div class="HeaderSearch d-none d-sm-block">
+                <input style="background-color: #F6F6F6;" class="SearchInput z-depth-1" type="search" placeholder="Enter Country of Currency">
+                <!-- <img class="plumIcon" src="img/search (2).png"> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body pt-4 pb-4">
+        <div class="container">
+          <div class="row mb-3">
+            <div class="col-4">
+              <div class="currency-flag">
+                <div><img src="img/wallet/usd-1.png">&nbsp;&nbsp;&nbsp;<span>USD</span></div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div><img src="img/wallet/Flag-Saudi-Arabia.png">&nbsp;&nbsp;&nbsp;<span>S.R</span></div>
+            </div>
+            <div class="col-4">
+              <div><img src="img/wallet/Mask Group 55.png">&nbsp;&nbsp;&nbsp;<span>R.S</span></div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-4">
+              <div class="currency-flag">
+                <div><img src="img/wallet/usd-1.png">&nbsp;&nbsp;&nbsp;<span>USD</span></div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div><img src="img/wallet/Flag-Saudi-Arabia.png">&nbsp;&nbsp;&nbsp;<span>S.R</span></div>
+            </div>
+            <div class="col-4">
+              <div><img src="img/wallet/Mask Group 55.png">&nbsp;&nbsp;&nbsp;<span>R.S</span></div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-4">
+              <div class="currency-flag">
+                <div><img src="img/wallet/usd-1.png">&nbsp;&nbsp;&nbsp;<span>USD</span></div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div><img src="img/wallet/Flag-Saudi-Arabia.png">&nbsp;&nbsp;&nbsp;<span>S.R</span></div>
+            </div>
+            <div class="col-4">
+              <div><img src="img/wallet/Mask Group 55.png">&nbsp;&nbsp;&nbsp;<span>R.S</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="container">
+          <div class="row ">
+            <div class="col-12 text-end">
+              <button class="btn plum-btn">Done</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Mdoel For currency end -->
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  
+  
+
+</body>
+
+</html>

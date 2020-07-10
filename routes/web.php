@@ -29,16 +29,16 @@ Route::get('contact-us', function () {
     return view('contact',compact('data'));
 });
 Route::get('/', function () {
-    $latest = Course::where('status',1)->get()->take(3);
+    $latest = Course::where('status',1)->orderByRaw('RAND()')->take(12)->get();
     $latest2 = Course::where('status',1)->orderByRaw('RAND()')->take(3)->get();
-    $categories = Category::all();
+    $all = Course::where('status',1)->orderByRaw('RAND()')->take(12)->get();
     $categories1 = Category::take(3)->get();
     $slider = Slider::all();
     $slider1 = Slider::where('id', '>=', 1)->first();
     $latest1 = Course::where('status',1)->orderByRaw('RAND()')->take(3)->get();
     $setting = Setting::where('id',1)->first();
 
-    return view('home.frontend.index', compact('slider', 'categories', 'categories1', 'slider1', 'latest', 'latest1','latest2','setting'));
+    return view('home.frontend.index', compact('slider', 'all', 'categories1', 'slider1', 'latest', 'latest1','latest2','setting'));
 });
 /**
  * admin routes
@@ -50,6 +50,8 @@ Route::prefix('admin')->group(function () {
         Route::get('sales', 'Backend\DashboardController@sell_courses')->name('sales');
         Route::get('settings',  'SettingController@index')->name('settings');
         Route::post('update-settings',  'SettingController@update')->name('update_settings');
+        Route::get('percentages',  'PercentageController@index')->name('percentages');
+        Route::post('update-percentages',  'PercentageController@update')->name('update_percentages');
         Route::get('all-users', 'Backend\DashboardController@all_users')->name('all-users');
         Route::get('all-trainers', 'Backend\DashboardController@all_trainers')->name('all_trainers');
         Route::get('delete-user', 'Backend\UserController@delete_users')->name('delete_users');
