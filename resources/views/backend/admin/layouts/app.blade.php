@@ -107,8 +107,8 @@ The above copyright notice and this permission notice shall be included in all c
                         <p>Manage Settings</p>
                     </a>
                 </li>
-                <li class="nav-item {{ Request::segment(2) == 'settings'? 'active':'' }} ">
-                    <a class="nav-link" href="{{route('settings')}}">
+                <li class="nav-item {{ Request::segment(2) == 'percentages'? 'active':'' }} ">
+                    <a class="nav-link" href="{{route('percentages')}}">
                         <i class="material-icons">settings</i>
                         <p>Manage Percentages</p>
                     </a>

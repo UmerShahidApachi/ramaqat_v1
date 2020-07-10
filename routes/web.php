@@ -23,6 +23,9 @@ Route::post('language/{locale}', function (Request $request,$locale) {
     // App::setLocale($locale);
     $request->session()->put('lang', $locale);
 });
+
+Route::get('set_currency/{currency}',        'Frontend\HomeController@set_currency');
+
 Route::get('contact-us', function () {
     $data = Setting::where('id',1)->first();
 
@@ -142,6 +145,7 @@ Route::prefix('user')->group(function () {
     Route::group(['middleware' => ['User']], function () {
         Route::get('become_trainer', 'Backend\UserController@become_trainer')->name('become_trainer');
         Route::get('my-course', 'Frontend\CourseController@my_course')->name('my-courses');
+        Route::get('profile', 'Backend\UserController@user_profile')->name('user_profile');
 
     });
 });
