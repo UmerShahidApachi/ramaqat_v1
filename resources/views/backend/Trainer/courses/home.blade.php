@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="crud-opration pr-1">
+                <div class="crud-opration">
                     <div class="table-responsive">
 
                         <table class="table table-striped table-hover" id="table_id">

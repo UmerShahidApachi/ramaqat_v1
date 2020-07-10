@@ -4,9 +4,6 @@
     .table-responsive{
         overflow-x: hidden;
     }
-    #table_id_filter{
-        margin-right: 2%;
-    }
 </style>
 
     {{--    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>--}}

@@ -6,7 +6,7 @@
     color: #999999;
   }
 </style>
-<div class="col-9 content">
+<div class="content">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6">

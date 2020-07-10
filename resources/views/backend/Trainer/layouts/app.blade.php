@@ -54,6 +54,7 @@ Trainer Dashboard
     }
     .table-responsive{
         overflow-x: hidden;
+        padding: 1%;
     }
     .sidebar-dashboard{
         height: initial;
