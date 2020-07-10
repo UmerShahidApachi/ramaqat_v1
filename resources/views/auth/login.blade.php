@@ -2,7 +2,9 @@
 @section('userlogin')
 <div class="img-bg" style="height:100vh">
     <div class="flex-center flex-column col-11 col-sm-4 mx-auto">
-        <img class="mb-2 SiteLogo" src="{{asset('assets/frontend/img/logo.png')}}" alt="Logo">
+        <a href="{{url('/')}}">
+
+            <img class="mb-2 SiteLogo" src="{{asset('assets/frontend/img/logo.png')}}" alt="Logo"></a>
         <h1 class="text-hide animated fadeIn mb-2 font45 plum-text mb-2">أهلا وسهلا بك إلى رمقات</h1>
         <div class="inputform plum-bg text-center white-text">
             <h2>Sign in</h2>

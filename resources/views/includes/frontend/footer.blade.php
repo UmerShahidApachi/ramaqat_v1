@@ -17,7 +17,7 @@
                     <li>Free Courses</li>
                     <li>About</li>
                     <li>Terms & Conditions</li>
-                    <li>Contact us</li>
+                    <a href="{{url('contact-us')}}"> <li>Contact us</li></a>
                 </ul>
             </div>
             <div class="col-6 col-sm-2 text-start">

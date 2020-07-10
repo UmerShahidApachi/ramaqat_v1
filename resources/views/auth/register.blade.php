@@ -5,7 +5,9 @@
 @section('register')
     <div class="img-bg">
         <div class="flex-center flex-column col-11 col-sm-4 mx-auto">
-            <img class="mb-1 img-fluid SiteLogo" src="{{asset('assets/frontend/img/logo.png')}}" alt="Logo">
+            <a href="{{url('/')}}">
+
+                <img class="mb-1 img-fluid SiteLogo" src="{{asset('assets/frontend/img/logo.png')}}" alt="Logo"></a>
             <h1 class="text-hide animated fadeIn mb-1 font45 plum-text mb-2">أهلا وسهلا بك إلى رمقات</h1>
             <div class="inputform plum-bg text-center white-text">
                 <h2>Sign Up</h2>
@@ -55,9 +57,9 @@
                             <!-- Default input -->
                                 <input id="password-confirm" placeholder="Re-Type Password" type="password" class="custom-height form-control" name="password_confirmation" required autocomplete="new-password">
                         </div>
-                        <div class="col-12 mx-auto mb-3">
-                            <input type="checkbox" name="trainer" value="1" > As Trainer
-                        </div>
+{{--                        <div class="col-12 mx-auto mb-3">--}}
+{{--                            <input type="checkbox" name="trainer" value="1" > As Trainer--}}
+{{--                        </div>--}}
 
                     </div>
                     <!-- Grd row -->
@@ -66,11 +68,13 @@
                 </form>
                 <!-- Default form row -->
 
-                <div>Aleady Register?&nbsp;<span><a href="">Login</a></span></div>
+                <div>Aleady Register?&nbsp;<span><a href="{{route("login")}}">Login</a></span></div>
                 <hr style="background-color:#fff;">
+                <a href="{{route("trainer_register")}}">
                 <div class="col-12">
-                    <bitton style="border-radius:5px;" class="btn white-btn waves-effect waves-light w-100">Trainer</buton>
+                    <button style="border-radius:5px;"  class="btn white-btn waves-effect waves-light w-100">Trainer</buton>
                 </div>
+                </a>
             </div>
             <div class="font36 plum-text mt-3 mb-3">تخطى</div>
         </div>

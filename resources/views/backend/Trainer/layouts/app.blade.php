@@ -41,7 +41,27 @@ Trainer Dashboard
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+<style>
+    body{
+        overflow-y: hidden;
+    }
+    #sidebar_setting a{
+        padding:0px;
+    }
 
+    .dataTables_filter{
+        margin-right: 14px;
+    }
+    .table-responsive{
+        overflow-x: hidden;
+    }
+    .sidebar-dashboard{
+        height: initial;
+    }
+    .crud-sec{
+        padding: 20px 15px;
+    }
+</style>
 <body class="">
 <!-- Header Start Here -->
 <nav class="z-depth-1-half top-nav">
@@ -84,25 +104,25 @@ Trainer Dashboard
 <!-- header End  Here-->
 
 <div class="row">
-    <div class="col-3" style="height:100vh;overflow-y:hidden;">
+    <div class="col-3" style="height:100vh;" id="sidebar_setting">
         <div class="sidebar-dashboard plum-bg text-center">
             <div class="change-sec">
                 <div class="change-img">
                     @if(Auth::user()->image == "")
-                        <img class="img-fluid" src="{{asset('assets/frontend/img/download.png')}}" alt="user">
+                        <img class="img-fluid rounded-circle" src="{{asset('assets/frontend/img/download.png')}}" alt="user">
                     @else
-                        <img class="img-fluid" src="{{asset('users/'. Auth::user()->image)}}" alt="user">
+                        <img class="img-fluid rounded-circle" src="{{asset('users/'. Auth::user()->image)}}" alt="user">
                     @endif
                     <div class="edit-box">
-{{--                        <div class="edit-sec text-center">--}}
+{{--                        <div class="edit-sec text-center rounded-circle">--}}
 {{--                            <img class="edit" src="{{asset('assets/frontend/img/Subtraction 1.png')}}">--}}
 {{--                            <div class="edit-text"><a href="#">edit</a></div>--}}
 {{--                        </div>--}}
                     </div>
                 </div>
-                <div class="trainer-name mt-3">{{Auth::user()->name}}</div>
+                <div class="trainer-name mt-1">{{Auth::user()->name}}</div>
             </div>
-            <div class="mt-3">
+            <div class="mt-1">
                 <a href="{{route('Trainer/dashboard')}}">
                     <ul class="menu-list {{ Request::segment(2) == 'Trainer/dashboard'? 'active':'' }}">
                         <li>

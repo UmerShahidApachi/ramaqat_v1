@@ -29,7 +29,6 @@
 {{--  <!-- CSS Just for demo purpose, don't include it in your project -->--}}
 {{--  <link href="../assets/demo/demo.css" rel="stylesheet" />--}}
 {{--</head>--}}
-
 {{--<body class="">--}}
 {{--  <div class="wrapper ">--}}
 {{--    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">--}}

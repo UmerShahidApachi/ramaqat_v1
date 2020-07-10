@@ -102,10 +102,50 @@ class SettingController extends Controller
             $destinationpath = public_path('setting');
             $file->move($destinationpath, $imgname);
         }
+        if ($request->hasfile('image2')) {
+            $postData = $request->only('image2');
+
+            $file = $postData['image2'];
+
+            $fileArray = array('image2' => $file);
+
+            // Tell the validator that this file should be an image
+            $rules = array(
+                'image2' => 'mimes:jpeg,jpg,png,gif|required|max:10000' // max 10000kb
+            );
+
+            // Now pass the input and rules into the validator
+            $validator = Validator::make($fileArray, $rules);
+
+
+            // Check to see if validation fails or passes
+            if ($validator->fails()) {
+                return redirect()->back()->with('alert', 'Upload Image only')->withInput();
+            }
+            $file = $request->file('image2');
+            $filename = str_replace(' ', '', $file->getClientOriginalName());
+            $ext = $file->getClientOriginalExtension();
+            $imgname2 = uniqid() . $filename;
+            $destinationpath = public_path('setting');
+            $file->move($destinationpath, $imgname2);
+        }
 //        dd($imgname);
 
 
-        $category = Setting::where('id',1)->update(['about_us_description'=>$request->description,'fb_link'=>$request->fb_link,'insta_link'=>$request->description,'twitter_link'=>$request->twitter_link,'in_link'=>$request->in_link,'about_us_image'=>$imgname]);
+        $category = Setting::where('id',1)->update([
+            'about_us_description'=>$request->description,
+            'contact_us_description'=>$request->contact_desc,
+            'fb_link'=>$request->fb_link,
+            'insta_link'=>$request->insta_link,
+            'twitter_link'=>$request->twitter_link,
+            'in_link'=>$request->in_link,
+            'about_us_image'=>$imgname,
+            'contact_us_image'=>$imgname2,
+            'contact_phone'=>$request->phone,
+            'contact_address'=>$request->address,
+            'contact_city'=>$request->location,
+            'contact_email'=>$request->email,
+            ]);
 
         if ($category){
             return redirect()->back();
