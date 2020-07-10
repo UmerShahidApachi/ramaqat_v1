@@ -50,6 +50,8 @@ Route::prefix('admin')->group(function () {
         Route::get('sales', 'Backend\DashboardController@sell_courses')->name('sales');
         Route::get('settings',  'SettingController@index')->name('settings');
         Route::post('update-settings',  'SettingController@update')->name('update_settings');
+        Route::get('percentages',  'PercentageController@index')->name('percentages');
+        Route::post('update-percentages',  'PercentageController@update')->name('update_percentages');
         Route::get('all-users', 'Backend\DashboardController@all_users')->name('all-users');
         Route::get('all-trainers', 'Backend\DashboardController@all_trainers')->name('all_trainers');
         Route::get('delete-user', 'Backend\UserController@delete_users')->name('delete_users');

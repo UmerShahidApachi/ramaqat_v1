@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/logo.png" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/traineedashboard.css">
+</head>
+
+<body>
+
+  <!-- Project start here -->
+
+  <!-- Header Start Here -->
+  <nav class="z-depth-1-half top-nav d-none d-sm-block">
+    <div class="d-flex text-center">
+      <div class="col-3">
+        <div class="logo">
+          <img src="img/traneedashboard/logo.png">
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="HeaderSearch d-none d-sm-block">
+          <input class="SearchInput z-depth-1" type="search" placeholder="Search">
+          <img class="plumIcon" src="img/search (2).png">
+        </div>
+      </div>
+      <div class="col-3">
+        <ul class="top-list">
+
+          <li>
+            <img src="img/traneedashboard/grid.png" alt="grid">
+          </li>
+          <li>
+            <img src="img/traneedashboard/notification.png" alt="notification">
+          </li>
+          <li>
+            <div class="traineee-img">
+              <img class="rounded-circle full-img" src="img/traneedashboard/dummy.png" alt="user">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- header End  Here-->
+
+  <!--Header for Mob-->
+  <nav class="z-depth-1-half top-nav d-block d-sm-none">
+    <div class="d-flex">
+      <div class="col-6">
+        <div id="clickme">
+          <img src="img/traneedashboard/toggle.png">
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="logo">
+          <img class="img-fluid" src="img/traneedashboard/logo.png">
+        </div>
+      </div>
+
+    </div>
+  </nav>
+  <!-- End -->
+
+  <div class="row">
+    <div class="col-sm-3 slidebar-main">
+      <div class="sidebar-dashboard plum-bg text-center">
+        <div class="change-sec">
+          <div class="change-img">
+            <img class="img-fluid" src="img/traneedashboard/download.png" alt="user">
+            <div class="edit-box">
+              <div class="edit-sec text-center">
+                <img class="edit" src="img/traneedashboard/Subtraction 1.png">
+                <div class="edit-text"><a href="#">edit</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="trainer-name mt-3">Trainer Name</div>
+        </div>
+        <div class="mt-3">
+          <a href="#">
+            <ul class="menu-list">
+              <li>
+                <img src="img/traneedashboard/category.png" alt="category">
+              </li>
+              <li>
+                Category
+              </li>
+            </ul>
+          </a>
+          <a href="#">
+            <ul class="menu-list">
+              <li>
+                <img src="img/traneedashboard/person.png" alt="category">
+              </li>
+              <li>
+                profile
+              </li>
+            </ul>
+          </a>
+          <a href="#">
+            <ul class="menu-list">
+              <li>
+                <img src="img/traneedashboard/list.png" alt="category">
+              </li>
+              <li>
+                My Course
+              </li>
+            </ul>
+          </a>
+          <a href="#">
+            <ul class="menu-list">
+              <li>
+                <img src="img/traneedashboard/list.png" alt="category">
+              </li>
+              <li>
+                Sale
+              </li>
+            </ul>
+          </a>
+          <a href="#">
+            <ul class="menu-list">
+              <li>
+                <img src="img/traneedashboard/logout.png" alt="category">
+              </li>
+              <li>
+                logout
+              </li>
+            </ul>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-9 pt-3 pb-3">
+      <div class="container-fluid pr-3 pl-3">
+        <div class="wallet-box">
+          <div class="row">
+            <div class="col-12">
+              <div class=""><a href="#"><img src="img/wallet/arrows.png"></a>&nbsp;&nbsp;&nbsp;<span class="h-1">My Wallet</span></div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12 col-sm-6">
+              <div class="wallet-white">
+                <div class="row pt-3 pb-3 pr-3 pl-3">
+                  <div class="col-4">
+                   <h5>Notification</h5>
+                  </div>
+                  <div class="col-4">
+                    
+                  </div>
+                  <div class="col-4">
+                    <select>
+                      <option>
+                        Show All
+                      </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row line-1 mt-3">
+                  <div class="col-3 text-center">
+                    <div class="color-box">
+                    <img class="full-img mx-auto" src="img/wallet/green.png">
+                    </div>
+                  </div>
+                  <div class="col-5">
+                    <h6 class="plum-text">Payment received</h6>
+                    <div class="plum-text time-text">5 hours ago</div>
+                  </div>
+                  <div class="col-4">
+                    <h6 class="plum-text">$ 100.00</h6>
+                    
+                  </div>
+                </div>
+                <div class="row line-1 mt-3">
+                  <div class="col-3 text-center">
+                    <div class="color-box">
+                    <img class="full-img mx-auto" src="img/wallet/red.png">
+                    </div>
+                  </div>
+                  <div class="col-5">
+                    <h6 class="plum-text">Payment received</h6>
+                    <div class="plum-text time-text">5 hours ago</div>
+                  </div>
+                  <div class="col-4">
+                    <h6 class="plum-text">$ 100.00</h6>
+                    
+                  </div>
+                </div>
+                <div class="row line-1 mt-3">
+                  <div class="col-3 text-center">
+                    <div class="color-box">
+                    <img class="full-img mx-auto" src="img/wallet/blue.png">
+                    </div>
+                  </div>
+                  <div class="col-5">
+                    <h6 class="plum-text">Payment received</h6>
+                    <div class="plum-text time-text">5 hours ago</div>
+                  </div>
+                  <div class="col-4">
+                    <h6 class="plum-text">$ 100.00</h6>
+                    
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="wallet-white">
+                <div class="row pt-3 pb-3 pr-3 pl-3">
+                  <div class="col-4">
+                   <h5>Earning </h5>
+                  </div>
+                  <div class="col-4">
+                    <h5><b>$4,986</b></h5>
+                  </div>
+                  <div class="col-4">
+                    <select>
+                      <option>
+                        Month
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="wrapper">
+                  <canvas id='c'></canvas>
+                  <!-- <div class="label">text</div> -->
+                </div>
+               
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header plum-bg">
+          <ul class="header-list">
+            <li>
+              <div>
+                <h5 class="modal-title" id="exampleModalLabel"><b>Courese Content</b></h5>
+              </div>
+              <div>
+                <h6>2 Section / 5 Lesson</h6>
+              </div>
+            </li>
+            <li>
+              <img src="img/traneedashboard/clock.png"><span class="ml-3"><b>13:00</b></span>
+            </li>
+            <li>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </li>
+          </ul>
+
+        </div>
+        <div class="modal-body">
+
+          <!-- course list heading-->
+          <ul class="course-list-sec mb-4">
+            <li>
+              <!-- Forst empty box -->
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-6 col-sm-4">
+                  <div>
+                    <h5 class="plum-text"><b>1:Section</b></h5>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 text-center">
+                  <div>
+                    <span class="plum-text"><b>8:00</b></span>
+                  </div>
+                </div>
+                <div class="col-4 col-sm-4 text-end">
+
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- course list -->
+
+          <ul class="course-list-sec">
+            <li>
+              <input type="checkbox">
+            </li>
+            <li>
+              <div class="row detail-bg">
+                <div class="col-6 col-sm-4 c-text">
+                  <div>
+                    <img src="img/traneedashboard/lession.png"><span class="mr-3 ml-3">Lession#</span>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 text-center">
+                  <div>
+                    <span class=" plum-text"><b>8:00</b></span>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 text-end">
+                  <a class="edit-btn" href="#">Edit</a>
+                </div>
+              </div>
+              <!-- <ul class="header-list-sec">
+            <li>
+               <img src="img/traneedashboard/lession.png"><span class="mr-3"><h6>Lession#</h6></span>
+            </li>
+            <li>
+                <img class="d-none" src="img/traneedashboard/clock.png"><span class="ml-3 plum-text"><b>8:00</b></span>
+            </li>
+            <li>
+              <button class="btn white-btn">Edit</button>
+            </li>
+          </ul> -->
+            </li>
+          </ul>
+
+          <!-- footerbutton -->
+          <div class="row mt-5">
+            <div class="col-12 col-sm-8 mx-auto">
+              <div class="row btn-row">
+                <div class="col-12 col-sm-5">
+                  <button class="btn btn-w-100">+ Add Section</button>
+                </div>
+                <div class="col-12 col-sm-2 text-center">
+                  Or
+                </div>
+                <div class="col-12 col-sm-5">
+                  <button class="btn btn-w-100">+ Add Lession</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <script>
+    var label = document.querySelector(".label");
+var c = document.getElementById("c");
+var ctx = c.getContext("2d");
+var cw = c.width = 420;
+var ch = c.height = 300;
+var cx = cw / 2,
+  cy = ch / 2;
+var rad = Math.PI / 180;
+var frames = 0;
+
+ctx.lineWidth = 1;
+ctx.strokeStyle = "#999";
+ctx.fillStyle = "#ccc";
+ctx.font = "14px monospace";
+
+var grd = ctx.createLinearGradient(0, 0, 0, cy);
+grd.addColorStop(0, "hsla(167,72%,60%,1)");
+grd.addColorStop(1, "hsla(167,72%,60%,0)");
+
+var oData = {
+  "2008": 10,
+  "2009": 39.9,
+  "2010": 17,
+  "2011": 30.0,
+  "2012": 5.3,
+  "2013": 38.4,
+  "2014": 15.7,
+  "2015": 9.0
+};
+
+var valuesRy = [];
+var propsRy = [];
+for (var prop in oData) {
+
+  valuesRy.push(oData[prop]);
+  propsRy.push(prop);
+}
+
+
+var vData = 4;
+var hData = valuesRy.length;
+var offset = 50.5; //offset chart axis
+var chartHeight = ch - 2 * offset;
+var chartWidth = cw - 2 * offset;
+var t = 1 / 7; // curvature : 0 = no curvature 
+var speed = 2; // for the animation
+
+var A = {
+  x: offset,
+  y: offset
+}
+var B = {
+  x: offset,
+  y: offset + chartHeight
+}
+var C = {
+  x: offset + chartWidth,
+  y: offset + chartHeight
+}
+
+/*
+      A  ^
+	    |  |  
+	    + 25
+	    |
+	    |
+	    |
+	    + 25  
+      |__|_________________________________  C
+      B
+*/
+
+// CHART AXIS -------------------------
+ctx.beginPath();
+ctx.moveTo(A.x, A.y);
+ctx.lineTo(B.x, B.y);
+ctx.lineTo(C.x, C.y);
+ctx.stroke();
+
+// vertical ( A - B )
+var aStep = (chartHeight - 50) / (vData);
+
+var Max = Math.ceil(arrayMax(valuesRy) / 10) * 10;
+var Min = Math.floor(arrayMin(valuesRy) / 10) * 10;
+var aStepValue = (Max - Min) / (vData);
+console.log("aStepValue: " + aStepValue); //8 units
+var verticalUnit = aStep / aStepValue;
+
+var a = [];
+ctx.textAlign = "right";
+ctx.textBaseline = "middle";
+for (var i = 0; i <= vData; i++) {
+
+  if (i == 0) {
+    a[i] = {
+      x: A.x,
+      y: A.y + 25,
+      val: Max
+    }
+  } else {
+    a[i] = {}
+    a[i].x = a[i - 1].x;
+    a[i].y = a[i - 1].y + aStep;
+    a[i].val = a[i - 1].val - aStepValue;
+  }
+  drawCoords(a[i], 3, 0);
+}
+
+//horizontal ( B - C )
+var b = [];
+ctx.textAlign = "center";
+ctx.textBaseline = "hanging";
+var bStep = chartWidth / (hData + 1);
+
+for (var i = 0; i < hData; i++) {
+  if (i == 0) {
+    b[i] = {
+      x: B.x + bStep,
+      y: B.y,
+      val: propsRy[0]
+    };
+  } else {
+    b[i] = {}
+    b[i].x = b[i - 1].x + bStep;
+    b[i].y = b[i - 1].y;
+    b[i].val = propsRy[i]
+  }
+  drawCoords(b[i], 0, 3)
+}
+
+function drawCoords(o, offX, offY) {
+  ctx.beginPath();
+  ctx.moveTo(o.x - offX, o.y - offY);
+  ctx.lineTo(o.x + offX, o.y + offY);
+  ctx.stroke();
+
+  ctx.fillText(o.val, o.x - 2 * offX, o.y + 2 * offY);
+}
+//----------------------------------------------------------
+
+// DATA
+var oDots = [];
+var oFlat = [];
+var i = 0;
+
+for (var prop in oData) {
+  oDots[i] = {}
+  oFlat[i] = {}
+
+  oDots[i].x = b[i].x;
+  oFlat[i].x = b[i].x;
+
+  oDots[i].y = b[i].y - oData[prop] * verticalUnit - 25;
+  oFlat[i].y = b[i].y - 25;
+
+  oDots[i].val = oData[b[i].val];
+  
+  i++
+}
+
+
+
+///// Animation Chart ///////////////////////////
+//var speed = 3;
+function animateChart() {
+  requestId = window.requestAnimationFrame(animateChart);
+  frames += speed; //console.log(frames)
+  ctx.clearRect(60, 0, cw, ch - 60);
+  
+  for (var i = 0; i < oFlat.length; i++) {
+    if (oFlat[i].y > oDots[i].y) {
+      oFlat[i].y -= speed;
+    }
+  }
+  drawCurve(oFlat);
+  for (var i = 0; i < oFlat.length; i++) {
+      ctx.fillText(oDots[i].val, oFlat[i].x, oFlat[i].y - 25);
+      ctx.beginPath();
+      ctx.arc(oFlat[i].x, oFlat[i].y, 3, 0, 2 * Math.PI);
+      ctx.fill();
+    }
+
+  if (frames >= Max * verticalUnit) {
+    window.cancelAnimationFrame(requestId);
+    
+  }
+}
+requestId = window.requestAnimationFrame(animateChart);
+
+/////// EVENTS //////////////////////
+c.addEventListener("mousemove", function(e) {
+  label.innerHTML = "";
+  label.style.display = "none";
+  this.style.cursor = "default";
+
+  var m = oMousePos(this, e);
+  for (var i = 0; i < oDots.length; i++) {
+
+    output(m, i);
+  }
+
+}, false);
+
+function output(m, i) {
+  ctx.beginPath();
+  ctx.arc(oDots[i].x, oDots[i].y, 20, 0, 2 * Math.PI);
+  if (ctx.isPointInPath(m.x, m.y)) {
+    //console.log(i);
+    label.style.display = "block";
+    label.style.top = (m.y + 10) + "px";
+    label.style.left = (m.x + 10) + "px";
+    label.innerHTML = "<strong>" + propsRy[i] + "</strong>: " + valuesRy[i] + "%";
+    c.style.cursor = "pointer";
+  }
+}
+
+// CURVATURE
+function controlPoints(p) {
+  // given the points array p calculate the control points
+  var pc = [];
+  for (var i = 1; i < p.length - 1; i++) {
+    var dx = p[i - 1].x - p[i + 1].x; // difference x
+    var dy = p[i - 1].y - p[i + 1].y; // difference y
+    // the first control point
+    var x1 = p[i].x - dx * t;
+    var y1 = p[i].y - dy * t;
+    var o1 = {
+      x: x1,
+      y: y1
+    };
+
+    // the second control point
+    var x2 = p[i].x + dx * t;
+    var y2 = p[i].y + dy * t;
+    var o2 = {
+      x: x2,
+      y: y2
+    };
+
+    // building the control points array
+    pc[i] = [];
+    pc[i].push(o1);
+    pc[i].push(o2);
+  }
+  return pc;
+}
+
+function drawCurve(p) {
+
+  var pc = controlPoints(p); // the control points array
+
+  ctx.beginPath();
+  //ctx.moveTo(p[0].x, B.y- 25);
+  ctx.lineTo(p[0].x, p[0].y);
+  // the first & the last curve are quadratic Bezier
+  // because I'm using push(), pc[i][1] comes before pc[i][0]
+  ctx.quadraticCurveTo(pc[1][1].x, pc[1][1].y, p[1].x, p[1].y);
+
+  if (p.length > 2) {
+    // central curves are cubic Bezier
+    for (var i = 1; i < p.length - 2; i++) {
+      ctx.bezierCurveTo(pc[i][0].x, pc[i][0].y, pc[i + 1][1].x, pc[i + 1][1].y, p[i + 1].x, p[i + 1].y);
+    }
+    // the first & the last curve are quadratic Bezier
+    var n = p.length - 1;
+    ctx.quadraticCurveTo(pc[n - 1][0].x, pc[n - 1][0].y, p[n].x, p[n].y);
+  }
+
+  //ctx.lineTo(p[p.length-1].x, B.y- 25);
+  ctx.stroke();
+  ctx.save();
+  ctx.fillStyle = grd;
+  ctx.fill();
+  ctx.restore();
+}
+
+function arrayMax(array) {
+  return Math.max.apply(Math, array);
+};
+
+function arrayMin(array) {
+  return Math.min.apply(Math, array);
+};
+
+function oMousePos(canvas, evt) {
+  var ClientRect = canvas.getBoundingClientRect();
+  return { //objeto
+    x: Math.round(evt.clientX - ClientRect.left),
+    y: Math.round(evt.clientY - ClientRect.top)
+  }
+}
+  </script>
+  <script>
+    // Material Select Initialization
+    $(document).ready(function () {
+      $('.mdb-select').materialSelect();
+    });
+  </script>
+  <script>
+    $("#clickme").click(function () {
+      $(".slidebar-main").toggle("slow", function () {
+        // Animation complete.
+      });
+    });
+  </script>
+
+</body>
+
+</html>
