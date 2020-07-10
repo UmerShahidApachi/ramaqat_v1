@@ -1,6 +1,10 @@
-@extends('backend.Trainer.layouts.app')
+@extends('backend.trainer.layouts.app')
 @section('customSection')
-
+<style>
+    .form-group .bmd-label-static{
+        top: -20px;
+    }
+</style>
     <div class="container mt-5">
     <form id="course_formss">
         @csrf

@@ -1,9 +1,8 @@
-@extends('backend.Trainer.layouts.app')
+@extends('backend.trainer.layouts.app')
 @section('customSection')
 <style>
     .table-responsive{
-        overflow-x: initial;
-        overflow-y: initial;
+        overflow-x: hidden;
     }
     #table_id_filter{
         margin-right: 2%;
@@ -30,6 +29,8 @@
                     </div>
                 </div>
 {{--                {{dd(Auth::id())}}--}}
+                <div class="crud-opration">
+
                 <div class="card-body">
                     <div class="row">
                         <div class="table-responsive">
@@ -92,6 +93,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>

@@ -26,7 +26,12 @@ class SettingSeeder extends Seeder
                 "insta_link"=> "https://www.instagram.com/",
                 "twitter_link"=> "https://twitter.com/explore",
                 "in_link"=> "https://www.linkedin.com/",
-
+                 "contact_us_description" => "By connecting students all over the world to the best instructors, Udemy is helping individuals reach their goals and pursue their dreams",
+                "contact_address"=>"14 street dubai",
+            "contact_phone"=>"+1232239344",
+            "contact_city"=>"Dubai,UAE",
+            "contact_email"=>"contact@ramaqat.com",
+            "contact_us_image"=>"5f06e7b494056office.png",
             ];
         $category = Setting::create($users);
     }
