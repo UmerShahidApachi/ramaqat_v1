@@ -23,6 +23,9 @@ Route::post('language/{locale}', function (Request $request,$locale) {
     // App::setLocale($locale);
     $request->session()->put('lang', $locale);
 });
+
+Route::get('set_currency/{currency}',        'Frontend\HomeController@set_currency');
+
 Route::get('contact-us', function () {
     $data = Setting::where('id',1)->first();
 

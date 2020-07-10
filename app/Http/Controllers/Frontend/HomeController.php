@@ -124,4 +124,14 @@ class HomeController extends Controller
             return ['status'=>0, 'message'=>'There is some issue'];
         }
     }
+
+    public function set_currency($currency, Request $request)
+    {
+        // dd($currency);
+        $request->session()->put('set_currency', $currency);
+        return redirect()->back();
+    }
+
+
+
 }
