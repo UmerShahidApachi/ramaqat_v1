@@ -22,6 +22,7 @@
 {{--    @yield('headerbody')--}}
     @yield('indexpage')
     @yield('contact')
+    @yield('profile')
     @yield('userlogin')
     @yield('register')
    @yield('offline-course')

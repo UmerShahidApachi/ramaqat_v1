@@ -170,3 +170,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/show_lesson/{id}', 'Frontend\LessonController@index');
 
 
+//user
+Route::get('/form', 'User\HomeController@index');
