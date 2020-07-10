@@ -112,7 +112,7 @@
             padding: 12px 15px;
        }
        li .logout-btn{
-          padding: 12px 15px; 
+          padding: 12px 15px;
        }
        li .signup{
         padding: 12px 15px;
@@ -399,7 +399,7 @@
                     <a href="#"><img src="{{asset('assets/frontend/img/favourites%20.png')}}">Favourites </a>
                     <a href="#currencymodal" data-toggle="modal" data-target=""><img src="{{asset('assets/frontend/img/currency_rate.png')}}">Currency Rate</a>
 
-                    <a href="#"><img src="{{asset('assets/frontend/img/contact_us.png')}}">Contact Us</a>
+                    <a href="{{url('contact-us')}}"><img src="{{asset('assets/frontend/img/contact_us.png')}}">Contact Us</a>
 
 
                 @endif
@@ -408,10 +408,10 @@
                     <a href="{{route('my_courses')}}"><img src="{{asset('assets/frontend/img/online_courses.png')}}">My
                         Courses</a>
 
-{{--                    <a href="#"><img src="{{asset('assets/frontend/img/your_courses.png')}}">Your Courses</a>--}}
+                    <a href="{{route('user_profile')}}"><img src="{{asset('assets/frontend/img/category.png')}}">Profile</a>
                     <a href="#"><img src="{{asset('assets/frontend/img/favourites%20.png')}}">Favourites </a>
                         <a href="#currencymodal" data-toggle="modal" data-target=""><img src="{{asset('assets/frontend/img/currency_rate.png')}}">Currency Rate</a>
-                        <a href="#"><img src="{{asset('assets/frontend/img/contact_us.png')}}">Contact Usasdasd</a>
+                        <a href="{{url('contact-us')}}"><img src="{{asset('assets/frontend/img/contact_us.png')}}">Contact Us</a>
 
 
                     <a href="{{route('become_trainer')}}"><img src="{{asset('assets/frontend/img/contact_us.png')}}">Become a Trainer</a>
@@ -449,16 +449,16 @@
         <div class="container">
           <div class="row mb-3">
             @foreach($currenices as $currency)
-            <div class="col-4">                
-              <div class="currency-flag">                
+            <div class="col-4">
+              <div class="currency-flag">
                 <div><a href="{{url('set_currency/'.$currency->symbol)}}"><img src="{{url('currency/'.$currency->flag)}}" style="width: 30%;">&nbsp;&nbsp;&nbsp;<span>{{$currency->symbol}}</span></div>
               </div>
             </div>
             @endforeach
 
           </div>
-          
-         
+
+
         </div>
       </div>
       <div class="modal-footer">

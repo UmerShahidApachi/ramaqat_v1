@@ -145,6 +145,7 @@ Route::prefix('user')->group(function () {
     Route::group(['middleware' => ['User']], function () {
         Route::get('become_trainer', 'Backend\UserController@become_trainer')->name('become_trainer');
         Route::get('my-course', 'Frontend\CourseController@my_course')->name('my-courses');
+        Route::get('profile', 'Backend\UserController@user_profile')->name('user_profile');
 
     });
 });
