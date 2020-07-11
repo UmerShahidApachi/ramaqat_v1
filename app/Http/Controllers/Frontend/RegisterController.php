@@ -20,6 +20,10 @@ class RegisterController extends Controller
     {
         return view('auth.trainer_register');
     }
+    public function producer_register()
+    {
+        return view('auth.producer_register');
+    }
 
     /**
      * Show the form for creating a new resource.

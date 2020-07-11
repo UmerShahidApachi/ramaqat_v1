@@ -65,6 +65,12 @@ The above copyright notice and this permission notice shall be included in all c
                         <p>All Trainers</p>
                     </a>
                 </li>
+                <li class="nav-item {{ Request::segment(2) == 'all_producers'? 'active':'' }} ">
+                    <a class="nav-link" href="{{route('all_producers')}}">
+                        <i class="material-icons">person</i>
+                        <p>All Producers</p>
+                    </a>
+                </li>
                 <li class="nav-item {{ Request::segment(2) == 'courses'? 'active':'' }} ">
                     <a class="nav-link" href="{{route('courses')}}">
                         <i class="material-icons">content_paste</i>

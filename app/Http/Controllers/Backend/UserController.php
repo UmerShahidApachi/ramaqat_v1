@@ -59,8 +59,15 @@ class UserController extends Controller
             $destinationpath = public_path('users');
             $file->move($destinationpath, $imgname);
         }
+        if ($request->role_id == 2){
+            $is_trainer = 1;
+            $role = 3;
+        }else{
+            $is_trainer = 0;
+            $role = $request->role_id;
+        }
 
-        User::create(['name' => $request->name, 'role_id' => $request->role_id, 'email' => $request->email, 'cnic' => $request->cnic, 'password' => Hash::make($request->password), 'address' => $request->address, 'experience' => $request->experience, 'country' => $request->country, 'phone' => $request->phone, 'date_of_birth' => $request->date_of_birth, 'image' => $imgname]);
+        User::create(['name' => $request->name, 'role_id' => $role,'is_trainer'=> $is_trainer,'email' => $request->email, 'cnic' => $request->cnic, 'password' => Hash::make($request->password), 'address' => $request->address, 'experience' => $request->experience, 'country' => $request->country, 'phone' => $request->phone, 'date_of_birth' => $request->date_of_birth, 'image' => $imgname]);
         return redirect()->back();
     }
 

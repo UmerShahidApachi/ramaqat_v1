@@ -75,6 +75,11 @@
                     <button style="border-radius:5px;"  class="btn white-btn waves-effect waves-light w-100">Trainer</buton>
                 </div>
                 </a>
+                <a href="{{route("producer_register")}}">
+                <div class="col-12">
+                    <button style="border-radius:5px;"  class="btn white-btn waves-effect waves-light w-100">Producer</buton>
+                </div>
+                </a>
             </div>
             <div class="font36 plum-text mt-3 mb-3">تخطى</div>
         </div>

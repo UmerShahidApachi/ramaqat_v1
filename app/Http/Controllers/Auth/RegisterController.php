@@ -68,7 +68,7 @@ class RegisterController extends Controller
 //        dd($data);
         $user = User::create([
             'is_trainer' => isset($data['trainer']) ? 1 : 0,
-            'role_id' => 3,
+            'role_id' => isset($data['role_id']) ?$data['role_id']  : 3,
             'experience' => isset($data['experience'])? $data['experience']: "",
             'fb_link' => isset($data['fb_link'])? $data['fb_link']: "",
             'insta_link' => isset($data['insta_link'])? $data['insta_link']: "",

@@ -44,6 +44,11 @@ class DashboardController extends Controller
         return view('backend.admin.users.home', compact('data'));
 
     }
+    public function all_producers(){
+        $data = User::where('role_id',4)->get();
+        return view('backend.admin.producers.home', compact('data'));
+
+    }
 
     public function accounts(){
         $data = "";

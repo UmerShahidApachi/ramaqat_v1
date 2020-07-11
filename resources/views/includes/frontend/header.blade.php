@@ -111,8 +111,8 @@
         }
 
 
-      
-      
+
+
         #Subscribe_body .SubBtn {
             display: inline-block;
           }
@@ -399,7 +399,8 @@
 
                 @endif
                 @if(Auth::user()->role_id == 3 and Auth::user()->is_trainer == 0)
-
+                        <a href="#" onclick="setActiveStyleSheet('color1'); return false;" href="{{url('/')}}"><img
+                                src="{{asset('assets/frontend/img/dark_mode.png')}}">Dark Mode</a>
                     <a href="{{route('my_courses')}}"><img src="{{asset('assets/frontend/img/online_courses.png')}}">My
                         Courses</a>
 

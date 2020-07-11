@@ -57,6 +57,7 @@ Route::prefix('admin')->group(function () {
         Route::post('update-percentages',  'PercentageController@update')->name('update_percentages');
         Route::get('all-users', 'Backend\DashboardController@all_users')->name('all-users');
         Route::get('all-trainers', 'Backend\DashboardController@all_trainers')->name('all_trainers');
+        Route::get('all-producers', 'Backend\DashboardController@all_producers')->name('all_producers');
         Route::get('delete-user', 'Backend\UserController@delete_users')->name('delete_users');
         Route::get('add/user', 'Backend\UserController@new_user_form')->name('new_user_form');
         Route::post('new-profile', 'Backend\UserController@new_profile')->name('admin_new_profile');
@@ -152,6 +153,7 @@ Route::prefix('user')->group(function () {
 Route::get('userlogin', 'Frontend\LoginController@userLogin')->name('login-form');
 Route::post('login_user', 'Frontend\LoginController@login_user')->name('login_user');
 Route::get('trainer-register', 'Frontend\RegisterController@userRegister')->name('trainer_register');
+Route::get('producer-register', 'Frontend\RegisterController@producer_register')->name('producer_register');
 Route::get('all-course', 'Frontend\CourseController@onlineCourse')->name('all-course');
 Route::get('trainer-profile', 'Backend\UserController@trainer_profile')->name('trainer_profile');
 Route::get('add-to-favorite', 'Backend\UserController@fvt')->name('fvt');

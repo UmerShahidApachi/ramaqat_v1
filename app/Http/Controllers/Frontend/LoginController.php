@@ -31,7 +31,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
 //            if (Auth::loginUsingId($user->id)) {
             session()->flash('main_admin_success','Login Successfully');
-                if (Auth::user()->role_id == 3) {
+                if (Auth::user()->role_id == 3 or Auth::user()->role_id == 4) {
                     return redirect('/');
                 }elseif (Auth::user()->role_id == 3 And Auth::user()->is_trainer == 1){
                     return redirect(route('Trainer/dashboard'));
