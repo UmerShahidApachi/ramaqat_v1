@@ -121,14 +121,6 @@
     /*    font-weight: 400 !important;*/
     /*}*/
 
-    li .white-btn {
-        padding: 13px 25px;
-    }
-
-    li .signup {
-        padding: 13px 25px;
-    }
-
     #Subscribe_body .SubBtn {
         display: inline-block;
     }
@@ -136,8 +128,19 @@
     #Subscribe_inner_body input {
         width: inherit;
     }
+     .custom-select {
+        width: 85px;
+       }
 
-
+     li .white-btn{
+            padding: 12px 15px;
+       }
+       li .logout-btn{
+          padding: 12px 20px;
+       }
+       li .signup{
+        padding: 12px 15px;
+       }
     @media (max-width: 991px) {
 
         .container.container_category {
@@ -165,18 +168,8 @@
         }
 
 
-       li .white-btn{
-            padding: 12px 15px;
-       }
-       li .logout-btn{
-          padding: 12px 15px;
-       }
-       li .signup{
-        padding: 12px 15px;
-       }
-       .custom-select {
-        width: 85px;
-       }
+      
+      
         #Subscribe_body .SubBtn {
             display: inline-block;
           }
@@ -302,8 +295,10 @@
 
             <div class="col-4" id="searchbox_header">
                 <div class="HeaderSearch d-none d-sm-block">
-                    <input class="SearchInput z-depth-1" type="search" placeholder="Search">
-                    <img class="plumIcon" src="{{asset('assets/frontend/img/search (2).png')}}">
+                    <form id="search_form" method="get" action="{{route('home_search')}}">
+                    <input class="SearchInput z-depth-1" type="text" name="search_text" placeholder="Search By Course Name">
+                    <img class="plumIcon" id="search_click" src="{{asset('assets/frontend/img/search (2).png')}}" style="cursor: pointer;">
+                    </form>
                 </div>
             </div>
 
@@ -532,6 +527,12 @@
     </div>
   </div>
 </div>
+
+<script>
+    $('#search_click').click(function(){
+        $('#search_form').submit();
+    });
+</script>
 
 </header>
 <!--Header End Here  -->

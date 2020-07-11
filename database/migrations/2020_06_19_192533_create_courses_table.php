@@ -16,13 +16,17 @@ class CreateCoursesTable extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
+            $table->text('description');
+            $table->text('short_description')->nullable();
+            $table->bigInteger('producer_name')->nullable();
+            $table->string('auther')->nullable();
             $table->string('duration')->nullable();
             $table->text('attach_doc')->nullable();
+            $table->text('promo_video')->nullable();
             $table->text('thumbnail');
             $table->string('views_counter')->default(0);
-            $table->integer('price');
-            $table->integer('discount_price')->unsigned()->nullable();
+            $table->float('price', 8, 2);
+            $table->float('discount_price', 8, 2)->nullable();            
             $table->bigInteger('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('category_id','150')->nullable();

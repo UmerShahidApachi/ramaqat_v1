@@ -166,6 +166,9 @@ Route::post('user/rating',        'Frontend\HomeController@gaveRating')->name('g
 Route::get('progressView',    'progresscontroller@fileUpload')->name('progressView');
 Route::post('progressStore',  'progresscontroller@fileStore')->name('progressStore');
 
+Route::get('/search', 'Frontend\HomeController@home_search')->name('home_search');
+
+
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
 
