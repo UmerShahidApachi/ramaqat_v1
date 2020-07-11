@@ -95,10 +95,9 @@
                 <div class="form-group ">
                     <label class="contents">Producer Name</label>
                     <select class="form-control chosen chosen-height" name="producer_name"  required>
-                            <option>Select producer</option>
-                            <option value="0">zack syder</option>
-                            <option value="1">yash johar</option>
-                            <option value="2">nadeem</option>
+                        @foreach($producer as $c)
+                            <option value="{{$c->id}}">{{$c->name}}</option>
+                        @endforeach
                     </select>
                 </div>
               </div>
@@ -166,9 +165,9 @@
             <div class="row">
               <div class="col-6">
                 <div class="form-group bmd-form-group">
-                    <p>Upload your course image here.It must meet our <a href="#" style="color: blue" >course image</a> <br>
+                    <p>Upload your course demo video here.It must meet our <a href="#" style="color: blue" >Demo Video</a> <br>
                         <a href="#" style="color: blue">quality standreds</a>
-                        to be accepted.Important guidelines:750X422 pixels; .jpg, .jpeg , .gif, or .png on text on the image </p>
+                        to be accepted.Important guidelines:.wmp, or .mp4  </p>
                   <div class="custom-file">
                     <input type="file" class="custom-file-input" id="inputGroupFile01"
                       aria-describedby="inputGroupFileAddon01" name="promo_video" accept="video/*"  required>
@@ -182,9 +181,9 @@
               </div>
               <div class="col-6">
                 <div class="form-group bmd-form-group">
-                    <p>Upload your course image here.It must meet our <a href="#" style="color: blue" >course image</a> <br>
+                    <p>Upload your course extra attachments here.You can add multiple files <br>
                         <a href="#" style="color: blue">quality standreds</a>
-                        to be accepted.Important guidelines:750X422 pixels; .jpg, .jpeg , .gif, or .png on text on the image </p>
+                        to be accepted.Important guidelines:750X422 pixels; .jpg, .jpeg , .gif, or .png,.exel.</p>
                   <div class="custom-file">
 
                     <input type="file" class="custom-file-input" id="inputGroupFile03"

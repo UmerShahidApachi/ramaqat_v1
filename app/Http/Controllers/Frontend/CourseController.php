@@ -168,7 +168,8 @@ class CourseController extends Controller
     {
         $categories = Category::all();
         $trainer = User::where('role_id',3)->where('is_trainer',1)->get();
-        return view('backend.trainer.courses.add', compact('categories','trainer'));
+        $producer = User::where('role_id',4)->where('is_trainer',0)->get();
+        return view('backend.trainer.courses.add', compact('categories','trainer','producer'));
     }
 
     /**
@@ -262,12 +263,12 @@ class CourseController extends Controller
             $promo_video = uniqid() . $filename;
             $destinationpath = public_path('course/attachment');
             $file->move($destinationpath, $name[$key]);
-          
+
         }else{
           $promo_video = $slider->promo_video;
         }
 
-       
+
         $category_id = implode(',', $request->category_id);
         $author = implode(',', $request->author);
 
