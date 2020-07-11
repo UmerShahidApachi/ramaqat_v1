@@ -69,6 +69,21 @@ Trainer Dashboard
     .crud-sec{
         padding: 20px 15px;
     }
+    .submit_btn{
+        background-color: #570055;
+        color: white;
+    }
+    .white-btn{
+        color: #570055;
+        background-color: white;
+    }
+    .form-group textarea.form-control{
+        min-height: 100px;
+    }
+    .select-dropdown ul.chosen-choices{
+      height: 37px;
+      padding: 3px;
+    }
 
 </style>
 <body class="">
