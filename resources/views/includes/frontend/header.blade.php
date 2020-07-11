@@ -238,8 +238,10 @@
 
             <div class="col-4" id="searchbox_header">
                 <div class="HeaderSearch d-none d-sm-block">
-                    <input class="SearchInput z-depth-1" type="search" placeholder="Search">
-                    <img class="plumIcon" src="{{asset('assets/frontend/img/search (2).png')}}">
+                    <form id="search_form" method="get" action="{{route('home_search')}}">
+                    <input class="SearchInput z-depth-1" type="text" name="search_text" placeholder="Search By Course Name">
+                    <img class="plumIcon" id="search_click" src="{{asset('assets/frontend/img/search (2).png')}}" style="cursor: pointer;">
+                    </form>
                 </div>
             </div>
 
@@ -467,6 +469,12 @@
     </div>
   </div>
 </div>
+
+<script>
+    $('#search_click').click(function(){
+        $('#search_form').submit();
+    });
+</script>
 
 </header>
 <!--Header End Here  -->
