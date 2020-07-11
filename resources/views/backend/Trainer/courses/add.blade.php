@@ -34,8 +34,12 @@
     label.contents{
       display: contents;
     }
-    .form-group {
-      margin-bottom: 0px;
+    .form-control {
+        border: 1px solid #ced4da;
+        border-bottom:0px  ;
+    }
+    .form-control:invalid {
+        background-image: linear-gradient(to top,  #5786c0 2px, rgba(244, 67, 54, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
     }
     .modal-header, .modal-footer{
       border-color: white;
@@ -67,7 +71,8 @@
             <div class="col-6">
                 <div class="form-group" style="padding-top: 30px">
                     <p>Upload your course image here.It must meet our <a href="#" style="color: blue" >course image</a> <br>
-                        <a href="#" style="color: blue">quality standreds</a> to be accepted.Important guidlines:750X422 pixels </p>
+                        <a href="#" style="color: blue">quality standreds</a>
+                        to be accepted.Important guidelines:750X422 pixels; .jpg, .jpeg , .gif, or .png on text on the image </p>
                     <div class="custom-file" >
                         <input type="file" class="custom-file-input" id="inputGroupFile02"
                                accept="image/*" onchange="loadFile(event)" >
@@ -87,7 +92,7 @@
                 </div>
               </div>
               <div class="col-6">
-                <div class="form-group">
+                <div class="form-group ">
                     <label class="contents">Producer Name</label>
                     <select class="form-control chosen chosen-height" name="producer_name"  required>
                             <option>Select producer</option>
@@ -103,7 +108,8 @@
               <div class="col-6">
                 <div class="form-group select-dropdown">
                     <label  class="contents">Category</label>
-                    <select class="form-control chosen chosen-height" name="category_id[]" multiple required>
+                    <select class="form-control chosen chosen-height"  name="category_id[]" multiple required>
+
                         @foreach($categories as $c)
                             <option value="{{$c->id}}">{{$c->name}}</option>
                         @endforeach
@@ -114,6 +120,7 @@
                 <div class="form-group select-dropdown">
                     <label class="contents">Auther</label>
                      <select class="form-control chosen chosen-height cat_height" name="author[]" multiple >
+
                       @foreach($trainer as $auther)
                       <option value="{{$auther->id}}">{{$auther->name}}</option>
                       @endforeach
@@ -159,7 +166,9 @@
             <div class="row">
               <div class="col-6">
                 <div class="form-group bmd-form-group">
-                <label>Promo Video</label>
+                    <p>Upload your course image here.It must meet our <a href="#" style="color: blue" >course image</a> <br>
+                        <a href="#" style="color: blue">quality standreds</a>
+                        to be accepted.Important guidelines:750X422 pixels; .jpg, .jpeg , .gif, or .png on text on the image </p>
                   <div class="custom-file">
                     <input type="file" class="custom-file-input" id="inputGroupFile01"
                       aria-describedby="inputGroupFileAddon01" name="promo_video" accept="video/*"  required>
@@ -173,8 +182,11 @@
               </div>
               <div class="col-6">
                 <div class="form-group bmd-form-group">
-                <label>Attachment</label>
+                    <p>Upload your course image here.It must meet our <a href="#" style="color: blue" >course image</a> <br>
+                        <a href="#" style="color: blue">quality standreds</a>
+                        to be accepted.Important guidelines:750X422 pixels; .jpg, .jpeg , .gif, or .png on text on the image </p>
                   <div class="custom-file">
+
                     <input type="file" class="custom-file-input" id="inputGroupFile03"
                       aria-describedby="inputGroupFileAddon01" name="attachment[]" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,image/*" multiple>
                     <label class="custom-file-label" for="inputGroupFile03">Choose Attachment</label>
@@ -197,11 +209,11 @@
                     <label class="custom-file-label" for="inputGroupFile05">Choose image</label>
                   </div>
 
-                 <!--  <div class="btn btn-primary btn-sm float-left">
+{{--                 <!--  <div class="btn btn-primary btn-sm float-left">--}}
 
-                      <span>Choose file</span>
-                      <input type="file" name="image" accept="image/*" required>
-                  </div> -->
+{{--                      <span>Choose file</span>--}}
+{{--                      <input type="file" name="image" accept="image/*" required>--}}
+{{--                  </div> -->--}}
 
                 </div>
               </div>
@@ -532,7 +544,7 @@ aria-hidden="true">
 
 
 
-<!-- footerbutton -->
+0<-- footerbutton -->
 <div class="row mt-5">
 <div class="col-12 col-sm-8 mx-auto">
 <div class="row btn-row">

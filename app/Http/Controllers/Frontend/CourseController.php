@@ -130,10 +130,10 @@ class CourseController extends Controller
             $promo_video = uniqid() . $filename;
             $destinationpath = public_path('course/attachment');
             $file->move($destinationpath, $name[$key]);
-          
+
         }
         $names = implode(',', $name);
-       
+
         $category_id = implode(',', $request->category_id);
         $author = implode(',', $request->author);
 
