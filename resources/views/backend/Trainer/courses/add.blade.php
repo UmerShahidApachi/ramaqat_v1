@@ -235,27 +235,27 @@
 
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <div class="modal-header" style="background:purple">
+        <button type="button" class="close" data-dismiss="modal" style="float: right">&times;</button>
         <h4 class="modal-title">Add Section</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body"style="padding-top: 40px" >
          <form  id="section_form">
             @csrf
             <input type="hidden" name="course_ids" id="course_ids">
             <div class="row">
             <div class="col-12">
-            <div class="form-group">
+            <div class="form-group" >
                 <label>Section</label>
                 <input type="test" class="form-control" name="section" placeholder="section" required>
             </div>
             </div>
             </div>
-            <button type="submit" class="btn btn-success cat">Submit</button>
+            <button type="submit" class="btn btn-success cat" style="border-radius: 15px;background-color: purple !important;">Submit</button>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal" id="close_section">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="close_section" style="border: 1px solid purple; border-radius: 15px; background-color: white !important; color: purple">Close</button>
       </div>
     </div>
 
@@ -310,9 +310,9 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                  <label>video</label> 
+                  <label>video</label>
                   <div class="custom-file mb-3">
-                                       
+
                   <input type="file" class="custom-file-input" id="customFile2" name="image" accept="video/*">
                   <label class="custom-file-label" for="customFile1">No file attached</label>
                 </div>
@@ -333,7 +333,7 @@
                 <div class="col-6">
                   <label>document</label>
                   <div class="custom-file mb-3">
-                    
+
                   <input type="file" class="custom-file-input" id="customFile2" name="document" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword">
                   <label class="custom-file-label" for="customFile1">No file attached</label>
                 </div>
@@ -461,7 +461,7 @@
                   </div>
                 </div>
             </div>
-           
+
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
@@ -842,17 +842,17 @@ CKEDITOR.replace('lesson_desc');
 
 
     $('#close_section').click(function(){
-        $('#myModal').modal('hide');      
+        $('#myModal').modal('hide');
         $('#basicExampleModal').modal('show');
     });
 
      $('#close_add_lesson').click(function(){
-        $('#lessonModal').modal('hide');      
+        $('#lessonModal').modal('hide');
         $('#basicExampleModal').modal('show');
     });
 
       $('#edit_lesson_cancel').click(function(){
-        $('#edit_lesson').modal('hide');      
+        $('#edit_lesson').modal('hide');
         $('#basicExampleModal').modal('show');
     });
 
@@ -885,14 +885,14 @@ $('body').on('click','.lessons_del',function(){
         $('#dell_'+data.data).remove();
 
 
-        
+
    }
   })
         }
             } );
      } );
-</script> 
+</script>
 
 
-@endsection 
+@endsection
 
