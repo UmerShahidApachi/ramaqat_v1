@@ -202,6 +202,7 @@ class CourseController extends Controller
     public function update(Request $request)
     {
        // dd($request->all());
+      // echo "<pre>"; print_r($request->all()); exit();
         $slider = Course::find($request->id);
         if($request->hasfile('image')){
 
@@ -239,10 +240,39 @@ class CourseController extends Controller
 
         }
 
+         if ($request->hasfile('attachment')) {
+          foreach ($request->file('attachment') as $key => $value) {
+            $file = $value;
+            $filename = str_replace(' ', '', $file->getClientOriginalName());
+            $ext = $file->getClientOriginalExtension();
+            $name[] = uniqid() . $filename;
+            $destinationpath = public_path('course/attachment');
+            $file->move($destinationpath, $name[$key]);
+          }
+        $names = implode(',', $name);
+
+        }else{
+          $names = $slider->attach_doc;
+        }
+
+        if ($request->hasfile('promo_video')) {
+            $file = $request->file('promo_video');
+            $filename = str_replace(' ', '', $file->getClientOriginalName());
+            $ext = $file->getClientOriginalExtension();
+            $promo_video = uniqid() . $filename;
+            $destinationpath = public_path('course/attachment');
+            $file->move($destinationpath, $name[$key]);
+          
+        }else{
+          $promo_video = $slider->promo_video;
+        }
+
+       
         $category_id = implode(',', $request->category_id);
+        $author = implode(',', $request->author);
 
 
-        $category = Course::where('id',$request->id)->update(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
+        $category = Course::where('id',$request->id)->update(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->briefdescription,'short_description'=>$request->shortdescription,'duration'=>$request->duration,'price'=>$request->price, 'discount_price'=>$request->discount_price,'thumbnail'=>$imgname,'promo_video'=>$promo_video,'user_id'=>Auth::id(),'auther'=>$author,'producer_name'=>$request->producer_name,'attach_doc'=>$names]);
 
         if ($category){
             return ['status'=>1, 'course'=>$category];

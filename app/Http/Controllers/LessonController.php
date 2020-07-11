@@ -45,7 +45,7 @@ class LessonController extends Controller
      */
     public function store(Request $request)
     {
-
+        // echo "<pre>"; print_r($request->all()); exit();
         $course = Course::find($request->course_id);
         if ($request->hasfile('document')) {
             $postData = $request->only('document');
@@ -106,12 +106,18 @@ class LessonController extends Controller
             $destinationpath = public_path('course/' . $course->name . '/');
             $file->move($destinationpath, $video);
         }
-
+            if(isset($request->video_lock))
+            {
+               $video_lock = 1; 
+            }else{
+               $video_lock = 0; 
+            }
+            // print_r($video_lock); exit();
         if ($request->hasfile('document')) {
-            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'section_id' => $request->sections, 'video_path' => $video, 'extra_document' => $imgname]);
+            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'section_id' => $request->sections, 'video_path' => $video, 'video_lock' => $video_lock, 'extra_document' => $imgname]);
         } else {
 
-            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description,'section_id' => $request->sections, 'video_path' => $video]);
+            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'video_lock' => $video_lock, 'description' => $request->description,'section_id' => $request->sections, 'video_path' => $video]);
 
         }
         $section = Section::with('lessons')->where('course_id',$request->course_id)->get();
@@ -154,7 +160,7 @@ class LessonController extends Controller
     public function edit($id)
     {
         $data = Lesson::find($id);
-        $section = Section::where('course_id',$id)->get();
+        $section = Section::where('course_id',$data->course_id)->get();
         // return view('backend.trainer.courses.lessons.edit', compact('data'));
         return ['status'=>1, 'lesson'=>$data, 'data'=>$section];
     }
@@ -162,7 +168,7 @@ class LessonController extends Controller
     public function delete($id)
     {
         $data = Lesson::find($id)->delete();
-        return redirect()->back();
+        return ['status'=>1, 'data'=>$id];
     }
 
     /**
@@ -292,6 +298,12 @@ class LessonController extends Controller
         }
     }
 
+    public function get_lesson_section($id)
+    {
+        // print_r($id);exit();
+        $section = Section::with('lessons')->where('course_id',$id)->get();
+        return ['status'=>1, 'section'=>$section];
 
+    }
 
 }

@@ -19,6 +19,7 @@ class CreateLessonsTable extends Migration
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
             $table->text('video_path');
             $table->string('lesson_no')->nullable();
+            $table->bigInteger('video_lock')->default(0);            
             $table->bigInteger('section_id')->unsigned();
             $table->string('title')->nullable();
             $table->string('description')->nullable();
