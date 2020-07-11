@@ -40,7 +40,6 @@
     }
 </style>
 
-
     <div class="container mt-5" id="add_cource_scroll">
     <form id="course_formss">
         @csrf
@@ -59,8 +58,13 @@
               </div>
               <div class="col-6">
                 <div class="form-group">
-                    <label class="contents">Name</label>
-                    <input type="text" class="form-control" name="newname">
+                    <label class="contents">Producer Name</label>
+                    <select class="form-control chosen chosen-height" name="producer_name"  required> 
+                            <option>Select producer</option>    
+                            <option value="0">zack syder</option> 
+                            <option value="1">yash johar</option>                     
+                            <option value="2">nadeem</option>                                         
+                    </select>
                 </div>
               </div>
             </div>
@@ -79,8 +83,10 @@
               <div class="col-6">
                 <div class="form-group select-dropdown">
                     <label class="contents">Auther</label>
-                     <select class="form-control chosen chosen-height cat_height" name="author" multiple >
-                      <option value=""></option>
+                     <select class="form-control chosen chosen-height cat_height" name="author[]" multiple >
+                      @foreach($trainer as $auther)
+                      <option value="{{$auther->id}}">{{$auther->name}}</option>
+                      @endforeach
                     </select>
                 </div>
               </div>
@@ -121,11 +127,11 @@
             <div class="row">
               <div class="col-6">
                 <div class="form-group bmd-form-group">
-                <label>Attachment</label>
+                <label>Promo Video</label>
                   <div class="custom-file">
                     <input type="file" class="custom-file-input" id="inputGroupFile01"
-                      aria-describedby="inputGroupFileAddon01" name="attachment[]" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,image/*" multiple required>
-                    <label class="custom-file-label" for="inputGroupFile01">upload video</label>
+                      aria-describedby="inputGroupFileAddon01" name="promo_video" accept="video/*"  required>
+                    <label class="custom-file-label" for="inputGroupFile01">Choose video</label>
                   </div>
               </div>
                  <!-- <div class="btn btn-primary btn-sm float-left">
@@ -138,8 +144,8 @@
                 <label>Attachment</label>
                   <div class="custom-file">
                     <input type="file" class="custom-file-input" id="inputGroupFile02"
-                      aria-describedby="inputGroupFileAddon01" name="attachment[]" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,image/*" multiple required>
-                    <label class="custom-file-label" for="inputGroupFile02">upload video</label>
+                      aria-describedby="inputGroupFileAddon01" name="attachment[]" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,image/*" multiple>
+                    <label class="custom-file-label" for="inputGroupFile02">Choose Attachment</label>
                   </div>
               </div>
                  <!-- <div class="btn btn-primary btn-sm float-left">
@@ -148,6 +154,29 @@
                 </div> -->
               </div>
             </div>
+
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group bmd-form-group">
+                  <label>Cover</label>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile05"
+                      aria-describedby="inputGroupFileAddon01" name="image" accept="image/*">
+                    <label class="custom-file-label" for="inputGroupFile05">Choose image</label>
+                  </div>
+                
+                 <!--  <div class="btn btn-primary btn-sm float-left">
+
+                      <span>Choose file</span>
+                      <input type="file" name="image" accept="image/*" required>
+                  </div> -->
+
+                </div>
+              </div>
+           
+         
+            </div>
+          
 
         <div class="modal-footer">
             <input type="button" class="btn white-btn" data-dismiss="modal" value="Cancel">
@@ -502,7 +531,9 @@ Or
 <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 
 <script>
-    CKEDITOR.replace('description');
+    CKEDITOR.replace('shortdescription');
+    CKEDITOR.replace('briefdescription');
+
 </script>
 <script>
     $(".chosen").chosen();

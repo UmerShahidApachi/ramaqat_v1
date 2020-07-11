@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Rating;
+use App\Models\Course;
 use Auth;
+use App\Models\Category;
+
 
 class HomeController extends Controller
 {
@@ -132,6 +135,15 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
+    public function home_search(Request $request)
+    {
+        $data = Course::Where('name', 'like', '%' . $request->search_text . '%')->where('status',1)->paginate(9);
+        $category = ['name'=>'All'];
+      // echo "<pre>";  print_r($data); exit();
+        return view('course.onlineCourse',compact('data','category'));
 
+
+
+    }
 
 }
