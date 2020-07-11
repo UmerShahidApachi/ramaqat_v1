@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Lesson;
+use App\User;
 use App\Models\Category;
 use App\Models\Course;
 use App\Slider;
@@ -81,7 +82,8 @@ class CourseController extends Controller
      */
     public function create(Request $request)
     {
-       // dd($request->all());
+      // echo "<pre>"; print_r($request->all()); exit();
+
         if ($request->hasfile('image')) {
             $postData = $request->only('image');
 
@@ -120,13 +122,24 @@ class CourseController extends Controller
             $file->move($destinationpath, $name[$key]);
           }
         }
-       // dd($name);
-//        $name ="";
-//        $attachments = implode(',', $name);
+
+        if ($request->hasfile('promo_video')) {
+            $file = $request->file('promo_video');
+            $filename = str_replace(' ', '', $file->getClientOriginalName());
+            $ext = $file->getClientOriginalExtension();
+            $promo_video = uniqid() . $filename;
+            $destinationpath = public_path('course/attachment');
+            $file->move($destinationpath, $name[$key]);
+          
+        }
+        $names = implode(',', $name);
+       
         $category_id = implode(',', $request->category_id);
+        $author = implode(',', $request->author);
+
 
 //        $category = Course::create(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price, 'discount_price'=>$request->discount_price,'attach_doc'=>$attachments,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
-        $category = Course::create(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price, 'discount_price'=>$request->discount_price,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
+        $category = Course::create(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->briefdescription,'short_description'=>$request->shortdescription,'duration'=>$request->duration,'price'=>$request->price, 'discount_price'=>$request->discount_price,'thumbnail'=>$imgname,'promo_video'=>$promo_video,'user_id'=>Auth::id(),'auther'=>$author,'producer_name'=>$request->producer_name,'attach_doc'=>$names]);
 
         if ($category){
            return ['status'=>1, 'course'=>$category];
@@ -154,7 +167,8 @@ class CourseController extends Controller
     public function show()
     {
         $categories = Category::all();
-        return view('backend.trainer.courses.add', compact('categories'));
+        $trainer = User::where('role_id',3)->where('is_trainer',1)->get();
+        return view('backend.trainer.courses.add', compact('categories','trainer'));
     }
 
     /**
