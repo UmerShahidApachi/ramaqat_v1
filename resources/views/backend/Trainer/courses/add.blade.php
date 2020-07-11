@@ -49,7 +49,7 @@
               <div class="col-6">
                 <div class="form-group select-dropdown">
                     <label>Auther</label>
-                     <select class="form-control chosen chosen-height" name="" multiple required>                        
+                     <select class="form-control chosen chosen-height" name="author" multiple >
                       <option value=""></option>
                     </select>
                 </div>

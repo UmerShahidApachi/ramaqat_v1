@@ -7,6 +7,11 @@
     .HeaderSearch{
         margin:2.5%;
     }
+    .crud-opration{
+        overflow-y: scroll;
+        position: relative;
+        
+    }
 </style>
 
     {{--    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>--}}
