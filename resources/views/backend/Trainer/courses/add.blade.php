@@ -165,8 +165,9 @@
                   </div> -->
 
                 </div>
-            </div>
-              <button>Add more</button>
+              </div>
+           
+         
             </div>
           
 
