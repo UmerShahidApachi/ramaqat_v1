@@ -4,6 +4,9 @@
     label{
         top: -20px;
     }
+    .HeaderSearch{
+        margin:2.5%;
+    }
 </style>
 
     {{--    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>--}}
@@ -43,7 +46,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="crud-opration pr-1">
+                <div class="crud-opration">
                     <div class="table-responsive">
 
                         <table class="table table-striped table-hover" id="table_id">

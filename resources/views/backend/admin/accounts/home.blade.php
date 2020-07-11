@@ -31,12 +31,10 @@
                                     {{--								<label for="selectAll"></label>--}}
                                     {{--							</span>--}}
                                     {{--						</th>--}}
-                                    <th>Purchesd By</th>
-                                    <th>Price</th>
                                     <th>Trainer</th>
-                                    <th>Category</th>
-                                    <th>Course</th>
-                                    <th>Date</th>
+                                    <th>Total Amount</th>
+                                    <th>Payed Amount</th>
+                                    <th>Pending Amount</th>
                                 </tr>
                                 </thead>
 
@@ -61,7 +59,6 @@
                                             </td>
                                             <td>{{$row->email}}</td>
                                             <td>{{$row->address}}</td>
-                                            <td>{{$row->phone}}</td>
 
                                             {{--						<td>89 Chiaroscuro Rd, Portland, USA</td>--}}
                                             {{--                        <td>(171) 555-2222</td>--}}

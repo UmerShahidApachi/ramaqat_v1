@@ -19,6 +19,11 @@ class UserController extends Controller
         return view('backend.admin.trainers.add');
 
     }
+    public function user_profile()
+    {
+        return view('backend.user.profile.home');
+
+    }
 
     public function new_profile(Request $request)
     {

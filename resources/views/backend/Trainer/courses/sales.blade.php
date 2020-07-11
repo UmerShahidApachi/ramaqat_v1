@@ -4,8 +4,8 @@
     .table-responsive{
         overflow-x: hidden;
     }
-    #table_id_filter{
-        margin-right: 2%;
+    .HeaderSearch{
+        margin:2.5%;
     }
 </style>
 
