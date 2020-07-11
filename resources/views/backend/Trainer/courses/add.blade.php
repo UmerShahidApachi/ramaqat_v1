@@ -14,6 +14,8 @@
     }
     .custom-file-input:lang(en)~.custom-file-label::after{
       content: "upload";
+        background: purple;
+        color: white;
     }
     #checkbox_setting{
       margin-top: 9%;
@@ -38,6 +40,12 @@
     .modal-header, .modal-footer{
       border-color: white;
     }
+    .add-course{
+        width: 100%;
+        height: 250px;
+        border: 1px solid white;
+    }
+
 </style>
 
     <div class="container mt-5" id="add_cource_scroll">
@@ -48,6 +56,28 @@
         <div class="modal-header">
             <h4 class="modal-title" style="color: #570055;">Add Course</h4>
         </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <span style="float: left"> Course Image</span>
+                    <img class="add-course" id="addcourse"/>
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class="form-group" style="padding-top: 30px">
+                    <p>Upload your course image here.It must meet our <a href="#" style="color: blue" >course image</a> <br>
+                        <a href="#" style="color: blue">quality standreds</a> to be accepted.Important guidlines:750X422 pixels </p>
+                    <div class="custom-file" >
+                        <input type="file" class="custom-file-input" id="inputGroupFile02"
+                               accept="image/*" onchange="loadFile(event)" >
+                        <label class="custom-file-label" for="inputGroupFile02">No file Select</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
             <div class="row">
               <div class="col-6">
@@ -59,11 +89,11 @@
               <div class="col-6">
                 <div class="form-group">
                     <label class="contents">Producer Name</label>
-                    <select class="form-control chosen chosen-height" name="producer_name"  required> 
-                            <option>Select producer</option>    
-                            <option value="0">zack syder</option> 
-                            <option value="1">yash johar</option>                     
-                            <option value="2">nadeem</option>                                         
+                    <select class="form-control chosen chosen-height" name="producer_name"  required>
+                            <option>Select producer</option>
+                            <option value="0">zack syder</option>
+                            <option value="1">yash johar</option>
+                            <option value="2">nadeem</option>
                     </select>
                 </div>
               </div>
@@ -110,13 +140,15 @@
             </div>
 
              <div class="row">
-              <div class="col-6">
+              <div class="col-12">
                 <div class="form-group">
                     <label class="contents">Short Description</label>
                     <textarea id="shortdescription" class="form-control description" name="shortdescription" required></textarea>
                 </div>
               </div>
-              <div class="col-6">
+              </div>
+        <div class="row">
+              <div class="col-12">
                 <div class="form-group bmd-form-group">
                     <label class="contents">Brief Description</label>
                     <textarea id="briefdescription"  class="form-control description" name="briefdescription" required></textarea>
@@ -143,9 +175,9 @@
                 <div class="form-group bmd-form-group">
                 <label>Attachment</label>
                   <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile02"
+                    <input type="file" class="custom-file-input" id="inputGroupFile03"
                       aria-describedby="inputGroupFileAddon01" name="attachment[]" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,image/*" multiple>
-                    <label class="custom-file-label" for="inputGroupFile02">Choose Attachment</label>
+                    <label class="custom-file-label" for="inputGroupFile03">Choose Attachment</label>
                   </div>
               </div>
                  <!-- <div class="btn btn-primary btn-sm float-left">
@@ -164,7 +196,7 @@
                       aria-describedby="inputGroupFileAddon01" name="image" accept="image/*">
                     <label class="custom-file-label" for="inputGroupFile05">Choose image</label>
                   </div>
-                
+
                  <!--  <div class="btn btn-primary btn-sm float-left">
 
                       <span>Choose file</span>
@@ -173,10 +205,10 @@
 
                 </div>
               </div>
-           
-         
+
+
             </div>
-          
+
 
         <div class="modal-footer">
             <input type="button" class="btn white-btn" data-dismiss="modal" value="Cancel">
@@ -762,7 +794,14 @@ Or
   })
 
  });
-
+    var loadFile = function(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+            var output = document.getElementById('addcourse');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    };
 </script>
 
 
