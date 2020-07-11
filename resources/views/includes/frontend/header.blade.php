@@ -1,68 +1,125 @@
+<head>
+    <!------ Include the above in your HEAD tag ---------->head>
+</head>
 <style>
-    .main_color {
-        color: #570055;
+    /* carousel */
+    .media-carousel
+    {
+        margin-bottom: 0;
+        padding: 0 10px 10px 10px;
+        margin-top: 30px;
     }
-
-
-    #basicSlider {
-        position: relative;
+    /* Previous button  */
+    .media-carousel .carousel-control.left
+    {
+        left: -12px;
+        background-image: none;
+        background: none repeat scroll 0 0 #222222;
+        border: 4px solid #FFFFFF;
+        border-radius: 23px 23px 23px 23px;
+        height: 10px;
+        width : 10px;
+        margin-top: 30px
     }
-
-    #basicSlider img {
-        width: 65px;
-        height: 65px;
+    /* Next button  */
+    .media-carousel .carousel-control.right
+    {
+        right: -12px !important;
+        background-image: none;
+        background: none repeat scroll 0 0 #222222;
+        border: 4px solid #FFFFFF;
+        border-radius: 23px 23px 23px 23px;
+        height: 20px;
+        width : 20px;
+        margin-top: 30px
     }
-
-    #basicSlider .MS-content {
-        white-space: nowrap;
-        overflow: hidden;
-        margin: 0 2%;
-        padding-top: 1%;
-
+    /* Changes the position of the indicators */
+    .media-carousel .carousel-indicators
+    {
+        right: 50%;
+        top: auto;
+        bottom: 0px;
+        margin-right: -19px;
     }
-
-    #basicSlider .MS-content .item {
-        display: inline-block;
-        width: 12%;
-        position: relative;
-        vertical-align: top;
-        overflow: hidden;
-        height: 100%;
-        white-space: normal;
-        line-height: 30px;
-        vertical-align: middle;
+    /* Changes the colour of the indicators */
+    .media-carousel .carousel-indicators li
+    {
+        background: #c0c0c0;
     }
-
-    #basicSlider .MS-content .item a {
-        line-height: 50px;
-        vertical-align: middle;
+    .media-carousel .carousel-indicators .active
+    {
+        background: #333333;
     }
-
-    #basicSlider .MS-controls button {
-        position: absolute;
+    .media-carousel img
+    {
+        width: 20px;
+        height: 50px
     }
+    /* End carousel */
+    /*.main_color {*/
+    /*    color: #570055;*/
+    /*}*/
 
-    #basicSlider .MS-controls .MS-left {
-        top: 35px;
-        left: 10px;
-        background: transparent;
-        border: none;
-        outline: none;
-        color: lightgray;
-        font-size: 30px;
-        font-weight: 400 !important;
-    }
 
-    #basicSlider .MS-controls .MS-right {
-        top: 35px;
-        right: 10px;
-        background: transparent;
-        border: none;
-        outline: none;
-        color: lightgray;
-        font-size: 30px;
-        font-weight: 400 !important;
-    }
+    /*#basicSlider {*/
+    /*    position: relative;*/
+    /*}*/
+
+    /*#basicSlider img {*/
+    /*    width: 65px;*/
+    /*    height: 65px;*/
+    /*}*/
+
+    /*#basicSlider .MS-content {*/
+    /*    white-space: nowrap;*/
+    /*    overflow: hidden;*/
+    /*    margin: 0 2%;*/
+    /*    padding-top: 1%;*/
+
+    /*}*/
+
+    /*#basicSlider .MS-content .item {*/
+    /*    display: inline-block;*/
+    /*    width: 12%;*/
+    /*    position: relative;*/
+    /*    vertical-align: top;*/
+    /*    overflow: hidden;*/
+    /*    height: 100%;*/
+    /*    white-space: normal;*/
+    /*    line-height: 30px;*/
+    /*    vertical-align: middle;*/
+    /*}*/
+
+    /*#basicSlider .MS-content .item a {*/
+    /*    line-height: 50px;*/
+    /*    vertical-align: middle;*/
+    /*}*/
+
+    /*#basicSlider .MS-controls button {*/
+    /*    position: absolute;*/
+    /*}*/
+
+    /*#basicSlider .MS-controls .MS-left {*/
+    /*    top: 35px;*/
+    /*    left: 10px;*/
+    /*    background: transparent;*/
+    /*    border: none;*/
+    /*    outline: none;*/
+    /*    color: lightgray;*/
+    /*    font-size: 30px;*/
+    /*    font-weight: 400 !important;*/
+    /*}*/
+
+    /*#basicSlider .MS-controls .MS-right {*/
+    /*    top: 35px;*/
+    /*    right: 10px;*/
+    /*    background: transparent;*/
+    /*    border: none;*/
+    /*    outline: none;*/
+    /*    color: lightgray;*/
+    /*    font-size: 30px;*/
+    /*    font-weight: 400 !important;*/
+    /*}*/
 
     #Subscribe_body .SubBtn {
         display: inline-block;
@@ -342,6 +399,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </nav>
 
@@ -479,3 +537,6 @@
 
 </header>
 <!--Header End Here  -->
+<script>
+
+</script>

@@ -10,10 +10,12 @@
       height: 73vh;
     }
     .custom-file-label:after{
-      content: "Choose file";
+      content: "upload";
     }
     .custom-file-input:lang(en)~.custom-file-label::after{
-      content: "Choose file";
+      content: "upload";
+        background: purple;
+        color: white;
     }
     #checkbox_setting{
       margin-top: 9%;
@@ -25,7 +27,31 @@
     .font_color{
       color: #570055 !important;
     }
+    .submit_btn{
+        background-color: #570055;
+        color: white;
+    }
+    label.contents{
+      display: contents;
+    }
+    .form-control {
+        border: 1px solid #ced4da;
+        border-bottom:0px  ;
+    }
+    .form-control:invalid {
+        background-image: linear-gradient(to top,  #5786c0 2px, rgba(244, 67, 54, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+    }
+    .modal-header, .modal-footer{
+      border-color: white;
+    }
+    .add-course{
+        width: 100%;
+        height: 250px;
+        border: 1px solid white;
+    }
+
 </style>
+
     <div class="container mt-5" id="add_cource_scroll">
     <form id="course_formss">
         @csrf
@@ -34,12 +60,56 @@
         <div class="modal-header">
             <h4 class="modal-title" style="color: #570055;">Add Course</h4>
         </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <span style="float: left"> Course Image</span>
+                    <img class="add-course" id="addcourse"/>
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class="form-group" style="padding-top: 30px">
+                    <p>Upload your course image here.It must meet our <a href="#" style="color: blue" >course image</a> <br>
+                        <a href="#" style="color: blue">quality standreds</a>
+                        to be accepted.Important guidelines:750X422 pixels; .jpg, .jpeg , .gif, or .png on text on the image </p>
+                    <div class="custom-file" >
+                        <input type="file" class="custom-file-input" id="inputGroupFile02"
+                               accept="image/*" onchange="loadFile(event)" name="image" >
+                        <label class="custom-file-label" for="inputGroupFile02">No file Select</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                    <label class="contents">Course Name</label>
+                    <input type="text" class="form-control" name="name" required>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group ">
+                    <label class="contents">Producer Name</label>
+                    <select class="form-control chosen chosen-height" name="producer_name"  required>
+                            <option>Select producer</option>
+                            <option value="0">zack syder</option>
+                            <option value="1">yash johar</option>
+                            <option value="2">nadeem</option>
+                    </select>
+                </div>
+              </div>
+            </div>
 
             <div class="row">
               <div class="col-6">
                 <div class="form-group select-dropdown">
-                    <label>Category</label>
-                    <select class="form-control chosen chosen-height" name="category_id[]" multiple required>
+                    <label  class="contents">Category</label>
+                    <select class="form-control chosen chosen-height"  name="category_id[]" multiple required>
+
                         @foreach($categories as $c)
                             <option value="{{$c->id}}">{{$c->name}}</option>
                         @endforeach
@@ -48,89 +118,113 @@
               </div>
               <div class="col-6">
                 <div class="form-group select-dropdown">
-                    <label>Auther</label>
-                     <select class="form-control chosen chosen-height" name="" multiple required>                        
-                      <option value=""></option>
+                    <label class="contents">Auther</label>
+                     <select class="form-control chosen chosen-height cat_height" name="author[]" multiple >
+
+                      @foreach($trainer as $auther)
+                      <option value="{{$auther->id}}">{{$auther->name}}</option>
+                      @endforeach
                     </select>
                 </div>
               </div>
             </div>
 
-            <div class="row">
-              <div class="col-6">
-              <div class="form-group">
-                  <label>Course Name</label>
-                  <input type="text" class="form-control" name="name" required>
-              </div>
-              </div>
-              <div class="col-6">
-              <div class="form-group">
-                  <label>Name</label>
-                  <input type="text" class="form-control" name="newname">
-              </div>
-              </div>
 
-            </div>
 
             <div class="row">
               <div class="col-6">
-              <div class="form-group">
-                  <label>Price</label>
-                  <input type="number" class="form-control" name="price" required>
-              </div>
-              </div>
-              <div class="col-6">
-              <div class="form-group">
-                  <label>Discount Price</label>
-                  <input type="number" class="form-control" name="discount_price" required>
-              </div>
-              </div>
-
-
-            </div>
-            <div class="row">
-              <div class="col-6">
-                <label>Attachment</label>
-
-                 <div class="custom-file mb-3">
-                  <input type="file" class="custom-file-input" id="customFile2" name="attachment" accept="image/*">
-                  <label class="custom-file-label" for="customFile1">No file attached</label>
+                <div class="form-group">
+                    <label class="contents">Price</label>
+                    <input type="number" class="form-control" name="price" required>
                 </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                    <label class="contents">Discount Price</label>
+                    <input type="number" class="form-control" name="discount_price" required>
+                </div>
+              </div>
+            </div>
 
+             <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                    <label class="contents">Short Description</label>
+                    <textarea id="shortdescription" class="form-control description" name="shortdescription" required></textarea>
+                </div>
+              </div>
+              </div>
+        <div class="row">
+              <div class="col-12">
+                <div class="form-group bmd-form-group">
+                    <label class="contents">Brief Description</label>
+                    <textarea id="briefdescription"  class="form-control description" name="briefdescription" required></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group bmd-form-group">
+                    <p>Upload your course image here.It must meet our <a href="#" style="color: blue" >course image</a> <br>
+                        <a href="#" style="color: blue">quality standreds</a>
+                        to be accepted.Important guidelines:750X422 pixels; .jpg, .jpeg , .gif, or .png on text on the image </p>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                      aria-describedby="inputGroupFileAddon01" name="promo_video" accept="video/*"  required>
+                    <label class="custom-file-label" for="inputGroupFile01">Choose video</label>
+                  </div>
+              </div>
                  <!-- <div class="btn btn-primary btn-sm float-left">
                   <span>Choose file</span>
                   <input type="file" name="attachment[]" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,image/*" multiple required>
                 </div> -->
               </div>
-
               <div class="col-6">
-                <label>Cover Image</label>
-                 <div class="custom-file mb-3">
-                  <input type="file" class="custom-file-input" id="customFile2" name="image" accept="image/*">
-                  <label class="custom-file-label" for="customFile1">No file attached</label>
-                </div>
-               <!--  <div class="btn btn-primary btn-sm float-left">
+                <div class="form-group bmd-form-group">
+                    <p>Upload your course image here.It must meet our <a href="#" style="color: blue" >course image</a> <br>
+                        <a href="#" style="color: blue">quality standreds</a>
+                        to be accepted.Important guidelines:750X422 pixels; .jpg, .jpeg , .gif, or .png on text on the image </p>
+                  <div class="custom-file">
 
-                    <span>Choose file</span>
-                    <input type="file" name="image" accept="image/*" required>
+                    <input type="file" class="custom-file-input" id="inputGroupFile03"
+                      aria-describedby="inputGroupFileAddon01" name="attachment[]" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,image/*" multiple>
+                    <label class="custom-file-label" for="inputGroupFile03">Choose Attachment</label>
+                  </div>
+              </div>
+                 <!-- <div class="btn btn-primary btn-sm float-left">
+                  <span>Choose file</span>
+                  <input type="file" name="attachment[]" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword,image/*" multiple required>
                 </div> -->
               </div>
-
-            </div>
-            <div class="row">
-            <div class="col-12 mt-4">
-            <div class="form-group">
-                <label>Description</label>
-                <textarea id="description"  class="form-control description" name="description" required></textarea>
-            </div>
-            </div>
             </div>
 
+              <!-- <div class="row">
+                <div class="col-6">
+                  <div class="form-group bmd-form-group">
+                  <label>Cover</label>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile05"
+                      aria-describedby="inputGroupFileAddon01" name="image" accept="image/*">
+                    <label class="custom-file-label" for="inputGroupFile05">Choose image</label>
+                  </div> -->
+
+{{--                 <!--  <div class="btn btn-primary btn-sm float-left">--}}
+
+{{--                      <span>Choose file</span>--}}
+{{--                      <input type="file" name="image" accept="image/*" required>--}}
+{{--                  </div> -->--}}
+
+               <!--  </div>
+              </div>
+
+
+            </div> -->
 
 
         <div class="modal-footer">
-            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-            <input type="submit" class="btn btn-success cat" id="" value="Submit">
+            <input type="button" class="btn white-btn" data-dismiss="modal" value="Cancel">
+            <input type="submit" class="btn white-btn submit_btn" id="" value="Submit">
         </div>
     </form>
     </div>
@@ -141,27 +235,27 @@
 
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <div class="modal-header" style="background:purple">
+        <button type="button" class="close" data-dismiss="modal" style="float: right">&times;</button>
         <h4 class="modal-title">Add Section</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body"style="padding-top: 40px" >
          <form  id="section_form">
             @csrf
             <input type="hidden" name="course_ids" id="course_ids">
             <div class="row">
             <div class="col-12">
-            <div class="form-group">
+            <div class="form-group" >
                 <label>Section</label>
                 <input type="test" class="form-control" name="section" placeholder="section" required>
             </div>
             </div>
             </div>
-            <button type="submit" class="btn btn-success cat">Submit</button>
+            <button type="submit" class="btn btn-success cat" style="border-radius: 15px;background-color: purple !important;">Submit</button>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="close_section" style="border: 1px solid purple; border-radius: 15px; background-color: white !important; color: purple">Close</button>
       </div>
     </div>
 
@@ -176,7 +270,7 @@
     <div class="modal-content ">
       <div class="modal-header bg_color p-3">
         <button type="button" class="close" data-dismiss="modal" style="position: absolute;right: 20px;">&times;</button>
-        <h4 class="modal-title">Add Section</h4>
+        <h4 class="modal-title">Add Lesson</h4>
       </div>
       <div class="modal-body">
         <form id="lesson_form" >
@@ -216,8 +310,10 @@
             </div>
             <div class="row">
                 <div class="col-6">
+                  <label>video</label>
                   <div class="custom-file mb-3">
-                  <input type="file" class="custom-file-input" id="customFile2" name="image" accept="image/*">
+
+                  <input type="file" class="custom-file-input" id="customFile2" name="image" accept="video/*">
                   <label class="custom-file-label" for="customFile1">No file attached</label>
                 </div>
                     <!-- <div class="btn btn-primary btn-sm float-left">
@@ -235,8 +331,10 @@
                     </div> -->
                 </div>
                 <div class="col-6">
+                  <label>document</label>
                   <div class="custom-file mb-3">
-                  <input type="file" class="custom-file-input" id="customFile2" name="image" accept="image/*">
+
+                  <input type="file" class="custom-file-input" id="customFile2" name="document" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword">
                   <label class="custom-file-label" for="customFile1">No file attached</label>
                 </div>
                     <!-- <div class="btn btn-primary btn-sm float-left">
@@ -257,7 +355,7 @@
                   <div class="form-group">
                       <div class="form-check-inline" id="checkbox_setting">
                         <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" value="">Option select
+                          <input type="checkbox" name="video_lock" class="form-check-input" value="1">Video Lock
                         </label>
                       </div>
                   </div>
@@ -267,7 +365,7 @@
                 <div class="col-12">
                     <div class="form-group">
                         <label>Description*</label>
-                        <textarea id=""  class="form-control description" name="description" required></textarea>
+                        <textarea id="lessonss_desc"  class="form-control description" name="description" required></textarea>
                     </div>
                 </div>
             </div>
@@ -275,14 +373,14 @@
 
 
             <div class="modal-footer">
-                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"  id="close_add_lesson">
                 <input type="submit" class="btn btn-success cat" id="cat">
             </div>
         </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="close_add_lesson">Close</button>
+      </div> -->
     </div>
 
   </div>
@@ -296,7 +394,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Add Section</h4>
+        <h4 class="modal-title">edit lesson</h4>
       </div>
       <div class="modal-body">
         <form id="update_lesson_form" >
@@ -349,11 +447,21 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label>Section*</label><br>
-                        <select name="sections" id="section2" required>
+                        <select class="form-control" name="sections" id="section2" required>
                         </select>
                     </div>
                 </div>
+                <div class="col-6">
+                  <div class="form-group">
+                      <div class="form-check-inline" id="checkbox_setting">
+                        <label class="form-check-label">
+                          <input type="checkbox" name="video_lock" class="form-check-input" id="video_lock" value="1">Video Lock
+                        </label>
+                      </div>
+                  </div>
+                </div>
             </div>
+
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
@@ -366,14 +474,14 @@
 
 
             <div class="modal-footer">
-                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                <input type="button" class="btn btn-default" data-dismiss="modal" id="edit_lesson_cancel" value="Cancel">
                 <input type="submit" class="btn btn-success cat" id="cat">
             </div>
         </form>
       </div>
-      <div class="modal-footer">
+  <!--     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+      </div> -->
     </div>
 
   </div>
@@ -389,10 +497,10 @@ aria-hidden="true">
 <ul class="header-list">
 <li>
 <div><h5 class="modal-title" id="exampleModalLabel"><b>Courese Content</b></h5></div>
-<div><h6>2 Section / 5 Lesson</h6></div>
+<!-- <div><h6>2 Section / 5 Lesson</h6></div> -->
 </li>
 <li>
-<img src="img/traneedashboard/clock.png"><span class="ml-3"><b>13:00</b></span>
+<!-- <img src="img/traneedashboard/clock.png"><span class="ml-3"><b>13:00</b></span> -->
 </li>
 <li>
 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -450,7 +558,7 @@ aria-hidden="true">
 
 
 
-<!-- footerbutton -->
+0<-- footerbutton -->
 <div class="row mt-5">
 <div class="col-12 col-sm-8 mx-auto">
 <div class="row btn-row">
@@ -479,9 +587,14 @@ Or
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+<link rel="stylesheet" href="{{url('assets/sweetalerts/sweetalert.css')}}">
+<script src="{{url('assets/sweetalerts/sweetalert.js')}}"></script>
 
 <script>
-    CKEDITOR.replace('description');
+CKEDITOR.replace('lesson_desc');
+    CKEDITOR.replace('lessonss_desc');
+    CKEDITOR.replace('briefdescription');
+
 </script>
 <script>
     $(".chosen").chosen();
@@ -609,7 +722,7 @@ Or
         if(typeof(value.lessons) != "undefined" && value.lessons !== null) {
             $.each(value.lessons, function( indx, val) {
         var html = '';
-        html +='<div class="row detail-bg remove_lesson">';
+        html +='<div class="row detail-bg remove_lesson" id="dell_'+val.id+'">';
         html +='<div class="col-6 col-sm-4 c-text">';
         html +='<div>';
         html +='<img src="img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + val.lesson_no +'</span>';
@@ -622,6 +735,7 @@ Or
         html +='</div>';
         html +='<div class="col-12 col-sm-4 text-end">';
         html +='<a class="edit-btn lessons_edit" id="'+val.id+'" href="#" >Edit</a>';
+        html +='<a class="edit-btn lessons_del" id="'+val.id+'" href="#" >Delete</a>';
         html +='</div>';
         html +='</div>';
          $('.show_lesson').append(html);
@@ -643,10 +757,16 @@ Or
 
    success:function(data)
    {
+
         $('#basicExampleModal').modal('hide');
         var i;
         for (i = 0; i < data.data.length; i++) {
         $("#section2").append(new Option(data.data[i].section, data.data[i].id));
+    }
+    if (data.lesson.video_lock==1) {
+      $('#video_lock').attr( "checked", true );
+    }else{
+      $('#video_lock').attr( "checked", true );
     }
         $('#lesson_num').val(data.lesson.lesson_no);
         $('#lesson_name').val(data.lesson.title);
@@ -685,7 +805,7 @@ Or
         if(typeof(value.lessons) != "undefined" && value.lessons !== null) {
             $.each(value.lessons, function( indx, val) {
         var html = '';
-        html +='<div class="row detail-bg remove_lesson">';
+        html +='<div class="row detail-bg remove_lesson" id="dell_'+val.id+'">';
         html +='<div class="col-6 col-sm-4 c-text">';
         html +='<div>';
         html +='<img src="img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + val.lesson_no +'</span>';
@@ -698,6 +818,7 @@ Or
         html +='</div>';
         html +='<div class="col-12 col-sm-4 text-end">';
         html +='<a class="edit-btn lessons_edit" id="'+val.id+'" href="#" >Edit</a>';
+        html +='<a class="edit-btn lessons_del" id="'+val.id+'" href="#" >Delete</a>';
         html +='</div>';
         html +='</div>';
          $('.show_lesson').append(html);
@@ -710,7 +831,66 @@ Or
   })
 
  });
+    var loadFile = function(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+            var output = document.getElementById('addcourse');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    };
 
+
+    $('#close_section').click(function(){
+        $('#myModal').modal('hide');
+        $('#basicExampleModal').modal('show');
+    });
+
+     $('#close_add_lesson').click(function(){
+        $('#lessonModal').modal('hide');
+        $('#basicExampleModal').modal('show');
+    });
+
+      $('#edit_lesson_cancel').click(function(){
+        $('#edit_lesson').modal('hide');
+        $('#basicExampleModal').modal('show');
+    });
+
+$('body').on('click','.lessons_del',function(){
+            var lesson_id = $(this).attr('id');
+            // var course_id = $('#lesson_course_id').val();
+            swal({
+      title: "Do you want to delete this details",
+      text: "@lang('packages.delete_package_msg')",
+      type: 'info',
+      showCancelButton: true,
+      confirmButtonColor: '#F79426',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes',
+      showLoaderOnConfirm: true
+    }).then( ( result ) => {
+      if ( result.value == true ) {
+            $.ajax({
+   url:"{{ url('trainer/delete_lessons') }}/"+ lesson_id,
+   method:"get",
+
+   success:function(data)
+   {
+      swal({
+           title: "Response",
+           text: "Record Delete Successfully",
+           type: 'info',
+                        });
+      console.log(data);
+        $('#dell_'+data.data).remove();
+
+
+
+   }
+  })
+        }
+            } );
+     } );
 </script>
 
 

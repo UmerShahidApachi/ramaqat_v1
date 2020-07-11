@@ -135,6 +135,10 @@ Route::prefix('trainer')->group(function () {
         Route::get('get_section/{id}',      'LessonController@get_section');
 
         Route::get('edit_lessons/{id}', 'LessonController@edit');
+        Route::get('delete_lessons/{id}', 'LessonController@delete');
+        Route::get('get_lesson_section/{id}', 'LessonController@get_lesson_section');
+        
+
 
 
 
@@ -179,3 +183,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/show_lesson/{id}', 'Frontend\LessonController@index');
 
 
+//user
+Route::get('/form', 'User\HomeController@index');
