@@ -75,7 +75,7 @@
                         to be accepted.Important guidelines:750X422 pixels; .jpg, .jpeg , .gif, or .png on text on the image </p>
                     <div class="custom-file" >
                         <input type="file" class="custom-file-input" id="inputGroupFile02"
-                               accept="image/*" onchange="loadFile(event)" >
+                               accept="image/*" onchange="loadFile(event)" name="image" >
                         <label class="custom-file-label" for="inputGroupFile02">No file Select</label>
                     </div>
                 </div>
@@ -199,7 +199,7 @@
               </div>
             </div>
 
-              <div class="row">
+              <!-- <div class="row">
                 <div class="col-6">
                   <div class="form-group bmd-form-group">
                   <label>Cover</label>
@@ -207,7 +207,7 @@
                     <input type="file" class="custom-file-input" id="inputGroupFile05"
                       aria-describedby="inputGroupFileAddon01" name="image" accept="image/*">
                     <label class="custom-file-label" for="inputGroupFile05">Choose image</label>
-                  </div>
+                  </div> -->
 
 {{--                 <!--  <div class="btn btn-primary btn-sm float-left">--}}
 
@@ -215,11 +215,11 @@
 {{--                      <input type="file" name="image" accept="image/*" required>--}}
 {{--                  </div> -->--}}
 
-                </div>
+               <!--  </div>
               </div>
 
 
-            </div>
+            </div> -->
 
 
         <div class="modal-footer">
@@ -255,7 +255,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="close_section">Close</button>
       </div>
     </div>
 
@@ -270,7 +270,7 @@
     <div class="modal-content ">
       <div class="modal-header bg_color p-3">
         <button type="button" class="close" data-dismiss="modal" style="position: absolute;right: 20px;">&times;</button>
-        <h4 class="modal-title">Add Section</h4>
+        <h4 class="modal-title">Add Lesson</h4>
       </div>
       <div class="modal-body">
         <form id="lesson_form" >
@@ -310,8 +310,10 @@
             </div>
             <div class="row">
                 <div class="col-6">
+                  <label>video</label> 
                   <div class="custom-file mb-3">
-                  <input type="file" class="custom-file-input" id="customFile2" name="image" accept="image/*">
+                                       
+                  <input type="file" class="custom-file-input" id="customFile2" name="image" accept="video/*">
                   <label class="custom-file-label" for="customFile1">No file attached</label>
                 </div>
                     <!-- <div class="btn btn-primary btn-sm float-left">
@@ -329,8 +331,10 @@
                     </div> -->
                 </div>
                 <div class="col-6">
+                  <label>document</label>
                   <div class="custom-file mb-3">
-                  <input type="file" class="custom-file-input" id="customFile2" name="image" accept="image/*">
+                    
+                  <input type="file" class="custom-file-input" id="customFile2" name="document" accept="application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword">
                   <label class="custom-file-label" for="customFile1">No file attached</label>
                 </div>
                     <!-- <div class="btn btn-primary btn-sm float-left">
@@ -351,7 +355,7 @@
                   <div class="form-group">
                       <div class="form-check-inline" id="checkbox_setting">
                         <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" value="">Option select
+                          <input type="checkbox" name="video_lock" class="form-check-input" value="1">Video Lock
                         </label>
                       </div>
                   </div>
@@ -361,7 +365,7 @@
                 <div class="col-12">
                     <div class="form-group">
                         <label>Description*</label>
-                        <textarea id=""  class="form-control description" name="description" required></textarea>
+                        <textarea id="lessonss_desc"  class="form-control description" name="description" required></textarea>
                     </div>
                 </div>
             </div>
@@ -369,14 +373,14 @@
 
 
             <div class="modal-footer">
-                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"  id="close_add_lesson">
                 <input type="submit" class="btn btn-success cat" id="cat">
             </div>
         </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="close_add_lesson">Close</button>
+      </div> -->
     </div>
 
   </div>
@@ -390,7 +394,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Add Section</h4>
+        <h4 class="modal-title">edit lesson</h4>
       </div>
       <div class="modal-body">
         <form id="update_lesson_form" >
@@ -443,11 +447,21 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label>Section*</label><br>
-                        <select name="sections" id="section2" required>
+                        <select class="form-control" name="sections" id="section2" required>
                         </select>
                     </div>
                 </div>
+                <div class="col-6">
+                  <div class="form-group">
+                      <div class="form-check-inline" id="checkbox_setting">
+                        <label class="form-check-label">
+                          <input type="checkbox" name="video_lock" class="form-check-input" id="video_lock" value="1">Video Lock
+                        </label>
+                      </div>
+                  </div>
+                </div>
             </div>
+           
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
@@ -460,7 +474,7 @@
 
 
             <div class="modal-footer">
-                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                <input type="button" class="btn btn-default" data-dismiss="modal" id="edit_lesson_cancel" value="Cancel">
                 <input type="submit" class="btn btn-success cat" id="cat">
             </div>
         </form>
@@ -483,10 +497,10 @@ aria-hidden="true">
 <ul class="header-list">
 <li>
 <div><h5 class="modal-title" id="exampleModalLabel"><b>Courese Content</b></h5></div>
-<div><h6>2 Section / 5 Lesson</h6></div>
+<!-- <div><h6>2 Section / 5 Lesson</h6></div> -->
 </li>
 <li>
-<img src="img/traneedashboard/clock.png"><span class="ml-3"><b>13:00</b></span>
+<!-- <img src="img/traneedashboard/clock.png"><span class="ml-3"><b>13:00</b></span> -->
 </li>
 <li>
 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -573,9 +587,12 @@ Or
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+<link rel="stylesheet" href="{{url('assets/sweetalerts/sweetalert.css')}}">
+<script src="{{url('assets/sweetalerts/sweetalert.js')}}"></script>
 
 <script>
-    // CKEDITOR.replace('shortdescription');
+CKEDITOR.replace('lesson_desc');
+    CKEDITOR.replace('lessonss_desc');
     CKEDITOR.replace('briefdescription');
 
 </script>
@@ -705,7 +722,7 @@ Or
         if(typeof(value.lessons) != "undefined" && value.lessons !== null) {
             $.each(value.lessons, function( indx, val) {
         var html = '';
-        html +='<div class="row detail-bg remove_lesson">';
+        html +='<div class="row detail-bg remove_lesson" id="dell_'+val.id+'">';
         html +='<div class="col-6 col-sm-4 c-text">';
         html +='<div>';
         html +='<img src="img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + val.lesson_no +'</span>';
@@ -718,6 +735,7 @@ Or
         html +='</div>';
         html +='<div class="col-12 col-sm-4 text-end">';
         html +='<a class="edit-btn lessons_edit" id="'+val.id+'" href="#" >Edit</a>';
+        html +='<a class="edit-btn lessons_del" id="'+val.id+'" href="#" >Delete</a>';
         html +='</div>';
         html +='</div>';
          $('.show_lesson').append(html);
@@ -739,10 +757,16 @@ Or
 
    success:function(data)
    {
+
         $('#basicExampleModal').modal('hide');
         var i;
         for (i = 0; i < data.data.length; i++) {
         $("#section2").append(new Option(data.data[i].section, data.data[i].id));
+    }
+    if (data.lesson.video_lock==1) {
+      $('#video_lock').attr( "checked", true );
+    }else{
+      $('#video_lock').attr( "checked", true );
     }
         $('#lesson_num').val(data.lesson.lesson_no);
         $('#lesson_name').val(data.lesson.title);
@@ -781,7 +805,7 @@ Or
         if(typeof(value.lessons) != "undefined" && value.lessons !== null) {
             $.each(value.lessons, function( indx, val) {
         var html = '';
-        html +='<div class="row detail-bg remove_lesson">';
+        html +='<div class="row detail-bg remove_lesson" id="dell_'+val.id+'">';
         html +='<div class="col-6 col-sm-4 c-text">';
         html +='<div>';
         html +='<img src="img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + val.lesson_no +'</span>';
@@ -794,6 +818,7 @@ Or
         html +='</div>';
         html +='<div class="col-12 col-sm-4 text-end">';
         html +='<a class="edit-btn lessons_edit" id="'+val.id+'" href="#" >Edit</a>';
+        html +='<a class="edit-btn lessons_del" id="'+val.id+'" href="#" >Delete</a>';
         html +='</div>';
         html +='</div>';
          $('.show_lesson').append(html);
@@ -814,8 +839,60 @@ Or
         };
         reader.readAsDataURL(event.target.files[0]);
     };
-</script>
 
 
-@endsection
+    $('#close_section').click(function(){
+        $('#myModal').modal('hide');      
+        $('#basicExampleModal').modal('show');
+    });
+
+     $('#close_add_lesson').click(function(){
+        $('#lessonModal').modal('hide');      
+        $('#basicExampleModal').modal('show');
+    });
+
+      $('#edit_lesson_cancel').click(function(){
+        $('#edit_lesson').modal('hide');      
+        $('#basicExampleModal').modal('show');
+    });
+
+$('body').on('click','.lessons_del',function(){
+            var lesson_id = $(this).attr('id');
+            // var course_id = $('#lesson_course_id').val();
+            swal({
+      title: "Do you want to delete this details",
+      text: "@lang('packages.delete_package_msg')",
+      type: 'info',
+      showCancelButton: true,
+      confirmButtonColor: '#F79426',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes',
+      showLoaderOnConfirm: true
+    }).then( ( result ) => {
+      if ( result.value == true ) {
+            $.ajax({
+   url:"{{ url('trainer/delete_lessons') }}/"+ lesson_id,
+   method:"get",
+
+   success:function(data)
+   {
+      swal({
+           title: "Response",
+           text: "Record Delete Successfully",
+           type: 'info',
+                        });
+      console.log(data);
+        $('#dell_'+data.data).remove();
+
+
+        
+   }
+  })
+        }
+            } );
+     } );
+</script> 
+
+
+@endsection 
 
