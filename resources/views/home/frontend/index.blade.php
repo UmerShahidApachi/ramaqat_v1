@@ -346,7 +346,7 @@
             }
 
             .bottomsec p {
-                padding-left:: 5px;
+                padding-left: 5px;
                 font-size: 12px;
             }
         }
@@ -861,7 +861,7 @@
             <div class="col pt-1" style="min-height: 100px ;overflow: hidden; font-size: 17px;">
                 <!--Carousel Wrapper--
                 <div id="multi-item-example2" class="carousel slide carousel-multi-item" data-ride="carousel">
-                    <!--/.Indicators-->
+                    <--.Indicators-->
                     <div class="row">
                         <div class="col-md-1 controls-top p-0 text-end hide_on_mobile">
                             <a class="btn-floating" href="#multi-item-example2" style="color: #570055"
@@ -929,7 +929,7 @@
         <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
         <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
       </div>
-      <!--/.Controls-->
+      <--/.Controls-->
 
       <!--Indicators--
       <ol class="carousel-indicators">
@@ -937,7 +937,7 @@
         <li data-target="#multi-item-example" data-slide-to="1"></li>
         <li data-target="#multi-item-example" data-slide-to="2"></li>
       </ol>
-      <!--/.Indicators-->
+      <--/.Indicators-->
       <div class="row">
         <div class="col-1 text-center">
             <a class="btn-floating arrow_newtop" href="#multi-item-example" data-slide="prev">
@@ -1055,17 +1055,17 @@
     <!-- old 3*3 course -->
     <!--
     <div class="container">
-        <!-- Cetegory slider --
+        <-- Cetegory slider --
         <div class="row">
             <div class="col-sm-12" id="img_slider" style="margin: 0 auto">
-                <!-- block 1 --
+                <-- block 1 --
                 @foreach($categories1 as $cat)
 
-                    <!-- <div class="slider_header text-center m-2"><u>{{$cat->name}}</u></div> --
-                    <!--Carousel Wrapper--
+                    <-- <div class="slider_header text-center m-2"><u>{{$cat->name}}</u></div> --
+                    <--Carousel Wrapper--
                     <div id="multi-item-{{$cat->name}}" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-                        <!--/.Indicators--
+                        <--/.Indicators--
                         <div class="row" style="direction:ltr !important;">
 
                             <div class="col-md-1 controls-top hide_on_mobile">
@@ -1074,14 +1074,14 @@
                                     <i class="fa fa-chevron-left"></i>
                                 </a>
                             </div>
-                            <!--Slides--
+                            <--Slides--
                             @php
                                 $data =
                                 \App\Models\Course::whereRaw("find_in_set($cat->id,category_id)")->where('status',1)->orderByRaw('RAND()')->take(3)->get();
                             @endphp
                             <div class="col-md-10 p-0">
                                 <div class="carousel-inner" role="listbox">
-                                    <!--First slide--
+                                    <--First slide--
                                     <div class="carousel-item active mb-2">
 
                                         {{-- {{dd($data)}}--}}
@@ -1162,7 +1162,7 @@
                                         </div>
 
                                     </div>
-                                    <!--/.First slide-->
+                                    <--/.First slide-->
 
                                     <!--Second slide--
                                     <div class="carousel-item mb-2">
@@ -1253,14 +1253,14 @@
                                    data-slide="next"><i class="fa fa-chevron-right"></i></a>
                             </div>
 
-                            <!--/.Slides--
+                            <--/.Slides--
 
                         </div>
-                        <!--/.Carousel Wrapper--
+                        <--/.Carousel Wrapper--
                         @endforeach
                         <div class="row">
                             <div class="col-12" id="img_slider">
-                                <!-- block 1 --
+                                <-- block 1 --
                                 <div class="">
                                     <div class="" style="min-height: 100px ;overflow: hidden;">
                                     </div>
@@ -1270,7 +1270,7 @@
                         </div>
 
 
-                        <!-- slider close -->
+                        <-- slider close -->
 
 
                         <!-- End -->
