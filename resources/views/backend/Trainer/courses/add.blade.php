@@ -40,6 +40,7 @@
     }
 </style>
 
+
     <div class="container mt-5" id="add_cource_scroll">
     <form id="course_formss">
         @csrf
@@ -147,29 +148,6 @@
                 </div> -->
               </div>
             </div>
-
-              <div class="row">
-                <div class="col-6">
-                  <div class="form-group bmd-form-group">
-                  <label>Attachment</label>
-                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile05"
-                      aria-describedby="inputGroupFileAddon01">
-                    <label class="custom-file-label" for="inputGroupFile05">Choose file</label>
-                  </div>
-                
-                 <!--  <div class="btn btn-primary btn-sm float-left">
-
-                      <span>Choose file</span>
-                      <input type="file" name="image" accept="image/*" required>
-                  </div> -->
-
-                </div>
-              </div>
-           
-         
-            </div>
-          
 
         <div class="modal-footer">
             <input type="button" class="btn white-btn" data-dismiss="modal" value="Cancel">
