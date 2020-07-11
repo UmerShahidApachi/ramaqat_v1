@@ -531,7 +531,7 @@ Or
 <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 
 <script>
-    CKEDITOR.replace('shortdescription');
+    // CKEDITOR.replace('shortdescription');
     CKEDITOR.replace('briefdescription');
 
 </script>
