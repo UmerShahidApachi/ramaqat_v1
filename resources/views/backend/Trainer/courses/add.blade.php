@@ -784,9 +784,7 @@ CKEDITOR.replace('lesson_desc');
     }
         $('#lesson_num').val(data.lesson.lesson_no);
         $('#lesson_name').val(data.lesson.title);
-        // $('#lesson_desc').text(data.lesson.description);
-        console.log(data);
-        console.log(data.lesson.description);
+
 
         CKEDITOR.instances.lesson_desc.setData(data.lesson.description);
         $('#lesson_courses_id').val(data.lesson.course_id);
@@ -800,6 +798,9 @@ CKEDITOR.replace('lesson_desc');
 
         $('#update_lesson_form').on('submit', function(event){
   event.preventDefault();
+  for ( instance in CKEDITOR.instances ) {
+        CKEDITOR.instances[instance].updateElement();
+    }
   $.ajax({
    url:"{{route('update_lesson')}}",
    method:"POST",

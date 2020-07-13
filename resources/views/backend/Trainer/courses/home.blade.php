@@ -536,7 +536,7 @@ Or
 
     {{--@section('script')--}}
 
-@endsection
+
 <link rel="stylesheet" href="http://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
@@ -545,7 +545,9 @@ Or
 <script src="{{url('assets/sweetalerts/sweetalert.js')}}"></script>
 
 <script>
-  
+    CKEDITOR.replace('lessonss_desc');
+    CKEDITOR.replace('lesson_desc');
+    
 </script>
 <script>
 
@@ -589,17 +591,17 @@ Or
 
     } );
  $(document).on('click', '#show_lessonss', function () {
-    var lesson_id = $(this).attr('class')
+    var course_id = $(this).attr('class')
   $.ajax({
-    url:"{{ url('trainer/get_lesson_section') }}/"+ lesson_id,
+    url:"{{ url('trainer/get_lesson_section') }}/"+ course_id,
    method:"get",
    success:function(data)
    {
-    console.log(data);
-    alert(data.section.course_id);
-        $('#course_idd').val(data.section.course_id);
-        $('#course_ids').val(data.section.course_id);
+
+        $('#course_idd').val(course_id);
+        $('#course_ids').val(course_id);
   
+    var origin   = window.location.origin;
 
    $('.remove_section').remove();
         $('.remove_lesson').remove();
@@ -616,13 +618,13 @@ Or
         html +='<div class="row detail-bg remove_lesson" id="dell_'+val.id+'">';
         html +='<div class="col-6 col-sm-4 c-text">';
         html +='<div>';
-        html +='<img src="img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + val.lesson_no +'</span>';
+        html +='<img src="'+ origin +'/public/img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + '#' + val.lesson_no +'</span>';
         html +='</div>';
         html +='</div>';
         html +='<div class="col-6 col-sm-4 text-center">';
-        // html +='<div>';
-        // html +='<span class=" plum-text"><b>8:00</b></span>';
-        // html +='</div>';
+        html +='<div>';
+        html +='<span class=" plum-text"><b>'+val.video_duration + '</b></span>';
+        html +='</div>';
         html +='</div>';
         html +='<div class="col-12 col-sm-4 text-end">';
         html +='<a class="edit-btn lessons_edit" id="'+val.id+'" href="#" >Edit</a>';
@@ -641,7 +643,6 @@ Or
  $(document).on('click', '#add_lesson', function () {    
     $('#basicExampleModal').modal('hide');
     var course_id = $('#course_ids').val();
-    alert(course_id);
     $.ajax({
    url:"{{ url('trainer/get_section') }}/"+ course_id,
    method:"get",
@@ -693,7 +694,7 @@ Or
 
  });
 
-        $('#lesson_form').on('submit', function(event){
+  $(document).on('submit', '#lesson_form', function () {
   event.preventDefault();
   $.ajax({
    url:"{{route('add_lesson')}}",
@@ -705,6 +706,9 @@ Or
    processData: false,
    success:function(data)
    {
+
+    var origin   = window.location.origin;
+
         $('#lessonModal').modal('hide');
         $('.remove_section').remove();
         $('.remove_lesson').remove();
@@ -721,13 +725,13 @@ Or
         html +='<div class="row detail-bg remove_lesson" id="dell_'+val.id+'">';
         html +='<div class="col-6 col-sm-4 c-text">';
         html +='<div>';
-        html +='<img src="img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + val.lesson_no +'</span>';
+        html +='<img src="'+ origin +'/public/img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + '#' + val.lesson_no +'</span>';
         html +='</div>';
         html +='</div>';
         html +='<div class="col-6 col-sm-4 text-center">';
-        // html +='<div>';
-        // html +='<span class=" plum-text"><b>8:00</b></span>';
-        // html +='</div>';
+        html +='<div>';
+        html +='<span class=" plum-text"><b>'+val.video_duration + '</b></span>';
+        html +='</div>';
         html +='</div>';
         html +='<div class="col-12 col-sm-4 text-end">';
         html +='<a class="edit-btn lessons_edit" id="'+val.id+'" href="#" >Edit</a>';
@@ -753,6 +757,7 @@ Or
 
    success:function(data)
    {
+    console.log(data);
 
         $('#basicExampleModal').modal('hide');
         var i;
@@ -766,18 +771,19 @@ Or
     }
         $('#lesson_num').val(data.lesson.lesson_no);
         $('#lesson_name').val(data.lesson.title);
-        $('#lesson_desc').text(data.lesson.description);
+        // $('#lesson_desc').text(data.lesson.description);
         $('#lesson_courses_id').val(data.lesson.course_id);
         $('#lesson_id').val(data.lesson.id);
 
-
+        CKEDITOR.instances.lesson_desc.setData(data.lesson.description);
         $('#edit_lesson').modal('show');
    }
   })
         });
 
-        $('#update_lesson_form').on('submit', function(event){
+  $(document).on('submit', '#update_lesson_form', function () {        
   event.preventDefault();
+  
   $.ajax({
    url:"{{route('update_lesson')}}",
    method:"POST",
@@ -788,6 +794,8 @@ Or
    processData: false,
    success:function(data)
    {
+    var origin   = window.location.origin;
+
         $('#edit_lesson').modal('hide');
         $('.remove_section').remove();
         $('.remove_lesson').remove();
@@ -804,13 +812,13 @@ Or
         html +='<div class="row detail-bg remove_lesson" id="dell_'+val.id+'">';
         html +='<div class="col-6 col-sm-4 c-text">';
         html +='<div>';
-        html +='<img src="img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + val.lesson_no +'</span>';
+        html +='<img src="'+ origin +'/public/img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + '#' + val.lesson_no +'</span>';
         html +='</div>';
         html +='</div>';
         html +='<div class="col-6 col-sm-4 text-center">';
-        // html +='<div>';
-        // html +='<span class=" plum-text"><b>8:00</b></span>';
-        // html +='</div>';
+        html +='<div>';
+        html +='<span class=" plum-text"><b>'+val.video_duration + '</b></span>';
+        html +='</div>';
         html +='</div>';
         html +='<div class="col-12 col-sm-4 text-end">';
         html +='<a class="edit-btn lessons_edit" id="'+val.id+'" href="#" >Edit</a>';
@@ -857,7 +865,7 @@ $('body').on('click','.lessons_del',function(){
             // var course_id = $('#lesson_course_id').val();
             swal({
       title: "Do you want to delete this details",
-      text: "@lang('packages.delete_package_msg')",
+      text: "",
       type: 'info',
       showCancelButton: true,
       confirmButtonColor: '#F79426',
@@ -890,3 +898,4 @@ $('body').on('click','.lessons_del',function(){
 
 
 </script>
+@endsection
