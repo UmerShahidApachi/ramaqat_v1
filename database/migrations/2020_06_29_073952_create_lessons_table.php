@@ -17,7 +17,6 @@ class CreateLessonsTable extends Migration
             $table->id();
             $table->bigInteger('course_id')->unsigned()->nullable();
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
-            $table->bigInteger('free_lesson')->default(0)->nullable();            
             $table->text('video_path');
             $table->string('lesson_no')->nullable();
             $table->string('video_duration')->nullable();

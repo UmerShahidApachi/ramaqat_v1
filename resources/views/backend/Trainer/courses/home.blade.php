@@ -596,6 +596,7 @@ Or
    success:function(data)
    {
     console.log(data);
+    alert(data.section.course_id);
         $('#course_idd').val(data.section.course_id);
         $('#course_ids').val(data.section.course_id);
   
@@ -639,13 +640,15 @@ Or
  });
  $(document).on('click', '#add_lesson', function () {    
     $('#basicExampleModal').modal('hide');
-    var course_id = $('#course_idd').val();
+    var course_id = $('#course_ids').val();
+    alert(course_id);
     $.ajax({
    url:"{{ url('trainer/get_section') }}/"+ course_id,
    method:"get",
    success:function(data)
    {
         var i;
+         $("#section").find('option').remove();
         for (i = 0; i < data.data.length; i++) {
         $("#section").append(new Option(data.data[i].section, data.data[i].id));
     }

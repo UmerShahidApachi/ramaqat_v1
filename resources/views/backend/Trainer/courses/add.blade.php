@@ -370,14 +370,7 @@
                   </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-6">
-                  <label class="switch" style="float: left;"> free Course
-                <input  name="free_lesson" type="checkbox">
-                <div class="slider round"></div>
-            </label>
-                </div>
-              </div>
+           
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
@@ -478,14 +471,7 @@
                   </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-6">
-                  <label class="switch" style="float: left;"> free Course
-                <input  name="free_lesson" type="checkbox">
-                <div class="slider round"></div>
-            </label>
-                </div>
-              </div>
+           
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">

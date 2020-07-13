@@ -46,12 +46,6 @@ class LessonController extends Controller
     public function store(Request $request)
     {
         // echo "<pre>"; print_r($request->all()); exit();
-        if(isset($request->free_lesson) && $request->free_lesson=='on')
-        {
-          $free_lesson = 1;
-        }else{
-          $free_lesson = 0;
-        }
         $course = Course::find($request->course_id);
         if ($request->hasfile('document')) {
             $postData = $request->only('document');
@@ -132,10 +126,10 @@ class LessonController extends Controller
             }
 
         if ($request->hasfile('document')) {
-            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'section_id' => $request->sections, 'video_path' => $video, 'video_lock' => $video_lock, 'extra_document' => $imgname, 'video_duration' => $video_duration,'free_lesson'=>$free_lesson]);
+            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'section_id' => $request->sections, 'video_path' => $video, 'video_lock' => $video_lock, 'extra_document' => $imgname, 'video_duration' => $video_duration]);
         } else {
 
-            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'video_lock' => $video_lock, 'description' => $request->description,'section_id' => $request->sections, 'video_path' => $video, 'video_duration' => $video_duration,'free_lesson'=>$free_lesson]);
+            $category = Lesson::create(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'video_lock' => $video_lock, 'description' => $request->description,'section_id' => $request->sections, 'video_path' => $video, 'video_duration' => $video_duration]);
 
         }
         $section = Section::with('lessons')->where('course_id',$request->course_id)->get();
@@ -191,12 +185,6 @@ class LessonController extends Controller
     {
 
         // echo "<pre>"; print_r($request->all()); exit();
-        if(isset($request->free_lesson) && $request->free_lesson=='on')
-        {
-          $free_lesson = 1;
-        }else{
-          $free_lesson = 0;
-        }
         $course = Course::find($request->course_id);
         $lesson = Lesson::where('id',$request->id)->first();
         if ($request->hasfile('document')) {
@@ -277,10 +265,10 @@ class LessonController extends Controller
         }
         if ($request->hasfile('document')) {
 
-            $category = Lesson::where('id',$request->id)->update(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'video_path' => $video, 'extra_document' => $imgname, 'video_duration' => $video_duration,'free_lesson'=>$free_lesson]);
+            $category = Lesson::where('id',$request->id)->update(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'video_path' => $video, 'extra_document' => $imgname, 'video_duration' => $video_duration]);
         } else {
 
-            $category = Lesson::where('id',$request->id)->update(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'video_path' => $video, 'video_duration' => $video_duration,'free_lesson'=>$free_lesson]);
+            $category = Lesson::where('id',$request->id)->update(['course_id' => $request->course_id, 'title' => $request->name, 'lesson_no' => $request->l_num, 'description' => $request->description, 'video_path' => $video, 'video_duration' => $video_duration]);
 
         }
 
@@ -332,6 +320,7 @@ class LessonController extends Controller
     {
         // print_r($id);exit();
         $section = Section::with('lessons')->where('course_id',$id)->get();
+        // echo "<pre>"; print_r($section); exit();
         return ['status'=>1, 'section'=>$section];
 
     }
