@@ -83,7 +83,13 @@ class CourseController extends Controller
     public function create(Request $request)
     {
       // echo "<pre>"; print_r($request->all()); exit();
-
+      if(isset($request->free_course) && $request->free_course=='on')
+        {
+          $free_course = 1;
+        }else{
+          $free_course = 0;
+        }
+        // print_r($free_course); exit();
         if ($request->hasfile('image')) {
             $postData = $request->only('image');
 
@@ -136,10 +142,11 @@ class CourseController extends Controller
 
         $category_id = implode(',', $request->category_id);
         $author = implode(',', $request->author);
+        
 
 
 //        $category = Course::create(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->description,'duration'=>$request->duration,'price'=>$request->price, 'discount_price'=>$request->discount_price,'attach_doc'=>$attachments,'thumbnail'=>$imgname,'user_id'=>Auth::id()]);
-        $category = Course::create(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->briefdescription,'short_description'=>$request->shortdescription,'duration'=>$request->duration,'price'=>$request->price, 'discount_price'=>$request->discount_price,'thumbnail'=>$imgname,'promo_video'=>$promo_video,'user_id'=>Auth::id(),'auther'=>$author,'producer_name'=>$request->producer_name,'attach_doc'=>$names]);
+        $category = Course::create(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->briefdescription,'short_description'=>$request->shortdescription,'duration'=>$request->duration,'price'=>$request->price, 'discount_price'=>$request->discount_price,'thumbnail'=>$imgname,'promo_video'=>$promo_video,'user_id'=>Auth::id(),'auther'=>$author,'producer_name'=>$request->producer_name,'attach_doc'=>$names,'free_course'=>$free_course]);
 
         if ($category){
            return ['status'=>1, 'course'=>$category];
@@ -202,8 +209,13 @@ class CourseController extends Controller
      */
     public function update(Request $request)
     {
-       // dd($request->all());
       // echo "<pre>"; print_r($request->all()); exit();
+      if(isset($request->free_course) && $request->free_course=='on')
+        {
+          $free_course = 1;
+        }else{
+          $free_course = 0;
+        }
         $slider = Course::find($request->id);
         if($request->hasfile('image')){
 
@@ -273,7 +285,7 @@ class CourseController extends Controller
         $author = implode(',', $request->author);
 
 
-        $category = Course::where('id',$request->id)->update(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->briefdescription,'short_description'=>$request->shortdescription,'duration'=>$request->duration,'price'=>$request->price, 'discount_price'=>$request->discount_price,'thumbnail'=>$imgname,'promo_video'=>$promo_video,'user_id'=>Auth::id(),'auther'=>$author,'producer_name'=>$request->producer_name,'attach_doc'=>$names]);
+        $category = Course::where('id',$request->id)->update(['category_id'=>$category_id,'name'=>$request->name,'description'=>$request->briefdescription,'short_description'=>$request->shortdescription,'duration'=>$request->duration,'price'=>$request->price, 'discount_price'=>$request->discount_price,'thumbnail'=>$imgname,'promo_video'=>$promo_video,'user_id'=>Auth::id(),'auther'=>$author,'producer_name'=>$request->producer_name,'attach_doc'=>$names,'free_course'=>$free_course]);
 
         if ($category){
             return ['status'=>1, 'course'=>$category];

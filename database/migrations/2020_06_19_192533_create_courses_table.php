@@ -17,8 +17,9 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->text('short_description')->nullable();
+            $table->text('short_description')->nullable(); 
             $table->bigInteger('producer_name')->nullable();
+            $table->bigInteger('free_course')->default(0)->nullable();            
             $table->string('auther')->nullable();
             $table->string('duration')->nullable();
             $table->text('attach_doc')->nullable();

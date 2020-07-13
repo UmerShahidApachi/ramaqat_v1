@@ -140,7 +140,7 @@
               <div class="col-6">
                 <div class="form-group">
                     <label class="contents">Discount Price</label>
-                    <input type="number" class="form-control" name="discount_price" required>
+                    <input type="number" class="form-control" name="discount_price" >
                 </div>
               </div>
             </div>
@@ -167,7 +167,7 @@
                 <div class="form-group bmd-form-group">
                     <p>Upload your course demo video here.It must meet our <a href="#" style="color: blue" >Demo Video</a> <br>
                         <a href="#" style="color: blue">quality standreds</a>
-                        to be accepted.Important guidelines:.wmp, or .mp4  </p>
+                        to be accepted.Important guidelines:.wmv, .mpg, .mpeg or .mp4  </p>
                   <div class="custom-file">
                     <input type="file" class="custom-file-input" id="inputGroupFile01"
                       aria-describedby="inputGroupFileAddon01" name="promo_video" accept="video/*"  required>
@@ -183,7 +183,7 @@
                 <div class="form-group bmd-form-group">
                     <p>Upload your course extra attachments here.You can add multiple files <br>
                         <a href="#" style="color: blue">quality standreds</a>
-                        to be accepted.Important guidelines:750X422 pixels; .jpg, .jpeg , .gif, or .png,.exel.</p>
+                        to be accepted.Important guidelines:750X422 pixels; .jpg, .jpeg , .gif, .png, .pdf, or .word</p>
                   <div class="custom-file">
 
                     <input type="file" class="custom-file-input" id="inputGroupFile03"
@@ -197,6 +197,16 @@
                 </div> -->
               </div>
             </div>
+
+             <div class="row">
+                <div class="col-6">
+                  <label class="switch" style="float: left;"> free Course
+                <input  name="free_course" type="checkbox">
+                <div class="slider round"></div>
+            </label>
+                </div>
+              </div>
+
 
               <!-- <div class="row">
                 <div class="col-6">
@@ -235,7 +245,7 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header" style="background:purple">
-        <button type="button" class="close" data-dismiss="modal" style="float: right">&times;</button>
+        <button type="button" class="close close_section" data-dismiss="modal" style="float: right">&times;</button>
         <h4 class="modal-title">Add Section</h4>
       </div>
       <div class="modal-body"style="padding-top: 40px" >
@@ -254,7 +264,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal" id="close_section" style="border: 1px solid purple; border-radius: 15px; background-color: white !important; color: purple">Close</button>
+        <button type="button" class="btn btn-default close_section" data-dismiss="modal" style="border: 1px solid purple; border-radius: 15px; background-color: white !important; color: purple">Close</button>
       </div>
     </div>
 
@@ -268,7 +278,7 @@
     <!-- Modal content-->
     <div class="modal-content ">
       <div class="modal-header bg_color p-3">
-        <button type="button" class="close" data-dismiss="modal" style="position: absolute;right: 20px;">&times;</button>
+        <button type="button" class="close close_add_lesson" data-dismiss="modal" style="position: absolute;right: 20px;">&times;</button>
         <h4 class="modal-title">Add Lesson</h4>
       </div>
       <div class="modal-body">
@@ -312,7 +322,7 @@
                   <label>video</label>
                   <div class="custom-file mb-3">
 
-                  <input type="file" class="custom-file-input" id="customFile2" name="image" accept="video/*">
+                  <input type="file" class="custom-file-input" id="customFile2" name="video" accept="video/*">
                   <label class="custom-file-label" for="customFile1">No file attached</label>
                 </div>
                     <!-- <div class="btn btn-primary btn-sm float-left">
@@ -361,6 +371,14 @@
                 </div>
             </div>
             <div class="row">
+                <div class="col-6">
+                  <label class="switch" style="float: left;"> free Course
+                <input  name="free_lesson" type="checkbox">
+                <div class="slider round"></div>
+            </label>
+                </div>
+              </div>
+            <div class="row">
                 <div class="col-12">
                     <div class="form-group">
                         <label>Description*</label>
@@ -372,7 +390,7 @@
 
 
             <div class="modal-footer">
-                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"  id="close_add_lesson">
+                <input type="button" class="btn btn-default close_add_lesson" data-dismiss="modal" value="Cancel"  >
                 <input type="submit" class="btn btn-success cat" id="cat">
             </div>
         </form>
@@ -460,7 +478,14 @@
                   </div>
                 </div>
             </div>
-
+            <div class="row">
+                <div class="col-6">
+                  <label class="switch" style="float: left;"> free Course
+                <input  name="free_lesson" type="checkbox">
+                <div class="slider round"></div>
+            </label>
+                </div>
+              </div>
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
@@ -651,6 +676,7 @@ CKEDITOR.replace('lesson_desc');
    success:function(data)
    {
         var i;
+        $("#section").find('option').remove();
         for (i = 0; i < data.data.length; i++) {
         $("#section").append(new Option(data.data[i].section, data.data[i].id));
     }
@@ -698,6 +724,9 @@ CKEDITOR.replace('lesson_desc');
 
         $('#lesson_form').on('submit', function(event){
   event.preventDefault();
+   for ( instance in CKEDITOR.instances ) {
+        CKEDITOR.instances[instance].updateElement();
+    }
   $.ajax({
    url:"{{route('add_lesson')}}",
    method:"POST",
@@ -724,13 +753,13 @@ CKEDITOR.replace('lesson_desc');
         html +='<div class="row detail-bg remove_lesson" id="dell_'+val.id+'">';
         html +='<div class="col-6 col-sm-4 c-text">';
         html +='<div>';
-        html +='<img src="img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + val.lesson_no +'</span>';
+        html +='<img src="'+ origin +'/public/img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title +'#' + val.lesson_no +'</span>';
         html +='</div>';
         html +='</div>';
         html +='<div class="col-6 col-sm-4 text-center">';
-        // html +='<div>';
-        // html +='<span class=" plum-text"><b>8:00</b></span>';
-        // html +='</div>';
+        html +='<div>';
+        html +='<span class=" plum-text"><b>'+val.video_duration + '</b></span>';
+        html +='</div>';
         html +='</div>';
         html +='<div class="col-12 col-sm-4 text-end">';
         html +='<a class="edit-btn lessons_edit" id="'+val.id+'" href="#" >Edit</a>';
@@ -769,7 +798,11 @@ CKEDITOR.replace('lesson_desc');
     }
         $('#lesson_num').val(data.lesson.lesson_no);
         $('#lesson_name').val(data.lesson.title);
-        $('#lesson_desc').text(data.lesson.description);
+        // $('#lesson_desc').text(data.lesson.description);
+        console.log(data);
+        console.log(data.lesson.description);
+
+        CKEDITOR.instances.lesson_desc.setData(data.lesson.description);
         $('#lesson_courses_id').val(data.lesson.course_id);
         $('#lesson_id').val(data.lesson.id);
 
@@ -791,6 +824,7 @@ CKEDITOR.replace('lesson_desc');
    processData: false,
    success:function(data)
    {
+    var origin   = window.location.origin;
         $('#edit_lesson').modal('hide');
         $('.remove_section').remove();
         $('.remove_lesson').remove();
@@ -807,13 +841,13 @@ CKEDITOR.replace('lesson_desc');
         html +='<div class="row detail-bg remove_lesson" id="dell_'+val.id+'">';
         html +='<div class="col-6 col-sm-4 c-text">';
         html +='<div>';
-        html +='<img src="img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + val.lesson_no +'</span>';
+        html +='<img src="'+ origin +'/public/img/traneedashboard/lession.png"><span class="mr-3 ml-3">'+val.title + '#' + val.lesson_no +'</span>';
         html +='</div>';
         html +='</div>';
         html +='<div class="col-6 col-sm-4 text-center">';
-        // html +='<div>';
-        // html +='<span class=" plum-text"><b>8:00</b></span>';
-        // html +='</div>';
+        html +='<div>';
+        html +='<span class=" plum-text"><b>'+val.video_duration + '</b></span>';
+        html +='</div>';
         html +='</div>';
         html +='<div class="col-12 col-sm-4 text-end">';
         html +='<a class="edit-btn lessons_edit" id="'+val.id+'" href="#" >Edit</a>';
@@ -840,12 +874,12 @@ CKEDITOR.replace('lesson_desc');
     };
 
 
-    $('#close_section').click(function(){
+    $('.close_section').click(function(){
         $('#myModal').modal('hide');
         $('#basicExampleModal').modal('show');
     });
 
-     $('#close_add_lesson').click(function(){
+     $('.close_add_lesson').click(function(){
         $('#lessonModal').modal('hide');
         $('#basicExampleModal').modal('show');
     });

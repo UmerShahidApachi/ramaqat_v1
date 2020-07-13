@@ -264,7 +264,7 @@
                   <label>video</label> 
                   <div class="custom-file mb-3">
                                        
-                  <input type="file" class="custom-file-input" id="customFile2" name="image" accept="video/*">
+                  <input type="file" class="custom-file-input" id="customFile2" name="video" accept="video/*">
                   <label class="custom-file-label" for="customFile1">No file attached</label>
                 </div>
                     <!-- <div class="btn btn-primary btn-sm float-left">
